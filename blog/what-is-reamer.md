@@ -47,4 +47,4 @@ The trigger for reaching for Reamer isn't "I've decided to formally backtest thi
 
 ---
 
-Read next: [Why Reamer Exists](https://reamerlabs.com/blog/why-reamer-exists) · [Research, Not Deployment](https://reamerlabs.com/blog/research-not-deployment). Full technical reference: [docs](https://reamerlabs.com/docs). The execution model this all rests on is public and testable: [execution specification](https://github.com/reamerlabs/Reamer/blob/main/EXECUTION_SPEC.md). Real throughput numbers, not marketing claims: [benchmarks](https://reamerlabs.com/benchmark). The workflow this loop maps onto: [reamerlabs.com](https://reamerlabs.com/#workflow).
+Full technical reference: [docs](https://reamerlabs.com/docs). The execution model this all rests on is public and testable: [execution specification](https://github.com/reamerlabs/Reamer/blob/main/EXECUTION_SPEC.md). Real throughput numbers, not marketing claims: [benchmarks](https://reamerlabs.com/benchmark). The workflow this loop maps onto: [reamerlabs.com](https://reamerlabs.com/#workflow).

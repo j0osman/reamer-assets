@@ -29,7 +29,7 @@ Closing it isn't one feature — it's a handful of things that have to be true a
 - **A way to check whether the edge is real or lucky.** One backtest, however careful, is one draw from a distribution of possible outcomes. Testing the strategy against a spread of plausible ones is the difference between "this made money" and "this made money for a reason."
 - **The ability to actually look at what happened.** Not just a summary statistic, but the specific fill, at the specific tick, that explains why a trade did what it did.
 
-[What Is Reamer?](https://reamerlabs.com/blog/what-is-reamer) covers how those pieces fit together into one loop. This article is about why that loop needs to exist at all.
+What Reamer actually is covers how those pieces fit together into one loop. This article is about why that loop needs to exist at all.
 
 ## The trigger is earlier than "let's backtest this"
 
@@ -41,4 +41,4 @@ This gap — not a shortage of ideas, not a shortage of capital — is the actua
 
 ---
 
-Read next: [What Is Reamer?](https://reamerlabs.com/blog/what-is-reamer) · [Research, Not Deployment](https://reamerlabs.com/blog/research-not-deployment) · Full reference: [docs](https://reamerlabs.com/docs) · The workflow this maps onto: [reamerlabs.com](https://reamerlabs.com/#workflow)
+Full reference: [docs](https://reamerlabs.com/docs) · The workflow this maps onto: [reamerlabs.com](https://reamerlabs.com/#workflow)

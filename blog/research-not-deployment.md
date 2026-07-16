@@ -37,8 +37,8 @@ Validated strategy logic isn't locked into Reamer. Once an idea has survived the
 
 ## Why the boundary is a feature
 
-A tool that stops at validated strategy logic can afford to take that stage seriously — going all the way through cost realism, portfolio interaction, and robustness testing instead of stopping at a first promising number. Ideas that survive the [full loop](https://reamerlabs.com/blog/what-is-reamer) come out the other end ready to be trusted with a deployment decision, not just interesting enough to consider one. That depth is easier to justify when the product isn't also trying to be the infrastructure the strategy eventually runs on.
+A tool that stops at validated strategy logic can afford to take that stage seriously — going all the way through cost realism, portfolio interaction, and robustness testing instead of stopping at a first promising number. Ideas that survive the full loop come out the other end ready to be trusted with a deployment decision, not just interesting enough to consider one. That depth is easier to justify when the product isn't also trying to be the infrastructure the strategy eventually runs on.
 
 ---
 
-Read next: [What Is Reamer?](https://reamerlabs.com/blog/what-is-reamer) · [Why Reamer Exists](https://reamerlabs.com/blog/why-reamer-exists) · Full reference: [docs](https://reamerlabs.com/docs) · The workflow this maps onto: [reamerlabs.com](https://reamerlabs.com/#workflow)
+Full reference: [docs](https://reamerlabs.com/docs) · The workflow this maps onto: [reamerlabs.com](https://reamerlabs.com/#workflow)
