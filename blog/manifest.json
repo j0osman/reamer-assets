@@ -68,5 +68,12 @@
     "description": "\"This pattern tends to work\" isn't testable yet. A hypothesis needs a specific rule, a specific market and timeframe, and a clear idea of what would prove it wrong — the test being whether you can actually write it as code.",
     "date": "2026-07-16",
     "tier": "Research Process"
+  },
+  {
+    "slug": "designing-a-good-trading-experiment",
+    "title": "Designing a Good Trading Experiment",
+    "description": "A specific, falsifiable hypothesis can still be tested badly. Good experiment design means enough data to mean something, realistic costs from the start, no lookahead, a representative sample, and success criteria decided before the result exists.",
+    "date": "2026-07-16",
+    "tier": "Research Process"
   }
 ]
