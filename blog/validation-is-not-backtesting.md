@@ -18,7 +18,7 @@ A backtest, on its own, has no way to distinguish a real, repeatable edge from a
 
 ## What this looks like concretely
 
-`run_backtest()` produces the measurement — a specific result, from a specific run, against specific data. `run_monte_carlo()` is a separate, deliberate step: it bootstrap-resamples that result's trade sequence to build a distribution of plausible alternative outcomes, and reports how the actual result sits inside that distribution — risk of ruin, drawdown percentiles, how much of the apparent edge survives across variations rather than depending on the exact sequence that happened to occur.
+`run_backtest()` produces the measurement — a specific result, from a specific run, against specific data. [`run_monte_carlo()` is a separate, deliberate step](https://reamerlabs.com/blog/why-monte-carlo-matters): it bootstrap-resamples that result's trade sequence to build a distribution of plausible alternative outcomes, and reports how the actual result sits inside that distribution — risk of ruin, drawdown percentiles, how much of the apparent edge survives across variations rather than depending on the exact sequence that happened to occur.
 
 These are two different function calls because they're two different questions. A backtest can pass the first one — run cleanly, produce a strong number — and still fail the second, if the strength of that number turns out to depend heavily on the specific path the data happened to take.
 

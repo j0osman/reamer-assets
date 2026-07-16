@@ -12,7 +12,7 @@ A limit order sits and waits. It fills only when the market actually reaches the
 
 ## The fill is exact, but arrival isn't guaranteed
 
-When a limit order does fill, it fills at the level specified — not a worse price, the way a stop order can. The uncertainty isn't in the price, it's in whether the order gets touched at all within the time it's live. A backtest needs to genuinely check, tick by tick, whether the specified level was crossed — not assume it, and not silently skip that check because the strategy's premise made it feel likely.
+When a limit order does fill, it fills at the level specified — [not a worse price, the way a stop order can](https://reamerlabs.com/blog/stop-orders-gaps-and-reality). The uncertainty isn't in the price, it's in whether the order gets touched at all within the time it's live. A backtest needs to genuinely check, tick by tick, whether the specified level was crossed — not assume it, and not silently skip that check because the strategy's premise made it feel likely.
 
 ## Time-in-force changes what "never fills" means
 

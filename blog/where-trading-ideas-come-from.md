@@ -26,7 +26,7 @@ This matters because "it's published" or "someone credible said so" quietly get 
 
 ## Why the source doesn't change what happens next
 
-Once an idea is going to be tested, Reamer doesn't distinguish where it came from. A hunch from a chart and a replication of a well-known published factor get implemented the same way — as ordinary Python in `on_bar` — and run against the same execution realism, the same robustness check. The trigger for reaching for that process is always earlier than "I've decided to formally test this": it's the moment a noticed regularity, from wherever it came from, turns into "wait, is that actually real?"
+Once an idea is going to be tested, Reamer doesn't distinguish where it came from. A hunch from a chart and a replication of a well-known published factor get implemented the same way — as ordinary Python in `on_bar` — and run against [the same execution realism](https://reamerlabs.com/blog/why-execution-modeling-matters), [the same robustness check](https://reamerlabs.com/blog/why-monte-carlo-matters). The trigger for reaching for that process is always earlier than "I've decided to formally test this": it's the moment a noticed regularity, from wherever it came from, turns into "wait, is that actually real?"
 
 ---
 

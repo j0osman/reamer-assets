@@ -4,7 +4,7 @@ description: "Kept or discarded" is one bit of information. The actual value in 
 date: 2026-07-16
 ---
 
-The decision at the end of an experiment — kept or discarded — is almost the least useful thing to remember about it. It's a single bit of information. What's actually worth carrying forward is the specific reason behind that bit, and getting that reason out of a finished result takes a deliberate step of its own.
+[The decision at the end of an experiment — kept or discarded](https://reamerlabs.com/blog/the-research-loop) — is almost the least useful thing to remember about it. It's a single bit of information. What's actually worth carrying forward is the specific reason behind that bit, and getting that reason out of a finished result takes a deliberate step of its own.
 
 ## The decision isn't the knowledge
 

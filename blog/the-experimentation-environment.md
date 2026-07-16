@@ -14,7 +14,7 @@ A single backtest, in isolation, proves very little — a strategy can look exce
 
 ## Not "research environment," on its own
 
-"Research environment" is closer, but it describes a place, not a discipline. A folder of notebooks, a spreadsheet, and a shared drive is also, technically, a research environment — it doesn't commit to anything about how rigorous the research inside it has to be. It doesn't distinguish evidence-based testing, where a result has to survive realistic costs and a robustness check before it's trusted, from open-ended tinkering, where a good-looking number is treated as the end of the story.
+"Research environment" is closer, but it describes a place, not a discipline. A folder of notebooks, a spreadsheet, and a shared drive is also, technically, a research environment — it doesn't commit to anything about how rigorous the research inside it has to be. It doesn't distinguish evidence-based testing, where a result has to survive [realistic costs](https://reamerlabs.com/blog/why-execution-modeling-matters) and [a robustness check](https://reamerlabs.com/blog/why-monte-carlo-matters) before it's trusted, from open-ended tinkering, where a good-looking number is treated as the end of the story.
 
 The word that was missing is the discipline itself, not just the setting it happens in.
 
@@ -24,7 +24,7 @@ This one overreaches in the other direction. "Platform" and "operating" both imp
 
 ## What "experimentation environment" actually names
 
-The category needed to name the loop itself — idea, implementation, execution, inspection, validation, iteration — rather than any single stage of it, and it needed to commit to evidence as the operating discipline instead of leaving that implicit. "Experimentation environment" does both: it's a place (environment) built around a specific, repeatable method (experimentation), not a generic research space and not a single pipeline stage wearing the whole product's name.
+The category needed to name [the loop itself — idea, implementation, execution, inspection, validation, iteration](https://reamerlabs.com/blog/from-idea-to-evidence) — rather than any single stage of it, and it needed to commit to evidence as the operating discipline instead of leaving that implicit. "Experimentation environment" does both: it's a place (environment) built around a specific, repeatable method (experimentation), not a generic research space and not a single pipeline stage wearing the whole product's name.
 
 "Systematic trading laboratory" is decent secondary vocabulary for the same idea, and shows up in narrative writing for exactly that reason — it ties naturally to determinism and controlled, repeatable conditions. But "laboratory" also connotes a slowness and formality that doesn't match the actual experience of using Reamer, which is closer to an idea expressed in thirty lines and tested in seconds than to anything resembling lab-coat process. Useful in reserve. Not the primary name.
 

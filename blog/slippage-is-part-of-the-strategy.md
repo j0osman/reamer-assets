@@ -16,7 +16,7 @@ It's tempting to test a strategy with slippage set to zero "to see the pure sign
 
 ## Slippage tolerance is information about the strategy
 
-How much a result degrades as slippage increases is itself worth knowing, independent of whatever the headline return looks like at any one setting. A strategy that stays profitable across a reasonable range of slippage assumptions is telling you something different than one that only works at exactly zero and collapses the moment any friction is introduced. Reamer's execution model supports both a fixed, deterministic slippage value and optional stochastic noise scaled to the bar's own volatility — the second isn't there to make results worse for its own sake, it's there so a strategy's sensitivity to realistic variation in fill quality is something that can actually be observed, rather than assumed away by testing at a single, forgiving number.
+How much a result degrades as slippage increases is itself worth knowing, independent of whatever the headline return looks like at any one setting. A strategy that stays profitable across a reasonable range of slippage assumptions is telling you something different than one that only works at exactly zero and collapses the moment any friction is introduced. Reamer's execution model supports both a fixed, [deterministic](https://reamerlabs.com/blog/deterministic-research) slippage value and optional stochastic noise scaled to the bar's own volatility — the second isn't there to make results worse for its own sake, it's there so a strategy's sensitivity to realistic variation in fill quality is something that can actually be observed, rather than assumed away by testing at a single, forgiving number.
 
 ## Part of the strategy, not a discount applied to it
 

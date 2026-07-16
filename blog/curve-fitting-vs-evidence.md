@@ -16,7 +16,7 @@ Each additional free parameter gives a strategy one more way to bend toward what
 
 ## Evidence is what a curve fit doesn't have
 
-A result built on a real, persistent pattern doesn't depend on having been tuned against the exact data it's judged on — it should hold up reasonably well against a fresh, independent check the tuning process never touched. That's the practical difference: evidence survives being tested somewhere the fitting process wasn't looking. A curve fit, by construction, only really works where it was fitted, and its usual first sign of trouble is exactly that — a result that looks strong on the tuned data and considerably weaker the moment it's asked to do the same thing anywhere else.
+A result built on a real, persistent pattern doesn't depend on having been tuned against the exact data it's judged on — it should hold up reasonably well against [a fresh, independent check the tuning process never touched](https://reamerlabs.com/blog/validation-is-not-backtesting). That's the practical difference: evidence survives being tested somewhere the fitting process wasn't looking. A curve fit, by construction, only really works where it was fitted, and its usual first sign of trouble is exactly that — a result that looks strong on the tuned data and considerably weaker the moment it's asked to do the same thing anywhere else.
 
 ---
 

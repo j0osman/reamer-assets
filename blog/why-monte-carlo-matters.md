@@ -12,7 +12,7 @@ Reamer's Monte Carlo draws, with replacement, from the strategy's own set of obs
 
 ## Why this matters beyond the one path that happened
 
-A strategy's real edge, if it has one, doesn't guarantee any specific sequence of wins and losses — it guarantees a *tendency*, and the actual historical trades are one draw from whatever that tendency produces. A backtest that happened to draw an unusually favorable mix — slightly more of the big winners, slightly fewer of the ordinary losses — looks better than the underlying edge actually is, purely from the luck of which trades happened to occur. Resampling thousands of alternative, equally plausible draws from the same trade set is what reveals whether the one historical result sits near the middle of that distribution or out at its most fortunate edge.
+A strategy's real edge, if it has one, doesn't guarantee any specific sequence of wins and losses — it guarantees a *tendency*, and the actual historical trades are one draw from whatever that tendency produces. A backtest that happened to draw an unusually favorable mix — slightly more of the big winners, slightly fewer of the ordinary losses — looks better than the underlying edge actually is, purely from the luck of which trades happened to occur. Resampling thousands of alternative, equally plausible draws from the same trade set is what reveals whether [the one historical result sits near the middle of that distribution or out at its most fortunate edge](https://reamerlabs.com/blog/when-a-great-backtest-is-still-wrong).
 
 ## The question this answers that a single backtest can't
 

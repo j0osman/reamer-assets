@@ -16,7 +16,7 @@ Price doesn't always move continuously. Across a weekend, around a scheduled new
 
 ## Why conflating stops and limits changes a result
 
-Modeling a stop-loss as though it fills precisely at the stop price — the way a limit order fills at its limit price — quietly removes the one risk stop orders are specifically exposed to. A strategy backtested this way looks like its downside is more contained than it actually is, in exactly the scenario (a fast, gapping move) where real risk tends to concentrate. The two order types need genuinely different fill logic: a limit fills at its price or not at all; a stop, once crossed, fills at whatever the market actually offers next.
+Modeling a stop-loss as though it fills precisely at the stop price — [the way a limit order fills at its limit price](https://reamerlabs.com/blog/how-limit-orders-really-behave) — quietly removes the one risk stop orders are specifically exposed to. A strategy backtested this way looks like its downside is more contained than it actually is, in exactly the scenario (a fast, gapping move) where real risk tends to concentrate. The two order types need genuinely different fill logic: a limit fills at its price or not at all; a stop, once crossed, fills at whatever the market actually offers next.
 
 ## Reality, not pessimism
 

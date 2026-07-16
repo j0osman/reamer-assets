@@ -12,7 +12,7 @@ An idea forms in a specific context — a chart you were looking at, a conversat
 
 ## Speed is what makes breadth affordable
 
-Most ideas, honestly, aren't very promising — they're the quick, half-formed notices described earlier in this tier, not fully-formed convictions. When a test is expensive, only the ideas someone already feels fairly confident about seem worth spending that cost on. The quick hunches never get checked at all; they just linger, half-believed, neither confirmed nor ruled out. Cheap, fast iteration changes the economics of that decision — it becomes worth checking an idea you're only mildly curious about, precisely because being wrong costs almost nothing. That's what actually makes it possible to work through many ideas rather than just the handful that already look good.
+Most ideas, honestly, aren't very promising — they're [the quick, half-formed notices described earlier in this tier](https://reamerlabs.com/blog/where-trading-ideas-come-from), not fully-formed convictions. When a test is expensive, only the ideas someone already feels fairly confident about seem worth spending that cost on. The quick hunches never get checked at all; they just linger, half-believed, neither confirmed nor ruled out. Cheap, fast iteration changes the economics of that decision — it becomes worth checking an idea you're only mildly curious about, precisely because being wrong costs almost nothing. That's what actually makes it possible to work through many ideas rather than just the handful that already look good.
 
 ## Speed matters just as much once an idea has earned depth
 
@@ -22,7 +22,7 @@ The two aren't fully separate, either. Fast depth is part of what makes broad tr
 
 ## Speed removes the pressure to rescue a bad result
 
-There's a specific, human failure mode that shows up when a test is expensive: a marginal result creates real pressure to find a reason it's actually fine, because admitting the time was a loss feels worse than quietly lowering the bar. When the next test costs about as much as the last one, that pressure mostly disappears — a weak result can just be a weak result, dropped without much resistance, because starting over isn't expensive enough to fight for a rescue. This is true of a quick triage result and just as true of a deep one that didn't survive Monte Carlo.
+There's a specific, human failure mode that shows up when a test is expensive: a marginal result creates real pressure to find a reason it's actually fine, because admitting the time was a loss feels worse than quietly lowering the bar. When the next test costs about as much as the last one, that pressure mostly disappears — a weak result can just be a weak result, dropped without much resistance, because starting over isn't expensive enough to fight for a rescue. This is true of a quick triage result and just as true of [a deep one that didn't survive Monte Carlo](https://reamerlabs.com/blog/why-monte-carlo-matters).
 
 ## What actually makes this fast, at both ends
 

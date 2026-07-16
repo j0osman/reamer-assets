@@ -4,7 +4,7 @@ description: Validation isn't supposed to run forever. Once the pre-decided chec
 date: 2026-07-17
 ---
 
-Testing can continue indefinitely if nothing says when to stop. More Monte Carlo runs, another stress scenario, one more look at the trade log for something that might still be off — each additional check feels like due diligence, and none of them individually feels like enough of a reason to call it finished. At some point, though, continuing to test the same result stops adding real information and starts introducing a version of the exact problem validation was built to catch.
+Testing can continue indefinitely if nothing says when to stop. [More Monte Carlo runs](https://reamerlabs.com/blog/why-monte-carlo-matters), [another stress scenario](https://reamerlabs.com/blog/stress-testing-trading-strategies), one more look at the trade log for something that might still be off — each additional check feels like due diligence, and none of them individually feels like enough of a reason to call it finished. At some point, though, continuing to test the same result stops adding real information and starts introducing a version of the exact problem validation was built to catch.
 
 ## More testing isn't automatically more rigor
 
@@ -12,7 +12,7 @@ Running a validation check that's already been cleared, again, a slightly differ
 
 ## The bar was already decided
 
-This is exactly why the acceptance criteria from earlier in this loop — the risk-of-ruin threshold, the stress-test tolerance, the parameter-count sanity check — need to be decided before any of them are checked. Once they're checked and cleared, the process is done, by the same standard that was agreed to before the result existed. Continuing to test past that point isn't extra caution. It's relitigating a decision that was already made honestly, looking for a reason to feel even more sure than the evidence actually supports.
+This is exactly why [the acceptance criteria from earlier in this loop](https://reamerlabs.com/blog/robustness-before-capital) — the risk-of-ruin threshold, the stress-test tolerance, the parameter-count sanity check — need to be decided before any of them are checked. Once they're checked and cleared, the process is done, by the same standard that was agreed to before the result existed. Continuing to test past that point isn't extra caution. It's relitigating a decision that was already made honestly, looking for a reason to feel even more sure than the evidence actually supports.
 
 ## Being done is a decision too
 

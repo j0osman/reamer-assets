@@ -10,7 +10,7 @@ If most ideas that get tested end up surviving, that's not evidence of a good id
 
 Look at enough charts, enough indicators, enough parameter combinations over a finite dataset, and some of them will appear to work — not because they capture something real, but because a finite amount of historical data contains a finite amount of noise, and noise occasionally lines up in a way that looks like a pattern. There are vastly more ways to notice an apparent regularity than there are actual, persistent edges underneath the data. A rigorous test exists specifically to catch this, which means its job is to reject most candidates — because most candidates, honestly, are exactly that: noise that happened to resemble signal closely enough to get noticed.
 
-An idea surviving contact with realistic costs and a robustness check is supposed to be the exception. If it isn't — if nearly everything that gets tested comes out looking validated — the test is the thing worth questioning, not the unusual run of good ideas.
+An idea surviving contact with realistic costs and [a robustness check](https://reamerlabs.com/blog/why-monte-carlo-matters) is supposed to be the exception. If it isn't — if nearly everything that gets tested comes out looking validated — the test is the thing worth questioning, not the unusual run of good ideas.
 
 ## The trap is specifically psychological
 
@@ -22,7 +22,7 @@ Rejecting most tested ideas is evidence the test is actually discriminating betw
 
 ## The discard is not the failure
 
-None of this makes a discarded idea a wasted afternoon — that's a separate point, covered elsewhere in this loop. What matters here is narrower: expecting most ideas to fail is the correct expectation to walk in with, not a low bar or a sign of pessimism. The actual skill in this stage isn't protecting ideas from that outcome. It's being willing to reach it quickly, honestly, and without resistance, as often as the evidence actually says to.
+None of this makes a discarded idea a wasted afternoon — [that's a separate point, covered elsewhere in this loop](https://reamerlabs.com/blog/from-decision-to-knowledge). What matters here is narrower: expecting most ideas to fail is the correct expectation to walk in with, not a low bar or a sign of pessimism. The actual skill in this stage isn't protecting ideas from that outcome. It's being willing to reach it quickly, honestly, and without resistance, as often as the evidence actually says to.
 
 ---
 

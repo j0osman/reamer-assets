@@ -24,12 +24,12 @@ There's a professional version of the same problem. A backtest that can't be exp
 
 Closing it isn't one feature — it's a handful of things that have to be true at once:
 
-- **Execution costs that resemble reality.** Commission, slippage, spread, swap — modeled to a [published specification](https://github.com/reamerlabs/Reamer/blob/main/EXECUTION_SPEC.md), not assumed away, so a result reflects what would have actually happened to an order, not what a spreadsheet wishes had happened.
-- **Determinism.** The same inputs producing the same fills, every time, on any machine — so a result is something you can hand to someone else and have them reproduce, not something that only makes sense on the one run you happened to keep.
-- **A way to check whether the edge is real or lucky.** One backtest, however careful, is one draw from a distribution of possible outcomes. Testing the strategy against a spread of plausible ones is the difference between "this made money" and "this made money for a reason."
-- **The ability to actually look at what happened.** Not just a summary statistic, but the specific fill, at the specific tick, that explains why a trade did what it did.
+- **[Execution costs that resemble reality](https://reamerlabs.com/blog/why-execution-modeling-matters).** Commission, slippage, spread, swap — modeled to a [published specification](https://github.com/reamerlabs/Reamer/blob/main/EXECUTION_SPEC.md), not assumed away, so a result reflects what would have actually happened to an order, not what a spreadsheet wishes had happened.
+- **[Determinism](https://reamerlabs.com/blog/deterministic-research).** The same inputs producing the same fills, every time, on any machine — so a result is something you can hand to someone else and have them reproduce, not something that only makes sense on the one run you happened to keep.
+- **A way to check whether the edge is real or lucky.** One backtest, however careful, is one draw from a distribution of possible outcomes. [Testing the strategy against a spread of plausible ones](https://reamerlabs.com/blog/why-monte-carlo-matters) is the difference between "this made money" and "this made money for a reason."
+- **The ability to actually look at what happened.** Not just a summary statistic, but [the specific fill, at the specific tick, that explains why a trade did what it did](https://reamerlabs.com/blog/why-replay-matters).
 
-What Reamer actually is covers how those pieces fit together into one loop. This article is about why that loop needs to exist at all.
+[What Reamer actually is](https://reamerlabs.com/blog/what-is-reamer) covers how those pieces fit together into one loop. This article is about why that loop needs to exist at all.
 
 ## The trigger is earlier than "let's backtest this"
 

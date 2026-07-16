@@ -8,7 +8,7 @@ Four numbers — open, high, low, close — look like they describe what happene
 
 ## The ambiguity is real, not a technicality
 
-A bar with a given open, high, low, and close is consistent with many different real price paths. Price could have run up to the high first and back down to the low before closing, or the reverse, or oscillated between the two several times — the same four numbers describe all of these equally well. Most of the time this doesn't matter. It matters a great deal the moment a bar contains more than one order that could plausibly have filled — a take-profit and a stop-loss both within range, or two separate limit orders on either side of the entry — because which one actually happened first depends on the path, and the path is exactly the thing OHLCV doesn't record.
+A bar with a given open, high, low, and close is consistent with many different real price paths. Price could have run up to the high first and back down to the low before closing, or the reverse, or oscillated between the two several times — the same four numbers describe all of these equally well. Most of the time this doesn't matter. It matters a great deal the moment a bar contains more than one order that could plausibly have filled — [a take-profit and a stop-loss both within range](https://reamerlabs.com/blog/bracket-orders-done-correctly), or two separate limit orders on either side of the entry — because which one actually happened first depends on the path, and the path is exactly the thing OHLCV doesn't record.
 
 ## Guessing isn't good enough
 
@@ -16,7 +16,7 @@ Picking an answer arbitrarily — always assume the high comes first, or whichev
 
 ## Making the ambiguity deterministic instead of invisible
 
-Reamer generates a synthetic sequence of ticks within each bar — deterministic, seeded from the bar's own data and a run-level seed, so the same bar always produces the same internal sequence on every run. This doesn't recover the real path that actually happened; nothing can, from OHLCV alone. What it does is replace an arbitrary, hidden assumption with an explicit, reproducible one — order events get resolved against a specific, consistent sequence of prices instead of a silent rule that happens to be baked into whichever engine is running the test.
+Reamer generates a synthetic sequence of ticks within each bar — [deterministic](https://reamerlabs.com/blog/deterministic-research), seeded from the bar's own data and a run-level seed, so the same bar always produces the same internal sequence on every run. This doesn't recover the real path that actually happened; nothing can, from OHLCV alone. What it does is replace an arbitrary, hidden assumption with an explicit, reproducible one — order events get resolved against a specific, consistent sequence of prices instead of a silent rule that happens to be baked into whichever engine is running the test.
 
 ## Why this is worth understanding, not just trusting
 

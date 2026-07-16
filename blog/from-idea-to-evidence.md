@@ -8,19 +8,19 @@ date: 2026-07-16
 
 ## The idea
 
-It rarely starts as a formal hypothesis. More often it's a half-formed pattern-notice — something in a chart, a conversation, someone else's writeup — that hasn't earned a decision yet. The question underneath it is simple and a little uncomfortable: *is that actually real, or does it just look real?* Everything that follows exists to answer that question honestly.
+It rarely starts as a formal hypothesis. More often it's [a half-formed pattern-notice — something in a chart, a conversation, someone else's writeup](https://reamerlabs.com/blog/where-trading-ideas-come-from) — that hasn't earned a decision yet. The question underneath it is simple and a little uncomfortable: *is that actually real, or does it just look real?* Everything that follows exists to answer that question honestly.
 
 ## Implementation
 
-The idea becomes code. A Python class with one method, `on_bar`, called once per bar of data. Whatever the idea actually is — a breakout, a mean-reversion signal, a reaction to an earnings surprise — gets expressed as ordinary Python: read the data, decide, return an order. Nothing about this stage requires learning a proprietary strategy language; if it can be written as a function of the data in front of it, it can be implemented.
+[The idea becomes code](https://reamerlabs.com/blog/intuition-to-testable-hypothesis). A Python class with one method, `on_bar`, called once per bar of data. Whatever the idea actually is — a breakout, a mean-reversion signal, a reaction to an earnings surprise — gets expressed as ordinary Python: read the data, decide, return an order. Nothing about this stage requires learning a proprietary strategy language; if it can be written as a function of the data in front of it, it can be implemented.
 
 ## Execution
 
-`reamer_py.run_backtest(...)` runs the strategy against historical data, bar by bar, filling orders against an execution model that charges commission, slippage, spread, and swap the way a real broker would. This is the stage most tools stop at — a number comes out, and it's tempting to treat that number as the answer. It isn't, yet. It's a claim that hasn't been checked.
+`reamer_py.run_backtest(...)` runs the strategy against historical data, bar by bar, [filling orders against an execution model](https://reamerlabs.com/blog/why-execution-modeling-matters) that charges commission, slippage, spread, and swap the way a real broker would. This is the stage most tools stop at — a number comes out, and it's tempting to treat that number as the answer. It isn't, yet. It's a claim that hasn't been checked.
 
 ## Inspection
 
-Before trusting the number, look at what actually produced it. The free Reamer GUI opens the saved result and replays it tick by tick — the exact moment an order filled, at the exact price, against the exact tick that crossed it. This is where a result stops being a black box. If a trade did something surprising, the replay shows why, instead of leaving that question to a guess about the log file.
+Before trusting the number, look at what actually produced it. [The free Reamer GUI opens the saved result and replays it tick by tick](https://reamerlabs.com/blog/why-replay-matters) — the exact moment an order filled, at the exact price, against the exact tick that crossed it. This is where a result stops being a black box. If a trade did something surprising, the replay shows why, instead of leaving that question to a guess about the log file.
 
 ## Understanding
 
@@ -28,11 +28,11 @@ Every fill, every rejected order, every partial close is part of the result, not
 
 ## Iteration
 
-Understanding usually points at something to change — a filter that was missing, an entry condition that was too loose, a parameter that was never really tested, just guessed at. Iteration is refining the idea against its own results and running it again. It's easy to mistake this stage for the whole process, since a strategy can be tweaked indefinitely and keep looking a little better each time. It isn't the whole process. It's preparation for the next stage, which asks a different question entirely.
+Understanding usually points at something to change — a filter that was missing, an entry condition that was too loose, a parameter that was never really tested, just guessed at. [Iteration is refining the idea against its own results](https://reamerlabs.com/blog/validation-vs-iteration) and running it again. It's easy to mistake this stage for the whole process, since a strategy can be tweaked indefinitely and keep looking a little better each time. It isn't the whole process. It's preparation for the next stage, which asks a different question entirely.
 
 ## Validation
 
-A single backtest is one draw from a distribution of possible outcomes. Monte Carlo bootstrap-resamples the trade sequence to ask the harder question: across a spread of plausible variations, does this idea hold up, or did it just get lucky on the one run that got kept? This is the stage that separates a strategy that looks good from one that's actually earned some trust.
+A single backtest is one draw from a distribution of possible outcomes. [Monte Carlo bootstrap-resamples the trade sequence](https://reamerlabs.com/blog/why-monte-carlo-matters) to ask the harder question: across a spread of plausible variations, does this idea hold up, or did it just get lucky on the one run that got kept? This is the stage that separates a strategy that looks good from one that's actually earned some trust.
 
 ## Decision
 
@@ -40,7 +40,7 @@ Kept or discarded. Both are a real outcome, not just one of them. An idea that g
 
 ## Knowledge
 
-Whatever the decision, something persists past it. The `.reamer` result file is a complete, reproducible, inspectable record — the same execution config, the same seed, the same fills, available to revisit or to hand to someone else exactly as it happened. Even a discarded idea leaves behind a specific, concrete reason it didn't work, which is worth more going into the next idea than a vague memory of "I tried something like that once and it didn't pan out."
+Whatever the decision, something persists past it. The `.reamer` result file is a complete, reproducible, inspectable record — the same execution config, the same seed, the same fills, available to revisit or to hand to someone else exactly as it happened. [Even a discarded idea leaves behind a specific, concrete reason it didn't work](https://reamerlabs.com/blog/from-decision-to-knowledge), which is worth more going into the next idea than a vague memory of "I tried something like that once and it didn't pan out."
 
 ## What this adds up to
 

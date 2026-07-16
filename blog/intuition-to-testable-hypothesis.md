@@ -18,7 +18,7 @@ Usually it's missing one of a few specific things: an exact rule for when the si
 
 **Precise entry and exit logic.** Exactly what triggers a position, and exactly what closes it — a stop level, a target, a time limit, a reversal signal. If this can't be stated precisely enough to act on every single time the condition fires, it isn't finished yet.
 
-**A clear idea of what would prove it wrong.** A hypothesis that can't fail isn't one. Before running anything, it's worth being able to say what result — a poor win rate, a specific drawdown, a Monte Carlo distribution that looks too wide — would mean the idea doesn't hold up. Deciding this after seeing the result invites finding a reason to explain away whatever came out.
+**A clear idea of what would prove it wrong.** A hypothesis that can't fail isn't one. Before running anything, it's worth being able to say what result — a poor win rate, a specific drawdown, [a Monte Carlo distribution that looks too wide](https://reamerlabs.com/blog/why-monte-carlo-matters) — would mean the idea doesn't hold up. Deciding this after seeing the result invites finding a reason to explain away whatever came out.
 
 ## The actual test: can you write it as code?
 

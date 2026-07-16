@@ -8,7 +8,7 @@ Iteration and validation can look similar from the outside — both involve runn
 
 ## Two different questions
 
-Iteration refines an idea against its own results: something looks off, a filter gets added, a threshold gets adjusted, and the strategy runs again against the same data to see if the change helped. Validation asks something else entirely: would this result hold up against data it hasn't seen, or a spread of plausible variations of what actually happened? One tests whether a change helped on the data already in front of you. The other tests whether any of it means something beyond that specific data.
+Iteration refines an idea against its own results: something looks off, a filter gets added, a threshold gets adjusted, and the strategy runs again against the same data to see if the change helped. [Validation asks something else entirely](https://reamerlabs.com/blog/validation-is-not-backtesting): would this result hold up against data it hasn't seen, or a spread of plausible variations of what actually happened? One tests whether a change helped on the data already in front of you. The other tests whether any of it means something beyond that specific data.
 
 ## Why repeated iteration alone isn't evidence
 
@@ -18,7 +18,7 @@ After several rounds of tweaking, a strategy usually does look better than it di
 
 Using a validation result to guide further iteration is a completely standard approach in plenty of research styles — walk-forward optimization and tuning against a held-out validation set both work exactly this way, deliberately. The part that matters is whether the check is actually being asked something new each time, or just being asked the same question again in a different shape.
 
-A genuinely held-out check — a walk-forward window the strategy hasn't been tuned against, a true out-of-sample split — can be iterated against safely, because each round is a real test against data the refinement process hasn't already shaped itself around. Reamer's Monte Carlo is a different kind of check: it bootstrap-resamples the trade sequence from the run that already happened, not new out-of-sample data. Tuning a strategy and re-running Monte Carlo on the same underlying trades, repeatedly, doesn't introduce anything the strategy hasn't already seen — it's a different resampling of the same information, not a look at something new. That doesn't make Monte Carlo iteration meaningless, but it does mean repeated tuning against it doesn't earn the same trust that iterating against genuinely new data would.
+A genuinely held-out check — a walk-forward window the strategy hasn't been tuned against, a true out-of-sample split — can be iterated against safely, because each round is a real test against data the refinement process hasn't already shaped itself around. [Reamer's Monte Carlo is a different kind of check](https://reamerlabs.com/blog/why-monte-carlo-matters): it bootstrap-resamples the trade sequence from the run that already happened, not new out-of-sample data. Tuning a strategy and re-running Monte Carlo on the same underlying trades, repeatedly, doesn't introduce anything the strategy hasn't already seen — it's a different resampling of the same information, not a look at something new. That doesn't make Monte Carlo iteration meaningless, but it does mean repeated tuning against it doesn't earn the same trust that iterating against genuinely new data would.
 
 ## The practical distinction
 

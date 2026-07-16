@@ -4,7 +4,7 @@ description: Determinism is a property of a system — the same run produces the
 date: 2026-07-17
 ---
 
-Determinism and reproducibility are related closely enough to blur together, but they answer different questions. Determinism is about the system: does the same run produce the same output, every time. Reproducibility is about what that property is actually worth — can someone else, on their own machine, at a later date, regenerate the exact same result and check it for themselves.
+Determinism and reproducibility are related closely enough to blur together, but they answer different questions. [Determinism is about the system](https://reamerlabs.com/blog/deterministic-research): does the same run produce the same output, every time. Reproducibility is about what that property is actually worth — can someone else, on their own machine, at a later date, regenerate the exact same result and check it for themselves.
 
 ## The gap between "it's deterministic" and "it's reproducible"
 

@@ -8,7 +8,7 @@ A careful, deterministic model of what might have happened inside a bar is still
 
 ## What synthetic ticks actually fix
 
-Generating a deterministic sequence of prices within a bar replaces an arbitrary, hidden assumption about intra-bar order with an explicit, reproducible one. That's a real improvement — it turns a silent guess into something inspectable and consistent. It does not reconstruct the actual path price took in the real market. The genuine tick-by-tick history of a bar isn't recoverable from its open, high, low, and close, no matter how carefully the substitute is built.
+[Generating a deterministic sequence of prices within a bar](https://reamerlabs.com/blog/why-ohlcv-execution-is-harder-than-it-looks) replaces an arbitrary, hidden assumption about intra-bar order with an explicit, reproducible one. That's a real improvement — it turns a silent guess into something inspectable and consistent. It does not reconstruct the actual path price took in the real market. The genuine tick-by-tick history of a bar isn't recoverable from its open, high, low, and close, no matter how carefully the substitute is built.
 
 ## What this means for scope
 

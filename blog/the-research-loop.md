@@ -8,7 +8,7 @@ Ideas. Evidence. Repeat. The third word is doing as much work as the first two. 
 
 ## A decision closes an idea. Knowledge closes the loop.
 
-Every idea ends somewhere — kept or discarded. That's the decision, and it's specific to the one idea in front of you. But something else survives past the decision, whichever way it went: a discarded idea doesn't just disappear, it leaves behind a concrete, specific reason it didn't hold up. That reason is what a researcher actually carries into the next idea.
+Every idea ends somewhere — [kept or discarded](https://reamerlabs.com/blog/why-most-ideas-should-be-discarded). That's the decision, and it's specific to the one idea in front of you. But something else survives past the decision, whichever way it went: a discarded idea doesn't just disappear, [it leaves behind a concrete, specific reason it didn't hold up](https://reamerlabs.com/blog/from-decision-to-knowledge). That reason is what a researcher actually carries into the next idea.
 
 This is the difference between a loop and a dead end. A process that stops at the decision treats a rejected idea as wasted effort. A process that treats knowledge as the real output treats it as exactly the opposite — a confidently discarded idea, reached fast enough that the cost of finding out stayed low, is a complete, successful pass through the loop. The next idea starts a little sharper because of it, whether or not anyone remembers the specifics of what didn't work.
 
@@ -16,9 +16,9 @@ This is the difference between a loop and a dead end. A process that stops at th
 
 Not every idea deserves the same amount of attention, and the loop isn't single-speed. Most ideas get triaged cheaply — implemented, run, checked against realistic costs, and ruled out inside an afternoon, sometimes faster. That's breadth: getting through many hypotheses quickly, most of which won't survive contact with real execution costs, and shouldn't need to.
 
-A smaller number survive that first pass and earn something deeper — cost and slippage resilience checked more carefully, portfolio interaction across multiple instruments, a full robustness pass with Monte Carlo before anyone would seriously consider risking capital on it. That's depth, and it's the same loop, just continuing further because the idea has actually earned the extra scrutiny.
+A smaller number survive that first pass and earn something deeper — cost and slippage resilience checked more carefully, portfolio interaction across multiple instruments, [a full robustness pass with Monte Carlo](https://reamerlabs.com/blog/why-monte-carlo-matters) before anyone would seriously consider risking capital on it. That's depth, and it's the same loop, just continuing further because the idea has actually earned the extra scrutiny.
 
-Both speeds matter, in the same process, for the same reason: an idea should get exactly as much attention as its own results justify, not more and not less.
+[Both speeds matter](https://reamerlabs.com/blog/why-fast-iteration-matters), in the same process, for the same reason: an idea should get exactly as much attention as its own results justify, not more and not less.
 
 ## Why this compounds over time
 

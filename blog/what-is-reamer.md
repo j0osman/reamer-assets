@@ -12,7 +12,7 @@ Reamer exists to close that gap.
 
 Reamer is a local-first trading experimentation environment: a Python SDK and C++ execution core that takes a trading idea, runs it against realistic execution costs, and tells you — with evidence, not a vibe — whether it survives contact with the way real fills actually happen.
 
-You write a strategy in ordinary Python. Reamer runs it bar by bar, fills orders using a formally specified execution model (commission, slippage, spread, swap — the costs that separate a real result from a spreadsheet fantasy), and hands back a result you can replay tick by tick, stress-test with Monte Carlo, and either trust or discard.
+You write a strategy in ordinary Python. Reamer runs it bar by bar, fills orders using a formally specified execution model (commission, slippage, spread, swap — the costs that separate a real result from a spreadsheet fantasy), and hands back a result you can [replay tick by tick](https://reamerlabs.com/blog/why-replay-matters), [stress-test with Monte Carlo](https://reamerlabs.com/blog/why-monte-carlo-matters), and either trust or discard.
 
 Both outcomes count as success. An idea that gets confidently killed in an afternoon is not a wasted afternoon — it's one fewer idea you're still carrying around, half-believing, without evidence either way.
 
@@ -29,7 +29,7 @@ None of this requires a live account, a broker connection, or any infrastructure
 
 ## What Reamer is not
 
-Reamer does not place trades. It does not connect to a broker. It is not an OMS, an execution platform, or a live trading platform, and it never will be — that's not a missing feature, it's a deliberate edge of the product. Validated strategy logic is the finished thing Reamer produces. What happens to it after that — wiring it into a broker, an OMS, a platform like QuantConnect or NautilusTrader, or a stack you've already built — is a separate decision, made with separate tools, downstream of anything Reamer does.
+Reamer does not place trades. It does not connect to a broker. It is not an OMS, an execution platform, or a live trading platform, and it never will be — that's not a missing feature, it's a deliberate edge of the product. Validated strategy logic is the finished thing Reamer produces. [What happens to it after that](https://reamerlabs.com/blog/research-not-deployment) — wiring it into a broker, an OMS, a platform like QuantConnect or NautilusTrader, or a stack you've already built — is a separate decision, made with separate tools, downstream of anything Reamer does.
 
 That boundary is worth stating plainly, up front, because it's the single fact most likely to cause a confused evaluation if left implicit: Reamer is where a trading idea gets proven, not where it gets deployed.
 
@@ -39,7 +39,7 @@ It's also not built for everything. No L2/L3 order-book data, so it's not a fit 
 
 Backtesting is one stage of what Reamer does — the part where a strategy meets historical data and produces fills. But a single backtest, on its own, proves very little; a strategy can look excellent on one run and be indistinguishable from noise. The actual job is the full loop: form an idea, implement it, run it, inspect exactly what happened, decide whether the result would survive data it hasn't seen, and carry what you learned into the next idea — whether this one got kept or thrown away.
 
-"Backtesting engine" names the middle step. "Experimentation environment" names the whole loop, which is the thing Reamer is actually built around.
+"Backtesting engine" names the middle step. ["Experimentation environment"](https://reamerlabs.com/blog/the-experimentation-environment) names the whole loop, which is the thing Reamer is actually built around.
 
 ## Who this is for
 

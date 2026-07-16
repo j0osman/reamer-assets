@@ -8,7 +8,7 @@ Most software testing is satisfied by code that runs without an error. That bar 
 
 ## What "behavioral" means here
 
-A behavioral test doesn't just check that a function returns without throwing an exception. It sets up a specific, deliberate scenario — a limit order sitting exactly at a price the market is about to touch, a bracket with both sides in range on the same bar, a rejected order for insufficient margin — and checks the exact value the execution specification says should come out of it. Not "a reasonable-looking fill." The specific one the spec defines for that exact situation.
+A behavioral test doesn't just check that a function returns without throwing an exception. It sets up a specific, deliberate scenario — a limit order sitting exactly at a price the market is about to touch, a bracket with both sides in range on the same bar, a rejected order for insufficient margin — and checks the exact value [the execution specification](https://reamerlabs.com/blog/what-is-an-execution-specification) says should come out of it. Not "a reasonable-looking fill." The specific one the spec defines for that exact situation.
 
 ## Why this needs to be exhaustive, not representative
 

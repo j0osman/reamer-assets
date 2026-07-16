@@ -10,13 +10,13 @@ Reamer owns experimentation. Other systems own execution.
 
 ## What "research, not deployment" means in practice
 
-Reamer's job ends at a specific, well-defined point: validated strategy logic — an idea that's been implemented, run against realistic execution costs, inspected tick by tick, and stress-tested against the possibility that its apparent edge is noise. That's the finished product. What happens to it next — wiring it into a live account, a broker connection, an order management system, or a hosting platform that keeps something running unattended — is a separate decision, made with separate tools, entirely outside what Reamer does.
+Reamer's job ends at a specific, well-defined point: [validated strategy logic](https://reamerlabs.com/blog/from-idea-to-evidence) — an idea that's been implemented, run against realistic execution costs, inspected tick by tick, and stress-tested against the possibility that its apparent edge is noise. That's the finished product. What happens to it next — wiring it into a live account, a broker connection, an order management system, or a hosting platform that keeps something running unattended — is a separate decision, made with separate tools, entirely outside what Reamer does.
 
 This isn't "research first, deployment eventually." It's research *only*. Reamer is upstream of the deployment decision, not a participant in it.
 
 ## Why this is a design decision, not a missing feature
 
-Closing the trust gap between a trading idea and a decision to risk capital on it is one job. Running a live account — uptime, latency, order routing, operational risk — is a different one entirely. A product trying to be excellent at both tends to be mediocre at each. Reamer commits fully to the first and leaves the second, deliberately, to the tools already built for it.
+[Closing the trust gap](https://reamerlabs.com/blog/why-reamer-exists) between a trading idea and a decision to risk capital on it is one job. Running a live account — uptime, latency, order routing, operational risk — is a different one entirely. A product trying to be excellent at both tends to be mediocre at each. Reamer commits fully to the first and leaves the second, deliberately, to the tools already built for it.
 
 Concretely, that means these stay out, permanently:
 
@@ -37,7 +37,7 @@ Validated strategy logic isn't locked into Reamer. Once an idea has survived the
 
 ## Why the boundary is a feature
 
-A tool that stops at validated strategy logic can afford to take that stage seriously — going all the way through cost realism, portfolio interaction, and robustness testing instead of stopping at a first promising number. Ideas that survive the full loop come out the other end ready to be trusted with a deployment decision, not just interesting enough to consider one. That depth is easier to justify when the product isn't also trying to be the infrastructure the strategy eventually runs on.
+A tool that stops at validated strategy logic can afford to take that stage seriously — going all the way through cost realism, portfolio interaction, and robustness testing instead of stopping at a first promising number. Ideas that survive [the full loop](https://reamerlabs.com/blog/the-research-loop) come out the other end ready to be trusted with a deployment decision, not just interesting enough to consider one. That depth is easier to justify when the product isn't also trying to be the infrastructure the strategy eventually runs on.
 
 ---
 

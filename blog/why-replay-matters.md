@@ -8,7 +8,7 @@ A finished backtest result is a final-stage view. Trades happened, orders filled
 
 ## The specific problem replay solves
 
-A strategy runs, and something in the output doesn't look right — a couple of trades with unusually large losses sitting among otherwise ordinary ones, or an order that, according to the strategy's own logic, should clearly have filled and just didn't. Reading the summary statistics again doesn't answer why. Reading the order log might show that something happened, but not the tick-level reason it happened that way. Replay is what actually answers it: stepping through the exact bar, the exact synthetic tick sequence, and watching precisely what price the order was checked against and why it did or didn't fill.
+A strategy runs, and something in the output doesn't look right — a couple of trades with unusually large losses sitting among otherwise ordinary ones, or an order that, according to the strategy's own logic, should clearly have filled and just didn't. Reading the summary statistics again doesn't answer why. Reading the order log might show that something happened, but not the tick-level reason it happened that way. Replay is what actually answers it: stepping through the exact bar, [the exact synthetic tick sequence](https://reamerlabs.com/blog/why-ohlcv-execution-is-harder-than-it-looks), and watching precisely what price the order was checked against and why it did or didn't fill.
 
 ## Surgical diagnosis, not general reassurance
 

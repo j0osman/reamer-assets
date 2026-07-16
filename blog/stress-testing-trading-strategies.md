@@ -4,7 +4,7 @@ description: Monte Carlo resamples what already happened under the same assumpti
 date: 2026-07-17
 ---
 
-Monte Carlo asks how sensitive a result is to which specific trades happened to occur, holding everything else fixed. Stress testing asks a different, complementary question: what happens if the conditions themselves get worse — costs a bit higher, positions a bit larger, correlations a bit less favorable than assumed — rather than just resampling from the same fixed assumptions.
+[Monte Carlo asks how sensitive a result is to which specific trades happened to occur](https://reamerlabs.com/blog/why-monte-carlo-matters), holding everything else fixed. Stress testing asks a different, complementary question: what happens if the conditions themselves get worse — costs a bit higher, positions a bit larger, correlations a bit less favorable than assumed — rather than just resampling from the same fixed assumptions.
 
 ## Assumptions, not just outcomes, deserve scrutiny
 
@@ -16,7 +16,7 @@ Deliberately widening slippage and spread beyond the base-case estimate and re-r
 
 ## Why this matters alongside Monte Carlo, not instead of it
 
-Monte Carlo and stress testing catch different failure modes. A strategy can be robust to which specific trades happened to occur and still be fragile to costs turning out to be worse than assumed — or the reverse. Checking both is what distinguishes a strategy whose edge holds up under real-world variation from one that only survives inside the exact conditions it happened to be measured under.
+Monte Carlo and stress testing catch different failure modes. A strategy can be robust to which specific trades happened to occur and still be fragile to costs turning out to be worse than assumed — or the reverse. [Checking both](https://reamerlabs.com/blog/when-to-trust-an-edge) is what distinguishes a strategy whose edge holds up under real-world variation from one that only survives inside the exact conditions it happened to be measured under.
 
 ---
 

@@ -8,19 +8,19 @@ The properties that make research trustworthy in general are one thing. Applying
 
 ## Can it actually be reproduced?
 
-Run the same strategy against the same data with the same seed again. If the result changes, nothing else about it can be trusted yet — a result that can't be regenerated exactly hasn't earned any of the other questions being asked about it, because there's no way to know whether the number in front of you is the strategy's real behavior or an artifact of one particular run.
+[Run the same strategy against the same data with the same seed again](https://reamerlabs.com/blog/deterministic-research). If the result changes, nothing else about it can be trusted yet — a result that can't be regenerated exactly hasn't earned any of the other questions being asked about it, because there's no way to know whether the number in front of you is the strategy's real behavior or an artifact of one particular run.
 
 ## Was the execution model actually realistic for this?
 
-A strategy tested with zero commission, zero slippage, and no spread is a different, easier strategy than the one that would actually be traded. Before trusting a specific number, it's worth checking what assumptions produced it — realistic costs for the instrument and frequency involved, or a forgiving default that happened to be left in place.
+[A strategy tested with zero commission, zero slippage, and no spread](https://reamerlabs.com/blog/why-execution-modeling-matters) is a different, easier strategy than the one that would actually be traded. Before trusting a specific number, it's worth checking what assumptions produced it — realistic costs for the instrument and frequency involved, or a forgiving default that happened to be left in place.
 
 ## Has this been validated, or just run once?
 
-A single backtest is a single measurement, not a test of whether it would generalize. Before trusting it, it's worth asking specifically whether it's been checked against a spread of plausible variations — a real Monte Carlo pass, not just a single clean run that nobody has stress-tested yet.
+A single backtest is a single measurement, not a test of whether it would generalize. Before trusting it, it's worth asking specifically whether it's been checked against a spread of plausible variations — [a real Monte Carlo pass](https://reamerlabs.com/blog/why-monte-carlo-matters), not just a single clean run that nobody has stress-tested yet.
 
 ## Has anyone actually looked at the trades?
 
-A strong summary number can still be hiding something a closer look would catch — a handful of outsized trades doing most of the work, an entry that only makes sense because of a subtle look-ahead, a pattern that only appears in one narrow slice of the data. Replaying the result, at least enough to spot-check a few trades, is what turns "the number looks good" into "I've actually seen what produced it."
+A strong summary number can still be hiding something a closer look would catch — a handful of outsized trades doing most of the work, an entry that only makes sense because of a subtle look-ahead, a pattern that only appears in one narrow slice of the data. [Replaying the result](https://reamerlabs.com/blog/why-replay-matters), at least enough to spot-check a few trades, is what turns "the number looks good" into "I've actually seen what produced it."
 
 ## None of these are optional extras
 
