@@ -10,5 +10,11 @@
     "title": "Why Reamer Exists",
     "description": "The bottleneck in systematic trading isn't a shortage of ideas or capital — it's that most backtesting was never strict enough to tell a real edge from noise. Reamer exists to close that gap.",
     "date": "2026-07-16"
+  },
+  {
+    "slug": "research-not-deployment",
+    "title": "Research, Not Deployment",
+    "description": "Reamer produces validated strategy logic and stops there. It does not place trades, connect to a broker, or run anything live — not as a missing feature, but as a permanent, intentional edge of the product.",
+    "date": "2026-07-16"
   }
 ]

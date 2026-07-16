@@ -41,4 +41,4 @@ This gap — not a shortage of ideas, not a shortage of capital — is the actua
 
 ---
 
-Read next: [What Is Reamer?](https://reamerlabs.com/blog/what-is-reamer) · Full reference: [docs](https://reamerlabs.com/docs) · The workflow this maps onto: [reamerlabs.com](https://reamerlabs.com/#workflow)
+Read next: [What Is Reamer?](https://reamerlabs.com/blog/what-is-reamer) · [Research, Not Deployment](https://reamerlabs.com/blog/research-not-deployment) · Full reference: [docs](https://reamerlabs.com/docs) · The workflow this maps onto: [reamerlabs.com](https://reamerlabs.com/#workflow)
