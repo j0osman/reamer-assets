@@ -4,5 +4,11 @@
     "title": "What Is Reamer?",
     "description": "Reamer is a local-first experimentation environment that turns a trading idea into validated strategy logic — and stops the moment that proof is complete.",
     "date": "2026-07-16"
+  },
+  {
+    "slug": "why-reamer-exists",
+    "title": "Why Reamer Exists",
+    "description": "The bottleneck in systematic trading isn't a shortage of ideas or capital — it's that most backtesting was never strict enough to tell a real edge from noise. Reamer exists to close that gap.",
+    "date": "2026-07-16"
   }
 ]
