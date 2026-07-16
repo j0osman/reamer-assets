@@ -61,5 +61,12 @@
     "description": "Trading ideas rarely start as hypotheses. They start as noticed regularities from a chart, a paper, someone else's writeup, or a side observation made while testing something else entirely — and none of that origin determines whether they're real.",
     "date": "2026-07-16",
     "tier": "Research Process"
+  },
+  {
+    "slug": "intuition-to-testable-hypothesis",
+    "title": "How to Turn an Intuition into a Testable Hypothesis",
+    "description": "\"This pattern tends to work\" isn't testable yet. A hypothesis needs a specific rule, a specific market and timeframe, and a clear idea of what would prove it wrong — the test being whether you can actually write it as code.",
+    "date": "2026-07-16",
+    "tier": "Research Process"
   }
 ]
