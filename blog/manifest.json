@@ -89,5 +89,12 @@
     "description": "If most tested ideas survive validation, that's a sign something is wrong with the validation, not a sign the ideas were unusually good. A healthy research process rejects most of what it tests — that's the correct rate, not a failure rate.",
     "date": "2026-07-16",
     "tier": "Research Process"
+  },
+  {
+    "slug": "validation-vs-iteration",
+    "title": "Validation vs Iteration",
+    "description": "Iteration refines an idea against its own results. Validation tests whether the refined result would survive data it hasn't seen. Whether it's safe to iterate against a validation result depends entirely on what that check is actually testing against.",
+    "date": "2026-07-16",
+    "tier": "Research Process"
   }
 ]
