@@ -75,5 +75,12 @@
     "description": "A specific, falsifiable hypothesis can still be tested badly. Good experiment design means enough data to mean something, realistic costs from the start, no lookahead, a representative sample, and success criteria decided before the result exists.",
     "date": "2026-07-16",
     "tier": "Research Process"
+  },
+  {
+    "slug": "why-fast-iteration-matters",
+    "title": "Why Fast Iteration Matters",
+    "description": "Speed isn't just about checking more hypotheses — it's also about how quickly a single one can be taken all the way to a real answer. Both matter, and they're connected — fast depth is what lets more ideas afford to go deep in the first place.",
+    "date": "2026-07-16",
+    "tier": "Research Process"
   }
 ]
