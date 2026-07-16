@@ -103,5 +103,12 @@
     "description": "\"Kept or discarded\" is one bit of information. The actual value in a finished experiment is the specific reason behind that outcome — and extracting it is a deliberate step, not something that happens automatically just because a result exists.",
     "date": "2026-07-16",
     "tier": "Research Process"
+  },
+  {
+    "slug": "building-a-repeatable-research-process",
+    "title": "Building a Repeatable Research Process",
+    "description": "Knowing how to design a good experiment doesn't make research repeatable on its own. Repeatability comes from deciding your standards once — cost assumptions, discard bar, when iteration stops — instead of relitigating them for every new idea.",
+    "date": "2026-07-16",
+    "tier": "Research Process"
   }
 ]
