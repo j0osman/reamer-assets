@@ -28,5 +28,11 @@
     "title": "From Idea to Evidence",
     "description": "A walk through what actually happens, stage by stage, the first time a trading idea goes through Reamer — from a half-formed hunch to a result you can either trust or confidently throw away.",
     "date": "2026-07-16"
+  },
+  {
+    "slug": "the-research-loop",
+    "title": "The Research Loop",
+    "description": "Why Reamer is built around a loop and not a line — knowledge from a discarded idea feeds the next one, and the same process runs at different depths depending on what an idea earns.",
+    "date": "2026-07-16"
   }
 ]
