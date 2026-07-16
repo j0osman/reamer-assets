@@ -166,5 +166,54 @@
     "description": "Deterministic synthetic ticks make bar-based execution honest about what it doesn't know — they don't turn it into something it isn't. A bar-based simulation is not a substitute for real tick data, and strategies that depend on one shouldn't reach for the other.",
     "date": "2026-07-17",
     "tier": "Execution Modeling"
+  },
+  {
+    "slug": "deterministic-research",
+    "title": "Deterministic Research",
+    "description": "\"Run it again, get the same answer\" sounds like a low bar. Most ad-hoc research setups don't actually clear it — and without it, none of the other checks that make research trustworthy are even possible to run.",
+    "date": "2026-07-17",
+    "tier": "Trust & Correctness"
+  },
+  {
+    "slug": "why-reproducibility-matters",
+    "title": "Why Reproducibility Matters",
+    "description": "Determinism is a property of a system — the same run produces the same output. Reproducibility is what that property earns you in practice — a colleague, or your own future self, can regenerate the exact result months later, rather than having to take your word for it.",
+    "date": "2026-07-17",
+    "tier": "Trust & Correctness"
+  },
+  {
+    "slug": "what-is-an-execution-specification",
+    "title": "What Is an Execution Specification?",
+    "description": "\"The code does whatever it does\" isn't a definition of behavior — it's an admission that behavior hasn't actually been defined. A written execution specification is the difference between a claim you can check and a black box you have to trust.",
+    "date": "2026-07-17",
+    "tier": "Trust & Correctness"
+  },
+  {
+    "slug": "behavioral-testing-for-trading-engines",
+    "title": "Behavioral Testing for Trading Engines",
+    "description": "Most software testing asks whether code runs without crashing. Behavioral testing for an execution engine asks something stricter — does this specific scenario produce the exact fill the specification says it should, not just a plausible-looking one.",
+    "date": "2026-07-17",
+    "tier": "Trust & Correctness"
+  },
+  {
+    "slug": "why-replay-matters",
+    "title": "Why Replay Matters",
+    "description": "A finished backtest result is a final-stage view — trades, fills, a summary. When something in that result looks wrong, a few outsized losses, an order that seemingly should have filled and didn't, replay is how you go find the exact moment and diagnose why.",
+    "date": "2026-07-17",
+    "tier": "Trust & Correctness"
+  },
+  {
+    "slug": "trusting-a-backtest",
+    "title": "Trusting a Backtest",
+    "description": "Given one specific backtest result, four concrete questions decide whether it deserves trust — is it actually reproducible, was the execution model realistic, has it been validated rather than just run once, and has anyone actually looked at the trades.",
+    "date": "2026-07-17",
+    "tier": "Trust & Correctness"
+  },
+  {
+    "slug": "evidence-beats-assumptions",
+    "title": "Evidence Beats Assumptions",
+    "description": "Confidence is not evidence, no matter how earned it feels. Determinism, a written specification, exhaustive testing, and the ability to replay a result exist to replace a feeling of certainty with something that can actually be checked.",
+    "date": "2026-07-17",
+    "tier": "Trust & Correctness"
   }
 ]
