@@ -96,5 +96,12 @@
     "description": "Iteration refines an idea against its own results. Validation tests whether the refined result would survive data it hasn't seen. Whether it's safe to iterate against a validation result depends entirely on what that check is actually testing against.",
     "date": "2026-07-16",
     "tier": "Research Process"
+  },
+  {
+    "slug": "from-decision-to-knowledge",
+    "title": "From Decision to Knowledge",
+    "description": "\"Kept or discarded\" is one bit of information. The actual value in a finished experiment is the specific reason behind that outcome — and extracting it is a deliberate step, not something that happens automatically just because a result exists.",
+    "date": "2026-07-16",
+    "tier": "Research Process"
   }
 ]
