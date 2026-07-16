@@ -16,5 +16,11 @@
     "title": "Research, Not Deployment",
     "description": "Reamer produces validated strategy logic and stops there. It does not place trades, connect to a broker, or run anything live — not as a missing feature, but as a permanent, intentional edge of the product.",
     "date": "2026-07-16"
+  },
+  {
+    "slug": "the-experimentation-environment",
+    "title": "The Experimentation Environment",
+    "description": "Why \"experimentation environment\" is the right category for Reamer, and why the obvious alternatives — backtesting framework, research environment, research operating platform — each undersell or overreach what the product actually is.",
+    "date": "2026-07-16"
   }
 ]
