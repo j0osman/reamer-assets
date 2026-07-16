@@ -82,5 +82,12 @@
     "description": "Speed isn't just about checking more hypotheses — it's also about how quickly a single one can be taken all the way to a real answer. Both matter, and they're connected — fast depth is what lets more ideas afford to go deep in the first place.",
     "date": "2026-07-16",
     "tier": "Research Process"
+  },
+  {
+    "slug": "why-most-ideas-should-be-discarded",
+    "title": "Why Most Ideas Should Be Discarded",
+    "description": "If most tested ideas survive validation, that's a sign something is wrong with the validation, not a sign the ideas were unusually good. A healthy research process rejects most of what it tests — that's the correct rate, not a failure rate.",
+    "date": "2026-07-16",
+    "tier": "Research Process"
   }
 ]
