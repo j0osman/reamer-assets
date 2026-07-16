@@ -54,5 +54,12 @@
     "description": "A backtest is a single measurement. Validation is a test of whether that measurement can be trusted. Treating \"it backtested well\" as equivalent to \"it's validated\" is a common, costly mix-up.",
     "date": "2026-07-16",
     "tier": "Foundation"
+  },
+  {
+    "slug": "where-trading-ideas-come-from",
+    "title": "Where Trading Ideas Come From",
+    "description": "Trading ideas rarely start as hypotheses. They start as noticed regularities from a chart, a paper, someone else's writeup, or a side observation made while testing something else entirely — and none of that origin determines whether they're real.",
+    "date": "2026-07-16",
+    "tier": "Research Process"
   }
 ]
