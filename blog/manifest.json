@@ -3,48 +3,56 @@
     "slug": "what-is-reamer",
     "title": "What Is Reamer?",
     "description": "Reamer is a local-first experimentation environment that turns a trading idea into validated strategy logic — and stops the moment that proof is complete.",
-    "date": "2026-07-16"
+    "date": "2026-07-16",
+    "tier": "Foundation"
   },
   {
     "slug": "why-reamer-exists",
     "title": "Why Reamer Exists",
     "description": "The bottleneck in systematic trading isn't a shortage of ideas or capital — it's that most backtesting was never strict enough to tell a real edge from noise. Reamer exists to close that gap.",
-    "date": "2026-07-16"
+    "date": "2026-07-16",
+    "tier": "Foundation"
   },
   {
     "slug": "research-not-deployment",
     "title": "Research, Not Deployment",
     "description": "Reamer produces validated strategy logic and stops there. It does not place trades, connect to a broker, or run anything live — not as a missing feature, but as a permanent, intentional edge of the product.",
-    "date": "2026-07-16"
+    "date": "2026-07-16",
+    "tier": "Foundation"
   },
   {
     "slug": "the-experimentation-environment",
     "title": "The Experimentation Environment",
     "description": "Why \"experimentation environment\" is the right category for Reamer, and why the obvious alternatives — backtesting framework, research environment, research operating platform — each undersell or overreach what the product actually is.",
-    "date": "2026-07-16"
+    "date": "2026-07-16",
+    "tier": "Foundation"
   },
   {
     "slug": "from-idea-to-evidence",
     "title": "From Idea to Evidence",
     "description": "A walk through what actually happens, stage by stage, the first time a trading idea goes through Reamer — from a half-formed hunch to a result you can either trust or confidently throw away.",
-    "date": "2026-07-16"
+    "date": "2026-07-16",
+    "tier": "Foundation"
   },
   {
     "slug": "the-research-loop",
     "title": "The Research Loop",
     "description": "Why Reamer is built around a loop and not a line — knowledge from a discarded idea feeds the next one, and the same process runs at different depths depending on what an idea earns.",
-    "date": "2026-07-16"
+    "date": "2026-07-16",
+    "tier": "Foundation"
   },
   {
     "slug": "what-makes-research-trustworthy",
     "title": "What Makes Research Trustworthy?",
     "description": "A confident result and a trustworthy one aren't the same thing. Trustworthy research has to be checkable — reproducible, specified, inspectable, and tested against the possibility that it's wrong — not just convincing.",
-    "date": "2026-07-16"
+    "date": "2026-07-16",
+    "tier": "Foundation"
   },
   {
     "slug": "validation-is-not-backtesting",
     "title": "Validation Is Not Backtesting",
     "description": "A backtest is a single measurement. Validation is a test of whether that measurement can be trusted. Treating \"it backtested well\" as equivalent to \"it's validated\" is a common, costly mix-up.",
-    "date": "2026-07-16"
+    "date": "2026-07-16",
+    "tier": "Foundation"
   }
 ]
