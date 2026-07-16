@@ -110,5 +110,12 @@
     "description": "Knowing how to design a good experiment doesn't make research repeatable on its own. Repeatability comes from deciding your standards once — cost assumptions, discard bar, when iteration stops — instead of relitigating them for every new idea.",
     "date": "2026-07-16",
     "tier": "Research Process"
+  },
+  {
+    "slug": "why-execution-modeling-matters",
+    "title": "Why Execution Modeling Matters",
+    "description": "A backtest can be deterministic and well-validated and still be measuring the wrong thing, if the fill price underneath it doesn't reflect how an order actually gets filled. Execution modeling is the layer everything else depends on.",
+    "date": "2026-07-17",
+    "tier": "Execution Modeling"
   }
 ]
