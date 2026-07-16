@@ -117,5 +117,54 @@
     "description": "A backtest can be deterministic and well-validated and still be measuring the wrong thing, if the fill price underneath it doesn't reflect how an order actually gets filled. Execution modeling is the layer everything else depends on.",
     "date": "2026-07-17",
     "tier": "Execution Modeling"
+  },
+  {
+    "slug": "modeling-bid-ask-correctly",
+    "title": "Modeling Bid/Ask Correctly",
+    "description": "A buy pays the ask and a sell receives the bid — spread is a directional cost paid on every round trip, not symmetric noise. Getting the data's own bid/ask/midpoint convention wrong silently biases every fill the same way.",
+    "date": "2026-07-17",
+    "tier": "Execution Modeling"
+  },
+  {
+    "slug": "slippage-is-part-of-the-strategy",
+    "title": "Slippage Is Part of the Strategy",
+    "description": "Slippage isn't a fudge factor subtracted from an otherwise-real result. A strategy that only works when slippage is assumed away isn't a slightly-better version of the real strategy — it's evidence the real one doesn't hold up.",
+    "date": "2026-07-17",
+    "tier": "Execution Modeling"
+  },
+  {
+    "slug": "how-limit-orders-really-behave",
+    "title": "How Limit Orders Really Behave",
+    "description": "A limit order isn't a market order with a nicer price attached. It waits for a specific level to be crossed, might never fill at all, and modeling it any other way changes what a strategy's results actually mean.",
+    "date": "2026-07-17",
+    "tier": "Execution Modeling"
+  },
+  {
+    "slug": "stop-orders-gaps-and-reality",
+    "title": "Stop Orders, Gaps, and Reality",
+    "description": "A limit order guarantees a price. A stop order only guarantees a trigger — once crossed, it fills at whatever the market gives, which can be meaningfully worse than the stop level itself when price gaps through it.",
+    "date": "2026-07-17",
+    "tier": "Execution Modeling"
+  },
+  {
+    "slug": "bracket-orders-done-correctly",
+    "title": "Bracket Orders Done Correctly",
+    "description": "A take-profit exit is easy to assume fills at exactly the target price, like a limit order. It doesn't — it uses the same slippage-inclusive formula as a stop-loss exit, and when both are close together, which one actually triggers first is a real question with a real answer.",
+    "date": "2026-07-17",
+    "tier": "Execution Modeling"
+  },
+  {
+    "slug": "why-ohlcv-execution-is-harder-than-it-looks",
+    "title": "Why OHLCV Execution Is Harder Than It Looks",
+    "description": "Open, high, low, and close describe four points from a bar — not the path price actually took between them. Deciding which order filled first, or whether a level was touched at all, requires a real answer to a question OHLCV alone can't settle.",
+    "date": "2026-07-17",
+    "tier": "Execution Modeling"
+  },
+  {
+    "slug": "the-limits-of-bar-based-simulation",
+    "title": "The Limits of Bar-Based Simulation",
+    "description": "Deterministic synthetic ticks make bar-based execution honest about what it doesn't know — they don't turn it into something it isn't. A bar-based simulation is not a substitute for real tick data, and strategies that depend on one shouldn't reach for the other.",
+    "date": "2026-07-17",
+    "tier": "Execution Modeling"
   }
 ]
