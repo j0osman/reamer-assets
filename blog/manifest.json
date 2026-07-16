@@ -215,5 +215,54 @@
     "description": "Confidence is not evidence, no matter how earned it feels. Determinism, a written specification, exhaustive testing, and the ability to replay a result exist to replace a feeling of certainty with something that can actually be checked.",
     "date": "2026-07-17",
     "tier": "Trust & Correctness"
+  },
+  {
+    "slug": "why-monte-carlo-matters",
+    "title": "Why Monte Carlo Matters",
+    "description": "A backtest happened with one specific set of trades. Monte Carlo asks a different question — if the strategy's real edge produced a slightly different draw of similar trades, how much would the result actually change?",
+    "date": "2026-07-17",
+    "tier": "Validation & Robustness"
+  },
+  {
+    "slug": "robustness-before-capital",
+    "title": "Robustness Before Capital",
+    "description": "Robustness testing has to happen before capital is at risk, not after — because once real money is committed, a weak result stops being an easy thing to walk away from, and the incentive to rationalize it grows exactly when clear judgment matters most.",
+    "date": "2026-07-17",
+    "tier": "Validation & Robustness"
+  },
+  {
+    "slug": "curve-fitting-vs-evidence",
+    "title": "Curve Fitting vs Evidence",
+    "description": "A strategy with many adjustable parameters, tuned against the same data it's later evaluated on, will eventually look good almost regardless of whether it captures anything real. Recognizing curve fitting is about noticing the shape of the process, not just the result.",
+    "date": "2026-07-17",
+    "tier": "Validation & Robustness"
+  },
+  {
+    "slug": "when-a-great-backtest-is-still-wrong",
+    "title": "When a Great Backtest Is Still Wrong",
+    "description": "A backtest can pass every check covered so far — realistic execution, enough data, no lookahead — and still be sitting at the fortunate edge of what its own trades could plausibly have produced, a fact only Monte Carlo actually reveals.",
+    "date": "2026-07-17",
+    "tier": "Validation & Robustness"
+  },
+  {
+    "slug": "stress-testing-trading-strategies",
+    "title": "Stress Testing Trading Strategies",
+    "description": "Monte Carlo resamples what already happened under the same assumptions. Stress testing asks a different question — what happens if the assumptions themselves get worse, not just the specific sequence of trades drawn from them.",
+    "date": "2026-07-17",
+    "tier": "Validation & Robustness"
+  },
+  {
+    "slug": "when-to-trust-an-edge",
+    "title": "When to Trust an Edge",
+    "description": "Monte Carlo, stress testing, and a check for curve fitting each answer a different question. Put together, they're a reasonable way to decide how much trust an edge has earned — not a pass/fail gate, but a more informed basis for a judgment call.",
+    "date": "2026-07-17",
+    "tier": "Validation & Robustness"
+  },
+  {
+    "slug": "knowing-when-youre-done",
+    "title": "Knowing When You're Done",
+    "description": "Validation isn't supposed to run forever. Once the pre-decided checks have actually been cleared, more testing against the same result stops adding information and starts risking the same over-fitting problem validation exists to catch.",
+    "date": "2026-07-17",
+    "tier": "Validation & Robustness"
   }
 ]
