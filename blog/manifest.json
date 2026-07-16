@@ -34,5 +34,11 @@
     "title": "The Research Loop",
     "description": "Why Reamer is built around a loop and not a line — knowledge from a discarded idea feeds the next one, and the same process runs at different depths depending on what an idea earns.",
     "date": "2026-07-16"
+  },
+  {
+    "slug": "what-makes-research-trustworthy",
+    "title": "What Makes Research Trustworthy?",
+    "description": "A confident result and a trustworthy one aren't the same thing. Trustworthy research has to be checkable — reproducible, specified, inspectable, and tested against the possibility that it's wrong — not just convincing.",
+    "date": "2026-07-16"
   }
 ]
