@@ -21,6 +21,10 @@ Reamer isn't optimized to be the fastest tool at any one stage. It's built aroun
 
 This isn't a claim that Reamer's C++ execution core is slow — [it's 11.4×–16.2× faster than Backtrader on identical realistic-strategy workloads](https://reamerlabs.com/benchmark). It's a claim that raw throughput on a fixed-shape sweep was never the bottleneck this product was built to remove. The bottleneck it targets is earlier: whether an idea deserves to reach the sweep stage at all.
 
+## Cross-sectional access and side-channel data
+
+Reamer's `on_bar` fires once per aligned timestep with every ticker's data available inside that same call, as zero-copy numpy views — a genuinely different shape than vectorbt PRO's whole-history array operations, not a faster or slower version of the same thing. Reamer also supports attaching arbitrary, schema-free exogenous data — earnings surprises, macro prints, anything JSON-serializable — to any ticker, auto-resolved to the latest-known-as-of-this-bar value inside `on_bar`. This isn't a speed comparison; it's a different capability aimed at a different stage of the loop — expressing and inspecting a strategy's logic, not sweeping a fixed shape across a parameter grid.
+
 ## Where vectorbt PRO is genuinely the better tool
 
 If a strategy's shape is already validated and the actual task is exploring a large parameter space fast, vectorbt PRO is the right tool for that stage, full stop — that's a complementary use, not a competing one. Some researchers reasonably use both: validate a shape's realism and robustness in one tool, then hand a confirmed shape to a vectorized sweep for fine-tuning. Reamer doesn't try to be the fastest possible parameter-sweep engine; it tries to make sure the thing being swept was worth sweeping in the first place.

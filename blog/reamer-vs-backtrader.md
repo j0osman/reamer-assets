@@ -21,6 +21,16 @@ Backtrader lets you configure commission and slippage. It does not make configur
 
 Reamer's execution model works from a [published, testable specification](https://reamerlabs.com/spec) — commission, slippage, spread, and swap aren't optional configuration, they're the thing a 282-check conformance suite verifies every fill against. The difference isn't that Reamer supports more realistic execution. It's that realistic execution is the default the tool is built around, not a setting a user has to know to reach for.
 
+## Where the speed actually comes from
+
+Reamer's execution core is written in C++. It isn't "Python that happens to be fast" — the hot path (order matching, fill resolution, synthetic tick generation) runs as compiled machine code, and `on_bar` hands the strategy zero-copy numpy array views of the result rather than Python objects the interpreter has to construct and garbage-collect one at a time. Backtrader's entire engine runs as interpreted Python, one bytecode operation at a time, serialized by the GIL like any other pure-Python program.
+
+This isn't an abstract architecture claim — it's [measured directly](https://reamerlabs.com/benchmark). A no-op workload that isolates pure per-bar overhead (read one price, do nothing) shows an 89–245x gap, because that workload isolates exactly the cost a compiled core avoids and a pure-Python interpreter can't. A realistic moving-average strategy with real order flow narrows that gap to 11–16x, because order matching and bookkeeping cost both engines something regardless of implementation language — the interpreter overhead stops being the whole story once there's real work happening on both sides.
+
+## Multi-ticker access and exogenous data
+
+Reamer's `on_bar` fires once per aligned timestep, with every ticker's data available inside that same call as zero-copy numpy views — a cross-sectional strategy reads across instruments directly, rather than reconstructing state across N separate per-instrument callbacks the way a strict per-bar event loop requires. Reamer also supports attaching arbitrary, schema-free timeseries data — earnings surprises, macro prints, anything JSON-serializable — to any ticker, auto-resolved to the latest-known-as-of-this-bar value inside the same `on_bar` call as the OHLCV data itself. Backtrader has neither primitive built in; both would need to be hand-rolled by the strategy author.
+
 ## Determinism and maintenance
 
 Backtrader's development has slowed considerably in recent years — issues sit open, and the project doesn't have the kind of active maintenance that catches subtle execution bugs before they quietly bias a result. For a tool whose entire output is "trust this number," an unmaintained core is a real cost, not a cosmetic one.
@@ -35,4 +45,4 @@ The trigger for reaching past it is [earlier than "I've decided to formally vali
 
 ---
 
-Full reference: [docs](https://reamerlabs.com/docs) · The execution model this rests on: [execution specification](https://reamerlabs.com/spec) · Free tier: 10,000 processed bars per machine, permanently, no signup.
+Full reference: [docs](https://reamerlabs.com/docs) · The execution model this rests on: [execution specification](https://reamerlabs.com/spec) · Real measurements: [benchmarks](https://reamerlabs.com/benchmark) · Free tier: 10,000 processed bars per machine, permanently, no signup.

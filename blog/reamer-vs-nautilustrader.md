@@ -1,6 +1,6 @@
 ---
 title: Reamer vs NautilusTrader
-description: NautilusTrader closes the gap between backtest and live by running both through the same engine. Reamer targets a different, earlier problem — whether the research environment's own execution assumptions are realistic at all — and treats sandbox-to-live drift as a boundary question, not an integration one.
+description: NautilusTrader closes the gap between backtest and live by running both through the same Rust engine — genuinely fast, not a competitor by design. Reamer targets a different, earlier problem, and one specific, narrow finding from our own benchmark suite explains why we don't publish a head-to-head number against it.
 date: 2026-07-18
 tier: Comparisons
 ---
@@ -19,6 +19,16 @@ It's also an answer to a narrower question than the one Reamer is built around.
 
 Reamer treats these as genuinely separate problems, solved in that order: get the research infrastructure right first. Deployment is a later, separate decision.
 
+## Where the compiled cores actually differ
+
+NautilusTrader's core is written in Rust, and it's genuinely fast — this isn't a case where a compiled competitor turns out to be secretly slow underneath. When we benchmarked it directly, one specific, narrow finding is worth naming precisely rather than generalizing from: NautilusTrader's `Portfolio` unconditionally instantiates a `PortfolioAnalyzer` that records every trade via a `pandas.concat()` call appending a row to a growing Series on each position close — an operation that isn't gated by the engine's own `run_analysis=False` configuration flag, and that scales quadratically with trade count. At a measured 40,000 bars / 2,638 trades, that single method accounted for 55% of total wall time, and throughput degraded from roughly 512 trades/s to 124 trades/s as trades accumulated — a run with real order flow at our benchmark's scale effectively never finishes without bypassing it directly.
+
+That's a specific implementation detail in an analytics subsystem, not a statement about the Rust execution core itself — which is exactly why [we don't publish a head-to-head throughput number against NautilusTrader](https://reamerlabs.com/benchmark): a fair comparison would need to either patch around something a real user wouldn't know to patch around, or publish a number dominated by a bug unrelated to the actual execution engine, and neither is honest.
+
+## Multi-ticker access and exogenous data
+
+This is where the two engines' shapes diverge most concretely, and it's directly visible in how each is actually called: Reamer's `on_bar` fires once per aligned timestep with every ticker's data available inside that same call, as zero-copy numpy views. NautilusTrader's `on_bar` fires once per bar *per subscribed instrument* — a strategy trading N instruments tracks per-instrument state across N separate calls itself, rather than reading across instruments directly in one place. Reamer also supports attaching arbitrary, schema-free exogenous data — earnings surprises, macro prints, anything JSON-serializable — to any ticker, auto-resolved to the latest-known-as-of-this-bar value inside that same call. Neither is a speed claim; both are a difference in what the strategy author has to build themselves versus what the engine hands them directly.
+
 ## Why decoupling, not merging
 
 Reamer's answer to sandbox-to-live drift specifically isn't to unify backtest and live into one engine — it's to treat the problem as a boundary question. Once a strategy's decision logic has actually survived validation, the belief underneath [Reamer's boundary](https://reamerlabs.com/blog/research-not-deployment) — research owns experimentation, other systems own execution — is that very little should need to change to run that logic live: mostly how an order gets dispatched to a specific broker or platform, not the reasoning that decided to place it. Keeping that line firm, logic on one side and integration on the other, never touching, is a more durable fix than merging both environments into a single system — it doesn't just prevent two runs from diverging, it prevents the strategy's own decision logic from ever being reshaped by deployment-specific concerns in the first place.
@@ -31,4 +41,4 @@ Same boundary as everywhere else in this loop. A strategy that's actually surviv
 
 ---
 
-Full reference: [docs](https://reamerlabs.com/docs) · The execution model this rests on: [execution specification](https://reamerlabs.com/spec) · Free tier: 10,000 processed bars per machine, permanently, no signup.
+Full reference: [docs](https://reamerlabs.com/docs) · The execution model this rests on: [execution specification](https://reamerlabs.com/spec) · Real measurements: [benchmarks](https://reamerlabs.com/benchmark) · Free tier: 10,000 processed bars per machine, permanently, no signup.

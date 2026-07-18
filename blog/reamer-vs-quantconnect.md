@@ -13,11 +13,19 @@ That's a legitimate, different bet than the one Reamer makes, worth being precis
 
 A platform built to cover data sourcing, research, live execution, and broker integration in one system has to spread its engineering effort across all of it. That's not a criticism — it's the correct tradeoff for what QuantConnect is trying to be. But it means the backtesting stage can't receive the same singular, undivided attention a tool built around nothing else would give it. [Execution modeling — fill price, slippage, spread, swap, resolved to a published, testable specification](https://reamerlabs.com/spec) — is Reamer's entire reason for existing. For a platform where backtesting is one stage among several in a much larger system, it's a capability, not the whole point.
 
+## Where LEAN's execution actually runs
+
+LEAN's core is written in C# — a compiled language, so the gap here isn't "compiled vs. interpreted" the way it is against a pure-Python engine. The relevant difference is deployment shape, not language: LEAN is built foremost for breadth and compatibility across asset classes, brokers, and data sources, and the standard, documented way most users actually run it locally is through QuantConnect's own Docker image — a containerization layer sitting between the compiled core and the host machine. Reamer runs as a native compiled extension directly against the host, with no container boundary in the loop by default.
+
 ## Two different kinds of drift
 
 LEAN also runs the same algorithm code in backtest and live — a real, deliberate answer to the problem of two divergent code paths producing two divergent behaviors, and a genuine strength worth naming directly. It answers a narrower question than the one Reamer is built around, though: sharing one engine across backtest and live closes the gap between two *runs* of a strategy. It doesn't, by itself, establish whether the execution assumptions inside that shared engine were realistic to begin with — [that's a separate, earlier question](https://reamerlabs.com/blog/why-execution-modeling-matters), one Reamer's published, conformance-tested execution model exists specifically to answer, independent of whatever happens to a strategy after it leaves the research stage.
 
 Reamer's own answer to "will live match what I tested" is architectural rather than environmental: keep a strategy's decision logic decoupled from whatever it's eventually deployed against, so the surface that changes between a validated strategy and a live one stays as small as possible — how orders get dispatched, not the logic that decided to place them.
+
+## Multi-ticker access and exogenous data
+
+Reamer's `on_bar` fires once per aligned timestep with every ticker's data available inside that same call, as zero-copy numpy views, rather than requiring the strategy to track cross-sectional state across separate per-instrument event callbacks. Reamer also supports attaching arbitrary, schema-free exogenous data — earnings surprises, macro prints, anything JSON-serializable — to any ticker, auto-resolved to the latest-known-as-of-this-bar value directly inside `on_bar`, with no separate data-pipeline integration required.
 
 ## Not a competitor — a downstream option
 
@@ -25,4 +33,4 @@ Reamer's own answer to "will live match what I tested" is architectural rather t
 
 ---
 
-Full reference: [docs](https://reamerlabs.com/docs) · The execution model this rests on: [execution specification](https://reamerlabs.com/spec) · Free tier: 10,000 processed bars per machine, permanently, no signup.
+Full reference: [docs](https://reamerlabs.com/docs) · The execution model this rests on: [execution specification](https://reamerlabs.com/spec) · Real measurements: [benchmarks](https://reamerlabs.com/benchmark) · Free tier: 10,000 processed bars per machine, permanently, no signup.
