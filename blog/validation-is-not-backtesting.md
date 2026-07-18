@@ -28,4 +28,4 @@ This is the practical consequence worth holding onto: an excellent-looking backt
 
 ---
 
-Full reference: [docs](https://reamerlabs.com/docs) · The execution model behind the backtest itself: [execution specification](https://reamerlabs.com/execution-spec) · The workflow this maps onto: [reamerlabs.com](https://reamerlabs.com/#workflow)
+Full reference: [docs](https://reamerlabs.com/docs) · The execution model behind the backtest itself: [execution specification](https://reamerlabs.com/spec) · The workflow this maps onto: [reamerlabs.com](https://reamerlabs.com/#workflow)

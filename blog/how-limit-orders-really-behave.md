@@ -24,4 +24,4 @@ A strategy that only enters on pullbacks to a specific level is making a claim a
 
 ---
 
-Full reference: [docs](https://reamerlabs.com/docs) · The execution model this rests on: [execution specification](https://reamerlabs.com/execution-spec) · The workflow this maps onto: [reamerlabs.com](https://reamerlabs.com/#workflow)
+Full reference: [docs](https://reamerlabs.com/docs) · The execution model this rests on: [execution specification](https://reamerlabs.com/spec) · The workflow this maps onto: [reamerlabs.com](https://reamerlabs.com/#workflow)

@@ -34,4 +34,4 @@ A category name is a promise about what to expect. Call something a backtesting 
 
 ---
 
-Full reference: [docs](https://reamerlabs.com/docs) · The execution model behind the "test" part of the loop: [execution specification](https://reamerlabs.com/execution-spec) · The workflow this maps onto: [reamerlabs.com](https://reamerlabs.com/#workflow)
+Full reference: [docs](https://reamerlabs.com/docs) · The execution model behind the "test" part of the loop: [execution specification](https://reamerlabs.com/spec) · The workflow this maps onto: [reamerlabs.com](https://reamerlabs.com/#workflow)

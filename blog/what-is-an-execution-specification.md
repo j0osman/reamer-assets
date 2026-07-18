@@ -20,4 +20,4 @@ A specification is what makes a claim about execution checkable by someone who d
 
 ---
 
-Full reference: [docs](https://reamerlabs.com/docs) · Read the specification itself: [execution specification](https://reamerlabs.com/execution-spec) · The workflow this maps onto: [reamerlabs.com](https://reamerlabs.com/#workflow)
+Full reference: [docs](https://reamerlabs.com/docs) · Read the specification itself: [execution specification](https://reamerlabs.com/spec) · The workflow this maps onto: [reamerlabs.com](https://reamerlabs.com/#workflow)

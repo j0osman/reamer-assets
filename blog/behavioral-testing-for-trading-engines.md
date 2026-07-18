@@ -20,4 +20,4 @@ A test suite that passes isn't proof the engine is useful, profitable, or well-d
 
 ---
 
-Full reference: [docs](https://reamerlabs.com/docs) · The specification this suite verifies conformance to: [execution specification](https://reamerlabs.com/execution-spec) · The workflow this maps onto: [reamerlabs.com](https://reamerlabs.com/#workflow)
+Full reference: [docs](https://reamerlabs.com/docs) · The specification this suite verifies conformance to: [execution specification](https://reamerlabs.com/spec) · The workflow this maps onto: [reamerlabs.com](https://reamerlabs.com/#workflow)
