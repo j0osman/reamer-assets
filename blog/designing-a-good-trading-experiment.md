@@ -28,4 +28,4 @@ Once the experiment runs, the temptation to notice a plausible reason a middling
 
 ---
 
-Full reference: [docs](https://reamerlabs.com/docs) · The execution model behind realistic costs: [execution specification](https://github.com/reamerlabs/Reamer/blob/main/EXECUTION_SPEC.md) · The workflow this maps onto: [reamerlabs.com](https://reamerlabs.com/#workflow)
+Full reference: [docs](https://reamerlabs.com/docs) · The execution model behind realistic costs: [execution specification](https://reamerlabs.com/execution-spec) · The workflow this maps onto: [reamerlabs.com](https://reamerlabs.com/#workflow)
