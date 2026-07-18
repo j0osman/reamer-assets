@@ -292,5 +292,82 @@
     "description": "NautilusTrader closes the gap between backtest and live by running both through the same engine. Reamer targets a different, earlier problem — whether the research environment's own execution assumptions are realistic at all — and treats sandbox-to-live drift as a boundary question, not an integration one.",
     "date": "2026-07-18",
     "tier": "Comparisons"
+  },
+  {
+    "slug": "testing-earnings-strategies-with-exogenous-data",
+    "title": "Testing Earnings Strategies with Exogenous Data",
+    "description": "An earnings backtest is only honest if the data becomes visible on the date it was actually announced, not the date it happened to land in a spreadsheet. Exogenous data's point-in-time resolution is what makes that distinction real instead of assumed.",
+    "date": "2026-07-19",
+    "tier": "Practical Research Workflows"
+  },
+  {
+    "slug": "adding-macro-events-to-strategy-research",
+    "title": "Adding Macro Events to Strategy Research",
+    "description": "A CPI print or a rate decision doesn't belong to one ticker the way an earnings surprise does — but the exogenous data mechanism is keyed per-ticker. Deciding which instruments a macro event actually reaches is a research question, not a technical detail to skip past.",
+    "date": "2026-07-19",
+    "tier": "Practical Research Workflows"
+  },
+  {
+    "slug": "multi-asset-portfolio-research",
+    "title": "Multi-Asset Portfolio Research",
+    "description": "Running the same independent logic across many tickers isn't the same as running many separate single-asset backtests — they share one equity curve and one leverage pool, and that constraint only shows up once they're actually run together.",
+    "date": "2026-07-19",
+    "tier": "Practical Research Workflows"
+  },
+  {
+    "slug": "researching-cross-asset-relationships",
+    "title": "Researching Cross-Asset Relationships",
+    "description": "The moment a decision compares tickers to each other — ranking, correlation, a spread — a per-ticker loop stops being merely slower and becomes structurally the wrong shape for the question being asked.",
+    "date": "2026-07-19",
+    "tier": "Practical Research Workflows"
+  },
+  {
+    "slug": "parameter-sweeps-without-fooling-yourself",
+    "title": "Parameter Sweeps Without Fooling Yourself",
+    "description": "There's no dedicated sweep engine in Reamer — a sweep is just a loop over configs — and that absence of built-in guardrails means the discipline against overfitting to the sweep itself has to come from whoever's running it, not from the tool.",
+    "date": "2026-07-19",
+    "tier": "Practical Research Workflows"
+  },
+  {
+    "slug": "building-a-research-workflow-in-python",
+    "title": "Building a Research Workflow in Python",
+    "description": "The parts of a research setup that should stay fixed across every idea — data loading, cost assumptions, evaluation — and the one part that should actually change between ideas. Most one-off research scripts blur that line without meaning to.",
+    "date": "2026-07-19",
+    "tier": "Practical Research Workflows"
+  },
+  {
+    "slug": "forex-cfd-realism-spread-swap-rollover",
+    "title": "Forex and CFD Realism: Spread, Swap, and Rollover",
+    "description": "Forex and CFD cost structure maps onto Reamer's execution model as-is, not as an approximation — but one silent unit mistake is enough to mis-price every fill by five orders of magnitude without ever throwing an error.",
+    "date": "2026-07-19",
+    "tier": "Practical Research Workflows"
+  },
+  {
+    "slug": "futures-roll-without-a-fake-gap",
+    "title": "Rolling a Continuous Futures Contract Without a Fake Gap",
+    "description": "Splicing front-month futures contracts together at expiry creates a price jump that has nothing to do with the market. Reamer rebases execution bookkeeping around that jump automatically — with one real limit worth knowing before relying on it.",
+    "date": "2026-07-19",
+    "tier": "Practical Research Workflows"
+  },
+  {
+    "slug": "per-ticker-execution-costs",
+    "title": "Per-Ticker Execution Costs in a Multi-Asset Portfolio",
+    "description": "A multi-asset backtest sharing one execution config across every ticker is itself an assumption of uniform costs — and real portfolios never actually have that.",
+    "date": "2026-07-19",
+    "tier": "Practical Research Workflows"
+  },
+  {
+    "slug": "order-lifetime-ioc-gtd",
+    "title": "Order Lifetime: IOC, GTD, and Why It Matters",
+    "description": "An order doesn't just either fill or not — it stops being eligible to fill at some point too. Treating every order as though it waits indefinitely quietly tests a more patient strategy than the one that was actually written.",
+    "date": "2026-07-19",
+    "tier": "Practical Research Workflows"
+  },
+  {
+    "slug": "scaling-in-and-reversing-a-position",
+    "title": "Scaling In and Reversing a Position Correctly",
+    "description": "Real position management isn't strictly flat, full-open, or full-close. A framework that only knows those three states forces a strategy's logic to work around the tool instead of expressing the actual idea.",
+    "date": "2026-07-19",
+    "tier": "Practical Research Workflows"
   }
 ]
