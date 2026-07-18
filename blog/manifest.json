@@ -278,5 +278,19 @@
     "description": "vectorbt PRO is genuinely fast at what it's built for — sweeping thousands of parameter combinations across a strategy shape you've already fixed. That's a different job than carrying an unformed idea through the whole research loop, which is what Reamer is built around.",
     "date": "2026-07-18",
     "tier": "Comparisons"
+  },
+  {
+    "slug": "reamer-vs-quantconnect",
+    "title": "Reamer vs QuantConnect",
+    "description": "QuantConnect does have a backtesting component, but it sits inside a much broader platform built around live deployment, broker integration, and data aggregation. That breadth is a different bet than the one Reamer makes, not a worse one — and it makes QuantConnect a downstream option, not a competitor.",
+    "date": "2026-07-18",
+    "tier": "Comparisons"
+  },
+  {
+    "slug": "reamer-vs-nautilustrader",
+    "title": "Reamer vs NautilusTrader",
+    "description": "NautilusTrader closes the gap between backtest and live by running both through the same engine. Reamer targets a different, earlier problem — whether the research environment's own execution assumptions are realistic at all — and treats sandbox-to-live drift as a boundary question, not an integration one.",
+    "date": "2026-07-18",
+    "tier": "Comparisons"
   }
 ]

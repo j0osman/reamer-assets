@@ -1,0 +1,28 @@
+---
+title: Reamer vs QuantConnect
+description: QuantConnect does have a backtesting component, but it sits inside a much broader platform built around live deployment, broker integration, and data aggregation. That breadth is a different bet than the one Reamer makes, not a worse one — and it makes QuantConnect a downstream option, not a competitor.
+date: 2026-07-18
+tier: Comparisons
+---
+
+QuantConnect is not a research tool with some extra features bolted on. It's a full pipeline — data, backtesting, live deployment, broker connections, cloud infrastructure — built around getting an algorithm from idea to running against a real account with real capital. The backtesting engine (LEAN) is a real, capable piece of that pipeline. It is one piece of it, not the reason the platform exists.
+
+That's a legitimate, different bet than the one Reamer makes, worth being precise about instead of glossing over.
+
+## What breadth actually costs
+
+A platform built to cover data sourcing, research, live execution, and broker integration in one system has to spread its engineering effort across all of it. That's not a criticism — it's the correct tradeoff for what QuantConnect is trying to be. But it means the backtesting stage can't receive the same singular, undivided attention a tool built around nothing else would give it. [Execution modeling — fill price, slippage, spread, swap, resolved to a published, testable specification](https://reamerlabs.com/spec) — is Reamer's entire reason for existing. For a platform where backtesting is one stage among several in a much larger system, it's a capability, not the whole point.
+
+## Two different kinds of drift
+
+LEAN also runs the same algorithm code in backtest and live — a real, deliberate answer to the problem of two divergent code paths producing two divergent behaviors, and a genuine strength worth naming directly. It answers a narrower question than the one Reamer is built around, though: sharing one engine across backtest and live closes the gap between two *runs* of a strategy. It doesn't, by itself, establish whether the execution assumptions inside that shared engine were realistic to begin with — [that's a separate, earlier question](https://reamerlabs.com/blog/why-execution-modeling-matters), one Reamer's published, conformance-tested execution model exists specifically to answer, independent of whatever happens to a strategy after it leaves the research stage.
+
+Reamer's own answer to "will live match what I tested" is architectural rather than environmental: keep a strategy's decision logic decoupled from whatever it's eventually deployed against, so the surface that changes between a validated strategy and a live one stays as small as possible — how orders get dispatched, not the logic that decided to place them.
+
+## Not a competitor — a downstream option
+
+[Reamer owns experimentation. Other systems own execution](https://reamerlabs.com/blog/research-not-deployment). Once an idea has actually survived the loop — realistic costs, deterministic replay, Monte Carlo robustness — what happens to it next is a separate decision, made with separate tools. QuantConnect is one reasonable answer to that question: a validated strategy could be redeployed there to go live, the same way it could go through a broker directly or through NautilusTrader. None of those are competitors to what Reamer does. They're places a strategy might go *after* Reamer's job is already finished.
+
+---
+
+Full reference: [docs](https://reamerlabs.com/docs) · The execution model this rests on: [execution specification](https://reamerlabs.com/spec) · Free tier: 10,000 processed bars per machine, permanently, no signup.
