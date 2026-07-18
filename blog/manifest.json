@@ -264,5 +264,19 @@
     "description": "Validation isn't supposed to run forever. Once the pre-decided checks have actually been cleared, more testing against the same result stops adding information and starts risking the same over-fitting problem validation exists to catch.",
     "date": "2026-07-17",
     "tier": "Validation & Robustness"
+  },
+  {
+    "slug": "reamer-vs-backtrader",
+    "title": "Reamer vs Backtrader",
+    "description": "Backtrader and Reamer overlap on the surface — both are Python, both are event-driven, both give you an on_bar-style callback. The difference is what happens underneath that callback, and whether the tool was built to make execution realism a discipline or an option.",
+    "date": "2026-07-18",
+    "tier": "Comparisons"
+  },
+  {
+    "slug": "reamer-vs-vectorbt",
+    "title": "Reamer vs vectorbt PRO",
+    "description": "vectorbt PRO is genuinely fast at what it's built for — sweeping thousands of parameter combinations across a strategy shape you've already fixed. That's a different job than carrying an unformed idea through the whole research loop, which is what Reamer is built around.",
+    "date": "2026-07-18",
+    "tier": "Comparisons"
   }
 ]
