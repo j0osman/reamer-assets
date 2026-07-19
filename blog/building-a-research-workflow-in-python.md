@@ -31,9 +31,9 @@ def run(strategy, tickers):
 
 The strategy class — the actual idea — is the one piece meant to be different every time. Once loading, costs, and the run call are pulled into shared functions like the ones above, testing a new idea means writing a new strategy and calling `run(NewStrategy(), tickers)`, not re-deriving the whole setup from scratch and hoping nothing was quietly changed along the way.
 
-## Why this is the concrete version of [a principle already established](https://reamerlabs.com/blog/building-a-repeatable-research-process)
+## A checkable fact, not a promise
 
-Deciding cost assumptions and evaluation standards once, rather than relitigating them for every idea, is a principle worth holding regardless of what tool implements it. What changes at this level is that it becomes a specific, checkable fact about a specific codebase — either every strategy in a research project actually calls the same `default_exec_config()`, or it doesn't, and that's something a diff can catch, not something that has to be taken on faith about how carefully each script was written.
+Deciding cost assumptions and evaluation standards once, per [the same principle](https://reamerlabs.com/blog/building-a-repeatable-research-process), becomes a specific, checkable fact about a specific codebase at this level — either every strategy in a research project actually calls the same `default_exec_config()`, or it doesn't, and that's something a diff can catch, not something that has to be taken on faith about how carefully each script was written.
 
 ---
 

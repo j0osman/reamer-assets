@@ -5,7 +5,7 @@ date: 2026-07-19
 tier: Practical Research Workflows
 ---
 
-Sweeping a parameter — trying a moving-average length across a range of values, say, and keeping whichever one performed best — isn't a special operation in Reamer. It's an ordinary Python loop calling `run_backtest` once per combination and comparing the results afterward. That's a deliberate absence, not a missing feature: a dedicated sweep-optimization engine is a different kind of tool built around exploring a fixed parameter space efficiently, and that's not the problem Reamer is built to solve. The problem worth being honest about is what a loop like that actually proves.
+Sweeping a parameter — trying a moving-average length across a range of values, say, and keeping whichever one performed best — isn't a special operation in Reamer. It's an ordinary Python loop calling `run_backtest` once per combination and comparing the results afterward. A dedicated sweep-optimization engine is a different kind of tool, built around exploring a fixed parameter space efficiently — a different problem than the one Reamer solves. The problem worth being honest about is what a loop like that actually proves.
 
 ## The sweep itself is where the overfitting happens
 

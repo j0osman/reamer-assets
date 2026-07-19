@@ -7,11 +7,11 @@ tier: Comparisons
 
 QuantConnect is not a research tool with some extra features bolted on. It's a full pipeline — data, backtesting, live deployment, broker connections, cloud infrastructure — built around getting an algorithm from idea to running against a real account with real capital. The backtesting engine (LEAN) is a real, capable piece of that pipeline. It is one piece of it, not the reason the platform exists.
 
-That's a legitimate, different bet than the one Reamer makes, worth being precise about instead of glossing over.
+That's a legitimate, different bet than the one Reamer makes.
 
 ## What breadth actually costs
 
-A platform built to cover data sourcing, research, live execution, and broker integration in one system has to spread its engineering effort across all of it. That's not a criticism — it's the correct tradeoff for what QuantConnect is trying to be. But it means the backtesting stage can't receive the same singular, undivided attention a tool built around nothing else would give it. [Execution modeling — fill price, slippage, spread, swap, resolved to a published, testable specification](https://reamerlabs.com/spec) — is Reamer's entire reason for existing. For a platform where backtesting is one stage among several in a much larger system, it's a capability, not the whole point.
+A platform built to cover data sourcing, research, live execution, and broker integration in one system has to spread its engineering effort across all of it. It's the correct tradeoff for what QuantConnect is trying to be. But it means the backtesting stage can't receive the same singular, undivided attention a tool built around nothing else would give it. [Execution modeling — fill price, slippage, spread, swap, resolved to a published, testable specification](https://reamerlabs.com/spec) — is Reamer's entire reason for existing. For a platform where backtesting is one stage among several in a much larger system, it's a capability, not the whole point.
 
 ## Where LEAN's execution actually runs
 
@@ -19,7 +19,7 @@ LEAN's core is written in C# — a compiled language, so the gap here isn't "com
 
 ## Two different kinds of drift
 
-LEAN also runs the same algorithm code in backtest and live — a real, deliberate answer to the problem of two divergent code paths producing two divergent behaviors, and a genuine strength worth naming directly. It answers a narrower question than the one Reamer is built around, though: sharing one engine across backtest and live closes the gap between two *runs* of a strategy. It doesn't, by itself, establish whether the execution assumptions inside that shared engine were realistic to begin with — [that's a separate, earlier question](https://reamerlabs.com/blog/why-execution-modeling-matters), one Reamer's published, conformance-tested execution model exists specifically to answer, independent of whatever happens to a strategy after it leaves the research stage.
+LEAN also runs the same algorithm code in backtest and live — a real, deliberate answer to the problem of two divergent code paths producing two divergent behaviors. It answers a narrower question than the one Reamer is built around, though: sharing one engine across backtest and live closes the gap between two *runs* of a strategy. It doesn't, by itself, establish whether the execution assumptions inside that shared engine were realistic to begin with — [that's a separate, earlier question](https://reamerlabs.com/blog/why-execution-modeling-matters), one Reamer's published, conformance-tested execution model exists specifically to answer, independent of whatever happens to a strategy after it leaves the research stage.
 
 Reamer's own answer to "will live match what I tested" is architectural rather than environmental: keep a strategy's decision logic decoupled from whatever it's eventually deployed against, so the surface that changes between a validated strategy and a live one stays as small as possible — how orders get dispatched, not the logic that decided to place them.
 

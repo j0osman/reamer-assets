@@ -369,5 +369,75 @@
     "description": "Real position management isn't strictly flat, full-open, or full-close. A framework that only knows those three states forces a strategy's logic to work around the tool instead of expressing the actual idea.",
     "date": "2026-07-19",
     "tier": "Practical Research Workflows"
+  },
+  {
+    "slug": "designing-a-deterministic-simulation-engine",
+    "title": "Designing a Deterministic Simulation Engine",
+    "description": "A backtest that gives a different answer on a different run, or a different machine, isn't measuring a strategy — it's measuring noise. Determinism was a hard constraint from the first line of the engine, not a property added once something else broke.",
+    "date": "2026-07-19",
+    "tier": "Engineering"
+  },
+  {
+    "slug": "why-synthetic-ticks-instead-of-stored-ticks",
+    "title": "Why Synthetic Ticks Instead of Stored Ticks",
+    "description": "An OHLCV bar tells you four prices, not the path between them. Reamer answers the question of what happened inside a bar with a deterministic, seeded synthetic tick path — not with stored tick data most researchers can't afford or don't need.",
+    "date": "2026-07-19",
+    "tier": "Engineering"
+  },
+  {
+    "slug": "why-the-hot-loop-is-compiled-not-interpreted",
+    "title": "Why the Hot Loop Is Compiled, Not Interpreted",
+    "description": "Reamer isn't Python that happens to be fast. The hot path — order matching, fill resolution, tick generation — runs as compiled machine code with no GIL, and on_bar hands a strategy zero-copy numpy views instead of objects the interpreter has to build one at a time.",
+    "date": "2026-07-19",
+    "tier": "Engineering"
+  },
+  {
+    "slug": "what-a-rolling-window-actually-costs",
+    "title": "What a Rolling Window Actually Costs",
+    "description": "A lookback window isn't free just because the syntax to request one is a single number. What a rolling window of OHLCV history actually costs in memory and compute, as that number grows, shapes how large a lookback a research loop can actually afford to run.",
+    "date": "2026-07-19",
+    "tier": "Engineering"
+  },
+  {
+    "slug": "scaling-multi-asset-backtests",
+    "title": "Scaling Multi-Asset Backtests",
+    "description": "Running a strategy across fifty instruments isn't fifty single-asset backtests glued together — it's one aligned timeline, one shared equity curve, and a per-step cost that scales with ticker count regardless of how deep any single ticker's lookback is.",
+    "date": "2026-07-19",
+    "tier": "Engineering"
+  },
+  {
+    "slug": "one-compiled-module-every-asset-class",
+    "title": "One Compiled Module, Every Asset Class",
+    "description": "Reamer briefly shipped a separate compiled Python module per asset class, each hiding the fields the others didn't need. It was removed the same cycle it was built, once splitting modules turned out to cost more than it protected.",
+    "date": "2026-07-19",
+    "tier": "Engineering"
+  },
+  {
+    "slug": "publishing-an-execution-specification",
+    "title": "Publishing an Execution Specification",
+    "description": "\"The code does whatever the code does\" is not a definition of behavior — it's an admission that behavior was never actually decided. Writing the execution model down as a testable specification, before writing the tests, is a different discipline than testing code after the fact.",
+    "date": "2026-07-19",
+    "tier": "Engineering"
+  },
+  {
+    "slug": "testing-a-trading-engine",
+    "title": "Testing a Trading Engine",
+    "description": "Most software testing asks whether code runs without crashing. Testing an execution engine against a published specification asks something stricter — does this exact scenario produce the exact fill the spec says it should, not just a plausible-looking one.",
+    "date": "2026-07-19",
+    "tier": "Engineering"
+  },
+  {
+    "slug": "cross-platform-python-packaging",
+    "title": "Cross-Platform Python Packaging",
+    "description": "pybind11 has no stable-ABI support, on any version. Shipping one compiled extension that works across four Python minor versions and three operating systems means building the same unmodified C++ many times over and bundling every result into a single wheel, not one clever binary.",
+    "date": "2026-07-19",
+    "tier": "Engineering"
+  },
+  {
+    "slug": "the-reamer-file-making-a-backtest-result-portable",
+    "title": "The .reamer File: Making a Backtest Result Portable",
+    "description": "A result someone else can't independently reproduce isn't evidence — it's a claim you're asking them to trust. A self-contained result file, carrying its own config, seed, and fills, is what turns \"trust me\" into \"check it yourself.\"",
+    "date": "2026-07-19",
+    "tier": "Engineering"
   }
 ]

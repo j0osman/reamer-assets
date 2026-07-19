@@ -29,9 +29,9 @@ None of this requires a live account, a broker connection, or any infrastructure
 
 ## What Reamer is not
 
-Reamer does not place trades. It does not connect to a broker. It is not an OMS, an execution platform, or a live trading platform, and it never will be — that's not a missing feature, it's a deliberate edge of the product. Validated strategy logic is the finished thing Reamer produces. [What happens to it after that](https://reamerlabs.com/blog/research-not-deployment) — wiring it into a broker, an OMS, a platform like QuantConnect or NautilusTrader, or a stack you've already built — is a separate decision, made with separate tools, downstream of anything Reamer does.
+Reamer does not place trades. It does not connect to a broker. It is not an OMS, an execution platform, or a live trading platform, and it never will be. Validated strategy logic is the finished thing Reamer produces. [What happens to it after that](https://reamerlabs.com/blog/research-not-deployment) — wiring it into a broker, an OMS, a platform like QuantConnect or NautilusTrader, or a stack you've already built — is a separate decision, made with separate tools, downstream of anything Reamer does.
 
-That boundary is worth stating plainly, up front, because it's the single fact most likely to cause a confused evaluation if left implicit: Reamer is where a trading idea gets proven, not where it gets deployed.
+Reamer is where a trading idea gets proven, not where it gets deployed.
 
 It's also not built for everything. No L2/L3 order-book data, so it's not a fit for high-frequency or order-book-dependent strategies. No implied volatility or Greeks, so it's not built for options. It targets mid-frequency OHLCV strategies — intraday to multi-day holding periods — across forex/CFD, futures, and equities, and it's honest about where that scope ends.
 

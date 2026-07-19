@@ -4,7 +4,7 @@ description: Reamer produces validated strategy logic and stops there. It does n
 date: 2026-07-16
 ---
 
-Reamer does not place trades. It does not connect to a broker. It has no live risk management, no order management system, no way to run a strategy against a real account. This isn't a gap on a roadmap somewhere — it's a permanent, deliberate edge of the product, stated up front so it never has to be discovered by surprise halfway through an evaluation.
+Reamer does not place trades. It does not connect to a broker. It has no live risk management, no order management system, no way to run a strategy against a real account. This is a permanent edge of the product, not a gap on a roadmap.
 
 Reamer owns experimentation. Other systems own execution.
 
@@ -14,7 +14,7 @@ Reamer's job ends at a specific, well-defined point: [validated strategy logic](
 
 This isn't "research first, deployment eventually." It's research *only*. Reamer is upstream of the deployment decision, not a participant in it.
 
-## Why this is a design decision, not a missing feature
+## The cost of trying to do both
 
 [Closing the trust gap](https://reamerlabs.com/blog/why-reamer-exists) between a trading idea and a decision to risk capital on it is one job. Running a live account — uptime, latency, order routing, operational risk — is a different one entirely. A product trying to be excellent at both tends to be mediocre at each. Reamer commits fully to the first and leaves the second, deliberately, to the tools already built for it.
 
@@ -25,7 +25,7 @@ Concretely, that means these stay out, permanently:
 - **Live risk management** — a live-account concern, distinct from the research-time risk metrics (drawdown, margin, robustness) that are already core to what Reamer does and stay in.
 - **Cloud deployment of a running strategy, or strategy hosting** — running something live on someone's behalf is deployment, however it's hosted.
 
-None of that is a statement that these things don't matter — only that they're a different job, already done well by tools built specifically for it.
+They're a different job, already done well by tools built specifically for it.
 
 ## What's still in scope, despite the boundary
 
@@ -33,7 +33,7 @@ None of that is a statement that these things don't matter — only that they're
 
 ## What happens after Reamer's job is done
 
-Validated strategy logic isn't locked into Reamer. Once an idea has survived the loop, deploying it is a decision made entirely outside this product — through a broker directly, through a platform built for that stage of the problem like QuantConnect or NautilusTrader, or through infrastructure a team has already built and trusts. None of those are competitors to Reamer; they operate downstream, at a stage Reamer was never trying to occupy in the first place. Showing that handoff exists, plainly, is part of how you can tell this boundary is a real design decision and not an excuse for a feature that isn't finished.
+Validated strategy logic isn't locked into Reamer. Once an idea has survived the loop, deploying it is a decision made entirely outside this product — through a broker directly, through a platform built for that stage of the problem like QuantConnect or NautilusTrader, or through infrastructure a team has already built and trusts. None of those are competitors to Reamer; they operate downstream, at a stage Reamer was never trying to occupy in the first place.
 
 ## Why the boundary is a feature
 

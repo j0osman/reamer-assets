@@ -12,7 +12,7 @@ A strategy runs, and something in the output doesn't look right — a couple of 
 
 ## Surgical diagnosis, not general reassurance
 
-This isn't about confirming a result looks reasonable in general. It's about taking one specific, suspicious trade and finding the exact mechanical reason behind it — a stop that triggered on a tick the strategy's own bar-level view wouldn't have shown, a limit order that technically never got touched despite the bar's close looking like it should have, a fill that happened at a worse price than expected because of how slippage or spread applied at that exact moment. None of these are visible from the aggregate result. All of them are visible the instant the specific bar in question gets replayed.
+Replay takes one specific, suspicious trade and finds the exact mechanical reason behind it — a stop that triggered on a tick the strategy's own bar-level view wouldn't have shown, a limit order that technically never got touched despite the bar's close looking like it should have, a fill that happened at a worse price than expected because of how slippage or spread applied at that exact moment. None of these are visible from the aggregate result. All of them are visible the instant the specific bar in question gets replayed.
 
 ## Why this matters more than it sounds like it should
 

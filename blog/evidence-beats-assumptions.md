@@ -14,9 +14,9 @@ Confidence scales with experience and pattern exposure, not with whether a speci
 
 A result resting on assumptions can't be interrogated the same way — there's no specific claim to verify, just a general sense that it seems right. A result resting on evidence can be challenged specifically: run it again and see if it reproduces, check the fill against the specification, replay the trade that looks suspicious, [validate it against data it hasn't seen](https://reamerlabs.com/blog/validation-is-not-backtesting). Each of those is a real test with a real answer, not a matter of how convinced the person presenting it sounds.
 
-## Why this is worth insisting on
+## Intuition is a starting point, not a stopping point
 
-None of this is a claim that intuition is worthless — intuition is usually where an idea comes from in the first place. It's a claim that intuition is a starting point, not a stopping point, and that the distance between the two is exactly what determinism, specification, testing, and replay exist to cross. A trading idea's worth was never going to be settled by how confident it feels or how well it's described. It's settled by whether it survives being checked — and evidence, not conviction, is the only thing that actually survives that.
+Intuition is usually where an idea comes from in the first place — the distance from there to something worth trusting is exactly what determinism, specification, testing, and replay exist to cross. A trading idea's worth was never going to be settled by how confident it feels or how well it's described. It's settled by whether it survives being checked — and evidence, not conviction, is the only thing that actually survives that.
 
 ---
 
