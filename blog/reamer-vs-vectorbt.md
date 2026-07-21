@@ -19,7 +19,7 @@ A fast sweep over a shape that was never validated just finds the best-fitting v
 
 Reamer isn't optimized to be the fastest tool at any one stage. It's built around [the full loop](https://reamerlabs.com/blog/the-research-loop) — idea, implementation, execution, inspection, validation, iteration, decision, knowledge — with every stage held to the same standard: [deterministic, seeded execution](https://reamerlabs.com/blog/deterministic-research), fills modeled to [a published specification](https://reamerlabs.com/spec), [tick-level replay](https://reamerlabs.com/blog/why-replay-matters) to see exactly what happened, and [Monte Carlo robustness testing](https://reamerlabs.com/blog/why-monte-carlo-matters) before anything is trusted. Parameter optimization is one stage in that loop, not the reason the loop exists.
 
-Reamer's C++ execution core is [11.4×–16.2× faster than Backtrader on identical realistic-strategy workloads](https://reamerlabs.com/benchmark). Raw throughput on a fixed-shape sweep was never the bottleneck this product targets — the bottleneck is earlier: whether an idea deserves to reach the sweep stage at all.
+Reamer's C++ execution core is [12.1×–15.2× faster than Backtrader on identical realistic-strategy workloads](https://reamerlabs.com/benchmark). Raw throughput on a fixed-shape sweep was never the bottleneck this product targets — the bottleneck is earlier: whether an idea deserves to reach the sweep stage at all.
 
 ## Cross-sectional access and side-channel data
 
