@@ -45,4 +45,4 @@ The trigger for reaching past it is [earlier than "I've decided to formally vali
 
 ---
 
-Full reference: [docs](https://reamerlabs.com/docs) · The execution model this rests on: [execution specification](https://reamerlabs.com/spec) · Real measurements: [benchmarks](https://reamerlabs.com/benchmark) · Free tier: 10,000 processed bars per machine, permanently, no signup.
+Full reference: [docs](https://reamerlabs.com/docs) · The execution model this rests on: [execution specification](https://reamerlabs.com/spec) · Real measurements: [benchmarks](https://reamerlabs.com/benchmark) · License: GUI free, SDK requires an active license — [contact us](https://reamerlabs.com/#contact) for a free, time-limited test license.

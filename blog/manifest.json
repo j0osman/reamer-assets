@@ -14,16 +14,9 @@
     "tier": "Foundation"
   },
   {
-    "slug": "research-not-deployment",
-    "title": "Research, Not Deployment",
-    "description": "Reamer produces validated strategy logic and stops there. It does not place trades, connect to a broker, or run anything live — not as a missing feature, but as a permanent, intentional edge of the product.",
-    "date": "2026-07-16",
-    "tier": "Foundation"
-  },
-  {
     "slug": "the-experimentation-environment",
-    "title": "The Experimentation Environment",
-    "description": "Why \"experimentation environment\" is the right category for Reamer, and why the obvious alternatives — backtesting framework, research environment, research operating platform — each undersell or overreach what the product actually is.",
+    "title": "Quantitative Research Infrastructure, Not a Platform",
+    "description": "Why \"quantitative research infrastructure\" is the right category for Reamer, why \"platform\" specifically is the wrong word despite sounding close, and why the obvious alternatives — backtesting framework, research environment — each undersell what the product actually is.",
     "date": "2026-07-16",
     "tier": "Foundation"
   },
@@ -282,7 +275,7 @@
   {
     "slug": "reamer-vs-quantconnect",
     "title": "Reamer vs QuantConnect",
-    "description": "QuantConnect does have a backtesting component, but it sits inside a much broader platform built around live deployment, broker integration, and data aggregation. That breadth is a different bet than the one Reamer makes, not a worse one — and it makes QuantConnect a downstream option, not a competitor.",
+    "description": "QuantConnect does have a backtesting component, but it sits inside a much broader platform built around live deployment, broker integration, and data aggregation. That breadth is a different bet than the one Reamer makes, not a worse one. On deployment, QuantConnect is downstream, not a competitor — but its Institution tier is a real pricing peer for the same line item a desk is deciding whether to spend on.",
     "date": "2026-07-18",
     "tier": "Comparisons"
   },

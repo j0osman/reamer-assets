@@ -31,7 +31,7 @@ This is where the two engines' shapes diverge most concretely, and it's directly
 
 ## Why decoupling, not merging
 
-Reamer's answer to sandbox-to-live drift specifically isn't to unify backtest and live into one engine — it's to treat the problem as a boundary question. Once a strategy's decision logic has actually survived validation, the belief underneath [Reamer's boundary](https://reamerlabs.com/blog/research-not-deployment) — research owns experimentation, other systems own execution — is that very little should need to change to run that logic live: mostly how an order gets dispatched to a specific broker or platform, not the reasoning that decided to place it. Keeping that line firm, logic on one side and integration on the other, never touching, is a more durable fix than merging both environments into a single system — it doesn't just prevent two runs from diverging, it prevents the strategy's own decision logic from ever being reshaped by deployment-specific concerns in the first place.
+Reamer's answer to sandbox-to-live drift specifically isn't to unify backtest and live into one engine — it's to treat the problem as a boundary question. Once a strategy's decision logic has actually survived validation, the belief underneath Reamer's boundary — research owns experimentation, other systems own execution — is that very little should need to change to run that logic live: mostly how an order gets dispatched to a specific broker or platform, not the reasoning that decided to place it. Keeping that line clean, logic on one side and integration on the other, is a more durable fix than merging both environments into a single system — it doesn't just prevent two runs from diverging, it keeps the strategy's own decision logic from being reshaped by deployment-specific concerns in the first place.
 
 Unifying backtest and live is a real, working answer to a real problem — it addresses the symptom, two code paths that can diverge, more directly than the cause: research logic and deployment concerns sharing space at all.
 
@@ -41,4 +41,4 @@ Same boundary as everywhere else in this loop. A strategy that's actually surviv
 
 ---
 
-Full reference: [docs](https://reamerlabs.com/docs) · The execution model this rests on: [execution specification](https://reamerlabs.com/spec) · Real measurements: [benchmarks](https://reamerlabs.com/benchmark) · Free tier: 10,000 processed bars per machine, permanently, no signup.
+Full reference: [docs](https://reamerlabs.com/docs) · The execution model this rests on: [execution specification](https://reamerlabs.com/spec) · Real measurements: [benchmarks](https://reamerlabs.com/benchmark) · License: GUI free, SDK requires an active license — [contact us](https://reamerlabs.com/#contact) for a free, time-limited test license.

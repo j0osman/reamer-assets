@@ -1,10 +1,10 @@
 ---
-title: The Experimentation Environment
-description: Why "experimentation environment" is the right category for Reamer, and why the obvious alternatives — backtesting framework, research environment, research operating platform — each undersell or overreach what the product actually is.
+title: Quantitative Research Infrastructure, Not a Platform
+description: Why "quantitative research infrastructure" is the right category for Reamer, why "platform" specifically is the wrong word despite sounding close, and why the obvious alternatives — backtesting framework, research environment — each undersell what the product actually is.
 date: 2026-07-16
 ---
 
-Reamer is a trading experimentation environment. That's a specific, deliberate choice of words, not a stylistic preference — the more obvious labels were each considered and rejected for concrete reasons.
+Reamer is quantitative research infrastructure for systematic trading desks. That's a specific, deliberate choice of words, not a stylistic preference — the more obvious labels were each considered and rejected for concrete reasons, and "infrastructure" itself was chosen over a word it's easy to confuse it with.
 
 ## Not "backtesting framework"
 
@@ -18,19 +18,21 @@ A single backtest, in isolation, proves very little — a strategy can look exce
 
 The word that was missing is the discipline itself, not just the setting it happens in.
 
-## Not "research operating platform"
+## Not "platform" — even though "infrastructure" sounds close to it
 
-This one overreaches in the other direction. "Platform" and "operating" both imply infrastructure ambitions — hosting, orchestration, running things on someone's behalf, multi-tenant scale — that go well beyond what the actual loop needs. Reamer runs locally, on one machine, with no server in the middle. Naming the category after infrastructure it doesn't have and isn't trying to build would promise something the product was never going to be.
+This is the distinction most worth getting right, because the two words get used interchangeably and they shouldn't be. "Platform" — and "operating platform" specifically — implies hosting, orchestration, running things on someone's behalf, multi-tenant scale. Reamer runs locally, on one machine, with no server in the middle a customer depends on Reamer Labs to keep running. Calling it a platform would promise infrastructure ambitions it doesn't have and isn't building toward.
 
-## What "experimentation environment" actually names
+"Infrastructure" doesn't carry that implication on its own. A local database is infrastructure. An embedded toolchain is infrastructure. Neither is hosted, neither is multi-tenant, and calling either one "infrastructure" isn't a stretch — it's just accurate: something foundational and load-bearing that other work depends on. Reamer is infrastructure in exactly that sense — the thing a desk's research process runs on — without being a platform in the hosted, orchestrated sense at all. The two words sound like they're on the same spectrum. They aren't.
 
-The category needed to name [the loop itself — idea, implementation, execution, inspection, validation, iteration](https://reamerlabs.com/blog/from-idea-to-evidence) — rather than any single stage of it, and it needed to commit to evidence as the operating discipline instead of leaving that implicit. "Experimentation environment" does both: it's a place (environment) built around a specific, repeatable method (experimentation), not a generic research space and not a single pipeline stage wearing the whole product's name.
+## What "quantitative research infrastructure" actually names
 
-"Systematic trading laboratory" is decent secondary vocabulary for the same idea, and shows up in narrative writing for exactly that reason — it ties naturally to determinism and controlled, repeatable conditions. But "laboratory" also connotes a slowness and formality that doesn't match the actual experience of using Reamer, which is closer to an idea expressed in thirty lines and tested in seconds than to anything resembling lab-coat process. Useful in reserve. Not the primary name.
+The category needed to name [the loop itself — idea, implementation, execution, inspection, validation, iteration](https://reamerlabs.com/blog/from-idea-to-evidence) — rather than any single stage of it, and it needed to name what that loop actually becomes once it's something a desk relies on, not just an individual researcher's side tool: something the research process is built on top of. "Quantitative research infrastructure" does both — it names the discipline (quantitative research) and the role the product plays in it (infrastructure, not a single pipeline stage wearing the whole product's name, and not a hosted platform it was never going to be).
+
+"Experimentation environment" was the earlier answer to this same question, and its reasoning about the loop still holds — it's the "platform" adjacent confusion above that made the earlier phrasing worth revisiting, not a change in what the product actually does.
 
 ## Why this is worth being precise about
 
-A category name is a promise about what to expect. Call something a backtesting framework and someone reasonably expects a tool for running backtests, not a way to reason about whether an idea deserves capital behind it. Call it a research operating platform and someone reasonably expects infrastructure that isn't there. "Experimentation environment" is the name that's supposed to still describe Reamer accurately a decade from now, because it describes the loop — and the loop is the part of this product least likely to change.
+A category name is a promise about what to expect. Call something a backtesting framework and someone reasonably expects a tool for running backtests, not a way to reason about whether an idea deserves capital behind it. Call it a platform and someone reasonably expects hosting and multi-tenant infrastructure that isn't there. "Quantitative research infrastructure" is the name that's supposed to still describe Reamer accurately a decade from now, because it describes both the loop and the role, and neither is the part of this product likely to change.
 
 ---
 

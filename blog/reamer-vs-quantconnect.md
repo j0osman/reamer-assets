@@ -1,6 +1,6 @@
 ---
 title: Reamer vs QuantConnect
-description: QuantConnect does have a backtesting component, but it sits inside a much broader platform built around live deployment, broker integration, and data aggregation. That breadth is a different bet than the one Reamer makes, not a worse one — and it makes QuantConnect a downstream option, not a competitor.
+description: QuantConnect does have a backtesting component, but it sits inside a much broader platform built around live deployment, broker integration, and data aggregation. That breadth is a different bet than the one Reamer makes, not a worse one. On deployment, QuantConnect is downstream, not a competitor — but its Institution tier is a real pricing peer for the same line item a desk is deciding whether to spend on.
 date: 2026-07-18
 tier: Comparisons
 ---
@@ -27,10 +27,14 @@ Reamer's own answer to "will live match what I tested" is architectural rather t
 
 Reamer's `on_bar` fires once per aligned timestep with every ticker's data available inside that same call, as zero-copy numpy views, rather than requiring the strategy to track cross-sectional state across separate per-instrument event callbacks. Reamer also supports attaching arbitrary, schema-free exogenous data — earnings surprises, macro prints, anything JSON-serializable — to any ticker, auto-resolved to the latest-known-as-of-this-bar value directly inside `on_bar`, with no separate data-pipeline integration required.
 
-## Not a competitor — a downstream option
+## Not a competitor on deployment — a downstream option
 
-[Reamer owns experimentation. Other systems own execution](https://reamerlabs.com/blog/research-not-deployment). Once an idea has actually survived the loop — realistic costs, deterministic replay, Monte Carlo robustness — what happens to it next is a separate decision, made with separate tools. QuantConnect is one reasonable answer to that question: a validated strategy could be redeployed there to go live, the same way it could go through a broker directly or through NautilusTrader. None of those are competitors to what Reamer does. They're places a strategy might go *after* Reamer's job is already finished.
+Reamer owns experimentation. Other systems own execution. Once an idea has actually survived the loop — realistic costs, deterministic replay, Monte Carlo robustness — what happens to it next is a separate decision, made with separate tools. QuantConnect is one reasonable answer to that question: a validated strategy could be redeployed there to go live, the same way it could go through a broker directly or through NautilusTrader. None of those are competitors to what Reamer does. They're places a strategy might go *after* Reamer's job is already finished.
+
+## A real pricing peer on research spend, at the same time
+
+That's true on deployment and it's a separate claim from whether the two compete for the same budget decision — they do, and both things hold at once without contradiction. QuantConnect runs a dedicated Institution tier — on-prem LEAN Enterprise, FIX connectivity, custom libraries, direct engineer support — priced and positioned for exactly the buyer Reamer is built for: a desk deciding whether institutional-grade research tooling is worth a real line item. A firm evaluating that spend is, in practice, weighing Reamer against QuantConnect's Institution tier as much as against building the equivalent in-house. Downstream on execution, genuine same-tier competitor on the question of whether to pay for research infrastructure at all — the two facts sit in different dimensions of the comparison, not in tension with each other.
 
 ---
 
-Full reference: [docs](https://reamerlabs.com/docs) · The execution model this rests on: [execution specification](https://reamerlabs.com/spec) · Real measurements: [benchmarks](https://reamerlabs.com/benchmark) · Free tier: 10,000 processed bars per machine, permanently, no signup.
+Full reference: [docs](https://reamerlabs.com/docs) · The execution model this rests on: [execution specification](https://reamerlabs.com/spec) · Real measurements: [benchmarks](https://reamerlabs.com/benchmark) · License: GUI free, SDK requires an active license — [contact us](https://reamerlabs.com/#contact) for a free, time-limited test license.
