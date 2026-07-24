@@ -8,7 +8,7 @@ Ideas. Evidence. Repeat. The third word is doing as much work as the first two. 
 
 ## A decision closes an idea. Knowledge closes the loop.
 
-Every idea ends somewhere — [kept or discarded](https://reamerlabs.com/blog/why-most-ideas-should-be-discarded). That's the decision, and it's specific to the one idea in front of you. But something else survives past the decision, whichever way it went: a discarded idea doesn't just disappear, [it leaves behind a concrete, specific reason it didn't hold up](https://reamerlabs.com/blog/from-decision-to-knowledge). That reason is what a researcher actually carries into the next idea.
+Every idea ends somewhere — [kept or discarded](https://reamerlabs.com/blog/why-most-ideas-should-be-discarded). That's the decision, and it's specific to the one idea at hand. But something else survives past the decision, whichever way it went: a discarded idea doesn't just disappear, [it leaves behind a concrete, specific reason it didn't hold up](https://reamerlabs.com/blog/from-decision-to-knowledge). That reason is what a researcher actually carries into the next idea.
 
 This is the difference between a loop and a dead end. A process that stops at the decision treats a rejected idea as wasted effort. A process that treats knowledge as the real output treats it as exactly the opposite — a confidently discarded idea, reached fast enough that the cost of finding out stayed low, is a complete, successful pass through the loop. The next idea starts a little sharper because of it, whether or not anyone remembers the specifics of what didn't work.
 
@@ -22,7 +22,7 @@ A smaller number survive that first pass and earn something deeper — cost and 
 
 ## Why this compounds over time
 
-None of this is about any single strategy. It's about what happens across dozens of them, one after another. A researcher who runs this loop repeatedly isn't just accumulating a pile of past backtests — they're accumulating calibration: a sharper sense of which patterns tend to survive realistic costs and which ones tend not to, built from a growing set of ideas that were each actually checked rather than assumed. That calibration is the part that doesn't show up in any single result, and it's the reason the tenth idea through the loop tends to get resolved faster and more confidently than the first.
+None of this is about any single strategy. It's about what happens across dozens of them, one after another. A desk that runs this loop repeatedly isn't just accumulating a pile of past backtests — it's accumulating calibration: a sharper sense of which patterns tend to survive realistic costs and which ones tend not to, built from a growing set of ideas that were each actually checked rather than assumed. That calibration is the part that doesn't show up in any single result, and it's the reason the tenth idea through the loop tends to get resolved faster and more confidently than the first.
 
 ## Repeat
 

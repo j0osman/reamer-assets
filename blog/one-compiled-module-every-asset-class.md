@@ -13,7 +13,7 @@ Three concrete costs showed up almost immediately, not eventually. First, the sp
 
 ## What replaced it
 
-One compiled module, `_reamer_py`, with every asset-class field — futures' `roll_cycle_months`, and any future asset-class-specific field — always present and always Python-settable, inert unless a strategy actually sets it. The same pattern the FX-specific `swap_per_unit` field already used before any of this happened: presence isn't gated by which build you have, behavior is gated by whether you use it. Per-ticker behavior differences come from `ticker_overrides`, a separate mechanism, entirely independent of which module got imported.
+One compiled module, `_reamer_py`, with every asset-class field — futures' `roll_cycle_months`, and any future asset-class-specific field — always present and always Python-settable, inert unless a strategy actually sets it. The same pattern the FX-specific `swap_per_unit` field already used before any of this happened: presence isn't gated by which build is installed, behavior is gated by whether a strategy actually uses it. Per-ticker behavior differences come from `ticker_overrides`, a separate mechanism, entirely independent of which module got imported.
 
 ## The general lesson, not just this specific one
 

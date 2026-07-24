@@ -22,7 +22,7 @@ The signal at a given bar can only use information that would genuinely have bee
 
 Choosing the exact market, instrument, or window that happens to show the pattern most clearly, after having looked at several, is re-fitting with extra steps — it produces [the same overconfidence as tuning parameters until the number improves](https://reamerlabs.com/blog/curve-fitting-vs-evidence), just applied to the choice of data instead of the choice of rule. A fair test uses a sample chosen for being representative, decided before looking at how the result would come out on each candidate.
 
-## Decide what counts as success before you have the result
+## Decide what counts as success before the result exists
 
 Once the experiment runs, the temptation to notice a plausible reason a middling result was still "good enough" is strong and very human. Deciding the acceptance bar in advance — [a Monte Carlo risk-of-ruin threshold](https://reamerlabs.com/blog/robustness-before-capital), a minimum number of trades, a drawdown limit — removes the option to move the goalposts after the fact, which is usually the actual moment an experiment stops being honest.
 

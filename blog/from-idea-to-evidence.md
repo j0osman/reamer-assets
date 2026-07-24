@@ -1,6 +1,6 @@
 ---
 title: From Idea to Evidence
-description: A walk through what actually happens, stage by stage, the first time a trading idea goes through Reamer — from a half-formed hunch to a result you can either trust or confidently throw away.
+description: A walk through what actually happens, stage by stage, the first time a trading idea goes through Reamer — from a half-formed hunch to a result that's either trustworthy or worth confidently discarding.
 date: 2026-07-16
 ---
 
@@ -8,7 +8,7 @@ date: 2026-07-16
 
 ## The idea
 
-It rarely starts as a formal hypothesis. More often it's [a half-formed pattern-notice — something in a chart, a conversation, someone else's writeup](https://reamerlabs.com/blog/where-trading-ideas-come-from) — that hasn't earned a decision yet. The question underneath it is simple and a little uncomfortable: *is that actually real, or does it just look real?* Everything that follows exists to answer that question honestly.
+It rarely starts as a formal hypothesis. More often it's [a half-formed pattern-notice a researcher brings to the desk — something in a chart, a conversation, someone else's writeup](https://reamerlabs.com/blog/where-trading-ideas-come-from) — that hasn't earned a decision yet. The question underneath it is simple and a little uncomfortable: *is that actually real, or does it just look real?* Everything that follows exists to answer that question honestly.
 
 ## Implementation
 
@@ -40,7 +40,7 @@ Kept or discarded. Both are a real outcome, not just one of them. An idea that g
 
 ## Knowledge
 
-Whatever the decision, something persists past it. The `.reamer` result file is a complete, reproducible, inspectable record — the same execution config, the same seed, the same fills, available to revisit or to hand to someone else exactly as it happened. [Even a discarded idea leaves behind a specific, concrete reason it didn't work](https://reamerlabs.com/blog/from-decision-to-knowledge), which is worth more going into the next idea than a vague memory of "I tried something like that once and it didn't pan out."
+Whatever the decision, something persists past it. The `.reamer` result file is a complete, reproducible, inspectable record — the same execution config, the same seed, the same fills, available to revisit or to hand to someone else exactly as it happened. [Even a discarded idea leaves behind a specific, concrete reason it didn't work](https://reamerlabs.com/blog/from-decision-to-knowledge), which is worth more going into the next idea than a vague memory of "we tried something like that once and it didn't pan out."
 
 ## What this adds up to
 

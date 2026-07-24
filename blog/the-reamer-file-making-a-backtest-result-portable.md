@@ -1,6 +1,6 @@
 ---
 title: "The .reamer File: Making a Backtest Result Portable"
-description: A result someone else can't independently reproduce isn't evidence — it's a claim you're asking them to trust. A self-contained result file, carrying its own config, seed, and fills, is what turns "trust me" into "check it yourself."
+description: A result someone else can't independently reproduce isn't evidence — it's a claim asking to be trusted. A self-contained result file, carrying its own config, seed, and fills, is what turns "trust me" into "check it yourself."
 date: 2026-07-19
 tier: Engineering
 ---

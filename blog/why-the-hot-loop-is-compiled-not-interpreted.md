@@ -13,7 +13,7 @@ Reamer's execution core — order matching, fill resolution, synthetic tick gene
 
 ## What that boundary actually buys
 
-This isn't an abstract architecture claim — it's [measured directly](https://reamerlabs.com/benchmark). A no-op workload that isolates pure per-bar overhead shows an 89–245x gap against a pure-Python engine, because that workload isolates exactly the cost a compiled core avoids and an interpreter can't. A realistic strategy with real order flow narrows that gap to 11.4–16.2x, because order matching and bookkeeping cost both engines something regardless of implementation language once there's real work happening on both sides — the interpreter overhead stops being the whole story, but it's still the majority of it.
+This isn't an abstract architecture claim — it's [measured directly](https://reamerlabs.com/benchmark). A no-op workload that isolates pure per-bar overhead shows a 49–212x gap against Backtrader and QuantConnect LEAN, because that workload isolates exactly the cost a compiled core avoids and an interpreted or CLR-bridged loop can't. A realistic strategy with real order flow narrows that gap to 18–35x against both engines, because order matching and bookkeeping cost every engine something regardless of implementation language once there's real work happening on all sides — the loop overhead stops being the whole story, but it's still the majority of it.
 
 ## Why this matters more than a benchmark number
 

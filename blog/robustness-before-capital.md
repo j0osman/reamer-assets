@@ -12,11 +12,11 @@ Before capital is at risk, [a weak Monte Carlo result](https://reamerlabs.com/bl
 
 ## What "before" actually requires
 
-This means [the robustness check has to be a gate](https://reamerlabs.com/blog/knowing-when-youre-done), not a formality performed after the fact to justify a decision already made informally. A concrete bar decided in advance — a risk-of-ruin threshold below 5%, a probability-of-loss below 20%, whatever the specific numbers are for the situation — needs to be checked and cleared before capital moves, not glanced at afterward as reassurance. If the bar is only ever consulted after the decision, it isn't really a bar. It's a formality that was never going to change the outcome.
+This means [the robustness check has to be a gate](https://reamerlabs.com/blog/knowing-when-validation-is-done), not a formality performed after the fact to justify a decision already made informally. A concrete bar decided in advance — a risk-of-ruin threshold below 5%, a probability-of-loss below 20%, whatever the specific numbers are for the situation — needs to be checked and cleared before capital moves, not glanced at afterward as reassurance. If the bar is only ever consulted after the decision, it isn't really a bar. It's a formality that was never going to change the outcome.
 
 ## The cost of getting the order backwards
 
-A strategy that fails robustness after capital is already committed doesn't just cost the money eventually lost to a bad idea — it costs the clear-headedness that made the test meaningful in the first place. Deciding the threshold, and actually checking against it, before any capital is at stake is what keeps the test doing its real job: telling you something true, rather than something you're already inclined to accept.
+A strategy that fails robustness after capital is already committed doesn't just cost the money eventually lost to a bad idea — it costs the clear-headedness that made the test meaningful in the first place. Deciding the threshold, and actually checking against it, before any capital is at stake is what keeps the test doing its real job: telling a desk something true, rather than something it's already inclined to accept.
 
 ---
 

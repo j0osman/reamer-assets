@@ -17,11 +17,15 @@ A platform built to cover data sourcing, research, live execution, and broker in
 
 LEAN's core is written in C# — a compiled language, so the gap here isn't "compiled vs. interpreted" the way it is against a pure-Python engine. The relevant difference is deployment shape, not language: LEAN is built foremost for breadth and compatibility across asset classes, brokers, and data sources, and the standard, documented way most users actually run it locally is through QuantConnect's own Docker image — a containerization layer sitting between the compiled core and the host machine. Reamer runs as a native compiled extension directly against the host, with no container boundary in the loop by default.
 
+## Where the speed actually comes from
+
+LEAN's core is compiled C#, not interpreted Python — so unlike the gap against a pure-Python engine, this isn't a compiled-vs-interpreted story. It's [measured directly](https://reamerlabs.com/benchmark) anyway, and the gap is real: a no-op workload that isolates pure per-step overhead shows a 49–198x gap, largely a function of LEAN's CLR + Python.NET bridge and its `Portfolio`/`Securities`/`TradeBuilder` object graph built for backtest/live parity rather than throughput. A realistic strategy with real order flow narrows that to 18–35x, because order matching and bookkeeping cost every engine something once there's real work happening on both sides.
+
 ## Two different kinds of drift
 
 LEAN also runs the same algorithm code in backtest and live — a real, deliberate answer to the problem of two divergent code paths producing two divergent behaviors. It answers a narrower question than the one Reamer is built around, though: sharing one engine across backtest and live closes the gap between two *runs* of a strategy. It doesn't, by itself, establish whether the execution assumptions inside that shared engine were realistic to begin with — [that's a separate, earlier question](https://reamerlabs.com/blog/why-execution-modeling-matters), one Reamer's published, conformance-tested execution model exists specifically to answer, independent of whatever happens to a strategy after it leaves the research stage.
 
-Reamer's own answer to "will live match what I tested" is architectural rather than environmental: keep a strategy's decision logic decoupled from whatever it's eventually deployed against, so the surface that changes between a validated strategy and a live one stays as small as possible — how orders get dispatched, not the logic that decided to place them.
+Reamer's own answer to "will live match what was tested" is architectural rather than environmental: keep a strategy's decision logic decoupled from whatever it's eventually deployed against, so the surface that changes between a validated strategy and a live one stays as small as possible — how orders get dispatched, not the logic that decided to place them.
 
 ## Multi-ticker access and exogenous data
 

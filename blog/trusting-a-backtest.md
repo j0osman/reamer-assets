@@ -4,11 +4,11 @@ description: Given one specific backtest result, four concrete questions decide 
 date: 2026-07-17
 ---
 
-The properties that make research trustworthy in general are one thing. Applying them to one specific backtest, sitting in front of you right now, is another — it means asking a short list of concrete questions about this result, not just agreeing with the principle in the abstract.
+The properties that make research trustworthy in general are one thing. Applying them to one specific backtest a desk is deciding whether to trust is another — it means asking a short list of concrete questions about that result, not just agreeing with the principle in the abstract.
 
 ## Can it actually be reproduced?
 
-[Run the same strategy against the same data with the same seed again](https://reamerlabs.com/blog/deterministic-research). If the result changes, nothing else about it can be trusted yet — a result that can't be regenerated exactly hasn't earned any of the other questions being asked about it, because there's no way to know whether the number in front of you is the strategy's real behavior or an artifact of one particular run.
+[Run the same strategy against the same data with the same seed again](https://reamerlabs.com/blog/deterministic-research). If the result changes, nothing else about it can be trusted yet — a result that can't be regenerated exactly hasn't earned any of the other questions being asked about it, because there's no way to know whether that number is the strategy's real behavior or an artifact of one particular run.
 
 ## Was the execution model actually realistic for this?
 
@@ -20,7 +20,7 @@ A single backtest is a single measurement, not a test of whether it would genera
 
 ## Has anyone actually looked at the trades?
 
-A strong summary number can still be hiding something a closer look would catch — a handful of outsized trades doing most of the work, an entry that only makes sense because of a subtle look-ahead, a pattern that only appears in one narrow slice of the data. [Replaying the result](https://reamerlabs.com/blog/why-replay-matters), at least enough to spot-check a few trades, is what turns "the number looks good" into "I've actually seen what produced it."
+A strong summary number can still be hiding something a closer look would catch — a handful of outsized trades doing most of the work, an entry that only makes sense because of a subtle look-ahead, a pattern that only appears in one narrow slice of the data. [Replaying the result](https://reamerlabs.com/blog/why-replay-matters), at least enough to spot-check a few trades, is what turns "the number looks good" into "we've actually seen what produced it."
 
 ## None of these are optional extras
 

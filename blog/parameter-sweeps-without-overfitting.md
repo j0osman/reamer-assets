@@ -1,5 +1,5 @@
 ---
-title: "Parameter Sweeps Without Fooling Yourself"
+title: "Parameter Sweeps Without Overfitting"
 description: There's no dedicated sweep engine in Reamer — a sweep is just a loop over configs — and that absence of built-in guardrails means the discipline against overfitting to the sweep itself has to come from whoever's running it, not from the tool.
 date: 2026-07-19
 tier: Practical Research Workflows

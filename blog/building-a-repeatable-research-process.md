@@ -1,6 +1,6 @@
 ---
 title: Building a Repeatable Research Process
-description: Knowing how to design a good experiment doesn't make research repeatable on its own. Repeatability comes from deciding your standards once — cost assumptions, discard bar, when iteration stops — instead of relitigating them for every new idea.
+description: Knowing how to design a good experiment doesn't make research repeatable on its own. Repeatability comes from deciding on standards once — cost assumptions, discard bar, when iteration stops — instead of relitigating them for every new idea.
 date: 2026-07-16
 ---
 
@@ -8,7 +8,7 @@ Knowing how to write a specific hypothesis, design a fair experiment, and extrac
 
 ## Repeatable doesn't mean deterministic
 
-This isn't about a strategy producing the same fills on the same data every time — [that's determinism](https://reamerlabs.com/blog/deterministic-research), a property of the execution engine, not of a research practice. A repeatable process is one where the researcher doesn't have to reinvent, for every new idea, how rigorous to be this time: whether to start with realistic costs or add them later, how much data is enough, when iteration stops and validation begins. Re-deciding those questions from scratch for each idea is where a lot of process inconsistency quietly creeps in — not from any single bad decision, but from every idea getting slightly different treatment depending on the mood of the day it was tested.
+This isn't about a strategy producing the same fills on the same data every time — [that's determinism](https://reamerlabs.com/blog/deterministic-research), a property of the execution engine, not of a research practice. A repeatable process is one where a desk doesn't have to reinvent, for every new idea, how rigorous to be this time: whether to start with realistic costs or add them later, how much data is enough, when iteration stops and validation begins. Re-deciding those questions from scratch for each idea is where a lot of process inconsistency quietly creeps in — not from any single bad decision, but from every idea getting slightly different treatment depending on the mood of the day it was tested.
 
 ## Turning good practice into defaults
 

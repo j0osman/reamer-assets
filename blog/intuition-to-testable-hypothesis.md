@@ -1,6 +1,6 @@
 ---
 title: How to Turn an Intuition into a Testable Hypothesis
-description: "This pattern tends to work" isn't testable yet. A hypothesis needs a specific rule, a specific market and timeframe, and a clear idea of what would prove it wrong — the test being whether you can actually write it as code.
+description: "This pattern tends to work" isn't testable yet. A hypothesis needs a specific rule, a specific market and timeframe, and a clear idea of what would prove it wrong — the test being whether it can actually be written as code.
 date: 2026-07-16
 ---
 
@@ -20,7 +20,7 @@ Usually it's missing one of a few specific things: an exact rule for when the si
 
 **A clear idea of what would prove it wrong.** A hypothesis that can't fail isn't one. Before running anything, it's worth being able to say what result — a poor win rate, a specific drawdown, [a Monte Carlo distribution that looks too wide](https://reamerlabs.com/blog/why-monte-carlo-matters) — would mean the idea doesn't hold up. Deciding this after seeing the result invites finding a reason to explain away whatever came out.
 
-## The actual test: can you write it as code?
+## The actual test: can it be written as code?
 
 A useful, blunt check for whether an idea has become specific enough: try to write it as `on_bar`. If the condition can be expressed against `tv.close`, `tv.high`, `tv.low` and a handful of parameters, it's a hypothesis. If writing it requires filling in gaps with judgment calls that weren't part of the original intuition, those gaps are exactly what still needs to be decided — and deciding them now, deliberately, is better than letting the implementation decide them by accident.
 

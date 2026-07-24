@@ -8,7 +8,7 @@ date: 2026-07-16
 
 ## The decision isn't the knowledge
 
-"It didn't work" is a decision, not knowledge. It tells you nothing about the next idea, even a closely related one. "It didn't survive realistic slippage at this holding period" is knowledge — specific enough to change how the next similar idea gets approached, because it names the actual mechanism that broke this one, not just the outcome.
+"It didn't work" is a decision, not knowledge. It reveals nothing about the next idea, even a closely related one. "It didn't survive realistic slippage at this holding period" is knowledge — specific enough to change how the next similar idea gets approached, because it names the actual mechanism that broke this one, not just the outcome.
 
 The difference matters because the vague version is what's left if nobody deliberately extracts the specific one. A result that gets closed with "well, that one didn't pan out" and nothing more precise has quietly thrown away almost everything worth keeping from the time spent on it.
 

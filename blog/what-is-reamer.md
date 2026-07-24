@@ -21,7 +21,7 @@ Both outcomes count as success. An idea that gets confidently killed in an after
 Concretely, working with Reamer looks like this:
 
 - **Write a strategy.** A Python class with one method, `on_bar`, called once per bar. You read OHLCV data, optionally attach arbitrary side information to any timestamp (earnings surprises, macro releases, anything JSON-serializable), and return orders.
-- **Run it.** `reamer_py.run_backtest(...)` executes the strategy against your data, using an execution model you configure — commission, slippage, spread, swap, all in absolute units that map onto how a real broker actually charges you.
+- **Run it.** `reamer_py.run_backtest(...)` executes the strategy against your data, using an execution model you configure — commission, slippage, spread, swap, all in absolute units that map onto how a real broker actually charges a desk.
 - **Look at what happened, not just the summary number.** Every fill, every rejected order, every partial close is in the result. The free Reamer GUI opens the saved result file and replays it tick by tick, so you can watch the exact moment a trade entered and ask why, instead of reverse-engineering it from a log file.
 - **Stress-test it before you believe it.** Monte Carlo bootstrap-resamples the trade sequence to ask a harder question than "did this make money": how much of that result is luck, and what does the distribution of plausible outcomes actually look like.
 
@@ -43,7 +43,7 @@ Backtesting is one stage of what Reamer does — the part where a strategy meets
 
 ## Who this is for
 
-The trigger for reaching for Reamer isn't "I've decided to formally backtest this." It's earlier than that — a half-formed pattern-notice from a chart, a conversation, someone else's writeup, crystallizing into "wait, is that actually real?" If you're already at the point of writing a formal spec for a strategy, you've usually already done a chunk of the work Reamer is meant to shortcut. It's built for the moment right before that, when an idea is still cheap enough to kill quickly if it deserves it.
+The trigger for reaching for Reamer isn't "we've decided to formally backtest this." It's earlier than that — a half-formed pattern-notice a researcher brings to the desk, from a chart, a conversation, someone else's writeup, crystallizing into "wait, is that actually real?" If a team is already at the point of writing a formal spec for a strategy, they've usually already done a chunk of the work Reamer is meant to shortcut. It's built for the moment right before that, when an idea is still cheap enough for a desk to kill quickly if it deserves it.
 
 ---
 

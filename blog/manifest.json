@@ -245,15 +245,15 @@
     "tier": "Validation & Robustness"
   },
   {
-    "slug": "when-to-trust-an-edge",
-    "title": "When to Trust an Edge",
-    "description": "Monte Carlo, stress testing, and a check for curve fitting each answer a different question. Put together, they're a reasonable way to decide how much trust an edge has earned — not a pass/fail gate, but a more informed basis for a judgment call.",
+    "slug": "when-to-trust-a-signal",
+    "title": "When to Trust a Signal",
+    "description": "Monte Carlo, stress testing, and a check for curve fitting each answer a different question. Put together, they're a reasonable way to decide how much trust a signal has earned — not a pass/fail gate, but a more informed basis for a judgment call.",
     "date": "2026-07-17",
     "tier": "Validation & Robustness"
   },
   {
-    "slug": "knowing-when-youre-done",
-    "title": "Knowing When You're Done",
+    "slug": "knowing-when-validation-is-done",
+    "title": "Knowing When Validation Is Done",
     "description": "Validation isn't supposed to run forever. Once the pre-decided checks have actually been cleared, more testing against the same result stops adding information and starts risking the same over-fitting problem validation exists to catch.",
     "date": "2026-07-17",
     "tier": "Validation & Robustness"
@@ -315,8 +315,8 @@
     "tier": "Practical Research Workflows"
   },
   {
-    "slug": "parameter-sweeps-without-fooling-yourself",
-    "title": "Parameter Sweeps Without Fooling Yourself",
+    "slug": "parameter-sweeps-without-overfitting",
+    "title": "Parameter Sweeps Without Overfitting",
     "description": "There's no dedicated sweep engine in Reamer — a sweep is just a loop over configs — and that absence of built-in guardrails means the discipline against overfitting to the sweep itself has to come from whoever's running it, not from the tool.",
     "date": "2026-07-19",
     "tier": "Practical Research Workflows"

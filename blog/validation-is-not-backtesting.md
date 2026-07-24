@@ -4,7 +4,7 @@ description: A backtest is a single measurement. Validation is a test of whether
 date: 2026-07-16
 ---
 
-"I backtested it and it made money" gets treated, a lot of the time, as though it already means "I validated the idea." It doesn't. Backtesting and validation answer two different questions, and conflating them is one of the more common ways a strategy ends up trusted well before it's earned that trust.
+"We backtested it and it made money" gets treated, a lot of the time, as though it already means "we validated the idea." It doesn't. Backtesting and validation answer two different questions, and conflating them is one of the more common ways a strategy ends up trusted well before it's earned that trust.
 
 ## Two different questions
 
@@ -24,7 +24,7 @@ These are two different function calls because they're two different questions. 
 
 ## A good backtest and a validated idea are not the same milestone
 
-This is the practical consequence worth holding onto: an excellent-looking backtest is the beginning of the question, not the end of it. Nothing about a clean run, on its own, tells you whether the result would survive being asked the harder question. Only actually asking it does.
+This is the practical consequence worth holding onto: an excellent-looking backtest is the beginning of the question, not the end of it. Nothing about a clean run, on its own, says whether the result would survive being asked the harder question. Only actually asking it does.
 
 ---
 

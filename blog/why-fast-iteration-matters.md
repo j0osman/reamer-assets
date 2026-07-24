@@ -6,13 +6,13 @@ date: 2026-07-16
 
 Speed sounds like a minor, mechanical advantage — a nice-to-have on top of research that would otherwise happen the same way, just slower. It isn't. It changes two different things at once: how many hypotheses are worth checking at all, and how quickly any single one of them can be carried all the way through to a real answer.
 
-## A slow loop decays the idea while you wait
+## A slow loop decays the idea while it waits
 
-An idea forms in a specific context — a chart you were looking at, a conversation, a pattern that just seemed to jump out. If checking it takes days or weeks, that context fades before the answer arrives. By the time a slow test finishes, the market condition that made the idea plausible may already have moved on, and the original conviction that made it worth testing in the first place has usually gone with it. A correct result that arrives too late to still make sense of is close to as useless as a wrong one. This applies whether the wait is for a quick first check or a long, thorough one — the cost of a slow answer doesn't care which stage it's attached to.
+An idea forms in a specific context — a chart a researcher was looking at, a conversation, a pattern that just seemed to jump out. If checking it takes days or weeks, that context fades before the answer arrives. By the time a slow test finishes, the market condition that made the idea plausible may already have moved on, and the original conviction that made it worth testing in the first place has usually gone with it. A correct result that arrives too late to still make sense of is close to as useless as a wrong one. This applies whether the wait is for a quick first check or a long, thorough one — the cost of a slow answer doesn't care which stage it's attached to.
 
 ## Speed is what makes breadth affordable
 
-Most ideas, honestly, aren't very promising — they're [the quick, half-formed notices described earlier in this tier](https://reamerlabs.com/blog/where-trading-ideas-come-from), not fully-formed convictions. When a test is expensive, only the ideas someone already feels fairly confident about seem worth spending that cost on. The quick hunches never get checked at all; they just linger, half-believed, neither confirmed nor ruled out. Cheap, fast iteration changes the economics of that decision — it becomes worth checking an idea you're only mildly curious about, precisely because being wrong costs almost nothing. That's what actually makes it possible to work through many ideas rather than just the handful that already look good.
+Most ideas, honestly, aren't very promising — they're [the quick, half-formed notices described earlier in this tier](https://reamerlabs.com/blog/where-trading-ideas-come-from), not fully-formed convictions. When a test is expensive, only the ideas someone already feels fairly confident about seem worth spending that cost on. The quick hunches never get checked at all; they just linger, half-believed, neither confirmed nor ruled out. Cheap, fast iteration changes the economics of that decision — it becomes worth checking an idea that's only mildly interesting, precisely because being wrong costs almost nothing. That's what actually makes it possible to work through many ideas rather than just the handful that already look good.
 
 ## Speed matters just as much once an idea has earned depth
 
@@ -26,7 +26,7 @@ There's a specific, human failure mode that shows up when a test is expensive: a
 
 ## What actually makes this fast, at both ends
 
-Implementation stays fast because a strategy is ordinary Python — nothing proprietary to learn before the first test can even run. Single-instrument execution stays fast because the actual work happens in a compiled C++ core rather than an interpreted loop — [11.4x–16.2x faster than Backtrader on identical realistic-strategy workloads](https://reamerlabs.com/benchmark). And the deep end scales the same way: a 50-instrument portfolio backtest, the kind of test an idea only reaches after surviving initial triage, sees a comparable advantage rather than becoming the slow part of the process. There's no server round-trip either way — everything runs locally, so the loop is limited by how fast an idea can be thought through, not by infrastructure, at any depth.
+Implementation stays fast because a strategy is ordinary Python — nothing proprietary to learn before the first test can even run. Single-instrument execution stays fast because the actual work happens in a compiled C++ core rather than an interpreted loop — [18x–35x faster than Backtrader and QuantConnect LEAN on identical realistic-strategy workloads](https://reamerlabs.com/benchmark). And the deep end scales the same way: a 50-instrument portfolio backtest, the kind of test an idea only reaches after surviving initial triage, sees a comparable advantage rather than becoming the slow part of the process. There's no server round-trip either way — everything runs locally, so the loop is limited by how fast an idea can be thought through, not by infrastructure, at any depth.
 
 ---
 

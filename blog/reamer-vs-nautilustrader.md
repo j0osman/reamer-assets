@@ -37,7 +37,7 @@ Unifying backtest and live is a real, working answer to a real problem — it ad
 
 ## Not a competitor — a downstream option
 
-Same boundary as everywhere else in this loop. A strategy that's actually survived validation in Reamer could reasonably go on to run in NautilusTrader's live engine, exactly as it could go through a broker directly or through QuantConnect — that decision happens after Reamer's job is already done, not instead of it. NautilusTrader solves "how do I run this live without drift from my backtest" well. Reamer solves the earlier problem of whether there's anything worth running live in the first place.
+Same boundary as everywhere else in this loop. A strategy that's actually survived validation in Reamer could reasonably go on to run in NautilusTrader's live engine, exactly as it could go through a broker directly or through QuantConnect — that decision happens after Reamer's job is already done, not instead of it. NautilusTrader solves "how do we run this live without drift from our backtest" well. Reamer solves the earlier problem of whether there's anything worth running live in the first place.
 
 ---
 

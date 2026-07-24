@@ -10,7 +10,7 @@ A backtest can be extremely convincing and still not be trustworthy. A smooth eq
 
 A result earns trust by being verifiable, not by being persuasive. Four properties, specifically:
 
-**[Reproducible](https://reamerlabs.com/blog/deterministic-research).** The same inputs have to produce the same output — not something in the same ballpark, the same fills, every time, on any machine. If a result can't be regenerated exactly, there's no way to tell whether what you're looking at is the strategy's real behavior or an artifact of whatever happened to run that one time.
+**[Reproducible](https://reamerlabs.com/blog/deterministic-research).** The same inputs have to produce the same output — not something in the same ballpark, the same fills, every time, on any machine. If a result can't be regenerated exactly, there's no way to tell whether the result in hand is the strategy's real behavior or an artifact of whatever happened to run that one time.
 
 **[Specified](https://reamerlabs.com/blog/what-is-an-execution-specification).** The rules that produced the result need to be written down somewhere checkable, not just embodied in whatever the code happens to do. "The execution model behaves however the implementation behaves" isn't a specification — it's an invitation to find out the hard way when the implementation has a bug. A published spec is something a claim can be checked against.
 

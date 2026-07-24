@@ -1,6 +1,6 @@
 ---
 title: "Why Synthetic Ticks Instead of Stored Ticks"
-description: An OHLCV bar tells you four prices, not the path between them. Reamer answers the question of what happened inside a bar with a deterministic, seeded synthetic tick path — not with stored tick data most researchers can't afford or don't need.
+description: An OHLCV bar gives four prices, not the path between them. Reamer answers the question of what happened inside a bar with a deterministic, seeded synthetic tick path — not with stored tick data most researchers can't afford or don't need.
 date: 2026-07-19
 tier: Engineering
 ---

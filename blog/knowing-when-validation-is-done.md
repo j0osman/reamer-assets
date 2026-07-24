@@ -1,5 +1,5 @@
 ---
-title: Knowing When You're Done
+title: Knowing When Validation Is Done
 description: Validation isn't supposed to run forever. Once the pre-decided checks have actually been cleared, more testing against the same result stops adding information and starts risking the same over-fitting problem validation exists to catch.
 date: 2026-07-17
 ---
