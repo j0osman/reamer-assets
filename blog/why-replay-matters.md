@@ -20,4 +20,4 @@ Without the ability to go find that exact moment, a strange result either gets q
 
 ---
 
-Full reference: [docs](https://reamerlabs.com/docs) · The workflow this maps onto: [reamerlabs.com](https://reamerlabs.com/#workflow)
+Full reference: [docs](https://reamerlabs.com/docs)

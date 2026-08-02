@@ -1,110 +1,5 @@
 [
   {
-    "slug": "what-is-reamer",
-    "title": "What Is Reamer?",
-    "description": "Reamer is a local-first experimentation environment that turns a trading idea into validated strategy logic — and stops the moment that proof is complete.",
-    "date": "2026-07-16",
-    "tier": "Foundation"
-  },
-  {
-    "slug": "why-reamer-exists",
-    "title": "Why Reamer Exists",
-    "description": "The bottleneck in systematic trading isn't a shortage of ideas or capital — it's that most backtesting was never strict enough to tell a real edge from noise. Reamer exists to close that gap.",
-    "date": "2026-07-16",
-    "tier": "Foundation"
-  },
-  {
-    "slug": "the-experimentation-environment",
-    "title": "Quantitative Research Infrastructure, Not a Platform",
-    "description": "Why \"quantitative research infrastructure\" is the right category for Reamer, why \"platform\" specifically is the wrong word despite sounding close, and why the obvious alternatives — backtesting framework, research environment — each undersell what the product actually is.",
-    "date": "2026-07-16",
-    "tier": "Foundation"
-  },
-  {
-    "slug": "from-idea-to-evidence",
-    "title": "From Idea to Evidence",
-    "description": "A walk through what actually happens, stage by stage, the first time a trading idea goes through Reamer — from a half-formed hunch to a result you can either trust or confidently throw away.",
-    "date": "2026-07-16",
-    "tier": "Foundation"
-  },
-  {
-    "slug": "the-research-loop",
-    "title": "The Research Loop",
-    "description": "Why Reamer is built around a loop and not a line — knowledge from a discarded idea feeds the next one, and the same process runs at different depths depending on what an idea earns.",
-    "date": "2026-07-16",
-    "tier": "Foundation"
-  },
-  {
-    "slug": "what-makes-research-trustworthy",
-    "title": "What Makes Research Trustworthy?",
-    "description": "A confident result and a trustworthy one aren't the same thing. Trustworthy research has to be checkable — reproducible, specified, inspectable, and tested against the possibility that it's wrong — not just convincing.",
-    "date": "2026-07-16",
-    "tier": "Foundation"
-  },
-  {
-    "slug": "validation-is-not-backtesting",
-    "title": "Validation Is Not Backtesting",
-    "description": "A backtest is a single measurement. Validation is a test of whether that measurement can be trusted. Treating \"it backtested well\" as equivalent to \"it's validated\" is a common, costly mix-up.",
-    "date": "2026-07-16",
-    "tier": "Foundation"
-  },
-  {
-    "slug": "where-trading-ideas-come-from",
-    "title": "Where Trading Ideas Come From",
-    "description": "Trading ideas rarely start as hypotheses. They start as noticed regularities from a chart, a paper, someone else's writeup, or a side observation made while testing something else entirely — and none of that origin determines whether they're real.",
-    "date": "2026-07-16",
-    "tier": "Research Process"
-  },
-  {
-    "slug": "intuition-to-testable-hypothesis",
-    "title": "How to Turn an Intuition into a Testable Hypothesis",
-    "description": "\"This pattern tends to work\" isn't testable yet. A hypothesis needs a specific rule, a specific market and timeframe, and a clear idea of what would prove it wrong — the test being whether you can actually write it as code.",
-    "date": "2026-07-16",
-    "tier": "Research Process"
-  },
-  {
-    "slug": "designing-a-good-trading-experiment",
-    "title": "Designing a Good Trading Experiment",
-    "description": "A specific, falsifiable hypothesis can still be tested badly. Good experiment design means enough data to mean something, realistic costs from the start, no lookahead, a representative sample, and success criteria decided before the result exists.",
-    "date": "2026-07-16",
-    "tier": "Research Process"
-  },
-  {
-    "slug": "why-fast-iteration-matters",
-    "title": "Why Fast Iteration Matters",
-    "description": "Speed isn't just about checking more hypotheses — it's also about how quickly a single one can be taken all the way to a real answer. Both matter, and they're connected — fast depth is what lets more ideas afford to go deep in the first place.",
-    "date": "2026-07-16",
-    "tier": "Research Process"
-  },
-  {
-    "slug": "why-most-ideas-should-be-discarded",
-    "title": "Why Most Ideas Should Be Discarded",
-    "description": "If most tested ideas survive validation, that's a sign something is wrong with the validation, not a sign the ideas were unusually good. A healthy research process rejects most of what it tests — that's the correct rate, not a failure rate.",
-    "date": "2026-07-16",
-    "tier": "Research Process"
-  },
-  {
-    "slug": "validation-vs-iteration",
-    "title": "Validation vs Iteration",
-    "description": "Iteration refines an idea against its own results. Validation tests whether the refined result would survive data it hasn't seen. Whether it's safe to iterate against a validation result depends entirely on what that check is actually testing against.",
-    "date": "2026-07-16",
-    "tier": "Research Process"
-  },
-  {
-    "slug": "from-decision-to-knowledge",
-    "title": "From Decision to Knowledge",
-    "description": "\"Kept or discarded\" is one bit of information. The actual value in a finished experiment is the specific reason behind that outcome — and extracting it is a deliberate step, not something that happens automatically just because a result exists.",
-    "date": "2026-07-16",
-    "tier": "Research Process"
-  },
-  {
-    "slug": "building-a-repeatable-research-process",
-    "title": "Building a Repeatable Research Process",
-    "description": "Knowing how to design a good experiment doesn't make research repeatable on its own. Repeatability comes from deciding your standards once — cost assumptions, discard bar, when iteration stops — instead of relitigating them for every new idea.",
-    "date": "2026-07-16",
-    "tier": "Research Process"
-  },
-  {
     "slug": "why-execution-modeling-matters",
     "title": "Why Execution Modeling Matters",
     "description": "A backtest can be deterministic and well-validated and still be measuring the wrong thing, if the fill price underneath it doesn't reflect how an order actually gets filled. Execution modeling is the layer everything else depends on.",
@@ -114,14 +9,7 @@
   {
     "slug": "modeling-bid-ask-correctly",
     "title": "Modeling Bid/Ask Correctly",
-    "description": "A buy pays the ask and a sell receives the bid — spread is a directional cost paid on every round trip, not symmetric noise. Getting the data's own bid/ask/midpoint convention wrong silently biases every fill the same way.",
-    "date": "2026-07-17",
-    "tier": "Execution Modeling"
-  },
-  {
-    "slug": "slippage-is-part-of-the-strategy",
-    "title": "Slippage Is Part of the Strategy",
-    "description": "Slippage isn't a fudge factor subtracted from an otherwise-real result. A strategy that only works when slippage is assumed away isn't a slightly-better version of the real strategy — it's evidence the real one doesn't hold up.",
+    "description": "A buy pays the ask and a sell receives the bid \u2014 spread is a directional cost paid on every round trip, not symmetric noise. Getting the data's own bid/ask/midpoint convention wrong silently biases every fill the same way.",
     "date": "2026-07-17",
     "tier": "Execution Modeling"
   },
@@ -135,154 +23,91 @@
   {
     "slug": "stop-orders-gaps-and-reality",
     "title": "Stop Orders, Gaps, and Reality",
-    "description": "A limit order guarantees a price. A stop order only guarantees a trigger — once crossed, it fills at whatever the market gives, which can be meaningfully worse than the stop level itself when price gaps through it.",
+    "description": "A limit order guarantees a price. A stop order only guarantees a trigger \u2014 once crossed, it fills at whatever the market gives, which can be meaningfully worse than the stop level itself when price gaps through it.",
     "date": "2026-07-17",
     "tier": "Execution Modeling"
   },
   {
     "slug": "bracket-orders-done-correctly",
     "title": "Bracket Orders Done Correctly",
-    "description": "A take-profit exit is easy to assume fills at exactly the target price, like a limit order. It doesn't — it uses the same slippage-inclusive formula as a stop-loss exit, and when both are close together, which one actually triggers first is a real question with a real answer.",
+    "description": "A take-profit exit is easy to assume fills at exactly the target price, like a limit order. It doesn't \u2014 it uses the same slippage-inclusive formula as a stop-loss exit, and when both are close together, which one actually triggers first is a real question with a real answer.",
     "date": "2026-07-17",
     "tier": "Execution Modeling"
   },
   {
     "slug": "why-ohlcv-execution-is-harder-than-it-looks",
     "title": "Why OHLCV Execution Is Harder Than It Looks",
-    "description": "Open, high, low, and close describe four points from a bar — not the path price actually took between them. Deciding which order filled first, or whether a level was touched at all, requires a real answer to a question OHLCV alone can't settle.",
-    "date": "2026-07-17",
-    "tier": "Execution Modeling"
-  },
-  {
-    "slug": "the-limits-of-bar-based-simulation",
-    "title": "The Limits of Bar-Based Simulation",
-    "description": "Deterministic synthetic ticks make bar-based execution honest about what it doesn't know — they don't turn it into something it isn't. A bar-based simulation is not a substitute for real tick data, and strategies that depend on one shouldn't reach for the other.",
+    "description": "Open, high, low, and close describe four points from a bar \u2014 not the path price actually took between them. Deciding which order filled first, or whether a level was touched at all, requires a real answer to a question OHLCV alone can't settle.",
     "date": "2026-07-17",
     "tier": "Execution Modeling"
   },
   {
     "slug": "deterministic-research",
     "title": "Deterministic Research",
-    "description": "\"Run it again, get the same answer\" sounds like a low bar. Most ad-hoc research setups don't actually clear it — and without it, none of the other checks that make research trustworthy are even possible to run.",
-    "date": "2026-07-17",
-    "tier": "Trust & Correctness"
-  },
-  {
-    "slug": "why-reproducibility-matters",
-    "title": "Why Reproducibility Matters",
-    "description": "Determinism is a property of a system — the same run produces the same output. Reproducibility is what that property earns you in practice — a colleague, or your own future self, can regenerate the exact result months later, rather than having to take your word for it.",
+    "description": "\"Run it again, get the same answer\" sounds like a low bar. Most ad-hoc research setups don't actually clear it \u2014 and without it, none of the other checks that make research trustworthy are even possible to run.",
     "date": "2026-07-17",
     "tier": "Trust & Correctness"
   },
   {
     "slug": "what-is-an-execution-specification",
     "title": "What Is an Execution Specification?",
-    "description": "\"The code does whatever it does\" isn't a definition of behavior — it's an admission that behavior hasn't actually been defined. A written execution specification is the difference between a claim you can check and a black box you have to trust.",
+    "description": "\"The code does whatever it does\" isn't a definition of behavior \u2014 it's an admission that behavior hasn't actually been defined. A written execution specification is the difference between a claim you can check and a black box you have to trust.",
     "date": "2026-07-17",
     "tier": "Trust & Correctness"
   },
   {
     "slug": "behavioral-testing-for-trading-engines",
     "title": "Behavioral Testing for Trading Engines",
-    "description": "Most software testing asks whether code runs without crashing. Behavioral testing for an execution engine asks something stricter — does this specific scenario produce the exact fill the specification says it should, not just a plausible-looking one.",
+    "description": "Most software testing asks whether code runs without crashing. Behavioral testing for an execution engine asks something stricter \u2014 does this specific scenario produce the exact fill the specification says it should, not just a plausible-looking one.",
     "date": "2026-07-17",
     "tier": "Trust & Correctness"
   },
   {
     "slug": "why-replay-matters",
     "title": "Why Replay Matters",
-    "description": "A finished backtest result is a final-stage view — trades, fills, a summary. When something in that result looks wrong, a few outsized losses, an order that seemingly should have filled and didn't, replay is how you go find the exact moment and diagnose why.",
-    "date": "2026-07-17",
-    "tier": "Trust & Correctness"
-  },
-  {
-    "slug": "trusting-a-backtest",
-    "title": "Trusting a Backtest",
-    "description": "Given one specific backtest result, four concrete questions decide whether it deserves trust — is it actually reproducible, was the execution model realistic, has it been validated rather than just run once, and has anyone actually looked at the trades.",
-    "date": "2026-07-17",
-    "tier": "Trust & Correctness"
-  },
-  {
-    "slug": "evidence-beats-assumptions",
-    "title": "Evidence Beats Assumptions",
-    "description": "Confidence is not evidence, no matter how earned it feels. Determinism, a written specification, exhaustive testing, and the ability to replay a result exist to replace a feeling of certainty with something that can actually be checked.",
+    "description": "A finished backtest result is a final-stage view \u2014 trades, fills, a summary. When something in that result looks wrong, a few outsized losses, an order that seemingly should have filled and didn't, replay is how you go find the exact moment and diagnose why.",
     "date": "2026-07-17",
     "tier": "Trust & Correctness"
   },
   {
     "slug": "why-monte-carlo-matters",
     "title": "Why Monte Carlo Matters",
-    "description": "A backtest happened with one specific set of trades. Monte Carlo asks a different question — if the strategy's real edge produced a slightly different draw of similar trades, how much would the result actually change?",
-    "date": "2026-07-17",
-    "tier": "Validation & Robustness"
-  },
-  {
-    "slug": "robustness-before-capital",
-    "title": "Robustness Before Capital",
-    "description": "Robustness testing has to happen before capital is at risk, not after — because once real money is committed, a weak result stops being an easy thing to walk away from, and the incentive to rationalize it grows exactly when clear judgment matters most.",
-    "date": "2026-07-17",
-    "tier": "Validation & Robustness"
-  },
-  {
-    "slug": "curve-fitting-vs-evidence",
-    "title": "Curve Fitting vs Evidence",
-    "description": "A strategy with many adjustable parameters, tuned against the same data it's later evaluated on, will eventually look good almost regardless of whether it captures anything real. Recognizing curve fitting is about noticing the shape of the process, not just the result.",
-    "date": "2026-07-17",
-    "tier": "Validation & Robustness"
-  },
-  {
-    "slug": "when-a-great-backtest-is-still-wrong",
-    "title": "When a Great Backtest Is Still Wrong",
-    "description": "A backtest can pass every check covered so far — realistic execution, enough data, no lookahead — and still be sitting at the fortunate edge of what its own trades could plausibly have produced, a fact only Monte Carlo actually reveals.",
+    "description": "A backtest happened with one specific set of trades. Monte Carlo asks a different question \u2014 if the strategy's real edge produced a slightly different draw of similar trades, how much would the result actually change?",
     "date": "2026-07-17",
     "tier": "Validation & Robustness"
   },
   {
     "slug": "stress-testing-trading-strategies",
     "title": "Stress Testing Trading Strategies",
-    "description": "Monte Carlo resamples what already happened under the same assumptions. Stress testing asks a different question — what happens if the assumptions themselves get worse, not just the specific sequence of trades drawn from them.",
-    "date": "2026-07-17",
-    "tier": "Validation & Robustness"
-  },
-  {
-    "slug": "when-to-trust-a-signal",
-    "title": "When to Trust a Signal",
-    "description": "Monte Carlo, stress testing, and a check for curve fitting each answer a different question. Put together, they're a reasonable way to decide how much trust a signal has earned — not a pass/fail gate, but a more informed basis for a judgment call.",
-    "date": "2026-07-17",
-    "tier": "Validation & Robustness"
-  },
-  {
-    "slug": "knowing-when-validation-is-done",
-    "title": "Knowing When Validation Is Done",
-    "description": "Validation isn't supposed to run forever. Once the pre-decided checks have actually been cleared, more testing against the same result stops adding information and starts risking the same over-fitting problem validation exists to catch.",
+    "description": "Monte Carlo resamples what already happened under the same assumptions. Stress testing asks a different question \u2014 what happens if the assumptions themselves get worse, not just the specific sequence of trades drawn from them.",
     "date": "2026-07-17",
     "tier": "Validation & Robustness"
   },
   {
     "slug": "reamer-vs-backtrader",
     "title": "Reamer vs Backtrader",
-    "description": "Backtrader and Reamer overlap on the surface — both are Python, both are event-driven, both give you an on_bar-style callback. The difference is what happens underneath that callback, and whether the tool was built to make execution realism a discipline or an option.",
+    "description": "Backtrader and Reamer overlap on the surface \u2014 both are Python, both are event-driven, both give you an on_bar-style callback. The difference is what happens underneath that callback, and whether the tool was built to make execution realism a discipline or an option.",
     "date": "2026-07-18",
     "tier": "Comparisons"
   },
   {
     "slug": "reamer-vs-vectorbt",
     "title": "Reamer vs vectorbt PRO",
-    "description": "vectorbt PRO is genuinely fast at what it's built for — sweeping thousands of parameter combinations across a strategy shape you've already fixed. That's a different job than carrying an unformed idea through the whole research loop, which is what Reamer is built around.",
+    "description": "vectorbt PRO is genuinely fast at what it's built for \u2014 sweeping thousands of parameter combinations across a strategy shape you've already fixed. That's a different job than carrying an unformed idea through the whole research loop, which is what Reamer is built around.",
     "date": "2026-07-18",
     "tier": "Comparisons"
   },
   {
     "slug": "reamer-vs-quantconnect",
     "title": "Reamer vs QuantConnect",
-    "description": "QuantConnect does have a backtesting component, but it sits inside a much broader platform built around live deployment, broker integration, and data aggregation. That breadth is a different bet than the one Reamer makes, not a worse one. On deployment, QuantConnect is downstream, not a competitor — but its Institution tier is a real pricing peer for the same line item a desk is deciding whether to spend on.",
+    "description": "QuantConnect does have a backtesting component, but it sits inside a much broader platform built around live deployment, broker integration, and data aggregation. That breadth is a different bet than the one Reamer makes, not a worse one. On deployment, Reamer Server is a direct alternative to QuantConnect now, not downstream of it \u2014 and its Institution tier is also a real pricing peer for the same line item a desk is deciding whether to spend on.",
     "date": "2026-07-18",
     "tier": "Comparisons"
   },
   {
     "slug": "reamer-vs-nautilustrader",
     "title": "Reamer vs NautilusTrader",
-    "description": "NautilusTrader closes the gap between backtest and live by running both through the same engine. Reamer targets a different, earlier problem — whether the research environment's own execution assumptions are realistic at all — and treats sandbox-to-live drift as a boundary question, not an integration one.",
+    "description": "NautilusTrader closes the gap between backtest and live by running both through the same engine. Reamer targets a different, earlier problem \u2014 whether the research environment's own execution assumptions are realistic at all \u2014 and treats sandbox-to-live drift as a boundary question, not an integration one.",
     "date": "2026-07-18",
     "tier": "Comparisons"
   },
@@ -296,63 +121,63 @@
   {
     "slug": "adding-macro-events-to-strategy-research",
     "title": "Adding Macro Events to Strategy Research",
-    "description": "A CPI print or a rate decision doesn't belong to one ticker the way an earnings surprise does — but the exogenous data mechanism is keyed per-ticker. Deciding which instruments a macro event actually reaches is a research question, not a technical detail to skip past.",
+    "description": "A CPI print or a rate decision doesn't belong to one ticker the way an earnings surprise does \u2014 but the exogenous data mechanism is keyed per-ticker. Deciding which instruments a macro event actually reaches is a research question, not a technical detail to skip past.",
     "date": "2026-07-19",
     "tier": "Practical Research Workflows"
   },
   {
     "slug": "multi-asset-portfolio-research",
     "title": "Multi-Asset Portfolio Research",
-    "description": "Running the same independent logic across many tickers isn't the same as running many separate single-asset backtests — they share one equity curve and one leverage pool, and that constraint only shows up once they're actually run together.",
+    "description": "Running the same independent logic across many tickers isn't the same as running many separate single-asset backtests \u2014 they share one equity curve and one leverage pool, and that constraint only shows up once they're actually run together.",
     "date": "2026-07-19",
     "tier": "Practical Research Workflows"
   },
   {
     "slug": "researching-cross-asset-relationships",
     "title": "Researching Cross-Asset Relationships",
-    "description": "The moment a decision compares tickers to each other — ranking, correlation, a spread — a per-ticker loop stops being merely slower and becomes structurally the wrong shape for the question being asked.",
+    "description": "The moment a decision compares tickers to each other \u2014 ranking, correlation, a spread \u2014 a per-ticker loop stops being merely slower and becomes structurally the wrong shape for the question being asked.",
     "date": "2026-07-19",
     "tier": "Practical Research Workflows"
   },
   {
     "slug": "parameter-sweeps-without-overfitting",
     "title": "Parameter Sweeps Without Overfitting",
-    "description": "There's no dedicated sweep engine in Reamer — a sweep is just a loop over configs — and that absence of built-in guardrails means the discipline against overfitting to the sweep itself has to come from whoever's running it, not from the tool.",
+    "description": "There's no dedicated sweep engine in Reamer \u2014 a sweep is just a loop over configs \u2014 and that absence of built-in guardrails means the discipline against overfitting to the sweep itself has to come from whoever's running it, not from the tool.",
     "date": "2026-07-19",
     "tier": "Practical Research Workflows"
   },
   {
     "slug": "building-a-research-workflow-in-python",
     "title": "Building a Research Workflow in Python",
-    "description": "The parts of a research setup that should stay fixed across every idea — data loading, cost assumptions, evaluation — and the one part that should actually change between ideas. Most one-off research scripts blur that line without meaning to.",
+    "description": "The parts of a research setup that should stay fixed across every idea \u2014 data loading, cost assumptions, evaluation \u2014 and the one part that should actually change between ideas. Most one-off research scripts blur that line without meaning to.",
     "date": "2026-07-19",
     "tier": "Practical Research Workflows"
   },
   {
     "slug": "forex-cfd-realism-spread-swap-rollover",
     "title": "Forex and CFD Realism: Spread, Swap, and Rollover",
-    "description": "Forex and CFD cost structure maps onto Reamer's execution model as-is, not as an approximation — but one silent unit mistake is enough to mis-price every fill by five orders of magnitude without ever throwing an error.",
+    "description": "Forex and CFD cost structure maps onto Reamer's execution model as-is, not as an approximation \u2014 but one silent unit mistake is enough to mis-price every fill by five orders of magnitude without ever throwing an error.",
     "date": "2026-07-19",
     "tier": "Practical Research Workflows"
   },
   {
     "slug": "futures-roll-without-a-fake-gap",
     "title": "Rolling a Continuous Futures Contract Without a Fake Gap",
-    "description": "Splicing front-month futures contracts together at expiry creates a price jump that has nothing to do with the market. Reamer rebases execution bookkeeping around that jump automatically — with one real limit worth knowing before relying on it.",
+    "description": "Splicing front-month futures contracts together at expiry creates a price jump that has nothing to do with the market. Reamer rebases execution bookkeeping around that jump automatically \u2014 with one real limit worth knowing before relying on it.",
     "date": "2026-07-19",
     "tier": "Practical Research Workflows"
   },
   {
     "slug": "per-ticker-execution-costs",
     "title": "Per-Ticker Execution Costs in a Multi-Asset Portfolio",
-    "description": "A multi-asset backtest sharing one execution config across every ticker is itself an assumption of uniform costs — and real portfolios never actually have that.",
+    "description": "A multi-asset backtest sharing one execution config across every ticker is itself an assumption of uniform costs \u2014 and real portfolios never actually have that.",
     "date": "2026-07-19",
     "tier": "Practical Research Workflows"
   },
   {
     "slug": "order-lifetime-ioc-gtd",
     "title": "Order Lifetime: IOC, GTD, and Why It Matters",
-    "description": "An order doesn't just either fill or not — it stops being eligible to fill at some point too. Treating every order as though it waits indefinitely quietly tests a more patient strategy than the one that was actually written.",
+    "description": "An order doesn't just either fill or not \u2014 it stops being eligible to fill at some point too. Treating every order as though it waits indefinitely quietly tests a more patient strategy than the one that was actually written.",
     "date": "2026-07-19",
     "tier": "Practical Research Workflows"
   },
@@ -366,21 +191,21 @@
   {
     "slug": "designing-a-deterministic-simulation-engine",
     "title": "Designing a Deterministic Simulation Engine",
-    "description": "A backtest that gives a different answer on a different run, or a different machine, isn't measuring a strategy — it's measuring noise. Determinism was a hard constraint from the first line of the engine, not a property added once something else broke.",
+    "description": "A backtest that gives a different answer on a different run, or a different machine, isn't measuring a strategy \u2014 it's measuring noise. Determinism was a hard constraint from the first line of the engine, not a property added once something else broke.",
     "date": "2026-07-19",
     "tier": "Engineering"
   },
   {
     "slug": "why-synthetic-ticks-instead-of-stored-ticks",
     "title": "Why Synthetic Ticks Instead of Stored Ticks",
-    "description": "An OHLCV bar tells you four prices, not the path between them. Reamer answers the question of what happened inside a bar with a deterministic, seeded synthetic tick path — not with stored tick data most researchers can't afford or don't need.",
+    "description": "An OHLCV bar tells you four prices, not the path between them. Reamer answers the question of what happened inside a bar with a deterministic, seeded synthetic tick path \u2014 not with stored tick data most researchers can't afford or don't need.",
     "date": "2026-07-19",
     "tier": "Engineering"
   },
   {
     "slug": "why-the-hot-loop-is-compiled-not-interpreted",
     "title": "Why the Hot Loop Is Compiled, Not Interpreted",
-    "description": "Reamer isn't Python that happens to be fast. The hot path — order matching, fill resolution, tick generation — runs as compiled machine code with no GIL, and on_bar hands a strategy zero-copy numpy views instead of objects the interpreter has to build one at a time.",
+    "description": "Reamer isn't Python that happens to be fast. The hot path \u2014 order matching, fill resolution, tick generation \u2014 runs as compiled machine code with no GIL, and on_bar hands a strategy zero-copy numpy views instead of objects the interpreter has to build one at a time.",
     "date": "2026-07-19",
     "tier": "Engineering"
   },
@@ -394,7 +219,7 @@
   {
     "slug": "scaling-multi-asset-backtests",
     "title": "Scaling Multi-Asset Backtests",
-    "description": "Running a strategy across fifty instruments isn't fifty single-asset backtests glued together — it's one aligned timeline, one shared equity curve, and a per-step cost that scales with ticker count regardless of how deep any single ticker's lookback is.",
+    "description": "Running a strategy across fifty instruments isn't fifty single-asset backtests glued together \u2014 it's one aligned timeline, one shared equity curve, and a per-step cost that scales with ticker count regardless of how deep any single ticker's lookback is.",
     "date": "2026-07-19",
     "tier": "Engineering"
   },
@@ -408,14 +233,14 @@
   {
     "slug": "publishing-an-execution-specification",
     "title": "Publishing an Execution Specification",
-    "description": "\"The code does whatever the code does\" is not a definition of behavior — it's an admission that behavior was never actually decided. Writing the execution model down as a testable specification, before writing the tests, is a different discipline than testing code after the fact.",
+    "description": "\"The code does whatever the code does\" is not a definition of behavior \u2014 it's an admission that behavior was never actually decided. Writing the execution model down as a testable specification, before writing the tests, is a different discipline than testing code after the fact.",
     "date": "2026-07-19",
     "tier": "Engineering"
   },
   {
     "slug": "testing-a-trading-engine",
     "title": "Testing a Trading Engine",
-    "description": "Most software testing asks whether code runs without crashing. Testing an execution engine against a published specification asks something stricter — does this exact scenario produce the exact fill the spec says it should, not just a plausible-looking one.",
+    "description": "Most software testing asks whether code runs without crashing. Testing an execution engine against a published specification asks something stricter \u2014 does this exact scenario produce the exact fill the spec says it should, not just a plausible-looking one.",
     "date": "2026-07-19",
     "tier": "Engineering"
   },
@@ -429,7 +254,7 @@
   {
     "slug": "the-reamer-file-making-a-backtest-result-portable",
     "title": "The .reamer File: Making a Backtest Result Portable",
-    "description": "A result someone else can't independently reproduce isn't evidence — it's a claim you're asking them to trust. A self-contained result file, carrying its own config, seed, and fills, is what turns \"trust me\" into \"check it yourself.\"",
+    "description": "A result someone else can't independently reproduce isn't evidence \u2014 it's a claim you're asking them to trust. A self-contained result file, carrying its own config, seed, and fills, is what turns \"trust me\" into \"check it yourself.\"",
     "date": "2026-07-19",
     "tier": "Engineering"
   }

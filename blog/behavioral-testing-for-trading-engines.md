@@ -12,7 +12,7 @@ A behavioral test doesn't just check that a function returns without throwing an
 
 ## Why this needs to be exhaustive, not representative
 
-A handful of typical-case tests can miss the scenarios where execution modeling actually goes wrong — the edge cases, not the common ones, are where an off-by-one in a fill calculation or an unhandled collision between two orders tends to hide. A real conformance suite has to work through the specification's own scenarios deliberately and completely: every order type, every time-in-force, every combination of bracket and collision, checked against its own defined outcome, not sampled at random and hoped to be representative of everything else. Reamer's own suite runs 282 such checks specifically for this reason — not because a large number is impressive on its own, but because that's roughly how many distinct scenarios the specification actually describes.
+A handful of typical-case tests can miss the scenarios where execution modeling actually goes wrong — the edge cases, not the common ones, are where an off-by-one in a fill calculation or an unhandled collision between two orders tends to hide. A real conformance suite has to work through the specification's own scenarios deliberately and completely: every order type, every time-in-force, every combination of bracket and collision, checked against its own defined outcome, not sampled at random and hoped to be representative of everything else. Reamer's own suite runs 267 such checks specifically for this reason — not because a large number is impressive on its own, but because that's roughly how many distinct scenarios the specification actually describes.
 
 ## What passing actually proves
 
@@ -20,4 +20,4 @@ A test suite that passes isn't proof the engine is useful, profitable, or well-d
 
 ---
 
-Full reference: [docs](https://reamerlabs.com/docs) · The specification this suite verifies conformance to: [execution specification](https://reamerlabs.com/spec) · The workflow this maps onto: [reamerlabs.com](https://reamerlabs.com/#workflow)
+Full reference: [docs](https://reamerlabs.com/docs) · The specification this suite verifies conformance to: [execution specification](https://reamerlabs.com/spec)

@@ -36,4 +36,4 @@ Equities and forex don't trade on the same calendar, and a portfolio mixing them
 
 ---
 
-Full reference: [docs](https://reamerlabs.com/docs) · The workflow this maps onto: [reamerlabs.com](https://reamerlabs.com/#workflow)
+Full reference: [docs](https://reamerlabs.com/docs)

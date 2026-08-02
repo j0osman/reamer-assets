@@ -33,8 +33,8 @@ The strategy class — the actual idea — is the one piece meant to be differen
 
 ## A checkable fact, not a promise
 
-Deciding cost assumptions and evaluation standards once, per [the same principle](https://reamerlabs.com/blog/building-a-repeatable-research-process), becomes a specific, checkable fact about a specific codebase at this level — either every strategy in a research project actually calls the same `default_exec_config()`, or it doesn't, and that's something a diff can catch, not something that has to be taken on faith about how carefully each script was written.
+Deciding cost assumptions and evaluation standards once, per the same principle, becomes a specific, checkable fact about a specific codebase at this level — either every strategy in a research project actually calls the same `default_exec_config()`, or it doesn't, and that's something a diff can catch, not something that has to be taken on faith about how carefully each script was written.
 
 ---
 
-Full reference: [docs](https://reamerlabs.com/docs) · The workflow this maps onto: [reamerlabs.com](https://reamerlabs.com/#workflow)
+Full reference: [docs](https://reamerlabs.com/docs)

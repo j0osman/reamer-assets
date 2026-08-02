@@ -1,6 +1,6 @@
 ---
 title: Reamer vs NautilusTrader
-description: NautilusTrader closes the gap between backtest and live by running both through the same Rust engine — genuinely fast, not a competitor by design. Reamer targets a different, earlier problem, and one specific, narrow finding from our own benchmark suite explains why we don't publish a head-to-head number against it.
+description: NautilusTrader closes the gap between backtest and live by running both through the same Rust engine — genuinely fast. Reamer Py targets a different, earlier problem; on deployment, Reamer Server is now a direct alternative rather than downstream of it. One specific, narrow finding from our own benchmark suite explains why we don't publish a head-to-head number against NautilusTrader.
 date: 2026-07-18
 tier: Comparisons
 ---
@@ -15,7 +15,7 @@ It's also an answer to a narrower question than the one Reamer is built around.
 
 **Sandbox-to-live drift** is what NautilusTrader targets directly: the same strategy, run once in simulation and once against a real account, diverging because the two paths went through different code. Sharing one engine for both is a real, working answer to that specific problem.
 
-**Infra-drift in research** is a different, earlier problem — whether the sandbox's own execution assumptions (fill price, slippage, spread, which of a stop and a take-profit resolves first) [actually reflect how a real market behaves](https://reamerlabs.com/blog/why-execution-modeling-matters), independent of whether live matches it exactly. Sharing an engine between backtest and live doesn't make that engine's own assumptions any more realistic — it guarantees both runs are wrong in the same consistent way, if the underlying execution model was never held to a rigorous, published standard to begin with. [Reamer's execution model is checked against exactly that standard](https://reamerlabs.com/spec), by a 282-check conformance suite, independent of what happens to a strategy after it leaves the research stage.
+**Infra-drift in research** is a different, earlier problem — whether the sandbox's own execution assumptions (fill price, slippage, spread, which of a stop and a take-profit resolves first) [actually reflect how a real market behaves](https://reamerlabs.com/blog/why-execution-modeling-matters), independent of whether live matches it exactly. Sharing an engine between backtest and live doesn't make that engine's own assumptions any more realistic — it guarantees both runs are wrong in the same consistent way, if the underlying execution model was never held to a rigorous, published standard to begin with. [Reamer's execution model is checked against exactly that standard](https://reamerlabs.com/spec), by a 267-check conformance suite, independent of what happens to a strategy after it leaves the research stage.
 
 Reamer treats these as genuinely separate problems, solved in that order: get the research infrastructure right first. Deployment is a later, separate decision.
 
@@ -35,10 +35,10 @@ Reamer's answer to sandbox-to-live drift specifically isn't to unify backtest an
 
 Unifying backtest and live is a real, working answer to a real problem — it addresses the symptom, two code paths that can diverge, more directly than the cause: research logic and deployment concerns sharing space at all.
 
-## Not a competitor — a downstream option
+## Downstream on research, a direct alternative on deployment
 
-Same boundary as everywhere else in this loop. A strategy that's actually survived validation in Reamer could reasonably go on to run in NautilusTrader's live engine, exactly as it could go through a broker directly or through QuantConnect — that decision happens after Reamer's job is already done, not instead of it. NautilusTrader solves "how do we run this live without drift from our backtest" well. Reamer solves the earlier problem of whether there's anything worth running live in the first place.
+Same boundary as everywhere else in this loop, on the research side: Reamer Py solves the earlier problem of whether there's anything worth running live in the first place, and NautilusTrader has no equivalent to that stage. On deployment, though, a strategy that's actually survived validation in Reamer now has Reamer Server as a real option alongside NautilusTrader's live engine, a broker directly, or QuantConnect — Reamer Server's case there is continuity, not exclusivity: the same execution model that validated the strategy is the one running it live, not a second implementation to trust all over again. NautilusTrader solves "how do we run this live without drift from our backtest" by sharing one engine for both; Reamer Server solves the same problem by keeping the model identical across the boundary instead.
 
 ---
 
-Full reference: [docs](https://reamerlabs.com/docs) · The execution model this rests on: [execution specification](https://reamerlabs.com/spec) · Real measurements: [benchmarks](https://reamerlabs.com/benchmark) · License: GUI free, SDK requires an active license — [contact us](https://reamerlabs.com/#contact) for a free, time-limited test license.
+Full reference: [docs](https://reamerlabs.com/docs) · The execution model this rests on: [execution specification](https://reamerlabs.com/spec) · Real measurements: [benchmarks](https://reamerlabs.com/benchmark) · License: reamer_py requires an active license to run — no free tier — [contact us](https://reamerlabs.com/#contact) for a free, time-limited test license.

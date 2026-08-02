@@ -5,7 +5,7 @@ date: 2026-07-19
 tier: Practical Research Workflows
 ---
 
-An earnings-surprise strategy lives or dies on one detail that's easy to get wrong without ever noticing: the exact bar at which the surprise becomes knowable. A dataset keyed by fiscal quarter, joined against price data by date, will happily let an EPS number sit next to bars that came before the company actually announced it — the join succeeds, the backtest runs, and the strategy quietly gets to react to information a day or two before the market could have. That's not a small bias. It's the single easiest way to manufacture an edge that was never real — exactly the [no-lookahead discipline good experiment design requires](https://reamerlabs.com/blog/designing-a-good-trading-experiment), applied to the specific case of event data instead of price data.
+An earnings-surprise strategy lives or dies on one detail that's easy to get wrong without ever noticing: the exact bar at which the surprise becomes knowable. A dataset keyed by fiscal quarter, joined against price data by date, will happily let an EPS number sit next to bars that came before the company actually announced it — the join succeeds, the backtest runs, and the strategy quietly gets to react to information a day or two before the market could have. That's not a small bias. It's the single easiest way to manufacture an edge that was never real — exactly the no-lookahead discipline good experiment design requires, applied to the specific case of event data instead of price data.
 
 ## Reading a value as of a specific bar, not a specific date
 
@@ -26,4 +26,4 @@ The engine enforces point-in-time correctness once data is attached — it won't
 
 ---
 
-Full reference: [docs](https://reamerlabs.com/docs) · The workflow this maps onto: [reamerlabs.com](https://reamerlabs.com/#workflow)
+Full reference: [docs](https://reamerlabs.com/docs)

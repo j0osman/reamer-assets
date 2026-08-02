@@ -11,13 +11,13 @@ The question worth asking is what happens before that sweep, and after it.
 
 ## What a parameter sweep assumes
 
-Sweeping 500 parameter combinations assumes the strategy's shape is already fixed — a desk already knows it's a Donchian breakout, already knows roughly what it's optimizing, and the open question is which specific numbers to plug in. That's a real and common need. It's also a late-stage one. [Most of a trading idea's actual risk lives earlier](https://reamerlabs.com/blog/from-idea-to-evidence) — in whether the strategy shape itself survives realistic costs at all, whether the fills underneath it reflect how orders actually get filled, whether the resulting edge is real or [an artifact of tuning against the same data being evaluated on](https://reamerlabs.com/blog/curve-fitting-vs-evidence).
+Sweeping 500 parameter combinations assumes the strategy's shape is already fixed — a desk already knows it's a Donchian breakout, already knows roughly what it's optimizing, and the open question is which specific numbers to plug in. That's a real and common need. It's also a late-stage one. Most of a trading idea's actual risk lives earlier — in whether the strategy shape itself survives realistic costs at all, whether the fills underneath it reflect how orders actually get filled, whether the resulting edge is real or an artifact of tuning against the same data being evaluated on.
 
 A fast sweep over a shape that was never validated just finds the best-fitting version of an idea that might not have been real to begin with — speed doesn't fix that, it just produces the wrong answer faster.
 
 ## A loop, not a single fast stage
 
-Reamer isn't optimized to be the fastest tool at any one stage. It's built around [the full loop](https://reamerlabs.com/blog/the-research-loop) — idea, implementation, execution, inspection, validation, iteration, decision, knowledge — with every stage held to the same standard: [deterministic, seeded execution](https://reamerlabs.com/blog/deterministic-research), fills modeled to [a published specification](https://reamerlabs.com/spec), [tick-level replay](https://reamerlabs.com/blog/why-replay-matters) to see exactly what happened, and [Monte Carlo robustness testing](https://reamerlabs.com/blog/why-monte-carlo-matters) before anything is trusted. Parameter optimization is one stage in that loop, not the reason the loop exists.
+Reamer isn't optimized to be the fastest tool at any one stage. It's built around the full loop — idea, implementation, execution, inspection, validation, iteration, decision, knowledge — with every stage held to the same standard: [deterministic, seeded execution](https://reamerlabs.com/blog/deterministic-research), fills modeled to [a published specification](https://reamerlabs.com/spec), [tick-level replay](https://reamerlabs.com/blog/why-replay-matters) to see exactly what happened, and [Monte Carlo robustness testing](https://reamerlabs.com/blog/why-monte-carlo-matters) before anything is trusted. Parameter optimization is one stage in that loop, not the reason the loop exists.
 
 Reamer's C++ execution core is [18×–35× faster than Backtrader and QuantConnect LEAN on identical realistic-strategy workloads](https://reamerlabs.com/benchmark). Raw throughput on a fixed-shape sweep was never the bottleneck this product targets — the bottleneck is earlier: whether an idea deserves to reach the sweep stage at all.
 
@@ -31,4 +31,4 @@ If a strategy's shape is already validated and the actual task is exploring a la
 
 ---
 
-Full reference: [docs](https://reamerlabs.com/docs) · Benchmarks: [reamerlabs.com/benchmark](https://reamerlabs.com/benchmark) · License: GUI free, SDK requires an active license — [contact us](https://reamerlabs.com/#contact) for a free, time-limited test license.
+Full reference: [docs](https://reamerlabs.com/docs) · Benchmarks: [reamerlabs.com/benchmark](https://reamerlabs.com/benchmark) · License: reamer_py requires an active license to run — no free tier — [contact us](https://reamerlabs.com/#contact) for a free, time-limited test license.

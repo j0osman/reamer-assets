@@ -16,8 +16,8 @@ Deliberately widening slippage and spread beyond the base-case estimate and re-r
 
 ## Why this matters alongside Monte Carlo, not instead of it
 
-Monte Carlo and stress testing catch different failure modes. A strategy can be robust to which specific trades happened to occur and still be fragile to costs turning out to be worse than assumed — or the reverse. [Checking both](https://reamerlabs.com/blog/when-to-trust-a-signal) is what distinguishes a strategy whose edge holds up under real-world variation from one that only survives inside the exact conditions it happened to be measured under.
+Monte Carlo and stress testing catch different failure modes. A strategy can be robust to which specific trades happened to occur and still be fragile to costs turning out to be worse than assumed — or the reverse. Checking both is what distinguishes a strategy whose edge holds up under real-world variation from one that only survives inside the exact conditions it happened to be measured under.
 
 ---
 
-Full reference: [docs](https://reamerlabs.com/docs) · The workflow this maps onto: [reamerlabs.com](https://reamerlabs.com/#workflow)
+Full reference: [docs](https://reamerlabs.com/docs)

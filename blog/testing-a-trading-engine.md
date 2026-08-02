@@ -7,9 +7,9 @@ tier: Engineering
 
 A test suite that checks "the backtest ran and produced a result" catches crashes. It does not catch a fill price that's wrong by a consistent, plausible-looking amount — the kind of bug that's far more dangerous than a crash, because nothing about the output looks broken. Testing a trading engine seriously means testing against a specific, written answer for each scenario, not against "did something reasonable happen."
 
-## What the 282 checks are actually organized around
+## What the 267 checks are actually organized around
 
-Reamer's conformance suite isn't 282 variations on the same assertion. It's organized around the categories of behavior the [execution specification](https://reamerlabs.com/spec) actually commits to: fill-price correctness per order type (market, limit, stop, and their interaction with slippage and spread), time-in-force and expiry behavior (GTC, IOC, GTD, and what happens at each boundary), bracket collision resolution (which side fires first when both are in range on the same bar), position-state transitions (scale-in, partial close, netted reversal), margin and cost-accounting identities, and multi-asset alignment behavior. Each category is tested with the specific edge cases that category tends to get wrong — a stop order exactly at a gap boundary, a bracket where both levels sit inside the same bar, a reversal sized larger than the existing position.
+Reamer's conformance suite isn't 267 variations on the same assertion. It's organized around the categories of behavior the [execution specification](https://reamerlabs.com/spec) actually commits to: fill-price correctness per order type (market, limit, stop, and their interaction with slippage and spread), time-in-force and expiry behavior (GTC, IOC, GTD, and what happens at each boundary), bracket collision resolution (which side fires first when both are in range on the same bar), position-state transitions (scale-in, partial close, netted reversal), margin and cost-accounting identities, and multi-asset alignment behavior. Each category is tested with the specific edge cases that category tends to get wrong — a stop order exactly at a gap boundary, a bracket where both levels sit inside the same bar, a reversal sized larger than the existing position.
 
 ## Why edge cases, not the common case
 

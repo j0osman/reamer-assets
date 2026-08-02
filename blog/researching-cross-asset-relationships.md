@@ -26,8 +26,8 @@ The arrays exist before any decision is made, so "how does this ticker compare t
 
 ## The result is the honest version of the same idea
 
-None of this changes what the strategy is trying to test — a genuine belief that some tickers behave differently, or predictably relative to each other. What it changes is whether the backtest is actually testing that belief or a distorted version of it introduced by the way the comparison got implemented. A cross-asset strategy that "backtests well" written the loop-and-conditionals way is [a weaker result than it looks](https://reamerlabs.com/blog/curve-fitting-vs-evidence) — the same idea tested against a real cross-section can disagree with it, and the loop version never throws an error to say so.
+None of this changes what the strategy is trying to test — a genuine belief that some tickers behave differently, or predictably relative to each other. What it changes is whether the backtest is actually testing that belief or a distorted version of it introduced by the way the comparison got implemented. A cross-asset strategy that "backtests well" written the loop-and-conditionals way is a weaker result than it looks — the same idea tested against a real cross-section can disagree with it, and the loop version never throws an error to say so.
 
 ---
 
-Full reference: [docs](https://reamerlabs.com/docs) · The workflow this maps onto: [reamerlabs.com](https://reamerlabs.com/#workflow)
+Full reference: [docs](https://reamerlabs.com/docs)

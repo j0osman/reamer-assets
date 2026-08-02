@@ -13,7 +13,7 @@ Most backtesting cost models are built around equities first, then stretched to 
 
 ## Swap is a real cost, not a rounding error
 
-Every position held across a calendar date boundary accrues swap — longs pay, shorts receive, and the rate is set per day of the week, because many brokers roll a multiple of the normal rate on one specific day to account for weekend settlement. A strategy that holds positions for days rather than hours can have its entire apparent edge come from a backtest that zeroed this out, the same way [ignoring slippage anywhere else in the model quietly inflates results](https://reamerlabs.com/blog/slippage-is-part-of-the-strategy) — it isn't a smaller version of the real strategy, it's evidence the real one doesn't hold up once financing costs are actually charged.
+Every position held across a calendar date boundary accrues swap — longs pay, shorts receive, and the rate is set per day of the week, because many brokers roll a multiple of the normal rate on one specific day to account for weekend settlement. A strategy that holds positions for days rather than hours can have its entire apparent edge come from a backtest that zeroed this out, the same way ignoring slippage anywhere else in the model quietly inflates results — it isn't a smaller version of the real strategy, it's evidence the real one doesn't hold up once financing costs are actually charged.
 
 ```python
 cfg = reamer_py.DefaultExecutionModelConfig()
@@ -26,4 +26,4 @@ Forex/CFD cost structure maps onto Reamer's execution model directly — spread,
 
 ---
 
-Full reference: [docs](https://reamerlabs.com/docs) · The execution model this rests on: [execution specification](https://reamerlabs.com/spec) · The workflow this maps onto: [reamerlabs.com](https://reamerlabs.com/#workflow)
+Full reference: [docs](https://reamerlabs.com/docs) · The execution model this rests on: [execution specification](https://reamerlabs.com/spec)

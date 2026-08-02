@@ -19,7 +19,7 @@ Where they diverge is everything underneath that callback.
 
 Backtrader lets you configure commission and slippage. It does not make configuring them correctly, or checking that the resulting fills match a specific, written standard, part of using the tool. It's possible to build a Backtrader strategy that fills every order at the exact close price, with a broker model left at its permissive defaults, and get a result that looks like an answer without ever being checked against [what a realistic fill actually requires](https://reamerlabs.com/blog/why-execution-modeling-matters). Nothing in the tool stops that, or even flags it.
 
-Reamer's execution model works from a [published, testable specification](https://reamerlabs.com/spec) — commission, slippage, spread, and swap aren't optional configuration, they're the thing a 282-check conformance suite verifies every fill against. The difference isn't that Reamer supports more realistic execution. It's that realistic execution is the default the tool is built around, not a setting a user has to know to reach for.
+Reamer's execution model works from a [published, testable specification](https://reamerlabs.com/spec) — commission, slippage, spread, and swap aren't optional configuration, they're the thing a 267-check conformance suite verifies every fill against. The difference isn't that Reamer supports more realistic execution. It's that realistic execution is the default the tool is built around, not a setting a user has to know to reach for.
 
 ## Where the speed actually comes from
 
@@ -41,8 +41,8 @@ Backtrader's development has slowed considerably in recent years — issues sit 
 
 None of this makes Backtrader a bad tool for what it's actually good at: a first pass at an idea, a teaching environment, a lightweight sanity check before deciding whether something is worth taking further. If the question is "does this idea have any shape at all," Backtrader answers it well and cheaply.
 
-The trigger for reaching past it is [earlier than "we've decided to formally validate this"](https://reamerlabs.com/blog/why-reamer-exists) — it's the moment an idea has survived a first look and now needs to be checked against realistic costs, replayed tick by tick, and stress-tested with Monte Carlo before anyone would trust it with real capital. That's a different job, and it's the one Reamer is built around.
+The trigger for reaching past it is earlier than "we've decided to formally validate this" — it's the moment an idea has survived a first look and now needs to be checked against realistic costs, replayed tick by tick, and stress-tested with Monte Carlo before anyone would trust it with real capital. That's a different job, and it's the one Reamer is built around.
 
 ---
 
-Full reference: [docs](https://reamerlabs.com/docs) · The execution model this rests on: [execution specification](https://reamerlabs.com/spec) · Real measurements: [benchmarks](https://reamerlabs.com/benchmark) · License: GUI free, SDK requires an active license — [contact us](https://reamerlabs.com/#contact) for a free, time-limited test license.
+Full reference: [docs](https://reamerlabs.com/docs) · The execution model this rests on: [execution specification](https://reamerlabs.com/spec) · Real measurements: [benchmarks](https://reamerlabs.com/benchmark) · License: reamer_py requires an active license to run — no free tier — [contact us](https://reamerlabs.com/#contact) for a free, time-limited test license.

@@ -29,4 +29,4 @@ The part worth taking seriously isn't the dictionary — it's deciding which tic
 
 ---
 
-Full reference: [docs](https://reamerlabs.com/docs) · The workflow this maps onto: [reamerlabs.com](https://reamerlabs.com/#workflow)
+Full reference: [docs](https://reamerlabs.com/docs)

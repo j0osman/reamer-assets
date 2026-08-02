@@ -26,4 +26,4 @@ The loop above finds a candidate. It doesn't validate one. The parameter that wo
 
 ---
 
-Full reference: [docs](https://reamerlabs.com/docs) · The workflow this maps onto: [reamerlabs.com](https://reamerlabs.com/#workflow)
+Full reference: [docs](https://reamerlabs.com/docs)
