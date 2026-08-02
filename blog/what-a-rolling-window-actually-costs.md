@@ -9,11 +9,11 @@ Requesting a hundred bars of lookback instead of ten looks like a one-character 
 
 ## The shape of the cost
 
-Reamer's `on_bar` path keeps a rolling window of OHLCV history per ticker, sized to whatever lookback a strategy declares. The cost of that window is a function of two things multiplied together: how many bars of history it holds, and how many timesteps the backtest runs for — not a fixed cost paid once. A strategy with a 20-bar lookback over a year of 1-minute bars is doing meaningfully less work per step than the same strategy with a 500-bar lookback over the same data, and that difference compounds across every single step of the run, not just the first one.
+reamer_py's `on_bar` path keeps a rolling window of OHLCV history per ticker, sized to whatever lookback a strategy declares. The cost of that window is a function of two things multiplied together: how many bars of history it holds, and how many timesteps the backtest runs for — not a fixed cost paid once. A strategy with a 20-bar lookback over a year of 1-minute bars is doing meaningfully less work per step than the same strategy with a 500-bar lookback over the same data, and that difference compounds across every single step of the run, not just the first one.
 
 ## Why a bounded window, not the full history
 
-The alternative — handing a strategy the entire history up to the current bar, every step — would make the per-step cost grow across the *whole backtest*, not just with the declared lookback, since the window a strategy could look at would keep getting larger as the run progressed. Reamer bounds the window explicitly to what the strategy actually declared it needs, so the per-step cost stays flat across the length of the run instead of growing with it. A strategy that only reasons about the last 20 bars never pays for the ability to see bar 1 from bar 100,000.
+The alternative — handing a strategy the entire history up to the current bar, every step — would make the per-step cost grow across the *whole backtest*, not just with the declared lookback, since the window a strategy could look at would keep getting larger as the run progressed. reamer_py bounds the window explicitly to what the strategy actually declared it needs, so the per-step cost stays flat across the length of the run instead of growing with it. A strategy that only reasons about the last 20 bars never pays for the ability to see bar 1 from bar 100,000.
 
 ## Why this is worth understanding before choosing a lookback
 

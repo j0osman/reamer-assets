@@ -9,7 +9,7 @@ An earnings-surprise strategy lives or dies on one detail that's easy to get wro
 
 ## Reading a value as of a specific bar, not a specific date
 
-Reamer attaches an arbitrary, freeform value to a ticker at a specific timestamp — an earnings surprise, a guidance note, anything JSON-serializable — and `on_bar` reads back whatever entry is current as of that exact bar, never a later one. The engine doesn't parse or validate the value; it only tracks which entry is the latest-known one at each step, which means the actual moment a strategy can react to an earnings number is the timestamp it was attached at, not the fiscal period it describes.
+reamer_py attaches an arbitrary, freeform value to a ticker at a specific timestamp — an earnings surprise, a guidance note, anything JSON-serializable — and `on_bar` reads back whatever entry is current as of that exact bar, never a later one. The engine doesn't parse or validate the value; it only tracks which entry is the latest-known one at each step, which means the actual moment a strategy can react to an earnings number is the timestamp it was attached at, not the fiscal period it describes.
 
 ```python
 tv = data["AAPL"]

@@ -1,6 +1,6 @@
 ---
-title: Reamer vs vectorbt PRO
-description: vectorbt PRO is genuinely fast at what it's built for — sweeping thousands of parameter combinations across a strategy shape that's already fixed. That's a different job than carrying an unformed idea through the whole research loop, which is what Reamer is built around.
+title: reamer_py vs vectorbt PRO
+description: vectorbt PRO is genuinely fast at what it's built for — sweeping thousands of parameter combinations across a strategy shape that's already fixed. That's a different job than carrying an unformed idea through the whole research loop, which is what reamer_py is built around.
 date: 2026-07-18
 tier: Comparisons
 ---
@@ -17,17 +17,17 @@ A fast sweep over a shape that was never validated just finds the best-fitting v
 
 ## A loop, not a single fast stage
 
-Reamer isn't optimized to be the fastest tool at any one stage. It's built around the full loop — idea, implementation, execution, inspection, validation, iteration, decision, knowledge — with every stage held to the same standard: [deterministic, seeded execution](https://reamerlabs.com/blog/deterministic-research), fills modeled to [a published specification](https://reamerlabs.com/spec), [tick-level replay](https://reamerlabs.com/blog/why-replay-matters) to see exactly what happened, and [Monte Carlo robustness testing](https://reamerlabs.com/blog/why-monte-carlo-matters) before anything is trusted. Parameter optimization is one stage in that loop, not the reason the loop exists.
+reamer_py isn't optimized to be the fastest tool at any one stage. It's built around the full loop — idea, implementation, execution, inspection, validation, iteration, decision, knowledge — with every stage held to the same standard: [deterministic, seeded execution](https://reamerlabs.com/blog/deterministic-research), fills modeled to [a published specification](https://reamerlabs.com/spec), [tick-level replay](https://reamerlabs.com/blog/why-replay-matters) to see exactly what happened, and [Monte Carlo robustness testing](https://reamerlabs.com/blog/why-monte-carlo-matters) before anything is trusted. Parameter optimization is one stage in that loop, not the reason the loop exists.
 
-Reamer's C++ execution core is [18×–35× faster than Backtrader and QuantConnect LEAN on identical realistic-strategy workloads](https://reamerlabs.com/benchmark). Raw throughput on a fixed-shape sweep was never the bottleneck this product targets — the bottleneck is earlier: whether an idea deserves to reach the sweep stage at all.
+reamer_py's C++ execution core is [18×–35× faster than Backtrader and QuantConnect LEAN on identical realistic-strategy workloads](https://reamerlabs.com/benchmark). Raw throughput on a fixed-shape sweep was never the bottleneck this product targets — the bottleneck is earlier: whether an idea deserves to reach the sweep stage at all.
 
 ## Cross-sectional access and side-channel data
 
-Reamer's `on_bar` fires once per aligned timestep with every ticker's data available inside that same call, as zero-copy numpy views — a genuinely different shape than vectorbt PRO's whole-history array operations. Reamer also supports attaching arbitrary, schema-free exogenous data — earnings surprises, macro prints, anything JSON-serializable — to any ticker, auto-resolved to the latest-known-as-of-this-bar value inside `on_bar`. Both exist to express and inspect a strategy's logic, not to sweep a fixed shape across a parameter grid.
+reamer_py's `on_bar` fires once per aligned timestep with every ticker's data available inside that same call, as zero-copy numpy views — a genuinely different shape than vectorbt PRO's whole-history array operations. reamer_py also supports attaching arbitrary, schema-free exogenous data — earnings surprises, macro prints, anything JSON-serializable — to any ticker, auto-resolved to the latest-known-as-of-this-bar value inside `on_bar`. Both exist to express and inspect a strategy's logic, not to sweep a fixed shape across a parameter grid.
 
 ## Where vectorbt PRO is genuinely the better tool
 
-If a strategy's shape is already validated and the actual task is exploring a large parameter space fast, vectorbt PRO is the right tool for that stage. Some researchers use both: validate a shape's realism and robustness in one tool, then hand a confirmed shape to a vectorized sweep for fine-tuning. Reamer doesn't try to be the fastest possible parameter-sweep engine; it tries to make sure the thing being swept was worth sweeping in the first place.
+If a strategy's shape is already validated and the actual task is exploring a large parameter space fast, vectorbt PRO is the right tool for that stage. Some researchers use both: validate a shape's realism and robustness in one tool, then hand a confirmed shape to a vectorized sweep for fine-tuning. reamer_py's priority is making sure the thing being swept was worth sweeping in the first place, not being the fastest possible parameter-sweep engine.
 
 ---
 

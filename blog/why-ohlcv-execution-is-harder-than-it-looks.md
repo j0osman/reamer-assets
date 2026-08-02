@@ -16,7 +16,7 @@ Picking an answer arbitrarily — always assume the high comes first, or whichev
 
 ## Making the ambiguity deterministic instead of invisible
 
-Reamer generates a synthetic sequence of ticks within each bar — [deterministic](https://reamerlabs.com/blog/deterministic-research), seeded from the bar's own data and a run-level seed, so the same bar always produces the same internal sequence on every run. This doesn't recover the real path that actually happened; nothing can, from OHLCV alone. What it does is replace an arbitrary, hidden assumption with an explicit, reproducible one — order events get resolved against a specific, consistent sequence of prices instead of a silent rule that happens to be baked into whichever engine is running the test.
+reamer_py generates a synthetic sequence of ticks within each bar — [deterministic](https://reamerlabs.com/blog/deterministic-research), seeded from the bar's own data and a run-level seed, so the same bar always produces the same internal sequence on every run. This doesn't recover the real path that actually happened; nothing can, from OHLCV alone. What it does is replace an arbitrary, hidden assumption with an explicit, reproducible one — order events get resolved against a specific, consistent sequence of prices instead of a silent rule that happens to be baked into whichever engine is running the test.
 
 ## Why this is worth understanding, not just trusting
 

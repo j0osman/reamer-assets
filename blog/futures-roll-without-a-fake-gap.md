@@ -1,6 +1,6 @@
 ---
 title: "Rolling a Continuous Futures Contract Without a Fake Gap"
-description: Splicing front-month futures contracts together at expiry creates a price jump that has nothing to do with the market. Reamer rebases execution bookkeeping around that jump automatically — with one real limit worth knowing before relying on it.
+description: Splicing front-month futures contracts together at expiry creates a price jump that has nothing to do with the market. reamer_py rebases execution bookkeeping around that jump automatically — with one real limit worth knowing before relying on it.
 date: 2026-07-19
 tier: Practical Research Workflows
 ---
@@ -23,7 +23,7 @@ The roll is a ratio-rebase applied to execution-model bookkeeping — an open po
 
 ## The one real limit — this doesn't rewrite history
 
-Roll adjustment fixes execution bookkeeping. It does not rewrite historical bars — a strategy's own price history still shows the raw splice jump across the roll boundary exactly as it was in the source data. Anything computed from a lookback window that spans a roll date — a moving average, a breakout level, a volatility measure — sees the same discontinuity it would see with roll adjustment turned off entirely. Calling this a general-purpose continuous-contract price adjustment would be exactly the kind of overclaim [Reamer's approach to execution modeling exists to avoid](https://reamerlabs.com/blog/why-execution-modeling-matters) — it protects the bookkeeping around a position, not the price series a strategy reads from.
+Roll adjustment fixes execution bookkeeping. It does not rewrite historical bars — a strategy's own price history still shows the raw splice jump across the roll boundary exactly as it was in the source data. Anything computed from a lookback window that spans a roll date — a moving average, a breakout level, a volatility measure — sees the same discontinuity it would see with roll adjustment turned off entirely. Calling this a general-purpose continuous-contract price adjustment would be exactly the kind of overclaim [reamer_py's approach to execution modeling exists to avoid](https://reamerlabs.com/blog/why-execution-modeling-matters) — it protects the bookkeeping around a position, not the price series a strategy reads from.
 
 ---
 

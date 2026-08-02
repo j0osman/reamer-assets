@@ -9,7 +9,7 @@ The simplest way to test a strategy across many instruments is to run it once pe
 
 ## One equity curve, many tickers, still one constraint
 
-A multi-asset run in Reamer keeps every ticker's decisions independent — a strategy declares `tickers` and loops over them, each one's entry and exit logic depending only on its own data — while every position still draws against the same shared equity and the same leverage ceiling:
+A multi-asset run in reamer_py keeps every ticker's decisions independent — a strategy declares `tickers` and loops over them, each one's entry and exit logic depending only on its own data — while every position still draws against the same shared equity and the same leverage ceiling:
 
 ```python
 class MyStrategy:

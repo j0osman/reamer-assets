@@ -9,7 +9,7 @@ Most of what a simulation engine has to get right is invisible until it's wrong.
 
 ## Why this had to be a constraint, not a feature
 
-A simulation engine that's merely *usually* reproducible is worse than one that's honestly non-deterministic, because it fails exactly when someone trusts it least — when a result looks surprising enough to double-check, and checking it produces a different number. Reamer treats determinism as an architectural constraint that shapes everything built on top of it, not a checkbox added after the fact: no shared mutable random state carried between calls, no dependency on wall-clock time, thread scheduling, or floating-point summation order, and no code path whose behavior depends on anything other than the strategy, the data, and the seed.
+A simulation engine that's merely *usually* reproducible is worse than one that's honestly non-deterministic, because it fails exactly when someone trusts it least — when a result looks surprising enough to double-check, and checking it produces a different number. reamer_py treats determinism as an architectural constraint that shapes everything built on top of it, not a checkbox added after the fact: no shared mutable random state carried between calls, no dependency on wall-clock time, thread scheduling, or floating-point summation order, and no code path whose behavior depends on anything other than the strategy, the data, and the seed.
 
 ## What this rules out, on purpose
 

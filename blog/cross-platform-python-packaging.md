@@ -5,11 +5,11 @@ date: 2026-07-19
 tier: Engineering
 ---
 
-A pure-Python package is one file tree that works on any interpreter. A compiled extension is not — a `.so` built against Python 3.11's C API is not generally loadable by Python 3.12, and pybind11 (the library Reamer's Python bindings are built on) has no stable-ABI, abi3-style escape hatch on any version. "Works on Python 3.10 through 3.13" cannot mean one binary here. It has to mean building the same unmodified source once per targeted interpreter and shipping every result together.
+A pure-Python package is one file tree that works on any interpreter. A compiled extension is not — a `.so` built against Python 3.11's C API is not generally loadable by Python 3.12, and pybind11 (the library reamer_py's Python bindings are built on) has no stable-ABI, abi3-style escape hatch on any version. "Works on Python 3.10 through 3.13" cannot mean one binary here. It has to mean building the same unmodified source once per targeted interpreter and shipping every result together.
 
 ## What "one wheel" actually contains
 
-A Reamer wheel bundles multiple compiled extension files side by side — one per targeted CPython minor version — plus the pure-Python package files the tests and docs actually import. Nothing about the install process picks between them manually: Python's own import machinery already knows to look for the extension suffix matching whichever interpreter is running (`cpython-312-x86_64-linux-gnu`, and so on), so dropping several correctly-named binaries into the same wheel and letting normal import resolution run is sufficient — no custom selection logic needed at install time, just filenames that follow the convention correctly.
+A reamer_py wheel bundles multiple compiled extension files side by side — one per targeted CPython minor version — plus the pure-Python package files the tests and docs actually import. Nothing about the install process picks between them manually: Python's own import machinery already knows to look for the extension suffix matching whichever interpreter is running (`cpython-312-x86_64-linux-gnu`, and so on), so dropping several correctly-named binaries into the same wheel and letting normal import resolution run is sufficient — no custom selection logic needed at install time, just filenames that follow the convention correctly.
 
 ## Where this gets genuinely hard: three operating systems, one build
 

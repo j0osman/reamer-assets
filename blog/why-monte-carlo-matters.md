@@ -8,7 +8,7 @@ A backtest's trade sequence is one specific outcome — these particular wins, t
 
 ## What bootstrap resampling actually does
 
-Reamer's Monte Carlo draws, with replacement, from the strategy's own set of observed trade returns — meaning a single resample can include some trades more than once and leave others out entirely, thousands of times over, each time producing a new synthetic equity path from that resampled mix. This isn't reordering the same fixed set of trades; it's treating the observed trades as a sample from the strategy's real behavior and asking what a range of equally plausible samples from that same behavior would look like.
+reamer_py's Monte Carlo draws, with replacement, from the strategy's own set of observed trade returns — meaning a single resample can include some trades more than once and leave others out entirely, thousands of times over, each time producing a new synthetic equity path from that resampled mix. This isn't reordering the same fixed set of trades; it's treating the observed trades as a sample from the strategy's real behavior and asking what a range of equally plausible samples from that same behavior would look like.
 
 ## Why this matters beyond the one path that happened
 

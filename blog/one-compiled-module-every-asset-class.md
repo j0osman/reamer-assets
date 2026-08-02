@@ -1,15 +1,15 @@
 ---
 title: "One Compiled Module, Every Asset Class"
-description: Reamer briefly shipped a separate compiled Python module per asset class, each hiding the fields the others didn't need. It was removed the same cycle it was built, once splitting modules turned out to cost more than it protected.
+description: reamer_py briefly shipped a separate compiled Python module per asset class, each hiding the fields the others didn't need. It was removed the same cycle it was built, once splitting modules turned out to cost more than it protected.
 date: 2026-07-19
 tier: Engineering
 ---
 
-For a short period during futures support development, Reamer built `_reamer_py` as three separate compiled modules — one each for equities/FX, futures, and crypto — gated by a build flag, each exposing only the execution-model fields relevant to its own asset class. Futures got `roll_cycle_months`; the others didn't see it at all. The reasoning at the time seemed sound: why expose a futures-specific field to someone backtesting equities?
+For a short period during futures support development, the project built `_reamer_py` as three separate compiled modules — one each for equities/FX, futures, and crypto — gated by a build flag, each exposing only the execution-model fields relevant to its own asset class. Futures got `roll_cycle_months`; the others didn't see it at all. The reasoning at the time seemed sound: why expose a futures-specific field to someone backtesting equities?
 
 ## Why it got removed in the same cycle it shipped
 
-Three concrete costs showed up almost immediately, not eventually. First, the split had zero actual entitlement benefit — Reamer's license is per-machine and all-inclusive, so hiding fields behind a build flag protected nothing a paying user was supposed to be kept out of. Second, it broke something real: pybind11's type registry is process-wide, so two separately-compiled modules exposing overlapping type names collide the moment both get imported in the same Python process — which is exactly what mixing asset classes in one script requires, and exactly what a single all-inclusive license should have made possible in the first place. Third, a wheel-specific compile define meant a feature built for one wheel variant silently never reached the GUI or the test suite, because those were never told which variant they were supposed to be testing against.
+Three concrete costs showed up almost immediately, not eventually. First, the split had zero actual entitlement benefit — reamer_py's license is per-machine and all-inclusive, so hiding fields behind a build flag protected nothing a paying user was supposed to be kept out of. Second, it broke something real: pybind11's type registry is process-wide, so two separately-compiled modules exposing overlapping type names collide the moment both get imported in the same Python process — which is exactly what mixing asset classes in one script requires, and exactly what a single all-inclusive license should have made possible in the first place. Third, a wheel-specific compile define meant a feature built for one wheel variant silently never reached the GUI or the test suite, because those were never told which variant they were supposed to be testing against.
 
 ## What replaced it
 

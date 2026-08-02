@@ -21,7 +21,7 @@ Every ticker's data inside a multi-asset `on_bar` call arrives as zero-copy nump
 
 ## The actual constraint on "how many tickers"
 
-The practical ceiling on portfolio size in a Reamer backtest is set by how much per-step work an aligned, cross-sectional view of that many tickers actually requires — not by an arbitrary cap on ticker count. A strategy asking a genuinely large question — a broad cross-sectional universe, not a handful of correlated pairs — is exactly the case this architecture is built to keep affordable.
+The practical ceiling on portfolio size in a reamer_py backtest is set by how much per-step work an aligned, cross-sectional view of that many tickers actually requires — not by an arbitrary cap on ticker count. A strategy asking a genuinely large question — a broad cross-sectional universe, not a handful of correlated pairs — is exactly the case this architecture is built to keep affordable.
 
 ---
 

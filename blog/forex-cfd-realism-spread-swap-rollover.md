@@ -1,6 +1,6 @@
 ---
 title: "Forex and CFD Realism: Spread, Swap, and Rollover"
-description: Forex and CFD cost structure maps onto Reamer's execution model as-is, not as an approximation — but one silent unit mistake is enough to mis-price every fill by five orders of magnitude without ever throwing an error.
+description: Forex and CFD cost structure maps onto reamer_py's execution model as-is, not as an approximation — but one silent unit mistake is enough to mis-price every fill by five orders of magnitude without ever throwing an error.
 date: 2026-07-19
 tier: Practical Research Workflows
 ---
@@ -9,7 +9,7 @@ Most backtesting cost models are built around equities first, then stretched to 
 
 ## The mistake that doesn't throw an error
 
-`qty` in Reamer is always individual base-asset units, not lots — for forex, that means 1 unit of base currency, not the market's default of a 100,000-unit standard lot. Forex quotes and broker fee schedules are conventionally expressed in lots, so a strategy sized the way a trader would naturally think about it — "one standard lot" — has to be translated before it goes in as `qty=100000`, and `commission_per_unit` or a swap rate quoted per lot has to be divided by 100,000 to land in the same units. Skip that conversion and nothing crashes. The backtest just runs at costs five orders of magnitude off from what was intended, and a strategy that "works" under that mistake isn't a real edge — it's an artifact of a decimal point nobody moved.
+`qty` in reamer_py is always individual base-asset units, not lots — for forex, that means 1 unit of base currency, not the market's default of a 100,000-unit standard lot. Forex quotes and broker fee schedules are conventionally expressed in lots, so a strategy sized the way a trader would naturally think about it — "one standard lot" — has to be translated before it goes in as `qty=100000`, and `commission_per_unit` or a swap rate quoted per lot has to be divided by 100,000 to land in the same units. Skip that conversion and nothing crashes. The backtest just runs at costs five orders of magnitude off from what was intended, and a strategy that "works" under that mistake isn't a real edge — it's an artifact of a decimal point nobody moved.
 
 ## Swap is a real cost, not a rounding error
 
@@ -22,7 +22,7 @@ cfg.set_swap(3, 4.5)   # Wednesday — many brokers roll triple-swap here
 
 ## Why forex is the closest fit, not just a supported one
 
-Forex/CFD cost structure maps onto Reamer's execution model directly — spread, slippage, commission, and swap correspond to real broker fee-schedule fields with no approximation layer in between. Equities and futures are both well-supported too, but each carries a caveat forex doesn't: equities need pre-adjusted input to avoid a fake price break at every split or dividend, futures need an explicit roll-cycle configuration to avoid a fake price jump at every contract expiry. Forex has neither problem — the model is already shaped like a forex broker's own cost sheet, once the lot-to-unit conversion is made correctly and once for good.
+Forex/CFD cost structure maps onto reamer_py's execution model directly — spread, slippage, commission, and swap correspond to real broker fee-schedule fields with no approximation layer in between. Equities and futures are both well-supported too, but each carries a caveat forex doesn't: equities need pre-adjusted input to avoid a fake price break at every split or dividend, futures need an explicit roll-cycle configuration to avoid a fake price jump at every contract expiry. Forex has neither problem — the model is already shaped like a forex broker's own cost sheet, once the lot-to-unit conversion is made correctly and once for good.
 
 ---
 

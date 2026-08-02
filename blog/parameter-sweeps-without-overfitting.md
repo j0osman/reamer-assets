@@ -1,11 +1,11 @@
 ---
 title: "Parameter Sweeps Without Overfitting"
-description: There's no dedicated sweep engine in Reamer — a sweep is just a loop over configs — and that absence of built-in guardrails means the discipline against overfitting to the sweep itself has to come from whoever's running it, not from the tool.
+description: There's no dedicated sweep engine in reamer_py — a sweep is just a loop over configs — and that absence of built-in guardrails means the discipline against overfitting to the sweep itself has to come from whoever's running it, not from the tool.
 date: 2026-07-19
 tier: Practical Research Workflows
 ---
 
-Sweeping a parameter — trying a moving-average length across a range of values, say, and keeping whichever one performed best — isn't a special operation in Reamer. It's an ordinary Python loop calling `run_backtest` once per combination and comparing the results afterward. A dedicated sweep-optimization engine is a different kind of tool, built around exploring a fixed parameter space efficiently — a different problem than the one Reamer solves. The problem worth being honest about is what a loop like that actually proves.
+Sweeping a parameter — trying a moving-average length across a range of values, say, and keeping whichever one performed best — isn't a special operation in reamer_py. It's an ordinary Python loop calling `run_backtest` once per combination and comparing the results afterward. A dedicated sweep-optimization engine is a different kind of tool, built around exploring a fixed parameter space efficiently — a different problem than the one reamer_py solves. The problem worth being honest about is what a loop like that actually proves.
 
 ## The sweep itself is where the overfitting happens
 
