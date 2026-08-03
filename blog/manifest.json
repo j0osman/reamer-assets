@@ -84,34 +84,6 @@
     "tier": "Validation & Robustness"
   },
   {
-    "slug": "reamer-vs-backtrader",
-    "title": "reamer_py vs Backtrader",
-    "description": "Backtrader and reamer_py overlap on the surface — both are Python, both are event-driven, both give you an on_bar-style callback. The difference is what happens underneath that callback, and whether the tool was built to make execution realism a discipline or an option.",
-    "date": "2026-07-18",
-    "tier": "Comparisons"
-  },
-  {
-    "slug": "reamer-vs-vectorbt",
-    "title": "reamer_py vs vectorbt PRO",
-    "description": "vectorbt PRO is genuinely fast at what it's built for — sweeping thousands of parameter combinations across a strategy shape that's already fixed. That's a different job than carrying an unformed idea through the whole research loop, which is what reamer_py is built around.",
-    "date": "2026-07-18",
-    "tier": "Comparisons"
-  },
-  {
-    "slug": "reamer-vs-quantconnect",
-    "title": "reamer_py vs QuantConnect",
-    "description": "QuantConnect does have a backtesting component, but it sits inside a much broader platform built around live deployment, broker integration, and data aggregation. That breadth is a different bet than the one Reamer Labs makes, not a worse one. On deployment, Reamer Server is a direct alternative to QuantConnect now, not downstream of it — and its Institution tier is also a real pricing peer for the same line item a desk is deciding whether to spend on.",
-    "date": "2026-07-18",
-    "tier": "Comparisons"
-  },
-  {
-    "slug": "reamer-vs-nautilustrader",
-    "title": "reamer_py vs NautilusTrader",
-    "description": "NautilusTrader closes the gap between backtest and live by running both through the same Rust engine — genuinely fast. Reamer Py targets a different, earlier problem; on deployment, Reamer Server is now a direct alternative rather than downstream of it. One specific, narrow finding from our own benchmark suite explains why we don't publish a head-to-head number against NautilusTrader.",
-    "date": "2026-07-18",
-    "tier": "Comparisons"
-  },
-  {
     "slug": "testing-earnings-strategies-with-exogenous-data",
     "title": "Testing Earnings Strategies with Exogenous Data",
     "description": "An earnings backtest is only honest if the data becomes visible on the date it was actually announced, not the date it happened to land in a spreadsheet. Exogenous data's point-in-time resolution is what makes that distinction real instead of assumed.",
