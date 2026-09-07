@@ -12,7 +12,7 @@ A take-profit exit fills using the same slippage-inclusive formula as a stop-los
 
 ## What happens when both levels are close together
 
-A bracket with a tight stop and a tight target creates a real question whenever both could plausibly be hit within the same bar: which one actually got touched first? OHLCV data alone doesn't say. The answer has to come from [an actual, ordered sequence of prices within the bar](https://reamerlabs.com/blog/why-ohlcv-execution-is-harder-than-it-looks): a deterministic tick sequence, generated the same way every time for the same seed, so that whichever level is genuinely touched first in that sequence is the one that resolves the trade. Guessing which side "should" win based on which one is closer to the entry, or picking one arbitrarily, produces a different, less honest answer than actually checking the order events occurred in.
+A bracket with a tight stop and a tight target creates a real question whenever both could plausibly be hit within the same bar: which one actually got touched first? OHLCV data alone doesn't say. The answer has to come from [an actual, ordered sequence of prices within the bar](https://reamerlabs.com/blog/why-synthetic-ticks-instead-of-stored-ticks): a deterministic tick sequence, generated the same way every time for the same seed, so that whichever level is genuinely touched first in that sequence is the one that resolves the trade. Guessing which side "should" win based on which one is closer to the entry, or picking one arbitrarily, produces a different, less honest answer than actually checking the order events occurred in.
 
 ## Why this level of care matters here specifically
 

@@ -8,7 +8,7 @@ A finished backtest result is a final-stage view. Trades happened, orders filled
 
 ## The specific problem replay solves
 
-A strategy runs, and something in the output doesn't look right: a couple of trades with unusually large losses sitting among otherwise ordinary ones, or an order that, according to the strategy's own logic, should clearly have filled and just didn't. Reading the summary statistics again doesn't answer why. Replay is what actually answers it, and it does so from the CLI or from `reamer_py` directly: the run is deterministic for a given `rng_seed`, so the exact same result, down to the same [synthetic tick sequence](https://reamerlabs.com/blog/why-ohlcv-execution-is-harder-than-it-looks) for the bar in question, reproduces byte-for-byte on request. Nothing about diagnosing a specific trade requires a separate visual tool. The order CSV and the exported HTML report carry the per-order detail; a narrowed re-run against the same seed reproduces the exact tick path an order was checked against.
+A strategy runs, and something in the output doesn't look right: a couple of trades with unusually large losses sitting among otherwise ordinary ones, or an order that, according to the strategy's own logic, should clearly have filled and just didn't. Reading the summary statistics again doesn't answer why. Replay is what actually answers it: the run is deterministic for a given `rng_seed`, so the exact same result, down to the same synthetic tick sequence for the bar in question, reproduces byte-for-byte on request. Nothing about diagnosing a specific trade requires a separate visual tool. The result's `order_log` carries every order the run produced, whatever its outcome, with the fill price, the slippage cost, the reject reason, and whether the order was triggered intrabar; a narrowed re-run against the same seed reproduces the exact tick path that order was checked against.
 
 ## Surgical diagnosis, not general reassurance
 
@@ -16,7 +16,7 @@ Replay takes one specific, suspicious trade and finds the exact mechanical reaso
 
 ## Why this matters more than it sounds like it should
 
-Without the ability to go find that exact moment, a strange result either gets quietly trusted (because the summary number still looked fine overall) or quietly distrusted (because something felt off, with no way to confirm what). Replay removes the guessing from both of those outcomes. A specific concern about a specific trade gets a specific, checkable answer, from the same CLI and `reamer_py` workflow used to run the backtest in the first place.
+Without the ability to go find that exact moment, a strange result either gets quietly trusted (because the summary number still looked fine overall) or quietly distrusted (because something felt off, with no way to confirm what). Replay removes the guessing from both of those outcomes. A specific concern about a specific trade gets a specific, checkable answer, from the same run that produced the result in the first place.
 
 ---
 

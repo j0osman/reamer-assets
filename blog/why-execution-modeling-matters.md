@@ -20,7 +20,7 @@ A strategy that trades frequently, or trades in a market with a wide spread rela
 
 ## The layer everything else depends on
 
-Nothing downstream of a bad fill model can fix it. [A deterministic, perfectly reproducible run](https://reamerlabs.com/blog/deterministic-research) of an unrealistic execution model just reproduces the same wrong answer every time. [A Monte Carlo robustness pass](https://reamerlabs.com/blog/why-monte-carlo-matters) run on top of it is stress-testing a result that was never measuring the real strategy in the first place. Getting the fill price right isn't one item on a checklist alongside validation and robustness. It's the foundation those checks stand on.
+Nothing downstream of a bad fill model can fix it. A deterministic, perfectly reproducible run of an unrealistic execution model just reproduces the same wrong answer every time. A Monte Carlo robustness pass run on top of it is stress-testing a result that was never measuring the real strategy in the first place. Getting the fill price right isn't one item on a checklist alongside validation and robustness. It's the foundation those checks stand on.
 
 ---
 

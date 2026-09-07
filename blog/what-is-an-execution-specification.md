@@ -12,7 +12,7 @@ Code embodies behavior; it doesn't explain or justify it. A bug produces behavio
 
 ## The relationship between spec, tests, and code
 
-The specification is the authoritative source. [Tests exist to verify that the implementation conforms to it](https://reamerlabs.com/blog/behavioral-testing-for-trading-engines), leaving the document to define behavior and the tests to check it. When behavior needs to change, the specification changes first, deliberately, and the tests and any historical baselines get updated to match it in the same change, keeping the document the authority the test was supposed to be checking against. This ordering is what keeps the specification meaningful: if the document could be silently reinterpreted to match whatever the code currently does, it would stop being a specification and become a description after the fact.
+The specification is the authoritative source. Tests exist to verify that the implementation conforms to it, leaving the document to define behavior and the tests to check it. When behavior needs to change, the specification changes first, deliberately, and the tests and any historical baselines get updated to match it in the same change, keeping the document the authority the test was supposed to be checking against. This ordering is what keeps the specification meaningful: if the document could be silently reinterpreted to match whatever the code currently does, it would stop being a specification and become a description after the fact.
 
 ## Why this matters beyond any one engine
 

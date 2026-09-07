@@ -1,6 +1,6 @@
 ---
 title: "Why Synthetic Ticks Instead of Stored Ticks"
-description: An OHLCV bar gives four prices, not the path between them. reamer_py answers the question of what happened inside a bar with a deterministic, seeded synthetic tick path — not with stored tick data most researchers can't afford or don't need.
+description: An OHLCV bar gives four prices, not the path between them. Reamer Research answers the question of what happened inside a bar with a deterministic, seeded synthetic tick path — not with stored tick data most researchers can't afford or don't need.
 date: 2026-07-19
 tier: Engineering
 ---
@@ -13,7 +13,7 @@ There are exactly two honest ways to fill that gap. One is to actually have real
 
 ## What "deterministic" has to mean here
 
-reamer_py generates a synthetic intra-bar tick path instead — and the property that makes it usable for research, not just decoration, is that it's fully deterministic: the same seed produces the exact same tick path, on the same bar, every time, on any machine, forever. That's what turns "which order fired first" from an arbitrary implementation detail into a specified, reproducible, testable answer. A bracket collision isn't resolved by chance at run time; it's resolved by a path that was fixed the moment the seed was, and replaying that exact bar shows exactly what happened and why.
+Reamer Research generates a synthetic intra-bar tick path instead — and the property that makes it usable for research, not just decoration, is that it's fully deterministic: the same seed produces the exact same tick path, on the same bar, every time, on any machine, forever. That's what turns "which order fired first" from an arbitrary implementation detail into a specified, reproducible, testable answer. A bracket collision isn't resolved by chance at run time; it's resolved by a path that was fixed the moment the seed was, and replaying that exact bar shows exactly what happened and why.
 
 ## What stays undisclosed, and why
 
