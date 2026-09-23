@@ -33,4 +33,4 @@ The engine also has room to spare on the data-volume axis. Parsing about 4.7 mil
 
 These figures come from one machine on one date. They characterize an operating envelope, not a guaranteed service level. Reproduce them on your own target hardware before you rely on any specific number. The point of publishing the raw console and CSV outputs is exactly that: a reader can check every figure here against the files, and where a raw file and this note appear to differ, the raw file is authoritative.
 
-The full method, the environment table, and the rest of the measurements are in the preprint, [Predictable Trading Infrastructure on Many-Core CPUs](https://ssrn.com/abstract=7476081). The unedited benchmark artifacts are archived openly at [doi.org/10.6084/m9.figshare.33877588](https://doi.org/10.6084/m9.figshare.33877588).
+The full method, the environment table, and the rest of the measurements are in the preprint, [Predictable Trading Infrastructure on Many-Core CPUs](https://doi.org/10.6084/m9.figshare.33972466). The unedited benchmark artifacts are archived openly at [doi.org/10.6084/m9.figshare.33877588](https://doi.org/10.6084/m9.figshare.33877588).
