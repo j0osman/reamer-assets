@@ -12,7 +12,7 @@ In uncut recordings, Claude Code working only from the kit documents integrated 
 
 ## What the recordings show
 
-Each recording starts from a fresh copy of the kit, with no source code and no earlier exposure. A wall clock runs throughout, and the elapsed time is the measurement. They were recorded against version 4.3.0 and are played at double speed.
+Each recording starts from a fresh copy of the kit, with no source code and no earlier exposure. A wall clock runs throughout, and the elapsed time is the measurement. They were recorded against version 4.2.1 and are sped up, returning to normal speed at the end.
 
 - **Reamer Research, about 13 minutes.** The agent wrote a multi-instrument strategy from scratch and ran a backtest. It then confirmed that a second run gave identical results, swept the parameters and cost settings, traced the worst trade, and wrote the JSON report.
 - **Reamer Server, about 19 minutes.** The agent built its own gate and broker connector in C++, modelled on the kit's Go example, including a FIX 4.4 session. It ran orders through to a fill against the kit's simulated venue.
