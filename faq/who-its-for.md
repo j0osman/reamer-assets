@@ -18,7 +18,7 @@ They are for systematic quants who write their own code and trade mid-frequency 
 - **You want everything on your own machine,** with nothing uploaded.
 - **For [Reamer Server](/faq/what-is-reamer-server.html) in particular:** you are taking strategies live at your own broker, and you or your team can write the broker connection and the pre-trade check in C, C++, Rust or Go.
 
-Independent quants and firms buy the same products at the same prices. A Reamer Research key bought online is personal to the one person named at checkout, so each researcher on a team needs their own.
+Independent quants and firms buy the same products at the same prices. A Reamer Research key bought online is personal to the one person whose email it was issued to at checkout, so each researcher on a team needs their own.
 
 ## Not a fit
 

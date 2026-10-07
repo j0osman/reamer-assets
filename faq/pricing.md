@@ -22,7 +22,7 @@ Both work out at the same monthly rate, $150 and $600, and the trial costs one a
 - **One product on one machine** for the term. Running both products on one machine needs one seat of each.
 - **Unlimited runs** on that machine. You are not charged per backtest, per strategy or per order.
 - **Updates released during the term,** sent at no extra cost when you ask by email, and support by email while the licence is active.
-- **One named person** for a Reamer Research seat. Each person on a team needs their own.
+- **One person** for a Reamer Research seat. Each person on a team needs their own.
 
 ## How you pay
 

@@ -13,7 +13,7 @@ No. There is no free trial or free evaluation licence. There is a paid 30-day tr
 ## What the trial gives you
 
 - **The full product.** The same kit, the same binaries and the same documents as an annual licence, with nothing switched off.
-- **The same licence terms.** One seat on one machine, unlimited runs, and email support. A Reamer Research trial is licensed to one named person and covers live or paper trading as well as backtesting.
+- **The same licence terms.** One seat on one machine, unlimited runs, and email support. A Reamer Research trial is licensed to one person and covers live or paper trading as well as backtesting.
 - **30 days from first activation.** You can buy the key, read the kit and activate when your machine and data are ready. Deactivating and reactivating does not restart the clock.
 
 ## What to test in 30 days

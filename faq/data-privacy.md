@@ -31,6 +31,6 @@ After activation, both products run with no internet access, so you can block ou
 
 ## What Reamer Labs does hold
 
-Your email address, the licensee's name, the licence key, the machine fingerprint and activation times. Payment details stay with Paddle, which handles checkout. See the [privacy policy](/privacy.html).
+Your email address, the licence key, the machine fingerprint and activation times, plus the name of each licensee on an order paid by invoice. Payment details stay with Paddle, which handles checkout. See the [privacy policy](/privacy.html).
 
 See also [Is there a backtesting engine I can call from Python that runs locally and never uploads my code?](/faq/local-python-backtesting-engine-no-upload.html)
