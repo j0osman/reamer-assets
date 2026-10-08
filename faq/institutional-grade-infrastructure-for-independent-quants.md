@@ -24,13 +24,14 @@ None of these needs colocated hardware or a team. They need software built to th
 
 ## Where the money usually goes
 
-An independent quant usually meets three options, each with a cost that is not always the price:
+An independent quant usually meets four options, each with a cost that is not always the price:
 
 - **Build it yourself.** No licence, but months of engineering before the first trustworthy result, and the maintenance after. The real cost is the time not spent on strategies. See [Should I build my own backtester or buy one?](/faq/build-or-buy-backtester.html)
 - **Enterprise vendors.** Built for funds and banks. Prices are usually on request, contracts are annual with minimums, and the sales process can take longer than a trial should.
 - **Hosted platforms.** Cheap or free to start, but your strategy runs on someone else's machine, with that platform's execution model and its data. Leaving means rewriting.
+- **Build around a core.** Buy only the parts that have to be right and are the same for everyone, such as fill rules or order state, and build the rest yourself: strategies, data, risk rules and the broker connection. Less assembly than building it all, and nothing outside the core is decided for you.
 
-What an independent quant needs is the property list from the enterprise option at a price one person can pay, running on their own machine.
+What an independent quant needs is the property list from the enterprise option, in a core priced for one person, running on their own machine, with everything around it still theirs to build.
 
 ## How to check an "institutional" claim
 

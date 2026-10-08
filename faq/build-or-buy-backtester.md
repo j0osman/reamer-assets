@@ -89,9 +89,9 @@ A free, open-source framework is a third option: no licence fee, and the code is
 
 If an engine passes, buy the layers that need to be right and build the ones that make you money. Most setups end up in between: a bought or adopted engine, with your own data pipeline, strategies, sweep scripts and reporting built around it. See [What is a quant research engine, and how is it different from a backtesting script?](/faq/research-engine-vs-backtest-script.html)
 
-## What buying Reamer Research gets you
+## Where Reamer Research fits
 
-[Reamer Research](/products/reamer-research.html) covers the layers that have to be right but are rarely an edge: execution simulation, accounting, metrics, reporting and speed. Everything below is documented in the kit:
+[Reamer Research](/products/reamer-research.html) is the bought core in that in-between setup. It covers the layers that have to be right but are rarely an edge: execution simulation, accounting, metrics, reporting and speed. Your strategies, data pipeline, sweep scripts and analysis stay yours to build around it. Everything below is documented in the kit:
 
 - **The rules, already written.** Market, limit and stop fills, gaps, bracket collisions, spread and slippage, commission, margin, partial closes, overnight financing, futures rolls, multi-asset alignment and non-price data are each specified in `EXECUTION_SPEC.md`. The document ships in the kit rather than on the web, so the 30-day trial below is the way to read it, and test against it, before committing to a year.
 - **Checkable output.** With a fixed seed, a run is byte-identical on every repeat. The quickstart asks you to run it twice and compare.

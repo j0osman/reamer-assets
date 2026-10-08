@@ -66,7 +66,7 @@ Run the whole stack against a paper account before real money, and compare its f
 
 - **Always yours:** the strategies, the risk rules, the choice of data and broker, and the glue between the layers. Nobody can sell you these, because they are your edge and your risk tolerance.
 - **Usually bought:** market data and brokerage.
-- **Bought, adopted or built:** the research engine and the core of the execution pipeline. These have to be right but are rarely an edge, which is the case for not building them. See [Should I build my own backtester or buy one?](/faq/build-or-buy-backtester.html)
+- **Bought, adopted or built:** the research engine and the core of the execution pipeline. These have to be right but are rarely an edge, which is the case for buying them as a core and building everything else around it. See [Should I build my own backtester or buy one?](/faq/build-or-buy-backtester.html)
 - **Yours to run:** monitoring, alerting and storage for the record, using whatever tools you already use.
 
 ## Three common shapes
