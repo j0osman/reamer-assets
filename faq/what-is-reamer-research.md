@@ -29,6 +29,15 @@ How fills are decided, including stops and targets inside one bar, is set out in
 - No market data. You bring your own bars, already adjusted for splits and dividends.
 - Linux x86-64 and macOS on Apple Silicon only, with no Windows version.
 
+## How it compares
+
+- [Backtrader](/faq/reamer-research-vs-backtrader.html), a free, open-source Python framework.
+- [vectorbt PRO](/faq/reamer-research-vs-vectorbt-pro.html), a paid vectorised research library for Python.
+- [DolphinDB](/faq/reamer-research-vs-dolphindb.html), a time-series database with a backtest plugin.
+- [QuantConnect](/faq/reamer-labs-vs-quantconnect.html), a hosted platform with data, backtesting and live trading.
+- [NautilusTrader](/faq/reamer-labs-vs-nautilustrader.html), an open-source platform for backtest and live, down to order books.
+- [EPAM Deltix QuantOffice](/faq/reamer-labs-vs-deltix.html), an enterprise platform from research to execution.
+
 ## Price
 
 $1,800 per seat per year, paid once, with no automatic renewal. The $225 30-day trial includes the full kit. See the [product page](/products/reamer-research.html) and [pricing](/pricing.html).

@@ -34,6 +34,12 @@ Gate and connector can be written in C, C++, Rust or Go. Strategies connect over
 - **Not for high-frequency or order-book strategies,** and it supplies no market data or strategy framework.
 - **Linux x86-64 only,** with glibc 2.39 or later. No macOS or Windows version.
 
+## How it compares
+
+- [QuantConnect](/faq/reamer-labs-vs-quantconnect.html), a hosted platform with data, backtesting and managed live trading through supported brokers.
+- [NautilusTrader](/faq/reamer-labs-vs-nautilustrader.html), an open-source platform with venue adapters and its own order management.
+- [EPAM Deltix QuantOffice](/faq/reamer-labs-vs-deltix.html), an enterprise platform with over 100 exchange and broker connectors.
+
 ## Price
 
 $7,200 per seat per year, paid once, with no automatic renewal. The $900 30-day trial includes the full kit. See the [product page](/products/reamer-server.html), [What is an order management engine?](/faq/what-is-an-order-management-engine.html) and [pricing](/pricing.html).
