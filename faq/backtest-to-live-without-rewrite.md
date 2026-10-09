@@ -78,7 +78,7 @@ The rest is infrastructure, built once and shared by every strategy:
 ## Limits to know
 
 - **Costs stay in research.** The research configuration, data format and cost settings describe the simulation. Live costs are what your broker charges, and the server reads its own configuration.
-- **Exits travel as their own orders.** The live socket has no bracket fields, so the relay rejects an order with a stop or target attached. Send the stop and the target as separate orders.
+- **Brackets travel with the entry.** The relay sends the stop and the target with the order. Reamer Server tracks each exit as an order of its own, and your broker connector places them at the venue. A stop or target on a close is rejected, because exits attach to an entry.
 - **The relay speaks the local socket.** It connects to a server on the same machine. A strategy on another host uses the server's remote mode through a relay process you run.
 - **Your venue adapter.** The FIX reference runs against a simulated venue. Making a connection fit for your broker in production, including recovery after sequence gaps and venue certification, is your work.
 - **Your market data.** The live feed and the bars it is compared against are yours to source and match.

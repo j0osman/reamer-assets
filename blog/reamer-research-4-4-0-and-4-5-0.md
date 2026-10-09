@@ -66,7 +66,7 @@ An optional `on_progress` callback receives steps done and steps total between b
 
 The Reamer Research library now ships a strategy relay: `reamer_relay_open()`, `reamer_relay_send()`, `reamer_relay_poll()`, `reamer_relay_get_positions()`, `reamer_relay_is_connected()` and `reamer_relay_close()`.
 
-The relay sends the same `ReamerOrderRequest` a strategy returns from `on_bar` in a backtest to a running Reamer Server over its local strategy socket, with the backtest's order IDs and submission rules. Fills come back as the same `ReamerPositionState` the strategy reads in research. Your logic, your order structure and your instrument names carry over. Exits travel as their own orders, since the strategy socket carries no bracket fields. `RESEARCH_TO_SERVER.md` in the kit runs one order through the reference gate to a simulated fill on Linux and macOS.
+The relay sends the same `ReamerOrderRequest` a strategy returns from `on_bar` in a backtest to a running Reamer Server over its local strategy socket, with the backtest's order IDs and submission rules. Fills come back as the same `ReamerPositionState` the strategy reads in research. Your logic, your order structure and your instrument names carry over. A stop and target travel with the entry order, and your broker connector places them at the venue. `RESEARCH_TO_SERVER.md` in the kit runs one order through the reference gate to a simulated fill on Linux and macOS.
 
 The pre-trade gate and the broker connector in Reamer Server stay yours to build. That is where your risk model and your venue live.
 
