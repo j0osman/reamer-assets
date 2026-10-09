@@ -14,7 +14,7 @@ It is a library, not an application. You write a short `main()` that links it, s
 
 ## The core, and the two parts you build
 
-- **The core (what you buy).** It takes order intents from your strategies, puts them into one sequence, calls your gate once for each, and passes accepted orders to your connector. It handles market, limit, stop and stop-limit orders. Fills and order updates go back to the strategy that sent the order.
+- **The core (what you buy).** It takes order intents from your strategies, puts them into one sequence, calls your gate once for each, and passes accepted orders to your connector. Orders can be market, limit, stop, stop-limit, trailing stop, trailing stop-limit, market-if-touched, limit-if-touched and market-to-limit orders, with day, GTC, GTD, IOC, FOK, at-the-open and at-the-close time in force. An order can also carry an attached take-profit and stop-loss, iceberg and minimum quantity, post-only, reduce-only, hidden and all-or-none flags, an OCO, OTO or OUO link to another order, an account and a destination, and up to 1,024 bytes of your own data. The core passes every field to your gate and connector, and your connector maps them to your broker. Fills and order updates go back to the strategy that sent the order, including fills on an attached exit.
 - **Your gate.** Your pre-trade risk check. For each order it says pass or reject, with a reason, given the account's last known state. Its rules are yours; the core does not supply any. See [How can I plug my own risk model into every order before it reaches the broker?](/faq/plug-own-risk-model-pre-trade.html)
 - **Your connector.** Your broker session. It sends orders, reports fills, and is the only source of positions and open orders. Nothing in the kit talks to a real broker for you.
 
@@ -31,7 +31,7 @@ Gate and connector can be written in C, C++, Rust or Go. Strategies connect over
 
 - **Your broker, your connector.** You write the connector for your broker, and its certification is yours.
 - **The broker is the record.** On start, orders and positions are loaded from your connector. Anything else you want kept, you persist from the event stream.
-- **Mid-frequency order flow.** Market, limit, stop and stop-limit orders from strategies on bars. Market data and the strategy itself come from your own processes.
+- **Mid-frequency order flow.** The full order set above, from strategies on bars. Market data and the strategy itself come from your own processes.
 - **Linux x86-64,** with glibc 2.39 or later.
 
 ## How it compares
