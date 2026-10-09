@@ -96,7 +96,7 @@ If an engine passes, buy the layers that need to be right and build the ones tha
 - **The rules, already written.** Market, limit and stop fills, gaps, bracket collisions, spread and slippage, commission, margin, partial closes, overnight financing, futures rolls, multi-asset alignment and non-price data are each specified in `EXECUTION_SPEC.md`. The document ships in the kit rather than on the web, so the 30-day trial below is the way to read it, and test against it, before committing to a year.
 - **Checkable output.** With a fixed seed, a run is byte-identical on every repeat. The quickstart asks you to run it twice and compare.
 - **Speed for sweeps.** About 1.7 million bars per second per run on a 64-core EPYC machine, with the hardware, method and a benchmark tool to reproduce it in `BENCHMARK.md`.
-- **A stable interface.** Programs written against an earlier version of the interface keep working with the current library without changes.
+- **A stable interface.** From ABI 7 on, interface versions are additive: a program built against ABI 7 runs unmodified against a newer library. `ABI_VERSIONING_POLICY.md` in the kit states the rules.
 - **Integration in minutes.** An uncut recording shows an AI coding agent, working from the kit documents alone, taking a strategy through the full research loop in about 13 minutes.
 
 The price is USD 1,800 per seat per year, paid once, with nothing renewing automatically, or USD 225 for a 30-day trial to check fit first. See [Pricing](/pricing.html).

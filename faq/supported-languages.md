@@ -14,7 +14,7 @@ Both products are compiled libraries with a stable C interface. The C interface 
 
 ## Reamer Research
 
-- **Python.** A pure-Python binding using `ctypes` and numpy, for Python 3.8 or later, with no build step. You write an `on_bar` method that sees each instrument's recent bars as numpy arrays and returns orders. Templates and example strategies are included.
+- **Python.** A pure-Python binding using `ctypes` and numpy, for Python 3.8 or later, with no build step. You write an `on_bar` method that sees each instrument's recent bars as numpy arrays, its positions and resting orders, and returns orders and order actions. Templates and example strategies are included.
 - **C++.** A C++20 wrapper around the C interface, with example strategies.
 - **Anything else that can call C,** such as Rust, Go, Julia or C#, against the header directly.
 

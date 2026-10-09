@@ -57,6 +57,6 @@ Even when the backtest was honest, the move to live can change the strategy with
 
 Data quality stays yours. The engine checks that bars are well formed, not that prices are correctly adjusted.
 
-For group 5, [Reamer Server](/products/reamer-server.html) runs the same decision logic live, and `RESEARCH_TO_SERVER.md` lists exactly what changes on the way: indicators that read a lookback window become running state, instruments are mapped from backtest identifiers to live names, and no cost settings carry over. Backtest results carry your own instrument names, so the backtest and live instrument lists can be compared as a build step instead of trusted.
+For group 5, [Reamer Server](/products/reamer-server.html) runs the same decision logic live. `reamer_relay_*` in Reamer Research sends the same order structure the backtest uses, under the same instrument names, and `RESEARCH_TO_SERVER.md` lists exactly what changes on the way: indicators that read a lookback window become running state, and cost settings stay with the backtest. Backtest results carry your own instrument names, so the backtest and live instrument lists can be compared as a build step instead of trusted.
 
 No backtest removes the gap entirely: live fills depend on your broker and venue, and the market will always differ from any model of it. What a careful backtest does is make the gap small and known in advance, so you find it before real money does.

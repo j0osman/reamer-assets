@@ -83,7 +83,7 @@ Reamer Labs makes the third shape's two engines. Each is a precompiled library w
 
 - **Layer 2: [Reamer Research](/products/reamer-research.html).** A research engine for mid-frequency strategies on OHLCV bars: every fill and cost rule written in `EXECUTION_SPEC.md`, byte-identical output for a fixed seed, and a versioned JSON result for every run. Strategies are written in Python or C++ through the reference code, or in any language that can call C. It runs on Linux x86-64 and macOS on Apple silicon.
 - **Layer 3: [Reamer Server](/products/reamer-server.html).** The core of the execution pipeline. It holds every order's state, sequences orders from every strategy through one path, and calls your pre-trade check on every order before it reaches your broker. Strategies connect as separate processes over a local socket or a remote relay, in any language. On a 64-core EPYC machine it measured 11.3 µs at the median from strategy to a local acceptor, before the broker's own round trip. It runs on Linux x86-64.
-- **The gap between them.** `RESEARCH_TO_SERVER.md` ships in both kits and lists what carries over and what does not: the four points above, in more detail.
+- **The link between them.** `reamer_relay_*` in Reamer Research sends the orders a strategy returns in a backtest to Reamer Server and reads the fills back. `RESEARCH_TO_SERVER.md` ships in both kits, lists what carries over and what changes, and runs one order through the reference gate to a simulated fill.
 
 What you build, and what the kits give you to start from:
 

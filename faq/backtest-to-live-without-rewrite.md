@@ -68,17 +68,19 @@ The rest is infrastructure, built once and shared by every strategy:
 [Reamer Research](/products/reamer-research.html) and [Reamer Server](/products/reamer-server.html) are separate products built for this move. Both kits ship the same guide to it, `RESEARCH_TO_SERVER.md`, and what follows is from it:
 
 - **The decision logic does not change.** Entry signals, exit rules, sizing, stop and target levels and risk thresholds carry over. The guide calls the move a port from batch to event-driven code, not a rewrite.
+- **The order does not change.** `reamer_relay_send()` in the Reamer Research library takes the same `ReamerOrderRequest` a strategy returns from `on_bar` and sends it to a running Reamer Server over its local strategy socket. Order IDs are numbered as in a backtest, the closing and reducing rules are the same, and `reamer_relay_get_positions()` reads the fills back as the same position structure the backtest passes to `on_bar`.
 - **Strategies stay in your own processes.** Reamer Server hosts no strategy. Strategies connect to it over a socket, in any language; a Python strategy can submit a live order with nothing beyond the standard library's `socket` and `json`.
-- **Exactly one item touches strategy code: indicator state.** In Reamer Research, `on_bar` receives a lookback window every call. Live, an indicator that needs history must be kept as running state. Writing it that way in the backtest, as above, removes even that.
-- **The instrument mapping is checkable.** Reamer Research identifies instruments by index in the run; Reamer Server by name. Results from the current entry point carry your own names, so you can check the backtest's instruments against your live instrument table as a build step.
-- **The plumbing is built once.** The pre-trade check and the broker connector are yours to write, once per deployment, not per strategy. You start from worked examples, not a blank file: a minimal accept-all check and an in-memory paper broker in C++ and Rust, and a full FIX 4.4 integration in Go that drives one order from strategy to fill against a simulated venue.
+- **Exactly one item touches strategy code: indicator state.** In Reamer Research, `on_bar` receives a lookback window every call. Live, an indicator that needs history is kept as running state. Writing it that way in the backtest, as above, removes even that.
+- **Instrument names travel with the order.** `reamer_relay_open()` takes the same `ticker_names[]` array as `reamer_run_backtest()`, and backtest results carry those names, so the backtest's instruments can be checked against your live instrument table as a build step.
+- **The plumbing is built once.** The pre-trade check and the broker connector are yours to write, once per deployment, not per strategy. You start from worked examples, not a blank file: a minimal accept-all check and an in-memory paper broker in C++ and Rust, and a full FIX 4.4 integration in Go. `RESEARCH_TO_SERVER.md` runs one research order through the Go reference gate to a simulated fill in five steps.
 - **Byte-identical backtests make the parity test exact.** A fixed `rng_seed` gives the same order log every run, so a difference in the parity test is the port, not the engine.
 
 ## Limits to know
 
-- **No configuration or data file carries across.** Not the research config, the data format or the cost settings. Do not expect the backtest's cost model to mean anything to the live server.
-- **No automatic translation.** Neither product converts a research strategy into a live one. The port is your work, and so is the parity test.
-- **No venue adapter for your venue.** The FIX reference runs against a simulated venue. Making a connection fit for your broker in production, including recovery after sequence gaps and venue certification, is your work.
-- **No market data from either product.** The live feed and the bars it is compared against are yours to source and match.
+- **Costs stay in research.** The research configuration, data format and cost settings describe the simulation. Live costs are what your broker charges, and the server reads its own configuration.
+- **Exits travel as their own orders.** The live socket has no bracket fields, so the relay rejects an order with a stop or target attached. Send the stop and the target as separate orders.
+- **The relay speaks the local socket.** It connects to a server on the same machine. A strategy on another host uses the server's remote mode through a relay process you run.
+- **Your venue adapter.** The FIX reference runs against a simulated venue. Making a connection fit for your broker in production, including recovery after sequence gaps and venue certification, is your work.
+- **Your market data.** The live feed and the bars it is compared against are yours to source and match.
 
-The $225 Reamer Research trial includes the full execution specification and the kit, so you can write a strategy with running indicators and check it repeats exactly before buying a licence. The $900 Reamer Server trial includes both reference integrations, so you can run that strategy through to a paper fill.
+The $225 Reamer Research trial includes the full execution specification and the kit, so you can write a strategy with running indicators and check it repeats exactly before buying a licence. The $900 Reamer Server trial includes both reference integrations, so you can send that strategy's orders through to a simulated fill.

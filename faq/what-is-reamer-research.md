@@ -1,6 +1,6 @@
 ---
 title: What is Reamer Research?
-description: Reamer Research is a deterministic research engine for mid-frequency quants. It is a backtesting library with a stable C interface that you call from Python, C++ or any language that can call C, on your own machine. The same data, settings and seed give byte-identical results every run. It costs $1,800 per seat per year, with a $225 30-day trial.
+description: Reamer Research is a deterministic research engine for mid-frequency quants. It is a library with a stable C interface that you call from Python, C++ or any language that can call C, on your own machine. It tests a strategy, diagnoses it trade by trade, sweeps it, reports it, and sends its orders live to Reamer Server. The same data, settings and seed give byte-identical results every run. It costs $1,800 per seat per year, with a $225 30-day trial.
 stage: 4
 order: 24
 product: research
@@ -8,26 +8,26 @@ next: who-its-for, supported-languages, performance, what-is-reamer-server, pric
 date: 2026-10-02
 ---
 
-Reamer Research is a deterministic research engine for mid-frequency quants. It is a backtesting library with a stable C interface that you call from Python, C++ or any language that can call C, on your own machine. The same data, settings and seed give byte-identical results every run, including the randomised slippage and spread.
+Reamer Research is a deterministic research engine for mid-frequency quants. It is a library with a stable C interface that you call from Python, C++ or any language that can call C, on your own machine. The same data, settings and seed give byte-identical results every run, including the randomised slippage and spread.
 
 It is a library, not an application. Your program hands it bars, settings and a strategy, and gets back the full result.
 
 ## The loop it covers
 
-1. **Test.** Run a strategy against years of OHLCV bars, intraday to multi-day, with spread, slippage, commission and overnight swap set for each instrument, and a leverage limit on the account.
-2. **Diagnose.** Every order, fill and closed trade comes back, so any result can be traced trade by trade.
-3. **Sweep.** Run the same strategy across many parameter sets to see whether a result holds or survived on one lucky setting. Each backtest is single-threaded, and separate backtests can run at once from your own threads.
-4. **Report.** 31 summary metrics and the full trade and order logs, written as a schema-versioned JSON file.
-5. **Connect.** The researched logic goes live through [Reamer Server](/products/reamer-server.html), a separate product. Moving over is a port of the logic, not a copy of the code: see [How do I take a strategy from backtest to live trading without a rewrite?](/faq/backtest-to-live-without-rewrite.html)
+1. **Test.** Run a strategy against years of OHLCV bars, intraday to multi-day, with spread, slippage, commission and overnight swap set for each instrument, and a leverage limit on the account. Bars come from memory or from memory-mapped `.bin` files, so a dataset larger than RAM runs. On every bar the strategy sees its full position state and every resting order, and can re-price an order, move a position's stop and target, close everything or cancel everything.
+2. **Diagnose.** Every order, fill, modification and closed trade comes back, so any result can be traced trade by trade.
+3. **Sweep.** Run the same strategy across many parameter sets to see whether a result holds or survived on one lucky setting. Each backtest is single-threaded, and separate backtests can run at once from your own threads. A progress callback reports each run and can stop it early. `reamer_run_monte_carlo()` resamples a run's trades to show how much of a drawdown was trade-order luck.
+4. **Report.** 31 summary metrics, the realised equity curve, and the full trade and order logs, written as a schema-versioned JSON file.
+5. **Connect.** `reamer_relay_*` sends the orders your strategy returns to a running [Reamer Server](/products/reamer-server.html), a separate product, and reads the fills back as position state. The order is the same structure in both places. See [How do I take a strategy from backtest to live trading without a rewrite?](/faq/backtest-to-live-without-rewrite.html)
 
 How fills are decided, including stops and targets inside one bar, is set out in an execution specification that ships with the kit.
 
-## What it is not
+## Scope
 
-- Not for high-frequency or order-book (level 2 or level 3) strategies, and not for options.
-- Not a live trading system. It runs backtests in batches; live trading is Reamer Server's job.
-- No market data. You bring your own bars, already adjusted for splits and dividends.
-- Linux x86-64 and macOS on Apple Silicon only, with no Windows version.
+- Mid-frequency strategies on OHLCV bars. Order-book (level 2 or level 3), high-frequency and options strategies are a different kind of engine.
+- Batch runs over historical bars. Live order handling, sequencing and your pre-trade gate run in Reamer Server, which the relay connects to.
+- Your own data. You bring your own bars, already adjusted for splits and dividends.
+- Linux x86-64 and macOS on Apple Silicon.
 
 ## How it compares
 

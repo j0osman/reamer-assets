@@ -37,7 +37,7 @@ Mid-frequency means positions held from minutes to days, decided on bars rather 
 
 ## How Reamer Research answers them
 
-[Reamer Research](/products/reamer-research.html) is a backtesting engine delivered as a library with a stable C interface. Your program, in Python, C++ or any language that can call C, hands it bars, settings and a strategy, and gets back the full result. Everything below is documented in the kit:
+[Reamer Research](/products/reamer-research.html) is a research engine delivered as a library with a stable C interface. Your program, in Python, C++ or any language that can call C, hands it bars, settings and a strategy, and gets back the full result. Everything below is documented in the kit:
 
 - **Byte-identical runs.** A fixed `rng_seed` gives byte-identical output, including the randomised spread and slippage. In the published test, 20 of 20 runs matched by SHA-256.
 - **A written execution specification.** Fill prices, bid and ask, spread and slippage, commission, margin, order lifetimes (GTC, IOC, GTD), gaps, stop-and-target collisions, overnight swap and futures rolls are each specified, and the engine is tested against that document. It ships with the kit.
@@ -47,17 +47,18 @@ Mid-frequency means positions held from minutes to days, decided on bars rather 
 - **Python, with a cost.** The Python reference uses ctypes and numpy and ships with 15 example strategies and scripts. It is far slower per bar than C++: on a 2017 laptop, an 884,130-bar backtest took about 65 seconds from Python.
 - **Local.** After a one-time activation, it runs offline. Only activation and deactivation contact the licence server; strategies, data and results stay on your machine.
 - **The full record.** 31 summary metrics, including Sharpe, Sortino, Calmar and drawdown, plus every order, fill and closed trade, written as a versioned JSON report.
-- **A route to live.** [Reamer Server](/products/reamer-server.html) takes the same trading logic live. It is a separate product, and moving over is a port of the logic, not a copy of the code.
+- **Full state on every bar.** The strategy sees its position in each instrument and every resting order, and can re-price an order, move a position's stop to breakeven or into profit, close everything or cancel everything. Each action reports whether it was applied and why not.
+- **A route to live.** `reamer_relay_*` sends the orders your strategy returns to a running [Reamer Server](/products/reamer-server.html), a separate product, and reads the fills back as position state. The decision logic carries over; indicators move from a bar window to running state.
 
 The method and raw data behind the speed and repeatability figures are public: see [Reamer Research findings on EPYC](/blog/reamer-research-findings-epyc.html).
 
-## Who it is not for
+## Scope
 
-- **High-frequency or order-book strategies.** It runs on bars, not on level 2 or level 3 data.
-- **Options.** There is no options pricing or modelling.
-- **Point-and-click users.** You write the strategy and the program that runs it.
-- **Windows.** It runs on Linux x86-64 and macOS on Apple Silicon.
-- **Anyone needing data.** No market data is included, and equity data must already be adjusted for splits and dividends.
+- **Bars, minutes to days.** Level 2 and level 3 order-book strategies and high-frequency trading call for a different kind of engine.
+- **Equities, futures and FX on bars.** Options pricing and modelling sit outside it.
+- **Code first.** You write the strategy and the program that runs it.
+- **Linux x86-64 and macOS on Apple Silicon.**
+- **Your own data,** with equity data already adjusted for splits and dividends.
 
 ## Price
 

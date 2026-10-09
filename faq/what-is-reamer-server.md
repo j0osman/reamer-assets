@@ -18,7 +18,7 @@ It is a library, not an application. You write a short `main()` that links it, s
 - **Your gate.** Your pre-trade risk check. For each order it says pass or reject, with a reason, given the account's last known state. Its rules are yours; the core does not supply any. See [How can I plug my own risk model into every order before it reaches the broker?](/faq/plug-own-risk-model-pre-trade.html)
 - **Your connector.** Your broker session. It sends orders, reports fills, and is the only source of positions and open orders. Nothing in the kit talks to a real broker for you.
 
-Gate and connector can be written in C, C++, Rust or Go. Strategies connect over a socket protocol, specified byte for byte, from any language. See [How do I run several strategies through one broker connection?](/faq/multiple-strategies-one-broker-connection.html)
+Gate and connector can be written in C, C++, Rust or Go. Strategies connect over a socket protocol, specified byte for byte, from any language. A Reamer Research strategy sends its orders through `reamer_relay_*` in the Reamer Research library. See [How do I run several strategies through one broker connection?](/faq/multiple-strategies-one-broker-connection.html)
 
 ## What else is in the kit
 
@@ -27,12 +27,12 @@ Gate and connector can be written in C, C++, Rust or Go. Strategies connect over
 - **Monitoring.** A Prometheus `/metrics` endpoint and a `/health` route.
 - **A benchmark.** `server-bench` measures throughput and latency on your own hardware.
 
-## What it is not
+## Scope
 
-- **Not a broker or a broker connection.** You write the connector for your broker, and its certification is yours.
-- **No stored state of its own.** On start, orders and positions are loaded from your connector; the broker is the only record. Persisting anything else is your job.
-- **Not for high-frequency or order-book strategies,** and it supplies no market data or strategy framework.
-- **Linux x86-64 only,** with glibc 2.39 or later. No macOS or Windows version.
+- **Your broker, your connector.** You write the connector for your broker, and its certification is yours.
+- **The broker is the record.** On start, orders and positions are loaded from your connector. Anything else you want kept, you persist from the event stream.
+- **Mid-frequency order flow.** Market, limit, stop and stop-limit orders from strategies on bars. Market data and the strategy itself come from your own processes.
+- **Linux x86-64,** with glibc 2.39 or later.
 
 ## How it compares
 

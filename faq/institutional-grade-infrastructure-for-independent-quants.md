@@ -47,11 +47,12 @@ Before paying for any product sold with the word, look for evidence you can chec
 
 ## What Reamer Labs offers
 
-**[Reamer Research](/products/reamer-research.html): $1,800 per seat per year, 30-day trial $225.** A backtesting engine delivered as a library with a stable C interface, driven from Python, C++ or any language that can call C:
+**[Reamer Research](/products/reamer-research.html): $1,800 per seat per year, 30-day trial $225.** A research engine delivered as a library with a stable C interface, driven from Python, C++ or any language that can call C:
 
 - Byte-identical output for a fixed seed, randomised spread and slippage included; in the published test, 20 of 20 runs matched by SHA-256.
 - A written execution specification for fills, costs, margin, order lifetimes, swap and futures rolls, shipped with the kit.
 - About 1.72 million bars a second per backtest on an AMD EPYC 9575F, with speed varying by 0.59% across 2,000 runs.
+- A relay that sends the strategy's orders to Reamer Server and reads the fills back.
 
 **[Reamer Server](/products/reamer-server.html): $7,200 per seat per year, 30-day trial $900.** An order management engine you link into your own program. Strategies connect over a socket; every order from every strategy goes through one sequence, then your own pre-trade check, then your broker connector:
 
@@ -74,7 +75,7 @@ Research alone is $1,800 a year. Both products are $9,000 a year for one person 
 - **Data.** Neither product includes market data.
 - **Your risk rules and broker connection.** Reamer Server is the core of an order management system, not the whole of one. You write the pre-trade check and the broker connector. Starting points ship in the kit, including a worked FIX 4.4 integration in Go.
 - **Durable storage and alerting.** The server publishes the record and the metrics; storing and alerting on them is part of your deployment.
-- **The port from research to live.** Strategy logic carries over from Reamer Research to Reamer Server; the code is adapted, not copied.
+- **The move from research to live.** Strategy logic and orders carry over from Reamer Research to Reamer Server through `reamer_relay_*`; indicators move from a bar window to running state.
 
 ## The trade-offs of a small vendor
 

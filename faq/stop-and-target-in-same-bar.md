@@ -52,6 +52,7 @@ If the answer depends on the rule, the fixes are a wider bracket, shorter bars, 
 - **First touch wins.** When both the target and the stop are reached in the same bar, the exit whose level is reached at the earlier tick is the one that fills.
 - **The same every run.** The path is set by `rng_seed` and the bar data, so a fixed seed gives the same path, the same exits and byte-identical results every run.
 - **The stop and the target fill the same way.** Both are triggered and filled on the bid for a long position and the ask for a short one, with slippage. Neither fills at exactly its level.
+- **Brackets that move.** A strategy can replace a position's stop and target from `on_bar` with a `MODIFY_POSITION` action, to breakeven or into profit. The new levels apply from the next bar, so a bar the strategy has already seen is settled against the levels it had.
 - **Every exit can be checked.** Each closed trade in the result records its stop and target, the exit price, and the bar and tick index of the exit. You can find the trades whose exit bar reached both levels and see how each was settled.
 
 The tick path is not the real path, and the specification does not claim it is. The note [Why synthetic ticks instead of stored ticks](/notes/why-synthetic-ticks-instead-of-stored-ticks.html) explains the reasoning.

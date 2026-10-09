@@ -14,7 +14,7 @@ A Reamer Research run produces 31 summary metrics, every closed trade, every fil
 
 - **Profit and cost:** gross and net profit, with fees, slippage and overnight swap each reported separately.
 - **Returns and ratios:** total return, win rate, profit factor, expected profit per trade, recovery factor, and the Sharpe, Sortino and Calmar ratios.
-- **Orders:** how many were placed, filled, expired, cancelled and rejected.
+- **Orders:** how many were placed, filled, expired, cancelled and rejected. Each modification a strategy applies is recorded in the order log as its own `Modified` entry.
 - **Trades:** longest winning and losing streaks, and the average, longest and shortest holding times.
 - **Drawdown:** the largest fall in equity, in money and as a fraction.
 

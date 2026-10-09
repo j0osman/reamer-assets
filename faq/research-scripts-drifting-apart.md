@@ -61,6 +61,6 @@ Every rule below is documented in the kit:
 - **One configuration format.** Costs, leverage, the type of price data and the seed are set in the same documented fields for every study, with per-instrument overrides.
 - **One result format.** Each run can write a single JSON document with a version number, holding the summary metrics, every closed trade, fill and order, and the per-trade return series. `RESULT_JSON_SCHEMA.md` defines each field, including exactly how Sharpe, Sortino and Calmar are annualised, so a metric means the same thing in every study.
 - **Identical output for identical inputs.** With a fixed seed, a run is byte-identical on every repeat, so rerunning an old study is a real check.
-- **A stable interface.** Programs written against an earlier version of the interface keep working with the current library without modification, so upgrading does not mean rewriting every study.
+- **A stable interface.** From ABI 7 on, interface versions are additive: a program built against ABI 7 runs unmodified against a newer library, so upgrading does not mean rewriting every study. `ABI_VERSIONING_POLICY.md` in the kit states the rules.
 
 Keeping your strategy code under version control, fixing a copy of your data and recording each run's configuration stay with you; the engine does not store your research history. What it removes is the largest source of drift: a different set of fill, cost and metric rules in every script.

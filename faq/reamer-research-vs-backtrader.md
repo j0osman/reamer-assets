@@ -29,7 +29,7 @@ Both run a strategy one bar at a time against historical data, and someone who h
 
 - You are learning, or taking a first look at whether an idea has any shape at all.
 - You need it to be free.
-- You need a Backtrader feature or connector that Reamer Research does not have, such as built-in live trading or market data. Reamer Research supplies neither; live trading is [Reamer Server](/products/reamer-server.html), a separate product.
+- You want live trading and market data in the same package as the research tool. With Reamer Labs, live orders go through [Reamer Server](/products/reamer-server.html), a separate product, and the market data is yours.
 
 ## When Reamer Research is
 

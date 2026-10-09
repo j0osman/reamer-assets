@@ -68,7 +68,7 @@ Everything below is documented in the kit:
 ## Limits to know
 
 - **No per-strategy positions.** The account state your gate receives is the broker's net position per instrument. Positions per strategy, and limits on them, are yours to keep from the fills.
-- **No strategy client.** The protocols are specified; the client library your strategies use is yours, or adapted from the reference relay.
+- **Strategy clients.** The protocols are specified. Reamer Research ships a client for the local socket, `reamer_relay_*`, so a research strategy sends its orders directly. For remote mode, the client is yours, or adapted from the reference relay.
 - **One broker connector per server.** Several brokers, or several accounts with separate limits, means running several servers or a connector that handles them itself.
 - **Order ids and cancel ownership are your rules.** Make ids unique across strategies, and have your gate decide which strategy may cancel which order.
 - **No allocation across accounts.** Splitting one order's fills between accounts is not part of it.

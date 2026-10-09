@@ -1,6 +1,6 @@
 ---
 title: Why use Reamer Labs if I want to build my own trading system?
-description: You still build your own system. Reamer Labs supplies only its core, the part that has to be right and works the same for everyone. Reamer Research is the backtesting engine, with fill and cost rules already written and tested. Reamer Server is the order core, with order state, sequencing and a record of every decision. You build everything around them your own way, including strategies, data, risk rules, the broker connection, storage and monitoring.
+description: You still build your own system. Reamer Labs supplies only its core, the part that has to be right and works the same for everyone. Reamer Research is the research engine, with fill and cost rules already written and tested. Reamer Server is the order core, with order state, sequencing and a record of every decision. You build everything around them your own way, including strategies, data, risk rules, the broker connection, storage and monitoring.
 stage: 4
 order: 35.7
 product: both
@@ -14,12 +14,14 @@ That sits between the two usual choices. Building everything means months spent 
 
 ## What Reamer Labs supplies
 
-**Reamer Research, the research core.** A backtesting engine delivered as a library with a stable C interface:
+**Reamer Research, the research core.** A research engine delivered as a library with a stable C interface:
 
 - Fill and cost rules, written down in an execution specification that ships with the kit, with the engine tested against it. They cover market, limit and stop orders, gaps, stops and targets in the same bar, bid and ask, spread, slippage, commission, margin, overnight swap and futures rolls.
 - Byte-identical output for a fixed `rng_seed`, so a change in results is always your change.
 - About 1.7 million bars a second per backtest, fast enough to sweep.
 - 31 summary metrics plus every order, fill and trade, in a versioned JSON report.
+- Full position state and every resting order on each bar, with actions that re-price an order, move a position's stop and target, close all or cancel all.
+- A relay, `reamer_relay_*`, that sends the strategy's orders to Reamer Server and reads the fills back.
 
 **Reamer Server, the live core.** An order management engine delivered as a library you link into your own program:
 
