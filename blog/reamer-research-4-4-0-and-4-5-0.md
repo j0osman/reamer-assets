@@ -5,7 +5,7 @@ date: 2026-10-09
 tier: Release
 ---
 
-Reamer Research 4.4.0 and 4.5.0 are out. 4.4.0 widens what the research engine runs on and what it reports: datasets larger than RAM, Monte Carlo resampling, an equity curve, and one plainly named function for each job. 4.5.0 widens what a strategy can do: it sees everything it holds, manages it bar by bar, and sends its orders to Reamer Server unchanged. This post covers both releases and what they mean for your code.
+Reamer Research 4.4.0 and 4.5.0 are out. 4.4.0 widens what the research engine runs on and what it reports: datasets larger than RAM, Monte Carlo resampling, an equity curve, and one plainly named function for each job. 4.5.0 widens what a strategy can do: it sees everything it holds, manages it bar by bar, and sends its orders, brackets included, to a running Reamer Server. This post covers both releases and what they mean for your code.
 
 ## 4.4.0: data, reports and one clean interface
 
