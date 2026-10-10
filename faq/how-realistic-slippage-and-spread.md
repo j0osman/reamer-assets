@@ -54,7 +54,7 @@ A slow strategy that trades a few times a month in liquid instruments can tolera
 
 ## How Reamer Research models costs
 
-[Reamer Research](/products/reamer-research.html) applies the rules in `EXECUTION_SPEC.md`, which ships in the kit:
+[Reamer Research](/products/reamer-research.html) applies the rules in [`EXECUTION_SPEC.md`](/docs/execution-spec.html), which ships in the kit and is published in the docs:
 
 - **Per instrument.** Spread, slippage, commission, commission mode, overnight swap, the type of price data, and the amount of noise are each set per ticker, with a default for any ticker left unset.
 - **Bid and ask, not one price.** You declare whether your bars are bid, ask or midpoint prices. Buys fill at the ask plus slippage, sells at the bid minus slippage, including limit, stop and bracket exits, so a fill can land outside the bar's own high and low by up to the spread plus slippage.

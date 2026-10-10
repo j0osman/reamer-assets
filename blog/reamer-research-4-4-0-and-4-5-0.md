@@ -54,7 +54,7 @@ A strategy can now return up to 64 actions per bar alongside its orders:
 - `CLOSE_ALL` closes every position at market.
 - `CANCEL_ALL` cancels every resting order.
 
-Modify and cancel-all take effect from the next bar. A bar the strategy has already seen is settled against the levels it had when it saw it, which keeps the run free of look-ahead. Each action reports whether it was applied and, if not, why. A rejected action leaves the order or position as it was and the run continues. `EXECUTION_SPEC.md` §6b in the kit sets out the timing and validation rule by rule.
+Modify and cancel-all take effect from the next bar. A bar the strategy has already seen is settled against the levels it had when it saw it, which keeps the run free of look-ahead. Each action reports whether it was applied and, if not, why. A rejected action leaves the order or position as it was and the run continues. [`EXECUTION_SPEC.md` §6b](/docs/execution-spec.html#6b-order-and-position-actions) sets out the timing and validation rule by rule.
 
 Every applied modification appears in the result JSON `order_log` as a `Modified` record, so a trade-by-trade diagnosis shows when each stop moved and to where. The result schema is now version 2.
 

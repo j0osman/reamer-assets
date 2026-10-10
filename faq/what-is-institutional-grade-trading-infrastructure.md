@@ -66,7 +66,7 @@ Releases that can be verified before they are run, interfaces that stay compatib
 
 Each point below is documented in the kits:
 
-- **1 to 3: [Reamer Research](/products/reamer-research.html).** With a fixed seed, runs are byte-identical. Every fill, cost and accounting rule is written in `EXECUTION_SPEC.md`. Every study runs through the same engine and writes the same versioned result format.
+- **1 to 3: [Reamer Research](/products/reamer-research.html).** With a fixed seed, runs are byte-identical. Every fill, cost and accounting rule is written in [`EXECUTION_SPEC.md`](/docs/execution-spec.html). Every study runs through the same engine and writes the same versioned result format.
 - **4 and 5: [Reamer Server](/products/reamer-server.html).** Strategies connect as separate processes, and every order from every strategy passes through one sequenced pipeline and one gate before it reaches the broker. The gate is yours: you write the risk rules, and the server calls them on every order.
 - **6 and 7.** Every order's outcome, including the gate's own reason for a rejection, is published on a shared event stream. A Prometheus-format metrics endpoint reports submitted, accepted and rejected counts, rejection reasons, connection state and loop latency. By default the server refuses to start rather than run without its event stream. The event stream is held in memory, so writing it to durable storage is part of your deployment.
 - **8.** The server keeps no state of its own between runs. On start, orders and positions are rebuilt from your broker connector.

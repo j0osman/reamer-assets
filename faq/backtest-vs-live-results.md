@@ -48,7 +48,7 @@ Even when the backtest was honest, the move to live can change the strategy with
 
 ## How Reamer Research and Reamer Server handle each cause
 
-[Reamer Research](/products/reamer-research.html) is built to close groups 1 to 4 inside the backtest, and every rule it applies is written down in `EXECUTION_SPEC.md`, which ships in the kit:
+[Reamer Research](/products/reamer-research.html) is built to close groups 1 to 4 inside the backtest, and every rule it applies is written down in [`EXECUTION_SPEC.md`](/docs/execution-spec.html), which ships in the kit and is published in the docs:
 
 - Spread, slippage and commission are set per instrument. Spread is widest at the start of each bar and narrows toward its close, and with volatility enabled both spread and slippage scale with each bar's own range.
 - An order decided on a bar's close is only eligible from the next bar onward. Stops that gap fill near the open. When both bracket exits are touched in one bar, the one reached first in the bar's price path wins.

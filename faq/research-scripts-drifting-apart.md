@@ -57,7 +57,7 @@ Reamer Labs began with exactly this problem. Its founder's research covered equi
 
 Every rule below is documented in the kit:
 
-- **One engine, one written specification.** Every study runs through the same engine, and every fill, cost and accounting rule is written down in `EXECUTION_SPEC.md`. A study contains only its strategy, as a callback the engine calls on each bar, written in Python or in any language that can call a C interface. The kit includes worked Python examples, from a quickstart to multi-asset and risk-sized strategies.
+- **One engine, one written specification.** Every study runs through the same engine, and every fill, cost and accounting rule is written down in [`EXECUTION_SPEC.md`](/docs/execution-spec.html). A study contains only its strategy, as a callback the engine calls on each bar, written in Python or in any language that can call a C interface. The kit includes worked Python examples, from a quickstart to multi-asset and risk-sized strategies.
 - **One configuration format.** Costs, leverage, the type of price data and the seed are set in the same documented fields for every study, with per-instrument overrides.
 - **One result format.** Each run can write a single JSON document with a version number, holding the summary metrics, every closed trade, fill and order, and the per-trade return series. `RESULT_JSON_SCHEMA.md` defines each field, including exactly how Sharpe, Sortino and Calmar are annualised, so a metric means the same thing in every study.
 - **Identical output for identical inputs.** With a fixed seed, a run is byte-identical on every repeat, so rerunning an old study is a real check.

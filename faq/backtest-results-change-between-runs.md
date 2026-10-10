@@ -55,7 +55,7 @@ The target is identical output, byte for byte. "Close enough" hides the next cha
 
 ## How Reamer Research handles it
 
-[Reamer Research](/products/reamer-research.html) is built so the engine is never the variable. Each rule below is written down in `EXECUTION_SPEC.md` and `DEPLOYMENT.md`, which ship in the kit:
+[Reamer Research](/products/reamer-research.html) is built so the engine is never the variable. Each rule below is written down in [`EXECUTION_SPEC.md`](/docs/execution-spec.html) and `DEPLOYMENT.md`, which ship in the kit:
 
 - **Seeded execution noise.** Spread and slippage noise are off by default, and with noise off a run is fully deterministic whatever the seed. With noise on, every sampled price comes from a fixed seed (`rng_seed`, 42 by default), and the run is reproducible byte for byte for that seed. The quickstart in the kit asks you to run it twice and compare: the output is byte-identical. See [Why Replay Matters](/notes/why-replay-matters.html) and [Why Synthetic Ticks Instead of Stored Ticks](/notes/why-synthetic-ticks-instead-of-stored-ticks.html).
 - **Nothing depends on the clock.** The engine deliberately has no time limit on a strategy's callback, because a wall-clock limit would make identical inputs give different results under different machine load. If you need a time limit, you set it on the process, outside the result.
