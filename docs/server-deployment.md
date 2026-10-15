@@ -34,13 +34,14 @@ Download the kit from a tagged release
 below. Verifying first is both the correct order and the only order in
 which the commands work as printed: the `.zip`, `.sha256`, `.sha256.sig`,
 and `.zip.sig` are downloaded as siblings, and extraction creates the
-`server-kit-4.5.0-linux_x86_64/` directory *next to* them, not around them.
+`server-kit-4.5.1-linux_x86_64/` directory *next to* them, not around them.
 
 Once verification passes, extract — see "Extract the kit" at the end of
 this step for the commands, which must run after the verification above.
 
 Contents: `include/reamer_server_abi.h`, `lib/libreamer_server_core.a`,
-`lib/libreamer_license.a`, the standalone `bin/reamer-license`
+`lib/libreamer_license.a` (empty since 4.5.1, kept for existing link
+lines), the standalone `bin/reamer-license`
 activator, the standalone `bin/reamer-config-check` config validator,
 this doc set (`README.md`, `DEPLOYMENT.md`, `CONFIG.md`, `BENCHMARK.md`,
 `EXTENSION_PROTOCOL.md`, `LICENSING.md`, `RESEARCH_TO_SERVER.md`), a
@@ -65,10 +66,10 @@ are siblings of that directory, not members of it.
 1. Check the file wasn't corrupted or tampered with in transit:
 
    ```
-   sha256sum -c server-kit-4.5.0-linux_x86_64.zip.sha256
+   sha256sum -c server-kit-4.5.1-linux_x86_64.zip.sha256
    ```
 
-   Expected output: `server-kit-4.5.0-linux_x86_64.zip: OK`.
+   Expected output: `server-kit-4.5.1-linux_x86_64.zip: OK`.
 
 2. Check the checksum's detached signature, using the `release-sign`
    binary shipped in this kit's `bin/`.
@@ -78,8 +79,8 @@ are siblings of that directory, not members of it.
    downloads:
 
    ```
-   unzip -j server-kit-4.5.0-linux_x86_64.zip \
-     'server-kit-4.5.0-linux_x86_64/bin/release-sign' -d .
+   unzip -j server-kit-4.5.1-linux_x86_64.zip \
+     'server-kit-4.5.1-linux_x86_64/bin/release-sign' -d .
    chmod +x release-sign
    ```
 
@@ -87,8 +88,8 @@ are siblings of that directory, not members of it.
 
    ```
    ./release-sign verify \
-     server-kit-4.5.0-linux_x86_64.zip.sha256 \
-     server-kit-4.5.0-linux_x86_64.zip.sha256.sig \
+     server-kit-4.5.1-linux_x86_64.zip.sha256 \
+     server-kit-4.5.1-linux_x86_64.zip.sha256.sig \
      b0ff9dcdcbd767ec78375629e10afec2baf18319df27e000ed6d8307cb93e68c
    ```
 
@@ -105,8 +106,8 @@ are siblings of that directory, not members of it.
 
    ```text
    bin/release-sign verify \
-     ../server-kit-4.5.0-linux_x86_64.zip.sha256 \
-     ../server-kit-4.5.0-linux_x86_64.zip.sha256.sig \
+     ../server-kit-4.5.1-linux_x86_64.zip.sha256 \
+     ../server-kit-4.5.1-linux_x86_64.zip.sha256.sig \
      b0ff9dcdcbd767ec78375629e10afec2baf18319df27e000ed6d8307cb93e68c
    ```
 
@@ -150,8 +151,8 @@ are siblings of that directory, not members of it.
 
    ```
    ./release-sign verify \
-     server-kit-4.5.0-linux_x86_64.zip \
-     server-kit-4.5.0-linux_x86_64.zip.sig \
+     server-kit-4.5.1-linux_x86_64.zip \
+     server-kit-4.5.1-linux_x86_64.zip.sig \
      b0ff9dcdcbd767ec78375629e10afec2baf18319df27e000ed6d8307cb93e68c
    ```
 
@@ -184,13 +185,13 @@ Only after both verification commands above have passed, still from the
 directory holding the downloads:
 
 ```
-unzip -o server-kit-4.5.0-linux_x86_64.zip
-cd server-kit-4.5.0-linux_x86_64
+unzip -o server-kit-4.5.1-linux_x86_64.zip
+cd server-kit-4.5.1-linux_x86_64
 ls include/reamer_server_abi.h lib/libreamer_server_core.a
 ```
 
 Every later step in this document runs from that
-`server-kit-4.5.0-linux_x86_64/` directory unless it says otherwise.
+`server-kit-4.5.1-linux_x86_64/` directory unless it says otherwise.
 
 Start at `README.md` in the archive root — what the product is, what
 ships, and where the license key Step 2 needs comes from (it arrives by

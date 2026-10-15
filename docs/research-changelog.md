@@ -16,6 +16,18 @@ Version numbers here are the release version (`kReamerVersion`), which is
 shared with Reamer Server and moves independently of `REAMER_ABI_VERSION`.
 ABI bumps are called out explicitly where they occur.
 
+## [4.5.1] - 2026-10-15
+
+No ABI change (`REAMER_ABI_VERSION` stays 7). A security release: rebuilding
+against it is not required.
+
+### Security
+- The license library's internal test switches are no longer compiled into
+  any shipped binary. A release gate fails the build if one reaches the kit.
+  See `SECURITY_HARDENING.md` S10.
+- Every executable in `bin/` ships stripped.
+- `bin/release-sign` is a verify-only build. `verify` is unchanged.
+
 ## [4.5.0] - 2026-10-09
 
 **ABI bump: `REAMER_ABI_VERSION` 6 → 7. Breaking.** Rebuild strategies

@@ -12,6 +12,25 @@ entry below describes a customer-visible change to the Reamer Server
 product — the ABI, the shipped reference material, or the kit
 contents — not internal refactors. Updated at release, alongside the tag.
 
+## [4.5.1] - 2026-10-15
+
+No ABI change (`REAMER_ABI_VERSION` stays 4). A security release: relink your
+integration against the new archives. No source changes are needed.
+
+### Security
+- The license library's internal test switches are no longer compiled into
+  any shipped binary. A release gate fails the build if one reaches the kit.
+  See `SECURITY_HARDENING.md` S10.
+- `lib/libreamer_server_core.a` now contains the core and the license check
+  linked into one object. Its only named symbol is `reamer_server_run`.
+- Every executable in `bin/` ships stripped.
+- `bin/release-sign` is a verify-only build. `verify` is unchanged.
+
+### Deprecated
+- `lib/libreamer_license.a` is now an empty archive, kept so link lines that
+  name it (`-lreamer_server_core -lreamer_license`) keep working. It will be
+  removed in a later release, so drop it from your link line now.
+
 ## [4.5.0] - 2026-10-09
 
 **ABI bump: `REAMER_ABI_VERSION` 3 → 4. Additive.** Every ABI 3 field keeps

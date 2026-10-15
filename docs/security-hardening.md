@@ -81,9 +81,9 @@ than bundling an HTTP client to remove it.
 The activation endpoint could be redirected through an environment
 variable on its own — a second, undocumented control path.
 
-**Fixed.** The override is now honored only inside our internal test
-harness and has no effect in a customer deployment, so activation always
-reaches the Reamer Labs license server.
+**Fixed.** The override was first restricted to our internal test harness.
+Since 4.5.1 it is not compiled into any shipped binary at all (see S10), so
+activation always reaches the Reamer Labs license server.
 
 ### S5 — Undefined behavior in the vendored Ed25519 signing path
 
@@ -110,6 +110,31 @@ key is published out-of-band from the download (documented human/email
 channel independent of the archive), closing the key-provenance circularity.
 Both are documented in `DEPLOYMENT.md` as additive checks alongside the
 existing `.sha256` / `.sha256.sig` steps.
+
+### S10 — Test-only code and internal names in shipped binaries
+
+Through 4.5.0, the shipped license library carried the internal test
+harness's switches (a secret-gated license short-circuit and the S4
+override) behind a runtime check. Reamer Server's core and license logic
+shipped as two separate static archives, which exposed internal symbol
+names and let a different license archive be linked in place of ours. The
+executables shipped unstripped, and `bin/release-sign` contained its
+signing path as well as verification.
+
+**Fixed in 4.5.1.**
+
+- The test switches are compiled only into internal test builds. A release
+  gate fails the build if any of their strings appears in a shipped file.
+- Reamer Server's core and license logic are linked into one object inside
+  `lib/libreamer_server_core.a`. Its only named symbol is
+  `reamer_server_run`, and the license check is bound inside it.
+  `lib/libreamer_license.a` remains as an empty archive so existing link
+  lines keep working.
+- Every shipped executable is stripped.
+- `bin/release-sign` is a verify-only build.
+
+Customer link lines are unchanged. The kit's C++, Rust and Go references are
+built against the shipped archives as part of the release gate.
 
 ### S8, S9 — Characterized, no code change required
 

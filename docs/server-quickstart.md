@@ -45,8 +45,8 @@ that latency class rather than a full L2/L3 order book.
 | Path | What it is |
 |---|---|
 | `include/reamer_server_abi.h` | The entire integration contract. Every struct, vtable, and entry point, with the threading and lifetime rules stated inline. Read this first. |
-| `lib/libreamer_server_core.a` | The execution core you link. |
-| `lib/libreamer_license.a` | License verification, linked by your binary. |
+| `lib/libreamer_server_core.a` | The execution core you link, license verification included. |
+| `lib/libreamer_license.a` | Empty since 4.5.1, kept so existing link lines work. Will be removed. |
 | `bin/reamer-license` | Activates this machine's license (`activate` / `status` / `deactivate`). |
 | `bin/reamer-config-check` | Validates a config file offline, without starting a server. |
 | `bin/reamer-diag-bundle` | Point-in-time diagnostic bundle for a support request. |
@@ -66,7 +66,7 @@ Every binary in `bin/` answers `--version`, so you can confirm which build
 you have:
 
 ```bash
-bin/reamer-license --version    # reamer-license 4.5.0
+bin/reamer-license --version    # reamer-license 4.5.1
 ```
 
 Docs: `DEPLOYMENT.md` (quickstart and operations), `CONFIG.md` (every
