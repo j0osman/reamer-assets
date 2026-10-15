@@ -34,6 +34,6 @@ The licence key and kit arrive by email once payment clears. There is no sales c
 ## What it does not include
 
 - **Renewal.** At the end of the term nothing is charged. Renewing is a new purchase, made when you choose. A process that is already running keeps running after expiry; only starting a new one needs a current licence.
-- **Refunds.** All sales are final, which is what the trial is for. See the [terms](/terms.html).
+- **Refunds.** Handled by Paddle, the merchant of record, under its refund policy. See [Can I get a refund?](/faq/refunds.html)
 
 To buy or start a trial, see [pricing](/pricing.html). Firms that need an order form should see [For firms](/firms.html).

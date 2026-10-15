@@ -26,7 +26,7 @@ No. There is no free trial or free evaluation licence. There is a paid 30-day tr
 
 - **It is not credited** toward a later annual licence. The year is a separate purchase at the full price.
 - **It is card only,** through Paddle. Invoices are for annual licences.
-- **It is not refundable.** All sales are final, and the trial is where the terms place the decision about fit. See the [terms](/terms.html).
+- **Refunds follow Paddle's policy.** Paddle, the merchant of record, reviews refund requests made within 14 days of purchase; the trial is where the terms place the decision about fit. See [Can I get a refund?](/faq/refunds.html)
 
 ## What you can check for free
 

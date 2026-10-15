@@ -511,7 +511,7 @@ are three seats. A machine running both products holds one seat of each
 and is billed for both.
 
 Card payment runs through Paddle. An annual licence can also be paid by
-bank transfer against a Paddle invoice; see [pricing](/pricing.html). All sales are final.
+bank transfer against a Paddle invoice; see [pricing](/pricing.html). Refunds follow Paddle's refund policy.
 
 Seat policy is one machine at a time, same as every license — see
 above.
