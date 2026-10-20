@@ -6,6 +6,7 @@ order: 43
 product: both
 next: pricing, refunds, what-you-receive, seats, invoice-and-order-form
 date: 2026-10-03
+topics: software-license
 ---
 
 No. There is no free trial or free evaluation licence. There is a paid 30-day trial, USD 225 for Reamer Research and USD 900 for Reamer Server, which gives you the full product on the same terms as an annual licence. The 30 days start when you first activate, not when you buy.

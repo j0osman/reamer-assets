@@ -6,6 +6,7 @@ order: 17
 product: research
 next: what-is-reamer-research, research-engine-for-mid-frequency-strategies, deterministic-backtesting-with-slippage-and-spread, research-engine-vs-backtest-script
 date: 2026-10-01
+topics: backtesting, abi
 ---
 
 Yes. Look for an engine delivered as a library you run on your own machine, with a licence that is checked offline, and confirm it by running it with the network cut off. [Reamer Research](/products/reamer-research.html) is one: a compiled engine with a pure-Python binding that ships in source, which runs offline after a one-time activation and sends no strategy code, data or results to Reamer Labs.

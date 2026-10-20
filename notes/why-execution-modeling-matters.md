@@ -2,6 +2,7 @@
 title: Why Execution Modeling Matters
 description: A backtest can be deterministic and well-validated and still be measuring the wrong thing, if the fill price underneath it doesn't reflect how an order actually gets filled. Execution modeling is the layer everything else depends on.
 date: 2026-07-17
+topics: backtesting, slippage, transaction-cost
 ---
 
 Determinism and validation only matter if the thing being validated used realistic fills to begin with. A perfectly reproducible result and a rigorously validated one can both still be wrong from the very first trade, if the execution model underneath assumed something that doesn't happen in real markets. Execution modeling is the layer everything else sits on top of.

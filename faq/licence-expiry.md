@@ -6,6 +6,7 @@ order: 46
 product: both
 next: refunds, support, what-you-receive, seats, pricing
 date: 2026-10-03
+topics: software-license
 ---
 
 Anything already running keeps running. Expiry never stops a live process, including a Reamer Server instance that is trading. What it stops is starting a new process, so after expiry a restart will fail until you renew. Nothing renews or charges automatically; renewing is a new purchase.

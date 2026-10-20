@@ -6,6 +6,7 @@ order: 20
 product: server
 next: where-pre-trade-risk-checks-belong, self-hosted-order-management-engine, multiple-strategies-one-broker-connection, what-is-reamer-server
 date: 2026-10-01
+topics: financial-risk, risk-management
 ---
 
 Turn the model into one function that takes an order and the account's current state and returns pass or reject with a reason, then put that function where every order has to pass it. Keep any state the model needs that the order path does not supply, such as prices, daily counts or losses, in your own code, updated as fills arrive. [Reamer Server](/products/reamer-server.html) calls a function you write, the gate, for every new order, cancel and replace.

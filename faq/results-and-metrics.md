@@ -6,6 +6,7 @@ order: 33
 product: research
 next: paper-trading, research-to-server-move, performance, integration-time
 date: 2026-10-02
+topics: sharpe-ratio, drawdown, backtesting
 ---
 
 A Reamer Research run produces 31 summary metrics, every closed trade, every fill and every order with its outcome, as one schema-versioned JSON document. From Python the binding returns less, the main profit and cost totals and the closed trades, so the full set comes through the C interface.

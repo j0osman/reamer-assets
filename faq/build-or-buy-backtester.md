@@ -6,6 +6,7 @@ order: 10
 product: research
 next: independent-quant-research-to-live-stack, performance, research-engine-for-mid-frequency-strategies, research-engine-vs-backtest-script
 date: 2026-09-30
+topics: backtesting, determinism, source-code-escrow
 ---
 
 Build the parts of your research where your edge lives, and buy the parts it does not depend on. A strategy makes money from its signals, the data behind them and how it sizes positions. It rarely makes money from how the backtester fills a stop through a gap or annualises a Sharpe ratio, but it can lose money if either is done wrong. For most people trading on bars, that points to buying or adopting an engine and spending the saved time on the strategy.

@@ -6,6 +6,7 @@ order: 45
 product: both
 next: licence-expiry, pricing, what-you-receive, support, invoice-and-order-form
 date: 2026-10-03
+topics: software-license
 ---
 
 A seat is one product on one machine at a time, with unlimited runs and processes on that machine. To move it, deactivate on the old machine and activate on the new one. If the old machine is lost, support releases the seat by hand. A Reamer Research seat is also personal to one person.

@@ -6,6 +6,7 @@ order: 30
 product: both
 next: results-and-metrics, integration-time, paper-trading, supported-platforms
 date: 2026-10-02
+topics: latency, benchmark, manycore
 ---
 
 On a 64-core AMD EPYC 9575F, Reamer Research replays about 1.7 million bars a second in one backtest, and Reamer Server takes an order from a strategy to an accepted event in a median of 11.3 µs, with about 200,000 to 220,000 orders a second across many strategies.

@@ -6,6 +6,7 @@ order: 8
 product: research
 next: build-or-buy-backtester, research-engine-vs-backtest-script, deterministic-backtesting-with-slippage-and-spread, backtest-results-change-between-runs
 date: 2026-09-30
+topics: determinism, reproducibility, backtesting, random-seed
 ---
 
 A deterministic backtest is a function: the same strategy, the same data, the same settings and the same seed go in, and the same output comes out, down to the last byte, however many times it runs. Not roughly the same Sharpe ratio. The same trades, at the same prices, on the same bars.

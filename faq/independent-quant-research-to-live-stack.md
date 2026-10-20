@@ -6,6 +6,7 @@ order: 11
 product: both
 next: what-is-an-order-management-engine, where-pre-trade-risk-checks-belong, research-engine-for-mid-frequency-strategies, backtest-to-live-without-rewrite
 date: 2026-09-30
+topics: quantitative-analysis, backtesting, oms, fix
 ---
 
 Most independent quants who trade systematically end up with the same five layers: market data, a research engine, an execution pipeline, a broker connection, and monitoring with a record of what happened. The tools differ from person to person. The layers do not, because each one does a job the others cannot.

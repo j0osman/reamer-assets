@@ -3,6 +3,7 @@ title: "Spread and Slippage Widen at the Open"
 description: A single spread number and a single slippage number are two constants. Real fills are noisier than that — wider right after a bar opens, calmer toward its close, and scaled by how volatile the bar actually was. Reamer Research models that noise instead of averaging it away.
 date: 2026-09-04
 tier: Execution Modeling
+topics: bid-ask-spread, slippage, volatility
 ---
 
 `spread` and `slippage` are two config fields, each a single number. Read literally, that says every fill in a backtest pays exactly the same spread and exactly the same slippage, on a calm bar and a violent one alike. Real markets don't work that way — spread widens when a bar is choppy and tightens when it's quiet, and it's typically wider in the seconds right after a bar opens than by the time it closes. Treating `spread` and `slippage` as fixed constants isn't a simplification that nets out to the same average cost. It understates exactly the trades that matter most: the ones filled during real volatility.

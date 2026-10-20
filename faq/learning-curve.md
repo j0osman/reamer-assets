@@ -6,6 +6,7 @@ order: 31.5
 product: both
 next: integration-time, supported-languages, build-around-a-core, broker-connections
 date: 2026-10-08
+topics: abi, sdk
 ---
 
 Not for the integration. The kit documents are enough for a coding agent to do it. In uncut recordings, Claude Code working only from the kit integrated Reamer Research in about 13 minutes and Reamer Server in about 19, so you don't have to learn the C interface by hand. What still takes your judgement is the trading itself: your strategy, your data, your gate's rules and your broker.

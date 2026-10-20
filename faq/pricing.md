@@ -6,6 +6,7 @@ order: 42
 product: both
 next: trial, invoice-and-order-form, seats, licence-expiry, refunds, what-you-receive
 date: 2026-10-03
+topics: software-license
 ---
 
 Reamer Research is USD 1,800 per seat per year, and Reamer Server is USD 7,200 per seat per year. Each is paid once for the year and nothing renews automatically. A 30-day trial costs USD 225 for Reamer Research and USD 900 for Reamer Server. A seat is one product on one machine.

@@ -2,6 +2,7 @@
 title: What Is an Execution Specification?
 description: "The code does whatever the code does" isn't a definition of behavior. It's an admission that behavior hasn't actually been defined. A written execution specification is the difference between a claim that can be checked and a black box that has to be trusted.
 date: 2026-07-17
+topics: order
 ---
 
 Ask how a fill price gets calculated, and "however the code calculates it" is not an answer. It's a description of the absence of one. An execution specification exists specifically to close that gap: a written, authoritative definition of what the engine is supposed to do, checked against what it actually does, rather than the two being treated as automatically the same thing.

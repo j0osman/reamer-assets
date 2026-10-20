@@ -2,6 +2,7 @@
 title: Bracket Orders Done Correctly
 description: A take-profit exit is easy to assume fills at exactly the target price, like a limit order. It uses the same slippage-inclusive formula as a stop-loss exit, and when both are close together, which one actually triggers first is a real question with a real answer.
 date: 2026-07-17
+topics: order, stop-price, slippage
 ---
 
 A bracket, a take-profit and a stop-loss attached to the same position, looks like two simple, symmetric exits: hit the good price, or hit the bad one. The assumption that quietly sneaks in is that the take-profit side behaves like a limit order, filling at exactly the target. It doesn't, and treating it that way overstates exactly the side of the trade that's supposed to represent the win.

@@ -6,6 +6,7 @@ order: 31
 product: server
 next: integration-time, paper-trading, supported-languages, research-to-server-move
 date: 2026-10-02
+topics: fix, electronic-trading
 ---
 
 Any broker you write a connector for. Reamer Server ships no ready-made broker connection. You write the connector against its C interface, in C, C++, Rust or Go, over whatever API your broker offers. The kit includes an in-memory paper broker and a worked FIX 4.4 example run against a simulated venue.

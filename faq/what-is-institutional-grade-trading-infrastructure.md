@@ -6,6 +6,7 @@ order: 7
 product: both
 next: institutional-grade-infrastructure-for-independent-quants, what-is-an-order-management-engine, where-pre-trade-risk-checks-belong, what-makes-a-backtest-deterministic
 date: 2026-09-29
+topics: reproducibility, financial-risk, automated-trading
 ---
 
 "Institutional-grade" is often used to mean expensive: colocated servers, a team of engineers, data contracts with long names. For strategies that trade on bars, from minutes to days, most of that is not what separates professional infrastructure from a collection of scripts. What separates them is a set of properties, and each can be checked.

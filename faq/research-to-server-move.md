@@ -6,6 +6,7 @@ order: 35
 product: both
 next: backtest-to-live-without-rewrite, paper-trading, broker-connections, integration-time
 date: 2026-10-02
+topics: automated-trading, financial-risk
 ---
 
 Your trading logic and your order structure carry over. The relay functions in the Reamer Research library send the same orders your strategy returns in a backtest to a running Reamer Server and reads the fills back. Around it, you build a pre-trade gate and a broker connector once per deployment, feed live bars, and keep indicators as running state. Cost settings stay in research: live costs are what your broker charges.

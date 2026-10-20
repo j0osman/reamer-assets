@@ -6,6 +6,7 @@ order: 35.7
 product: both
 next: what-is-reamer-research, what-is-reamer-server, self-hosted-order-management-engine, research-to-server-move, integration-time
 date: 2026-10-08
+topics: automated-trading, oms, abi, backtesting
 ---
 
 You still build your own system. Reamer Labs supplies only its core: the part that has to be right, works the same for everyone, and makes no one money by being written again. You build everything around it, your own way, in your own language and on your own machine.

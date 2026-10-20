@@ -6,6 +6,7 @@ order: 9
 product: research
 next: build-or-buy-backtester, independent-quant-research-to-live-stack, research-engine-for-mid-frequency-strategies, what-makes-a-backtest-deterministic
 date: 2026-09-30
+topics: backtesting, quantitative-analysis, determinism
 ---
 
 A backtesting script is one program that tests one idea: it loads the data, loops over the bars, decides when to trade, works out the fills, adds up the profit and prints a result. A research engine takes everything in that script except the strategy and puts it in one place that every study calls. The strategy becomes a small piece of code the engine runs, and the rest (fills, costs, accounting, metrics, records) is the same for every study.

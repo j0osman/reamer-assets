@@ -6,6 +6,7 @@ order: 35.5
 product: both
 next: what-is-reamer-research, what-is-reamer-server, integration-time, who-its-for, pricing
 date: 2026-10-08
+topics: quantitative-analysis, backtesting, oms
 ---
 
 Deltix QuantOffice is an enterprise trading platform from EPAM. It covers research, backtesting, paper trading and live execution on one code base, with its own data store and over 100 exchange and broker connectors. Reamer Research and Reamer Server cover the same span, from research to live trading. The difference is scale and the cost of getting started: they are two smaller libraries that one person or a small team can buy self-serve and run without an integration project.

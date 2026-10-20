@@ -6,6 +6,7 @@ order: 15
 product: both
 next: what-is-reamer-research, what-is-reamer-server, who-its-for, research-engine-for-mid-frequency-strategies, self-hosted-order-management-engine
 date: 2026-10-01
+topics: quantitative-analysis, oms, financial-risk, reproducibility
 ---
 
 Yes, for systematic strategies that trade on bars. What makes infrastructure institutional is a set of properties you can check, not a budget: results that repeat exactly, fill and cost rules written down, risk checks separate from strategy code, one ordered path for every order, a full record, and performance claims backed by published data. Reamer Labs sells both halves at public prices, per seat per year: Reamer Research for research at $1,800 and Reamer Server for live order management at $7,200.

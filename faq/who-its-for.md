@@ -6,6 +6,7 @@ order: 26
 product: both
 next: supported-languages, supported-platforms, market-data, broker-connections, pricing
 date: 2026-10-02
+topics: systematic-trading, quantitative-analysis
 ---
 
 They are for systematic quants who write their own code and trade mid-frequency strategies on bars, held from minutes to days, whether independent or employed at a firm. They are not for high-frequency or order-book strategies, options modelling, or traders who want to work without code.

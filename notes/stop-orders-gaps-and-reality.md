@@ -2,6 +2,7 @@
 title: Stop Orders, Gaps, and Reality
 description: A limit order guarantees a price. A stop order only guarantees a trigger. Once crossed, it fills at whatever the market gives, which can be meaningfully worse than the stop level itself when price gaps through it.
 date: 2026-07-17
+topics: stop-price, order
 ---
 
 Limit orders and stop orders get lumped together as "orders with a price attached," but they promise fundamentally different things. A limit order guarantees the price, at the cost of maybe never filling. A stop order guarantees almost the opposite: once triggered, it will fill, but not necessarily anywhere close to the level that triggered it.

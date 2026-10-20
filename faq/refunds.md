@@ -6,6 +6,7 @@ order: 47
 product: both
 next: trial, pricing, what-you-receive, support, licence-expiry
 date: 2026-10-15
+topics: software-license
 ---
 
 Refunds are handled by Paddle, the merchant of record that sells every Reamer Labs licence, under Paddle's refund policy. A request goes to Paddle within 14 days of purchase, and Paddle decides it case by case. There is no partial refund or cancellation partway through a term. The paid trial is where you decide whether the product fits, and much of it can be checked for free before that.

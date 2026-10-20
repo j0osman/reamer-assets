@@ -6,6 +6,7 @@ order: 19
 product: server
 next: what-is-reamer-server, what-is-an-order-management-engine, where-pre-trade-risk-checks-belong, backtest-to-live-without-rewrite, broker-connections, integration-time
 date: 2026-10-01
+topics: oms, fix
 ---
 
 Yes. Look for an engine you link into your own program, which keeps order state, puts every strategy's orders into one sequence and publishes every decision, and leaves the pre-trade check, the broker connection and storage to you. [Reamer Server](/products/reamer-server.html) is built that way: a C library for Linux that you link into a program you write.

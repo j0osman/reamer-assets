@@ -6,6 +6,7 @@ order: 35.4
 product: both
 next: what-is-reamer-research, what-is-reamer-server, research-to-server-move, who-its-for, pricing
 date: 2026-10-08
+topics: systematic-trading, backtesting
 ---
 
 NautilusTrader is a free, open-source trading platform with a Rust core and a Python API. It runs the same strategy code in backtest and live, down to tick and order-book data, and has ready-made adapters for many venues. Reamer Research and Reamer Server are two paid libraries for strategies on bars: a research engine with a written execution specification, and an order management engine you build your own gate and broker connector around.

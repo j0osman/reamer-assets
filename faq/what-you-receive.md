@@ -6,6 +6,7 @@ order: 49
 product: both
 next: support, seats, supported-platforms, integration-time, licence-expiry
 date: 2026-10-03
+topics: sdk, software-license
 ---
 
 An email with your licence key and a link to download the kit. The kit is the product itself, compiled libraries and command-line tools with the full documentation and reference code, and it holds no key. You activate the key once per machine with the reamer-license tool, and the term starts then. Nothing is shipped physically and nothing is hosted for you.

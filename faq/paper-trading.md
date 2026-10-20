@@ -6,6 +6,7 @@ order: 34
 product: server
 next: research-to-server-move, broker-connections, integration-time, results-and-metrics
 date: 2026-10-02
+topics: paper-trading
 ---
 
 Yes, by pointing your Reamer Server connector at your broker's paper or demo account. The server handles paper and live orders the same way, and the licence allows both. The kit's in-memory paper broker only checks that your server is wired up correctly; it fills every order instantly at a made-up price, so it is not a market simulation.

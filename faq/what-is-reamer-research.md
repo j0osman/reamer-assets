@@ -6,6 +6,7 @@ order: 24
 product: research
 next: who-its-for, supported-languages, performance, what-is-reamer-server, pricing
 date: 2026-10-02
+topics: backtesting, quantitative-analysis
 ---
 
 Reamer Research is a deterministic research engine for mid-frequency quants. It is a library with a stable C interface that you call from Python, C++ or any language that can call C, on your own machine. The same data, settings and seed give byte-identical results every run, including the randomised slippage and spread.

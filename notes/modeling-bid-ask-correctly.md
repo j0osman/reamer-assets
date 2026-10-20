@@ -2,6 +2,7 @@
 title: Modeling Bid/Ask Correctly
 description: A buy pays the ask and a sell receives the bid, making spread a directional cost paid on every round trip. Getting the data's own bid/ask/midpoint convention wrong silently biases every fill the same way.
 date: 2026-07-17
+topics: bid-ask-spread, transaction-cost
 ---
 
 Spread gets treated, sometimes, as a small symmetric wobble around the "real" price, as likely to help a fill as hurt it. It is directional. A buy pays the ask. A sell receives the bid. Spread is a cost paid in the same direction every single time, on every round trip, and modeling it as anything else understates a real, structural cost.

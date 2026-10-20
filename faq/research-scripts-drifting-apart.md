@@ -6,6 +6,7 @@ order: 5
 product: research
 next: research-engine-vs-backtest-script, what-is-institutional-grade-trading-infrastructure, backtest-results-change-between-runs, what-makes-a-backtest-deterministic
 date: 2026-09-29
+topics: reproducibility, backtesting
 ---
 
 Research usually starts with one script. It works, so the next idea starts as a copy of it, and the one after that as a copy of whichever version was closest. A year later there are dozens of scripts, each with its own small differences in how it fills orders, charges costs, cleans data and computes returns. Results from different studies can no longer be compared, because each one was measured with a slightly different ruler.

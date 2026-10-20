@@ -6,6 +6,7 @@ order: 40
 product: both
 next: customer-reviews, single-maintainer-risk, data-privacy, are-benchmarks-verified
 date: 2026-10-03
+topics: software-license
 ---
 
 Each kit ships the documents a vendor review usually asks for, including a filled-in security questionnaire, a software bill of materials and signed release files. The security testing behind them was done by Reamer Labs itself; no outside firm has audited either product. Whether that is enough depends on your firm's policy, and you can test the binaries yourself.

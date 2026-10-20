@@ -6,6 +6,7 @@ order: 39
 product: both
 next: security-and-vendor-review, customer-reviews, who-makes-it, data-privacy
 date: 2026-10-03
+topics: source-code-escrow, software-license
 ---
 
 Your installed copy keeps running until its licence term ends, because the licence is checked on your machine, not against a server. What stops is updates, support, renewals and moving the licence to a new machine. If you need protection beyond that, you can set up a source escrow at your own cost, which releases the source to you only if Reamer Labs becomes insolvent or ends the product.

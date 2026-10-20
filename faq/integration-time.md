@@ -6,6 +6,7 @@ order: 32
 product: both
 next: paper-trading, results-and-metrics, research-to-server-move, broker-connections
 date: 2026-10-02
+topics: sdk, fix
 ---
 
 In uncut recordings, Claude Code working only from the kit documents integrated Reamer Research in about 13 minutes and Reamer Server in about 19, through to a simulated fill for Reamer Server. The Reamer Server kit puts a person's first simulated trade at a few hours. Going live at a real broker takes longer, because the broker's protocol details, session recovery and certification are your work.

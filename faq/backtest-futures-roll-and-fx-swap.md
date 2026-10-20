@@ -6,6 +6,7 @@ order: 22
 product: research
 next: stop-and-target-in-same-bar, deterministic-backtesting-with-slippage-and-spread, backtest-with-exogenous-data, research-engine-for-mid-frequency-strategies
 date: 2026-10-01
+topics: backtesting, futures, rolling, forex
 ---
 
 Yes, but only if the backtest handles two things a plain price series hides. In a continuous futures series, the price jump at each contract roll must not be counted as profit or loss. An FX position held overnight must be charged or credited swap every night it is held. Both are easy to miss, because the bars look normal and the backtest runs without complaint.

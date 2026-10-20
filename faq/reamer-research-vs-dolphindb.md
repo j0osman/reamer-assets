@@ -6,6 +6,7 @@ order: 35.6
 product: research
 next: what-is-reamer-research, market-data, supported-languages, who-its-for, pricing
 date: 2026-10-08
+topics: backtesting, market-data
 ---
 
 DolphinDB is a time-series database with its own scripting language, stream processing and a backtest plugin that simulates order matching down to tick-by-tick and Level-2 data. Reamer Research is a backtesting engine only, for strategies on OHLCV bars. DolphinDB is a data platform that can also backtest. Reamer Research does one job and leaves data storage to you.

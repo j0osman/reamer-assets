@@ -6,6 +6,7 @@ order: 6
 product: both
 next: what-is-institutional-grade-trading-infrastructure, institutional-grade-infrastructure-for-independent-quants, performance, supported-platforms
 date: 2026-09-29
+topics: latency, hft
 ---
 
 A modern laptop has more computing power than a trading desk's servers had twenty years ago. For strategies that trade on bars, from minutes to days, speed is rarely the constraint. What decides whether one machine is enough is how the work is shared across its cores, and whether it stays on and connected while the market is open.

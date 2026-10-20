@@ -3,6 +3,7 @@ title: "What 2,000 Runs on a 64-Core EPYC Show About Reamer Research"
 description: A single-threaded research engine has one job the rest of research depends on: run the same input twice and get the same answer, at a speed that does not wander. I measured both across 2,000 runs on an AMD EPYC 9575F. Timing held to a 0.59% coefficient of variation and every hashed output came back byte-identical.
 date: 2026-09-19
 tier: Findings
+topics: determinism, reproducibility, benchmark, manycore, coefficient-of-variation
 ---
 
 A research result is only worth acting on if two things hold. The same input has to give the same output, exactly, every time. And the time it takes to produce that output has to stay steady, so a sweep of a thousand variants is a stable measurement rather than a shifting one. I measured both on Reamer Research, the deterministic research engine, on a single-socket AMD EPYC 9575F, and this note reports what came back. The raw artifacts behind every number are published, so none of it has to be taken on trust.

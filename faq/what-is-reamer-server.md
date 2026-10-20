@@ -6,6 +6,7 @@ order: 25
 product: server
 next: who-its-for, broker-connections, supported-languages, paper-trading, what-is-reamer-research, pricing
 date: 2026-10-02
+topics: oms, automated-trading, financial-risk
 ---
 
 Reamer Server is an order management engine that takes a strategy live. It is the core of your trading process, delivered as a library with a stable C interface. It holds order state and sequencing, runs your pre-trade check on every order and sends accepted orders to your broker through a connector you write.

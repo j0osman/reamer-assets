@@ -6,6 +6,7 @@ order: 23
 product: research
 next: what-makes-a-backtest-deterministic, backtest-vs-live-results, research-engine-for-mid-frequency-strategies, what-is-reamer-research
 date: 2026-10-01
+topics: backtesting, market-data
 ---
 
 Stamp every record with the moment it became available to you, not the date it describes, then join it to your bars "as of": each bar sees the latest record stamped at or before it, never a later one. Most lookahead in event-driven backtests comes from the timestamps, not the join. [Reamer Research](/products/reamer-research.html) attaches a non-price series to each ticker and enforces that rule, so a value appears exactly on the bar carrying its timestamp and never earlier.

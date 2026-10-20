@@ -6,6 +6,7 @@ order: 29
 product: both
 next: integration-time, results-and-metrics, paper-trading, performance
 date: 2026-10-02
+topics: market-data, ohlc
 ---
 
 No. Neither Reamer Research nor Reamer Server includes market data. For Reamer Research you bring your own OHLCV bars, loaded from CSV or any source, and equities must already be adjusted for splits and dividends. The engine checks that bars are well formed, not that the data is right. Reamer Server takes orders from your strategies, which get their prices from your own feed.

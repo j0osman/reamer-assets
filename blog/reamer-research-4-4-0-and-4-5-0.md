@@ -3,6 +3,7 @@ title: "Reamer Research 4.4.0 and 4.5.0: Larger-Than-RAM Data, Monte Carlo, Full
 description: Reamer Research 4.4.0 runs datasets larger than RAM from memory-mapped bar files, adds Monte Carlo resampling and an equity curve, and gives every function a plain name. 4.5.0 gives a strategy its full position state and every resting order on each bar, lets it re-price orders, move stops and targets, close all or cancel all, adds a progress callback that can stop a run, and sends the same orders a backtest produces to a running Reamer Server. C ABI version 7, additive from here on.
 date: 2026-10-09
 tier: Release
+topics: backtesting, monte-carlo, order
 ---
 
 Reamer Research 4.4.0 and 4.5.0 are out. 4.4.0 widens what the research engine runs on and what it reports: datasets larger than RAM, Monte Carlo resampling, an equity curve, and one plainly named function for each job. 4.5.0 widens what a strategy can do: it sees everything it holds, manages it bar by bar, and sends its orders, brackets included, to a running Reamer Server. This post covers both releases and what they mean for your code.

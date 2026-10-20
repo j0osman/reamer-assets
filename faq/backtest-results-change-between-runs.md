@@ -6,6 +6,7 @@ order: 3
 product: research
 next: what-makes-a-backtest-deterministic, is-my-backtest-overfit, how-realistic-slippage-and-spread, research-engine-vs-backtest-script
 date: 2026-09-29
+topics: backtesting, determinism, reproducibility, random-seed
 ---
 
 If the same strategy on the same data gives a different answer each time, something in the run is changing that you did not change. Until that is found, no result can be compared with any other. You cannot tell whether an improvement came from your edit or from the run, and every parameter sweep mixes the strategy's variation with the tool's.

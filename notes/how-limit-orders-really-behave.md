@@ -2,6 +2,7 @@
 title: How Limit Orders Really Behave
 description: A limit order isn't a market order with a nicer price attached. It waits for a specific level to be crossed, might never fill at all, and modeling it any other way changes what a strategy's results actually mean.
 date: 2026-07-17
+topics: order, backtesting
 ---
 
 A limit order is sometimes modeled as though it were just a market order with a preferred price attached, assumed to fill the moment it's placed, at roughly the price requested. That isn't what a limit order actually does, and the difference changes what a backtest using them is really measuring.

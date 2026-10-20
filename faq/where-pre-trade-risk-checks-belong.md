@@ -6,6 +6,7 @@ order: 13
 product: server
 next: self-hosted-order-management-engine, plug-own-risk-model-pre-trade, multiple-strategies-one-broker-connection, what-is-an-order-management-engine
 date: 2026-09-30
+topics: financial-risk, risk-management, oms
 ---
 
 Pre-trade risk checks belong between the strategies and the broker, as one separate step that every order passes through. Orders from all strategies are first put into one sequence, and then the check makes one decision per order, pass or reject, before anything is sent. It should not live inside a strategy, and it should not be left to the broker.

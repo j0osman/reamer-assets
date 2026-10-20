@@ -6,6 +6,7 @@ order: 35.2
 product: research
 next: what-is-reamer-research, is-my-backtest-overfit, how-realistic-slippage-and-spread, pricing
 date: 2026-10-08
+topics: backtesting, determinism
 ---
 
 vectorbt PRO is a vectorised Python library that is very fast at testing thousands of parameter combinations of a strategy whose shape is already fixed. Reamer Research is an event-driven engine that steps through time and fills each order by a written specification. They answer different questions, and some researchers use both.

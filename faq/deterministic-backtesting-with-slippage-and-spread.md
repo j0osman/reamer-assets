@@ -6,6 +6,7 @@ order: 16
 product: research
 next: what-makes-a-backtest-deterministic, how-realistic-slippage-and-spread, stop-and-target-in-same-bar, research-engine-for-mid-frequency-strategies
 date: 2026-10-01
+topics: backtesting, determinism, slippage, bid-ask-spread
 ---
 
 One whose randomness is seeded and tied to each position in the data, not drawn from a running stream. Then spread and slippage can vary with the market and still repeat exactly for a fixed seed. [Reamer Research](/products/reamer-research.html) works this way. In its published test, 20 of 20 runs with spread and slippage noise switched on were byte-identical by SHA-256.

@@ -6,6 +6,7 @@ order: 1
 product: both
 next: how-realistic-slippage-and-spread, backtest-results-change-between-runs, backtest-to-live-without-rewrite, deterministic-backtesting-with-slippage-and-spread
 date: 2026-09-29
+topics: backtesting, slippage, bid-ask-spread, transaction-cost
 ---
 
 A gap between backtest and live results almost never has one cause. It is usually several small ones adding up in the same direction: each makes the backtest a little more optimistic than the market, and together they turn a profitable-looking strategy into a flat or losing one. The causes fall into five groups, and each can be checked.

@@ -6,6 +6,7 @@ order: 21
 product: server
 next: self-hosted-order-management-engine, plug-own-risk-model-pre-trade, where-pre-trade-risk-checks-belong, what-is-reamer-server
 date: 2026-10-01
+topics: financial-risk, event-driven
 ---
 
 Put one process between the strategies and the broker. Each strategy connects to it, it puts every strategy's orders into one sequence, checks each against your limits and sends it over the one connection, then routes each fill back to the strategy that sent the order. Track which strategy owns each order and each position yourself, because the broker sees one account. [Reamer Server](/products/reamer-server.html) is that process; it was measured with up to 512 strategies connected at once.

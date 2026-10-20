@@ -6,6 +6,7 @@ order: 16.5
 product: research
 next: deterministic-backtesting-with-slippage-and-spread, backtest-futures-roll-and-fx-swap, research-engine-for-mid-frequency-strategies
 date: 2026-10-01
+topics: order, stop-price, ohlc, backtesting
 ---
 
 The bar alone cannot say which was hit first, so no answer is certain. When a bar's high reaches the target and its low reaches the stop, the open, high, low and close do not record which came first. A backtest has to settle it by a rule. What matters is that the rule is stated, applied the same way on every run, and tested for how much the result depends on it.

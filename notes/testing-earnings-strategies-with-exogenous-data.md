@@ -3,6 +3,7 @@ title: "Testing Earnings Strategies with Exogenous Data"
 description: An earnings backtest is only honest if the data becomes visible on the date it was actually announced, not the date it happened to land in a spreadsheet. Exogenous data's point-in-time resolution is what makes that distinction real instead of assumed.
 date: 2026-07-19
 tier: Practical Research Workflows
+topics: backtesting, market-data
 ---
 
 An earnings-surprise strategy lives or dies on one detail that's easy to get wrong without ever noticing: the exact bar at which the surprise becomes knowable. A dataset keyed by fiscal quarter, joined against price data by date, will happily let an EPS number sit next to bars that came before the company actually announced it — the join succeeds, the backtest runs, and the strategy quietly gets to react to information a day or two before the market could have. That's not a small bias. It's the single easiest way to manufacture an edge that was never real — exactly the no-lookahead discipline good experiment design requires, applied to the specific case of event data instead of price data.

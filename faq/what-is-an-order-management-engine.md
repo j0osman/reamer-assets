@@ -6,6 +6,7 @@ order: 12
 product: server
 next: where-pre-trade-risk-checks-belong, self-hosted-order-management-engine, multiple-strategies-one-broker-connection, plug-own-risk-model-pre-trade
 date: 2026-09-30
+topics: oms, ems, financial-risk
 ---
 
 An order management engine is the part of a trading system between the strategies and the broker. A strategy decides what it wants to trade. The engine turns that decision into an order, checks it, sends it, follows it until it is finished, and keeps a record of all of it.

@@ -3,6 +3,7 @@ title: "Order Lifetime: IOC, GTD, and Why It Matters"
 description: An order fills, or stops being eligible to fill, at some point. Treating every order as though it waits indefinitely quietly tests a more patient strategy than the one that was actually written.
 date: 2026-07-19
 tier: Practical Research Workflows
+topics: order
 ---
 
 Most backtesting examples implicitly treat every order as good indefinitely: submit it, and it sits there until it fills, however long that takes. Real orders don't work that way, and a strategy whose actual logic is "get in now or don't get in at all" behaves differently depending on whether that's genuinely modeled or just quietly assumed away by a framework that only knows one kind of order lifetime.

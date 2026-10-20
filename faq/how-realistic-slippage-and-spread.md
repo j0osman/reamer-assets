@@ -6,6 +6,7 @@ order: 4
 product: research
 next: what-makes-a-backtest-deterministic, backtest-vs-live-results, deterministic-backtesting-with-slippage-and-spread, research-engine-vs-backtest-script
 date: 2026-09-29
+topics: slippage, bid-ask-spread, transaction-cost, volatility
 ---
 
 Costs are the part of a backtest most often set to zero, and the part most likely to decide whether a strategy makes money. They do not need to be perfect. They need to be realistic enough, and varied enough, that the result still holds when they are a little worse than expected.

@@ -6,6 +6,7 @@ order: 27
 product: both
 next: supported-platforms, performance, integration-time, research-to-server-move
 date: 2026-10-02
+topics: abi, sdk
 ---
 
 For Reamer Research, Python or C++ through the code that ships in the kit, or any language that can call a C library. For Reamer Server, the gate and the broker connector are written in C, C++, Rust or Go, and strategies connect over a socket from any language, Python included.

@@ -6,6 +6,7 @@ order: 35.1
 product: research
 next: what-is-reamer-research, research-engine-for-mid-frequency-strategies, what-makes-a-backtest-deterministic, pricing
 date: 2026-10-08
+topics: backtesting
 ---
 
 Both run a strategy one bar at a time against historical data, and someone who has written a Backtrader strategy will recognise the shape of a Reamer Research one. The difference is underneath: Backtrader is a free, open-source Python framework where costs are settings you add, and Reamer Research is a paid, compiled engine built around a written specification of how orders fill.

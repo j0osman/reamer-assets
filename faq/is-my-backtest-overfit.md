@@ -6,6 +6,7 @@ order: 2
 product: research
 next: backtest-results-change-between-runs, what-makes-a-backtest-deterministic, how-realistic-slippage-and-spread, research-engine-vs-backtest-script
 date: 2026-09-29
+topics: overfitting, walk-forward, backtesting, sharpe-ratio
 ---
 
 A backtest is overfit when it has learned the noise in one stretch of history instead of a pattern that will repeat. It looks excellent on the data it was built on and does little or nothing on data it has not seen. No single number tells you whether that has happened. What you can do is look for the signs, and each has a test.

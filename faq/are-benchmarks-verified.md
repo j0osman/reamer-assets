@@ -6,6 +6,7 @@ order: 37
 product: both
 next: data-privacy, single-maintainer-risk, security-and-vendor-review, customer-reviews, performance
 date: 2026-10-03
+topics: benchmark, reproducibility, latency
 ---
 
 No. No third party has audited the Reamer Research or Reamer Server benchmarks; Reamer Labs ran them itself. What you can check is the method, published as a whitepaper with a DOI, the raw output of every run, also published, and your own hardware, using the benchmark programs that ship in each kit.

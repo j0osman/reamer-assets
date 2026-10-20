@@ -2,6 +2,7 @@
 title: Why Replay Matters
 description: A finished backtest result is a final-stage view: trades, fills, a summary. When something in that result looks wrong, a few outsized losses, an order that seemingly should have filled and didn't, replay is the deterministic re-run and per-order diagnosis that finds the exact moment and shows why.
 date: 2026-07-17
+topics: determinism, backtesting
 ---
 
 A finished backtest result is a final-stage view. Trades happened, orders filled or didn't, a summary got produced, and all of that is presented after the fact, with the actual tick-by-tick mechanics that produced it already collapsed into a result that's meant to be read, not watched. Most of the time that's fine. It stops being fine the moment something in that result doesn't match what the strategy's logic was supposed to do.

@@ -6,6 +6,7 @@ order: 35.3
 product: both
 next: what-is-reamer-research, what-is-reamer-server, market-data, broker-connections, data-privacy, pricing
 date: 2026-10-08
+topics: algorithmic-trading, backtesting
 ---
 
 QuantConnect is a full hosted platform: market data, a cloud IDE, backtesting on its open-source LEAN engine, and live trading through brokers it already supports. Reamer Research and Reamer Server are two libraries that run on your own machine, a research engine and an order management engine, that you build your own system around. QuantConnect runs the whole system for you. Reamer Labs supplies the two engines, and every part around them is yours.

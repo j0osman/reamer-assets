@@ -6,6 +6,7 @@ order: 18
 product: both
 next: research-to-server-move, independent-quant-research-to-live-stack, backtest-vs-live-results, where-pre-trade-risk-checks-belong, paper-trading
 date: 2026-10-01
+topics: backtesting, automated-trading, fix
 ---
 
 Keep the decision logic, and port everything around it. Write the strategy so its signals depend only on state it updates one bar at a time, keep instrument names and costs out of it, then prove the live version matches by replaying the backtest's bars through it and comparing every signal. What changes is the plumbing, not the strategy, but the plumbing is real work.

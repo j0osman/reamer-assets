@@ -6,6 +6,7 @@ order: 44
 product: both
 next: pricing, seats, what-you-receive, support, refunds
 date: 2026-10-03
+topics: software-license
 ---
 
 Yes. An annual licence can be paid by invoice, issued by Paddle and payable within 14 days by bank transfer, and a signed order form is available on request. Both are at the same prices as the card checkout. The 30-day trial is card only.

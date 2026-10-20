@@ -3,6 +3,7 @@ title: "Why Synthetic Ticks Instead of Stored Ticks"
 description: An OHLCV bar gives four prices, not the path between them. Reamer Research answers the question of what happened inside a bar with a deterministic, seeded synthetic tick path — not with stored tick data most researchers can't afford or don't need.
 date: 2026-07-19
 tier: Engineering
+topics: ohlc, random-seed, market-microstructure, market-data
 ---
 
 An OHLCV bar is a summary, not a record. Open, high, low, close — four numbers describing what happened over an interval, with no information about the order any of them occurred in. That's fine for most questions a bar-based strategy asks. It stops being fine the moment two things are true in the same bar: a stop-loss and a take-profit are both within range, or a limit order's trigger price sits between the open and one of the extremes. At that point, "which happened first" is a real question, and OHLCV alone cannot answer it.

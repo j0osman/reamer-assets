@@ -3,6 +3,7 @@ title: "Reamer Server on a 64-Core EPYC: The Tail Is the Measurement"
 description: A trading engine is usually sold on one number, a peak throughput or a best-case latency. Neither tells a team what happens under concurrent load. I measured the integration boundary, the end-to-end order path, and the full 1-to-512 strategy sweep on an AMD EPYC 9575F. The boundary costs 53 nanoseconds, the engine-only P99 sits at 12.4 microseconds, and throughput holds a plateau to about 67 strategies.
 date: 2026-09-19
 tier: Findings
+topics: latency, benchmark, manycore, order
 ---
 
 Vendors and internal teams usually describe an execution engine with a single headline number: a peak throughput measured once under ideal placement, or a best-case latency. That number tells a team almost nothing about the question that actually matters, which is what happens to the distribution when many strategies run at once. I measured Reamer Server, the order-management engine that takes a proven strategy live, across that whole range on a single-socket AMD EPYC 9575F, and the theme that runs through every result is the same: the tail carries the information, not the median.
