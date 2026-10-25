@@ -98,10 +98,10 @@ lists every removal and rename.
 Every binary answers `--version`, so you can confirm which build you have:
 
 ```bash
-./bin/reamer-license --version    # reamer-license 4.5.1
-./bin/release-sign --version      # release-sign 4.5.1
-./bin/reamer-exo-build --version  # reamer-exo-build 4.5.1
-./bin/reamer-csv-build --version  # reamer-csv-build 4.5.1
+./bin/reamer-license --version    # reamer-license 4.6.1
+./bin/release-sign --version      # release-sign 4.6.1
+./bin/reamer-exo-build --version  # reamer-exo-build 4.6.1
+./bin/reamer-csv-build --version  # reamer-csv-build 4.6.1
 ```
 
 Docs: `EXECUTION_SPEC.md` (**authoritative** on fills, slippage, spread,

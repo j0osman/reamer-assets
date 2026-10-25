@@ -66,7 +66,7 @@ Every binary in `bin/` answers `--version`, so you can confirm which build
 you have:
 
 ```bash
-bin/reamer-license --version    # reamer-license 4.5.1
+bin/reamer-license --version    # reamer-license 4.6.1
 ```
 
 Docs: `DEPLOYMENT.md` (quickstart and operations), `CONFIG.md` (every

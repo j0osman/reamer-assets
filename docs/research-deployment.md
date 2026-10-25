@@ -26,7 +26,7 @@ variant).
 below. Verifying first is both the correct order and the only order in
 which the commands work as printed: the `.tar.gz`, `.sha256`,
 `.sha256.sig`, and `.tar.gz.sig` are downloaded as siblings, and
-extraction creates the `research-kit-4.5.1-linux_x86_64/` directory
+extraction creates the `research-kit-4.6.1-linux_x86_64/` directory
 *next to* them, not around them.
 
 Once verification passes, extract — see "Extract the archive" at the end
@@ -72,7 +72,7 @@ files are siblings of that directory, not members of it.
 1. Check the tarball wasn't corrupted or tampered with in transit:
 
    ```
-   sha256sum -c research-kit-4.5.1-linux_x86_64.tar.gz.sha256
+   sha256sum -c research-kit-4.6.1-linux_x86_64.tar.gz.sha256
    ```
 
 2. Check the checksum's detached signature, using the `release-sign`
@@ -83,17 +83,17 @@ files are siblings of that directory, not members of it.
    downloads:
 
    ```
-   tar xzf research-kit-4.5.1-linux_x86_64.tar.gz \
+   tar xzf research-kit-4.6.1-linux_x86_64.tar.gz \
      --strip-components=2 \
-     research-kit-4.5.1-linux_x86_64/bin/release-sign
+     research-kit-4.6.1-linux_x86_64/bin/release-sign
    ```
 
    Then verify, from the directory holding the downloads:
 
    ```
    ./release-sign verify \
-     research-kit-4.5.1-linux_x86_64.tar.gz.sha256 \
-     research-kit-4.5.1-linux_x86_64.tar.gz.sha256.sig \
+     research-kit-4.6.1-linux_x86_64.tar.gz.sha256 \
+     research-kit-4.6.1-linux_x86_64.tar.gz.sha256.sig \
      b0ff9dcdcbd767ec78375629e10afec2baf18319df27e000ed6d8307cb93e68c
    ```
 
@@ -138,8 +138,8 @@ files are siblings of that directory, not members of it.
 
    ```
    ./release-sign verify \
-     research-kit-4.5.1-linux_x86_64.tar.gz \
-     research-kit-4.5.1-linux_x86_64.tar.gz.sig \
+     research-kit-4.6.1-linux_x86_64.tar.gz \
+     research-kit-4.6.1-linux_x86_64.tar.gz.sig \
      b0ff9dcdcbd767ec78375629e10afec2baf18319df27e000ed6d8307cb93e68c
    ```
 
@@ -165,13 +165,13 @@ Only after both verification commands above have passed, still from the
 directory holding the downloads:
 
 ```
-tar xzf research-kit-4.5.1-linux_x86_64.tar.gz
-cd research-kit-4.5.1-linux_x86_64
+tar xzf research-kit-4.6.1-linux_x86_64.tar.gz
+cd research-kit-4.6.1-linux_x86_64
 ls include/reamer_research_abi.h lib/libreamer_research.so
 ```
 
 Every later step in this document runs from that
-`research-kit-4.5.1-linux_x86_64/` directory unless it says otherwise.
+`research-kit-4.6.1-linux_x86_64/` directory unless it says otherwise.
 
 ## Step 2 — Activate the license
 
@@ -410,22 +410,22 @@ detect this, but `window_valid` states it directly and is the supported
 signal.
 
 **positions.** Length `ticker_count`: the engine's signed position per
-ticker entering this bar (positive=long, negative=short, 0.0=flat).
+ticker after this bar's fills (positive=long, negative=short, 0.0=flat).
 
 **exogenous / exogenous_len.** Length `ticker_count`. NULL/0 when no
 sidecar paths were supplied or no entry is visible yet. See
 `EXOGENOUS_FORMAT.md`.
 
-**position_states.** Length `ticker_count`: each ticker's position entering
-this bar — signed `qty`, `avg_entry_price`, bracket `take_profit` and
+**position_states.** Length `ticker_count`: each ticker's position after
+this bar's fills — signed `qty`, `avg_entry_price`, bracket `take_profit` and
 `stop_loss`, `unrealized_pnl` and `entry_ts`. All fields are 0 for a flat
 ticker.
 
-**open_orders / open_order_count.** Every order still resting entering this
-bar, sorted by `order_id`. To cancel one, write a `ReamerOrderRequest` with
+**open_orders / open_order_count.** Every order still resting after this
+bar's fills, sorted by `order_id`. To cancel one, write a `ReamerOrderRequest` with
 `is_cancel = true` and `cancel_target_id` set to its `order_id`. The
-cancel takes effect after the current bar replays: an order that fills on
-the bar `on_bar` has just seen stays filled.
+cancel takes effect when `on_bar` returns, before the next bar can fill
+the order.
 `open_orders` is NULL when `open_order_count` is 0.
 
 **out_orders.** The order buffer format is `ReamerOrderRequest`, the
@@ -444,7 +444,7 @@ and positions, as `ReamerOrderAction` entries (64 per call):
 order in `open_orders`. Set `*out_action_count` to the number written; it is
 0 on entry. Modify and cancel-all actions take effect from the next bar;
 `EXECUTION_SPEC.md` §6b has the timing and validation. The engine writes
-`applied` and `reject_reason` into each entry after the bar replays and
+`applied` and `reject_reason` into each entry when `on_bar` returns and
 never clears the buffer, so read the previous call's results at the start
 of the next call.
 

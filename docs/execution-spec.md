@@ -236,8 +236,9 @@ Tolerance: 1e-6.
 Fill eligibility is origin-dependent:
 
 - **Bar-origin orders** — every order a strategy writes to `out_orders` in `on_bar(N)`.
-  `on_bar(N)` only ever runs after bar N is fully sealed (the newest window row is bar N's
-  real close), so an order it returns is only eligible starting
+  `on_bar(N)` only ever runs after bar N is fully sealed and replayed (the newest window row
+  is bar N's real close, and `positions`, `position_states` and `open_orders` show every fill
+  on bar N, as a venue reports fills before the bar closes), so an order it returns is only eligible starting
   the ticker's **next** bar (N+1) — `created_ts = bar_N.epoch`, and the order becomes
   eligible once `now_ts > created_ts`, i.e. bar N+1 tick 1 onward. It is never matched
   against any tick of bar N itself: a decision made from bar N's close cannot fill at a
@@ -267,13 +268,13 @@ purely price-driven; only the earliest tick it may search from moves to N+1.
 
 Cancellation:
 
-- A cancel request (`is_cancel = true`, `cancel_target_id`) takes effect after the current
-  bar replays, as `CANCEL_ALL` does (§6b): an order that fills on the bar the strategy has
-  already seen stays filled. If the order is still Pending then, it is cancelled at the
-  current bar's timestamp. An unknown or no-longer-pending ID is a silent no-op. Cancel requests consume no order ID; every other order written to
+- A cancel request (`is_cancel = true`, `cancel_target_id`) takes effect when `on_bar(N)`
+  returns, as `CANCEL_ALL` does (§6b). Bar N has already replayed, so the order is cancelled
+  at bar N's timestamp, before bar N+1 can fill it. An unknown or no-longer-pending ID is a silent no-op. Cancel requests consume no order ID; every other order written to
   `out_orders`, rejected or not, takes the next ID in submission order, starting at 1.
-- A full position close — strategy order or bracket exit — cancels every Pending order on
-  that ticker, entry orders included. A partial close cancels none.
+- A full position close — strategy order or bracket exit — cancels the Pending orders on
+  that ticker that only close: `is_close` orders, and opposite-side orders with no `qty`.
+  Entries and reversals stay live, as on a venue. A partial close cancels none.
 - At end of run, every order still Pending is recorded in `open_orders_end[]`, then
   cancelled.
 
@@ -289,13 +290,13 @@ Timing, for an action returned at bar N:
 | Action | Takes effect |
 |---|---|
 | `CLOSE_ALL` | One `is_close` market order per ticker with a nonzero `position_states` qty, submitted after that call's `out_orders` and taking IDs after them. Fills at bar N+1 tick 1, as any close. |
-| `MODIFY_ORDER` | After bar N replays. The new price and brackets apply from bar N+1. |
-| `MODIFY_POSITION` | After bar N replays. The new levels apply from bar N+1. |
-| `CANCEL_ALL` | After bar N replays. Cancels each order in that call's `open_orders` still Pending, at bar N's timestamp, as a cancel request does (§6). Orders submitted in the same call are not in that list and stay live. |
+| `MODIFY_ORDER` | When `on_bar(N)` returns. The new price and brackets apply from bar N+1. |
+| `MODIFY_POSITION` | When `on_bar(N)` returns. The new levels apply from bar N+1. |
+| `CANCEL_ALL` | When `on_bar(N)` returns. Cancels each order in that call's `open_orders` still Pending, at bar N's timestamp, as a cancel request does (§6). Orders submitted in the same call are not in that list and stay live. |
 
-Bar N has already reached the strategy when it writes the action, so a fill on bar N
-stands at the levels the strategy saw it with. An order that fills, or a position that
-closes, during bar N is no longer there to modify: its action reports `applied = false`.
+Bar N has replayed before `on_bar(N)` runs, so `open_orders` and `position_states` already
+show its fills and closes. An action naming an order or position that is gone reports
+`applied = false`.
 Actions apply in array order, so a later action on the same order or ticker overrides an
 earlier one.
 

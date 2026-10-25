@@ -16,6 +16,50 @@ Version numbers here are the release version (`kReamerVersion`), which is
 shared with Reamer Server and moves independently of `REAMER_ABI_VERSION`.
 ABI bumps are called out explicitly where they occur.
 
+## [4.6.1] - 2026-10-26
+
+No ABI change (`REAMER_ABI_VERSION` stays 7). Reference Python binding only;
+the library is unchanged and results are identical to 4.6.0.
+
+### Fixed
+- Reference Python binding: a backtest with more than 65,536 closed trades
+  raised `RuntimeError` instead of returning them. The trade buffer is now
+  sized from the run's own trade count, so every closed trade is returned.
+
+### Changed
+- Reference Python binding: a numpy structured array of bars is converted
+  field by field instead of row by row. On 500,000 bars, peak memory drops
+  from about 290 MB to about 210 MB and start-up is about 1.5 s faster.
+  Fields are still matched by name, so their order, extra fields and
+  narrower types are handled as before.
+
+## [4.6.0] - 2026-10-25
+
+No ABI change (`REAMER_ABI_VERSION` stays 7): no struct or signature
+changes. **Behaviour change**: a strategy's results can change, so re-run
+backtests made on earlier versions.
+
+### Fixed
+- `on_bar(N)` now sees the state after bar N's fills, as a venue reports
+  fills before the bar closes. `positions`, `position_states` and
+  `open_orders` were one bar stale: an order that filled at bar N's open
+  still showed as resting and the position as unchanged, and
+  `unrealized_pnl` was marked at bar N-1's close. Fill timing is unchanged:
+  an order returned from `on_bar(N)` still fills from bar N+1 tick 1.
+- A full position close no longer cancels every pending order on that
+  ticker. It cancels only orders that close (`is_close`, or an opposite-side
+  order with no `qty`); entries and reversals stay live. Together with the
+  stale state above, this cancelled the second of two reversals on
+  consecutive bars, leaving the strategy on the wrong side.
+- Cancel requests, `MODIFY_ORDER`, `MODIFY_POSITION` and `CANCEL_ALL` apply
+  when `on_bar` returns; bar N has already replayed by then, so the
+  observable timing is unchanged.
+
+### Changed
+- Reference Python binding: each `on_bar` call is about 4x cheaper. The bar
+  window's numpy dtype is built once instead of on every call; a 500,000-bar
+  no-op run drops from about 38 s to 10 s. Results are unchanged.
+
 ## [4.5.1] - 2026-10-15
 
 No ABI change (`REAMER_ABI_VERSION` stays 7). A security release: rebuilding
