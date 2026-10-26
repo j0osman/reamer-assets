@@ -14,14 +14,14 @@ No. No third party has audited the Reamer Research or Reamer Server benchmarks; 
 ## Who ran them, and where
 
 - **The laptop figures** come from a 2017 four-core laptop.
-- **The many-core figures** come from a rented single-socket AMD EPYC 9575F server, run by Reamer Labs in September 2026.
+- **The many-core figures** come from a rented single-socket AMD EPYC 9575F server, run by Reamer Labs in September 2026 and again, on release 4.6.0, in October 2026.
 
 Neither was observed or repeated by anyone else.
 
 ## What you can check
 
-- **The method.** The [whitepaper](https://doi.org/10.6084/m9.figshare.33972466) sets out the hardware, settings, workloads and how each figure was measured.
-- **The raw output.** The [raw benchmark data](https://doi.org/10.6084/m9.figshare.33877588) holds the unedited console and CSV output behind each published figure. Where a summary and a raw file differ, the raw file is the correct one.
+- **The method.** The [whitepaper](https://doi.org/10.6084/m9.figshare.33972466) sets out the hardware, settings, workloads and how each figure was measured. Its [replication](https://doi.org/10.6084/m9.figshare.34787757) repeats the measurements on release 4.6.0 and gives the current figures.
+- **The raw output.** The raw benchmark data of the [first run](https://doi.org/10.6084/m9.figshare.33877588) and of the [4.6.0 run](https://doi.org/10.6084/m9.figshare.34785762) hold the unedited console and CSV output behind each published figure. Where a summary and a raw file differ, the raw file is the correct one.
 - **Your own machine.** Each kit ships a ready-built benchmark: `research-bench` replays bars through Reamer Research, and `server-bench` sends orders from 1 to 64 strategies through Reamer Server. Both print throughput and latency percentiles, and each kit's `BENCHMARK.md` explains how to read them.
 - **Determinism.** Run the same backtest twice with the same seed and compare the result files byte for byte. That claim needs no benchmark to test.
 

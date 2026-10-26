@@ -71,7 +71,7 @@ In Reamer Server, the gate is your model. Everything below is documented in `EXT
 - **Units to watch.** Order quantities and prices reach the gate as decimals; positions in the account state are integers scaled by 10⁹. Scale before you compare.
 - **Fails closed.** A gate whose code throws an exception is treated as a rejection, logged, and the server keeps running. If the broker connector reports it is disconnected, the order is rejected with `venue disconnected` before your gate is called.
 - **Every reason counted.** Your reason text is published on the event stream with each rejection, and the `/metrics` endpoint counts rejections by reason, so a shift in why orders are refused shows up on a dashboard.
-- **Cheap to call.** The kit's benchmark measures crossing into your code and back at 53 ns on an AMD EPYC 9575F, before your own logic. The check has no timeout, so a gate that hangs holds up the order.
+- **Cheap to call.** The kit's benchmark measures crossing into your code and back at 60 ns on an AMD EPYC 9575F, before your own logic. The check has no timeout, so a gate that hangs holds up the order.
 - **Starting points.** An accept-all gate in C++ and Rust, and a Go reference gate that rejects instruments outside an approved list and orders while disconnected, with tests for its fail-closed behaviour. The kit's end-to-end demo shows one order rejected by that gate before it reaches the simulated venue.
 
 ## Limits to know

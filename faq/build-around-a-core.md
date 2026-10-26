@@ -19,7 +19,7 @@ That sits between the two usual choices. Building everything means months spent 
 
 - Fill and cost rules, written down in an execution specification that ships with the kit, with the engine tested against it. They cover market, limit and stop orders, gaps, stops and targets in the same bar, bid and ask, spread, slippage, commission, margin, overnight swap and futures rolls.
 - Byte-identical output for a fixed `rng_seed`, so a change in results is always your change.
-- About 1.7 million bars a second per backtest, fast enough to sweep.
+- About 1.8 million bars a second per backtest, fast enough to sweep.
 - 31 summary metrics plus every order, fill and trade, in a versioned JSON report.
 - Full position state and every resting order on each bar, with actions that re-price an order, move a position's stop and target, close all or cancel all.
 - A relay, `reamer_relay_*`, that sends the strategy's orders to Reamer Server and reads the fills back.

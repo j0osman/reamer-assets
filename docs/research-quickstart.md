@@ -32,9 +32,10 @@ drawdown and holding-time statistics — or dump the whole run with
 is byte-identical across repeats, including the stochastic slippage and
 spread path. Run any backtest twice and compare. Determinism holds in
 *timing* as well as output: on a 64-core EPYC 9575F the native engine ran
-2000 independent backtests with per-run throughput CV 0.59% (1.04× min→max
-spread) — the single-threaded engine has no scheduler in its path to
-introduce run-to-run drift. See `BENCHMARK.md`, "Many-Core Verification."
+2000 independent backtests with per-run throughput CV 0.66% (1.05× min→max
+spread) on release 4.6.0 — the single-threaded engine has no scheduler in
+its path to introduce run-to-run drift. See the [replication of the
+whitepaper](https://doi.org/10.6084/m9.figshare.34787757).
 
 **Scope.** OHLCV-bar mid-frequency strategies, intraday to multi-day. Not
 a high-frequency order-book (L2/L3) system, not an options platform, and
