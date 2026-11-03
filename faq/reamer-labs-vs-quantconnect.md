@@ -48,6 +48,8 @@ LEAN repeated every result, as did the other engines. This is one machine, one d
 - **QuantConnect** if you want data, brokers and hosting handled for you, need options or many asset classes, or want to start for free.
 - **Reamer Labs** if you already have your data and broker, want each part of the system in your own hands and on your own machine, and trade systematic strategies on bars from minutes to days. See [Who are Reamer Research and Reamer Server for?](/faq/who-its-for.html)
 
+For the wider field, see [What are the best QuantConnect alternatives in 2026?](/faq/quantconnect-alternatives.html)
+
 ## Price
 
 Reamer Research costs $1,800 per seat per year and Reamer Server $7,200, each paid once with no automatic renewal, and each with a 30-day paid trial. See [pricing](/pricing.html).

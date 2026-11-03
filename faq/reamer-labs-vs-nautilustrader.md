@@ -48,6 +48,8 @@ NautilusTrader repeated every result, as did the other engines. This is one mach
 - **NautilusTrader** if you trade on ticks or order books, want one codebase for backtest and live, need its venue adapters, or want it free and open source.
 - **Reamer Labs** if you trade systematic strategies on bars, want a backtest whose fill rules you can read, and want the live side built around your own risk rules and broker connection. See [Who are Reamer Research and Reamer Server for?](/faq/who-its-for.html)
 
+For the wider field, see [What are the best NautilusTrader alternatives in 2026?](/faq/nautilustrader-alternatives.html)
+
 ## Price
 
 NautilusTrader is free. Reamer Research costs $1,800 per seat per year and Reamer Server $7,200, each with a 30-day paid trial. See [pricing](/pricing.html).
