@@ -9,7 +9,7 @@ cites: fourway
 
 When you research a strategy, the limit is turnaround: how many backtests one machine finishes per hour, and how much memory each one needs. A single headline speed does not answer that, because the cost of a backtest grows in three directions: with the length of the data, with the number of instruments, and with the number of copies that run at once. I measured all three for four engines. The paper with the full method is public: [What a Backtest Costs](https://doi.org/10.6084/m9.figshare.34787745).
 
-A disclosure first. I build and sell Reamer Research, one of the four engines. So the study is set up so that you do not have to trust me. The other engines ran at their defaults. The one patch to an engine is disclosed, with both the stock and the patched results. The runners and the raw results are [public](https://doi.org/10.6084/m9.figshare.34785729). And before I saw any result, I wrote down four outcomes that would count against Reamer Research. Two of them occurred. They are below, not in a footnote.
+A disclosure first. I build and sell Reamer Research, one of the four engines. So the study is set up so that you do not have to trust me. The other engines ran at their defaults. The one patch to an engine is disclosed, with both the stock and the patched results. The runners and the raw results are [public](https://github.com/j0osman/research-engine-benchmark). And before I saw any result, I wrote down four outcomes that would count against Reamer Research. Two of them occurred. They are below, not in a footnote.
 
 ## The setup
 
@@ -52,4 +52,4 @@ Speed is not the whole choice, and the paper also compares, with sources, what a
 
 One machine, one date, one instrument series and two strategy shapes, with each engine at its defaults plus the listed changes. A strategy with heavy indicators or a model in the loop spends more of its time in its own code, and the engine differences then matter less. The runners are published so that anyone can repeat this with tuned configurations.
 
-The full method, every table and the sourced comparison are in the preprint, [What a Backtest Costs](https://doi.org/10.6084/m9.figshare.34787745). The raw results, runners and dataset builders are archived openly at [doi.org/10.6084/m9.figshare.34785729](https://doi.org/10.6084/m9.figshare.34785729).
+The full method, every table and the sourced comparison are in the preprint, [What a Backtest Costs](https://doi.org/10.6084/m9.figshare.34787745). The raw results, runners and dataset builders are on [GitHub](https://github.com/j0osman/research-engine-benchmark), and archived at [doi.org/10.6084/m9.figshare.34785729](https://doi.org/10.6084/m9.figshare.34785729).
