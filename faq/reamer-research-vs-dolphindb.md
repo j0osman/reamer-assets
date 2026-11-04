@@ -1,15 +1,15 @@
 ---
 title: How does Reamer Research compare with DolphinDB?
-description: DolphinDB is a time-series database with its own scripting language, streaming and a backtest plugin that simulates order matching down to tick-by-tick and Level-2 data. It suits teams that want to store and compute on large market-data sets in one system. Reamer Research is a backtesting engine only, for strategies on OHLCV bars, with a written execution specification and byte-identical runs, driven from Python, C++ or C. You bring your own data and keep it however you like.
+description: DolphinDB is a time-series database with its own scripting language, streaming and a backtest plugin that simulates order matching down to tick-by-tick and Level-2 data. It suits teams that want to store and compute on large market-data sets in one system. Reamer Research is a backtesting engine for strategies on OHLCV bars, with a written execution specification and byte-identical runs, driven from Python, C++ or C. You bring your own data and keep it however you like.
 stage: 4
 order: 35.6
 product: research
-next: what-is-reamer-research, market-data, supported-languages, who-its-for, pricing
+next: dolphindb-alternatives, what-is-reamer-research, market-data, supported-languages, who-its-for, pricing
 date: 2026-10-08
 topics: backtesting, market-data
 ---
 
-DolphinDB is a time-series database with its own scripting language, stream processing and a backtest plugin that simulates order matching down to tick-by-tick and Level-2 data. Reamer Research is a backtesting engine only, for strategies on OHLCV bars. DolphinDB is a data platform that can also backtest. Reamer Research does one job and leaves data storage to you.
+DolphinDB is a time-series database with its own scripting language, stream processing and a backtest plugin that simulates order matching down to tick-by-tick and Level-2 data. Reamer Research is a backtesting engine for strategies on OHLCV bars. DolphinDB is a data platform that can also backtest. Reamer Research does one job and leaves data storage to you.
 
 ## What DolphinDB is
 
@@ -20,7 +20,7 @@ DolphinDB is a time-series database with its own scripting language, stream proc
 
 ## How Reamer Research differs
 
-- **An engine, not a database.** [Reamer Research](/products/reamer-research.html) is a library with a stable C interface. Your program hands it bars from CSV files, settings and a strategy, and gets back the full result. Where you store data is up to you. See [Does it include market data?](/faq/market-data.html)
+- **An engine, not a database.** [Reamer Research](/products/reamer-research.html) is a library with a stable C interface. Your program hands it bars from any source, settings and a strategy, and gets back the full result. Where you store data is up to you. See [Does it include market data?](/faq/market-data.html)
 - **Your own language.** Strategies are written in Python or C++, or any language that can call C, not in a database's scripting language. See [Which languages can I write strategies in?](/faq/supported-languages.html)
 - **Bars, not order books.** It models what happens inside a bar on a deterministic tick path, but it does not replay Level-2 data or simulate a queue. Order-book and high-frequency strategies are out of scope.
 - **Fill rules in writing.** An execution specification ships with the kit and covers bid and ask, spread, slippage, commission, overnight swap, margin, gaps, order lifetimes and what fills first inside a bar.

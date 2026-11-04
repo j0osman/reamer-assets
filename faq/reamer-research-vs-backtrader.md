@@ -1,6 +1,6 @@
 ---
 title: How does Reamer Research compare with Backtrader?
-description: Both run a strategy one bar at a time against historical data. Backtrader is a free, open-source Python framework whose last release was in April 2023; costs and slippage are settings you add. Reamer Research is a paid, compiled engine with a written execution specification, costs modelled by default, byte-identical runs per seed and active maintenance. In a published four-engine benchmark, 500,000 bars took Backtrader 15.04 s and Reamer Research 3.38 s from Python, though Backtrader used less memory on a no-trade run. Backtrader is fine for a first look at an idea; Reamer Research is for results you need to trust and repeat.
+description: Both run a strategy one bar at a time against historical data. Backtrader is a free, open-source Python framework whose last release was in April 2023; costs and slippage are settings you add. Reamer Research is a paid, compiled engine with a written execution specification, costs modelled by default, byte-identical runs per seed and active maintenance. In a published four-engine benchmark, 500,000 bars took Backtrader 15.04 s and Reamer Research 3.38 s from Python. Backtrader is fine for a first look at an idea; Reamer Research is for results you need to trust and repeat.
 stage: 4
 order: 35.1
 product: research
@@ -14,7 +14,7 @@ Both run a strategy one bar at a time against historical data, and someone who h
 ## What Backtrader is
 
 - **Free and open source** (GPL-3.0), written entirely in Python.
-- **Widely used.** Years of tutorials and forum answers, and a simple `next()` method that is called on every bar.
+- **Years of tutorials.** Forum answers, and a simple `next()` method that is called on every bar.
 - **Flexible.** Many data feeds, indicators, analyzers and older live-trading connectors.
 - **Quiet.** The last release on PyPI, 1.9.78.123, came out in April 2023, and open issues and pull requests mostly go unanswered.
 

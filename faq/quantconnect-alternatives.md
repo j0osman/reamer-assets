@@ -9,7 +9,7 @@ date: 2026-11-04
 topics: algorithmic-trading, backtesting
 ---
 
-QuantConnect bundles market data, a cloud IDE, backtesting on its LEAN engine, and live trading through supported brokers. Few tools replace all of that, so start from the part you want to do differently.
+QuantConnect bundles market data, a cloud IDE, backtesting on its LEAN engine, and live trading through supported brokers. Start from the part you want to do differently.
 
 ## Why traders look for QuantConnect alternatives
 
@@ -34,13 +34,13 @@ Details below were checked against each project's own pages in November 2026.
 
 ## Self-hosted platforms
 
-**QuantRocket** is the closest match to the QuantConnect model. It is a paid Python platform that runs in Docker on your own hardware or cloud server, with the Zipline and Moonshot backtesters and data sources you can subscribe to.
+**QuantRocket** is a paid Python platform that runs in Docker on your own hardware or cloud server, with the Zipline and Moonshot backtesters and data sources you can subscribe to.
 
 ## Open-source frameworks
 
 - **LEAN** can be built from source and run on your own machine. You keep the same strategy model and supply your own data.
 - **NautilusTrader** has a Rust core and Python strategies, and the same code runs in backtest and live. Version 2.0 is in release candidates, and its README warns that breaking changes can occur between releases.
-- **vectorbt** is a vectorised library that tests large parameter grids quickly. It is not an execution system.
+- **vectorbt** is a vectorised library that tests large parameter grids as arrays. It is not an execution system.
 - **Backtrader** has years of tutorials. Its last PyPI release was in April 2023, so expect little maintenance.
 - **Zipline Reloaded** is the community-kept successor to Quantopian's engine. Its maintainers now fix bugs and compatibility problems, and point new projects to ML4T Backtest.
 
@@ -61,7 +61,7 @@ Details below were checked against each project's own pages in November 2026.
 | LEAN, built from source | 22.10 s |
 | NautilusTrader 1.231.0, stock | 76.85 s |
 
-The study's author builds and sells Reamer Research, so the [runners and raw results are public](https://github.com/j0osman/research-engine-benchmark) and you can check every figure. It is one machine, one date, one instrument and two simple strategies. It did not test QuantConnect's cloud, QuantRocket, vectorbt or Zipline, and speed is only one reason to choose an engine. See [How do Reamer Research and Reamer Server compare with QuantConnect?](/faq/reamer-labs-vs-quantconnect.html) for the full figures.
+The study's author builds and sells Reamer Research, so the [runners and raw results are public](https://github.com/j0osman/research-engine-benchmark) and you can check every figure. It is one machine, one date, one instrument and two simple strategies. It did not test QuantConnect's cloud, QuantRocket, vectorbt or Zipline. See [How do Reamer Research and Reamer Server compare with QuantConnect?](/faq/reamer-labs-vs-quantconnect.html) for the full figures.
 
 ## How to choose
 

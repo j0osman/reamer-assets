@@ -1,6 +1,6 @@
 ---
 title: What are the best Backtrader alternatives in 2026?
-description: Backtrader's last release was in April 2023, so most people who look for an alternative want something maintained. backtesting.py is the simplest step for one instrument. bt suits portfolio rebalancing, vectorbt suits parameter sweeps, and NautilusTrader and LEAN cover ticks, more asset classes and live trading. Reamer Research from Reamer Labs is a paid engine library for strategies on bars, and it keeps Backtrader's bar-by-bar shape. In a published benchmark, Backtrader took 15.04 s on 500,000 bars, ahead of LEAN and stock NautilusTrader, so speed alone may not justify a move.
+description: Backtrader's last release was in April 2023. backtesting.py is the simplest step for one instrument. bt suits portfolio rebalancing, vectorbt suits parameter sweeps, and NautilusTrader and LEAN cover ticks, more asset classes and live trading. Reamer Research from Reamer Labs is a paid engine library for strategies on bars, and it keeps Backtrader's bar-by-bar shape. In a published benchmark on 500,000 bars, Backtrader took 15.04 s and Reamer Research took 3.38 s from Python.
 stage: 4
 order: 35.91
 product: research
@@ -9,7 +9,7 @@ date: 2026-11-04
 topics: backtesting, algorithmic-trading, benchmark
 ---
 
-Backtrader is a free Python framework with years of tutorials and a simple `next()` method that runs on every bar. It still works for many people. The usual reason to leave is that nobody is keeping it up, not that it has stopped working.
+Backtrader is a free Python framework with years of tutorials and a simple `next()` method that runs on every bar. It has not had a release since April 2023.
 
 ## Why traders look for Backtrader alternatives
 
@@ -34,13 +34,13 @@ Details below were checked against each project's own pages in November 2026.
 
 ## Closest to how Backtrader works
 
-- **backtesting.py** has the same bar-by-bar idea and a smaller API, with good interactive charts. It trades one instrument per strategy, so a Backtrader strategy with several data feeds will not port directly.
+- **backtesting.py** has the same bar-by-bar idea and a smaller API, with interactive charts. It trades one instrument per strategy, so a Backtrader strategy with several data feeds will not port directly.
 - **[Reamer Research](/products/reamer-research.html)** calls your strategy on every bar, from Python or C++, and returns every order, fill and closed trade. Spread, slippage, commission, overnight swap and margin are set per instrument. A public [execution specification](/docs/execution-spec.html) states how orders fill. It has no charts, ready indicators or analyzers of the kind Backtrader ships, and it runs on Linux x86-64 and on macOS on Apple Silicon, with no Windows version. See [How does Reamer Research compare with Backtrader?](/faq/reamer-research-vs-backtrader.html)
 
 ## Different models
 
 - **bt** builds a strategy from allocation blocks. It suits rebalancing a portfolio more than order-level trading rules.
-- **vectorbt** works on whole arrays and tests large parameter grids quickly. Rules that depend on the current position or on bracket orders are harder to express.
+- **vectorbt** tests large parameter grids on whole arrays. Rules that depend on the current position or on bracket orders are harder to express.
 
 ## Larger platforms
 
@@ -61,7 +61,7 @@ Details below were checked against each project's own pages in November 2026.
 | LEAN, built from source | 22.10 s |
 | NautilusTrader 1.231.0, stock | 76.85 s |
 
-Backtrader was not the slowest here, so a move for speed alone may gain less than you expect. Your own indicators and any model inside the loop also count in every engine.
+Backtrader finished ahead of LEAN and stock NautilusTrader, and behind patched NautilusTrader and Reamer Research. Your own indicators and any model inside the loop also count in every engine.
 
 The study's author builds and sells Reamer Research, so the [runners and raw results are public](https://github.com/j0osman/research-engine-benchmark) and you can check every figure. It is one machine, one date, one instrument and two simple strategies. It did not test backtesting.py, bt, vectorbt or Zipline.
 

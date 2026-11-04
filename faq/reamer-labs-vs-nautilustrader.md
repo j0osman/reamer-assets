@@ -13,7 +13,7 @@ NautilusTrader is a free, open-source trading platform with a Rust core and a Py
 
 ## What NautilusTrader is
 
-- **Open source** (LGPL-3.0), with a fast Rust core and strategies written in Python.
+- **Open source** (LGPL-3.0), with a Rust core and strategies written in Python.
 - **One engine for backtest and live.** The same strategy code runs in both, which removes a whole class of differences between the two.
 - **Fine-grained data.** Quotes, trades, bars and order books, at nanosecond resolution.
 - **Many venues.** Adapters for crypto exchanges, Interactive Brokers, betting exchanges and others, with order management and risk checks built in.
@@ -38,7 +38,7 @@ The study tested NautilusTrader 1.231.0 on bars only, so it says nothing about i
 - **Why stock is slower.** The cost of `record_trade` grows with the square of the trade count. This was already reported as [issue 4434](https://github.com/nautechsystems/nautilus_trader/issues/4434), and the maintainers state that 2.0 fixes it. The 2.0 release candidates were not tested.
 - **No trades, smaller gap.** On a strategy that never trades, NautilusTrader took 6.43 s and Reamer Research 2.74 s from Python.
 - **100 tickers of 35,064 bars each.** Patched NautilusTrader took 675.92 s and 4.7 GB. Reamer Research took 14.85 s and 942 MB from Python. On 500,000 bars the gap was 4 times; here it was about 45 times, from a cost in NautilusTrader's position snapshots on netting accounts.
-- **64 copies at once.** Patched NautilusTrader finished 11,242 backtests per hour. Reamer Research finished 42,468 from Python and 332,249 from C++, though the C++ path lost the most speed per copy.
+- **64 copies at once.** Patched NautilusTrader finished 11,242 backtests per hour. Reamer Research finished 42,468 from Python and 332,249 from C++.
 - **Agreement.** NautilusTrader and LEAN agreed to the cent at −1,981.89. Reamer Research ended at −1,937.16 on the same trades, because they fill on the current bar and it fills on the next one.
 
 NautilusTrader repeated every result, as did the other engines. This is one machine, one date, one instrument and two simple strategies. Heavy indicators or a model inside the loop would narrow the differences.

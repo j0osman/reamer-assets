@@ -9,7 +9,7 @@ date: 2026-11-04
 topics: backtesting, algorithmic-trading
 ---
 
-backtesting.py is a free Python library with a small API, interactive charts and a built-in optimizer. It was last released in July 2026, so age is not a reason to leave it. People usually look elsewhere because a strategy has grown past what it is built for.
+backtesting.py is a free Python library with a small API, interactive charts and a built-in optimizer. It was last released in July 2026, so age is not a reason to leave it. People look elsewhere when a strategy grows past what it is built for.
 
 ## Why traders look for backtesting.py alternatives
 
@@ -37,7 +37,7 @@ Details below were checked against each project's own pages in November 2026.
 
 - **Backtrader** has many tutorials and supports several data feeds in one strategy. Its last PyPI release was in April 2023, and backtesting.py's own [list of alternatives](https://github.com/kernc/backtesting.py/blob/master/doc/alternatives.md) files it under obsolete or unmaintained. See [What are the best Backtrader alternatives in 2026?](/faq/backtrader-alternatives.html) for where to go if that matters to you.
 - **bt** builds a strategy from small allocation blocks. It suits portfolio weights and rebalancing better than order-level trading rules.
-- **vectorbt** tests large parameter grids quickly, because it works on whole arrays at once. Rules that depend on the current position or on bracket orders are harder to express that way.
+- **vectorbt** tests large parameter grids on whole arrays at once. Rules that depend on the current position or on bracket orders are harder to express that way.
 - **Zipline Reloaded** is the community-kept successor to Quantopian's engine. Its maintainers now fix bugs and compatibility problems, and point new projects to ML4T Backtest.
 
 ## Larger platforms
@@ -54,7 +54,7 @@ Details below were checked against each project's own pages in November 2026.
 - Fill rules are written down in a public [execution specification](/docs/execution-spec.html). A seeded tick path runs through every bar, so a stop and a target in one bar resolve the same way on every run.
 - Each run returns every order, fill and closed trade.
 
-It has limits. There are no built-in charts and no built-in optimizer, so a sweep is your own loop over runs. It covers strategies on OHLCV bars, not order books, options or high-frequency trading. It runs on Linux x86-64 and on macOS on Apple Silicon, with no Windows version. You bring your own data.
+It covers strategies on OHLCV bars, and runs on Linux x86-64 and on macOS on Apple Silicon. You bring your own data. There are no built-in charts or optimizer: a sweep is your own loop over runs, and separate runs can use every core.
 
 ## What a published benchmark measured
 

@@ -4,7 +4,7 @@ description: vectorbt PRO is a vectorised Python library, very fast at testing t
 stage: 4
 order: 35.2
 product: research
-next: what-is-reamer-research, is-my-backtest-overfit, how-realistic-slippage-and-spread, pricing
+next: vectorbt-alternatives, what-is-reamer-research, is-my-backtest-overfit, how-realistic-slippage-and-spread, pricing
 date: 2026-10-08
 topics: backtesting, determinism
 ---
@@ -14,7 +14,7 @@ vectorbt PRO is a vectorised Python library that is very fast at testing thousan
 ## What vectorbt PRO is
 
 - **A Python library** built on NumPy, pandas and Numba. It works on whole price histories as arrays, so one call can run a large grid of parameters at once.
-- **Fast at sweeps.** Few tools test 500 lookback lengths of a breakout rule faster.
+- **Built for sweeps.** One call can test 500 lookback lengths of a breakout rule.
 - **Broad.** Indicators, signal generation, portfolio simulation, plotting and analysis in one package.
 - **A paid membership** (monthly, yearly or lifetime) that gives access to a private repository. The older open-source vectorbt is free.
 
