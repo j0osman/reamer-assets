@@ -65,7 +65,7 @@ eviction); no such trigger is known in the current design.
 
 ## Reamer Research
 
-**Max practical portfolio / bar count.** A 100-ticker, union-aligned
+**Max practical portfolio / bar count.** A 100-ticker
 portfolio with 5 years of daily bars (~1,260 bars/ticker, 126,000 bars
 total — the "100-ticker portfolio, 5yr history" scenario
 Reamer Research is designed around)
