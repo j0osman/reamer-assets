@@ -4,7 +4,7 @@ description: Deltix QuantOffice alternatives depend on what you need from it. Qu
 stage: 4
 order: 35.95
 product: both
-next: reamer-labs-vs-deltix, quantconnect-alternatives, nautilustrader-alternatives, kdb-alternatives, pricing
+next: reamer-labs-vs-deltix, quantconnect-alternatives, quantrocket-alternatives, nautilustrader-alternatives, kdb-alternatives, pricing
 date: 2026-11-04
 topics: quantitative-analysis, backtesting, oms
 ---
@@ -34,7 +34,7 @@ Details below were checked against each project's own pages in November 2026.
 ## All-in-one platforms
 
 - **QuantConnect** bundles data, a cloud IDE and live trading through supported brokers. Strategy code runs on its cloud unless you run LEAN yourself. See [What are the best QuantConnect alternatives in 2026?](/faq/quantconnect-alternatives.html)
-- **QuantRocket** keeps the platform model on your own hardware, in Docker.
+- **QuantRocket** keeps the platform model on your own hardware, in Docker. See [What are the best QuantRocket alternatives in 2026?](/faq/quantrocket-alternatives.html)
 - **NautilusTrader** has a Rust core and Python strategies, and handles ticks and order books. It is free, and you run and maintain it yourself. Its README warns of breaking changes between releases.
 
 ## The data side

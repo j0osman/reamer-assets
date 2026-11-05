@@ -4,7 +4,7 @@ description: QuantConnect alternatives fall into three groups. Self-hosted platf
 stage: 4
 order: 35.7
 product: both
-next: nautilustrader-alternatives, reamer-labs-vs-quantconnect, what-is-reamer-research, what-is-reamer-server, market-data, pricing
+next: nautilustrader-alternatives, quantrocket-alternatives, reamer-labs-vs-quantconnect, what-is-reamer-research, what-is-reamer-server, market-data, pricing
 date: 2026-11-04
 topics: algorithmic-trading, backtesting
 ---
@@ -34,7 +34,7 @@ Details below were checked against each project's own pages in November 2026.
 
 ## Self-hosted platforms
 
-**QuantRocket** is a paid Python platform that runs in Docker on your own hardware or cloud server, with the Zipline and Moonshot backtesters and data sources you can subscribe to.
+**QuantRocket** is a paid Python platform that runs in Docker on your own hardware or cloud server, with the Zipline and Moonshot backtesters and data sources you can subscribe to. See [What are the best QuantRocket alternatives in 2026?](/faq/quantrocket-alternatives.html)
 
 ## Open-source frameworks
 
