@@ -21,7 +21,7 @@ Both products are compiled libraries with a stable C interface. The C interface 
 
 Two things to know about Python:
 
-- **It is slower per bar.** In the kit's benchmark, a strategy cost about 74 µs per bar from Python against about 2.2 µs from C++. An 884,130-bar backtest took about 65 seconds.
+- **It is slower per bar.** In the kit's benchmark, on release 4.1.2, a strategy cost about 74 µs per bar from Python against about 2.2 µs from C++. An 884,130-bar backtest took about 65 seconds.
 - **The binding covers less than the C interface.** It applies one cost setting to every instrument in a run, and passes no non-price data such as earnings dates. For those, call the C interface's newest entry point from C++ or extend the binding.
 
 See [Is there a backtesting engine I can call from Python that runs locally and never uploads my code?](/faq/local-python-backtesting-engine-no-upload.html)

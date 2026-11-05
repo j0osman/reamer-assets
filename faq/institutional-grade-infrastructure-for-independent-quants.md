@@ -52,7 +52,7 @@ Before paying for any product sold with the word, look for evidence you can chec
 
 - Byte-identical output for a fixed seed, randomised spread and slippage included; in the published test, 20 of 20 runs matched by SHA-256.
 - A written execution specification for fills, costs, margin, order lifetimes, swap and futures rolls, shipped with the kit.
-- About 1.83 million bars a second per backtest on an AMD EPYC 9575F, with speed varying by 0.66% across 2,000 runs.
+- About 1.83 million bars a second per backtest on an AMD EPYC 9575F and release 4.6.0, with speed varying by 0.66% across 2,000 runs.
 - A relay that sends the strategy's orders to Reamer Server and reads the fills back.
 
 **[Reamer Server](/products/reamer-server.html): $7,200 per seat per year, 30-day trial $900.** An order management engine you link into your own program. Strategies connect over a socket; every order from every strategy goes through one sequence, then your own pre-trade check, then your broker connector:

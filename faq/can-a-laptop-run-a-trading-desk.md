@@ -46,7 +46,7 @@ Reamer Labs was built around this question: one engine for research and one for 
 
 **[Reamer Research](/products/reamer-research.html)**
 
-- The native engine processed about 467,000 bars per second on that laptop with realistic fills. A Python strategy, which pays for the language on every bar, ran 884,130 bars in about 65 seconds.
+- The native engine processed about 467,000 bars per second on that laptop on release 4.1.2, with realistic fills. A Python strategy, which pays for the language on every bar, ran 884,130 bars in about 65 seconds.
 - Each backtest uses one thread, and one seat covers any number of concurrent backtests on the licensed machine, so a sweep can use every core not reserved for live trading.
 
 **[Reamer Server](/products/reamer-server.html)**

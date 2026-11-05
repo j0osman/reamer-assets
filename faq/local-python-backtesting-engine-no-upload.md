@@ -67,7 +67,7 @@ Everything below is stated in the documents that ship with the kit:
 
 ## Limits to know
 
-- **Python is much slower per bar than C++.** In the kit's benchmark, a realistic strategy cost about 74 µs per bar from Python against about 2.2 µs from C++, roughly 33 times slower. An 884,130-bar backtest took about 65 seconds from Python.
+- **Python is much slower per bar than C++.** In the kit's benchmark, on release 4.1.2, a realistic strategy cost about 74 µs per bar from Python against about 2.2 µs from C++, roughly 33 times slower. An 884,130-bar backtest took about 65 seconds from Python.
 - **The binding is sample code under the licence.** It works out of the box, and you may use and change it, in production too. But the licence (Section 4) treats it as unsupported, without warranty and liable to change between releases. The supported contract is the C interface.
 - **It covers less than the C interface.** The binding applies one cost configuration to every ticker in a run, and does not pass non-price data such as earnings dates. Both are available through the C interface's current entry point, which the binding can be extended to call.
 - **Closed source.** You can verify what the engine sends, as above, but not read its code.
