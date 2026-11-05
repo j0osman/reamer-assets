@@ -27,7 +27,7 @@ QuantConnect is a full hosted platform: market data, a cloud IDE, backtesting on
 - **Your own broker connection.** Reamer Server runs your pre-trade gate on every order and sends accepted orders through a connector you write. The kit has a worked FIX 4.4 example and a paper broker. See [Which brokers does Reamer Server connect to?](/faq/broker-connections.html)
 - **A written execution specification.** Reamer Research fills orders by a document that ships with the kit, and gives byte-identical output for a fixed `rng_seed`.
 - **Research and live are two engines joined by a relay.** On QuantConnect the same algorithm runs in backtest and live. With Reamer Labs, `reamer_relay_*` sends the orders a Reamer Research strategy returns to Reamer Server, and indicators move from a bar window to running state. See [What does it take to move from Reamer Research to Reamer Server?](/faq/research-to-server-move.html)
-- **Built for bars.** Strategies on OHLCV bars, on Linux and macOS (Reamer Server on Linux). No options, high-frequency or order-book strategies.
+- **Built for bars.** Strategies on time, tick, volume, dollar or custom bars, on Linux and macOS (Reamer Server on Linux). No options, high-frequency or order-book strategies.
 
 ## What a published benchmark measured
 

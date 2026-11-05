@@ -32,7 +32,7 @@ Details below were checked against QuantRocket's own site and documentation in N
 - **Byte-identical runs.** With a fixed `rng_seed`, output matches to the byte, which suits audit and regression tests.
 - **Any language that can call C.** Strategies can be written in Python or C++, and your own libraries and models run inside the strategy.
 - **Live through your own gate.** Reamer Server sequences orders, tracks their state and calls your pre-trade gate on every order, and `reamer_relay_*` sends research orders to it. You write the broker connector, and the kit has a worked FIX 4.4 example.
-- **Your own data.** Reamer Labs sells no data. You bring OHLCV bars, from minutes to days.
+- **Your own data.** Reamer Labs sells no data. You bring your own bars of any type, from minutes to days.
 
 Reamer Research runs on Linux x86-64 and on macOS on Apple Silicon. Reamer Server runs on Linux. Neither runs on Windows.
 

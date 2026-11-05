@@ -1,6 +1,6 @@
 ---
 title: How does Reamer Research compare with kdb+?
-description: kdb+ and its successor KDB-X from KX are time-series databases with the q language, built for storing and computing on very large market data sets. A backtest on them is something you build, using q or Python. Reamer Research is a backtesting engine for strategies on OHLCV bars, with fill rules, costs and accounting already in place, and it stores no data. If your firm already runs kdb+, the two can work together, with kdb+ supplying the bars.
+description: kdb+ and its successor KDB-X from KX are time-series databases with the q language, built for storing and computing on very large market data sets. A backtest on them is something you build, using q or Python. Reamer Research is a backtesting engine for strategies on time, tick, volume, dollar or custom bars, with fill rules, costs and accounting already in place, and it stores no data. If your firm already runs kdb+, the two can work together, with kdb+ supplying the bars.
 stage: 4
 order: 35.63
 product: research
@@ -28,7 +28,7 @@ Details below were checked against KX's own pages in November 2026.
 - **An engine, not a database.** You load bars from any source and pass them in as arrays, or use memory-mapped `.bin` files for data larger than RAM. It has no query language and no streaming data store.
 - **Your own language.** Strategies are written in Python or C++, or any language that can call C. You do not need to learn q.
 - **Byte-identical runs.** With a fixed seed, output matches to the byte, including randomised spread and slippage.
-- **Built for bars.** It handles OHLCV bars, and it runs on Linux x86-64 and on macOS on Apple Silicon.
+- **Built for bars.** It handles time, tick, volume, dollar or custom bars, and it runs on Linux x86-64 and on macOS on Apple Silicon.
 
 ## Using both
 

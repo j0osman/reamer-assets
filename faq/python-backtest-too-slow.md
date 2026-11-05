@@ -62,6 +62,6 @@ The gap between the last two is the cost of crossing into Python on every bar. T
 
 ## Where Reamer Research fits
 
-[Reamer Research](/products/reamer-research.html) is a compiled engine you call from Python, C++ or any language that can call C. Bars can come from memory-mapped `.bin` files, so a dataset larger than RAM runs. Each backtest runs on one thread, and you run several at once for a sweep. It covers strategies on OHLCV bars, on Linux x86-64 and on macOS on Apple Silicon, with no Windows version. See [How fast is it?](/faq/performance.html) for the conditions behind each figure.
+[Reamer Research](/products/reamer-research.html) is a compiled engine you call from Python, C++ or any language that can call C. Bars can come from memory-mapped `.bin` files, so a dataset larger than RAM runs. Each backtest runs on one thread, and you run several at once for a sweep. It covers strategies on time, tick, volume, dollar or custom bars, on Linux x86-64 and on macOS on Apple Silicon, with no Windows version. See [How fast is it?](/faq/performance.html) for the conditions behind each figure.
 
 The $225 30-day trial lets you time your own strategy on your own machine before buying a licence. See [pricing](/pricing.html).

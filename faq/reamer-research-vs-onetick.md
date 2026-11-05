@@ -1,6 +1,6 @@
 ---
 title: How does Reamer Research compare with OneTick?
-description: OneTick, now part of KX, is a tick data and analytics platform with managed market data from over 200 venues, order book history, transaction cost analysis and trade surveillance, sold to institutions without a public price list. Reamer Research is a backtesting engine for strategies on OHLCV bars, with a written execution specification, byte-identical runs and published prices. It holds no market data. The two do different jobs, and bars from OneTick can feed Reamer Research.
+description: OneTick, now part of KX, is a tick data and analytics platform with managed market data from over 200 venues, order book history, transaction cost analysis and trade surveillance, sold to institutions without a public price list. Reamer Research is a backtesting engine for strategies on time, tick, volume, dollar or custom bars, with a written execution specification, byte-identical runs and published prices. It holds no market data. The two do different jobs, and bars from OneTick can feed Reamer Research.
 stage: 4
 order: 35.62
 product: research
@@ -9,7 +9,7 @@ date: 2026-11-04
 topics: backtesting, market-data, transaction-cost
 ---
 
-OneTick is a tick data and analytics platform. Reamer Research is a backtesting engine for strategies on OHLCV bars. OneTick answers what happened in the market, down to individual orders. Reamer Research answers what your strategy would have earned on bars, under fill rules you can read.
+OneTick is a tick data and analytics platform. Reamer Research is a backtesting engine for strategies on time, tick, volume, dollar or custom bars. OneTick answers what happened in the market, down to individual orders. Reamer Research answers what your strategy would have earned on bars, under fill rules you can read.
 
 Details below were checked against the vendors' own pages in November 2026.
 

@@ -78,7 +78,7 @@ An engine does not find an edge, supply market data or decide which costs are re
 
 ## How Reamer Research fits
 
-[Reamer Research](/products/reamer-research.html) is a research engine for mid-frequency strategies on OHLCV bars, from intraday to multi-day. It is a precompiled library with a stable C interface, running on your own machine. It covers the five steps like this, each documented in the kit:
+[Reamer Research](/products/reamer-research.html) is a research engine for mid-frequency strategies on time, tick, volume, dollar or custom bars, from intraday to multi-day. It is a precompiled library with a stable C interface, running on your own machine. It covers the five steps like this, each documented in the kit:
 
 - **Test.** Your strategy is a callback the engine calls on each bar, written in Python through the reference binding, in C++, or in any language that can call C. Every fill, cost, margin and accounting rule is written in [`EXECUTION_SPEC.md`](/docs/execution-spec.html). Several instruments are aligned onto one timeline, and bars of any construction (time, tick, volume or dollar bars) are accepted in the same format.
 - **Diagnose.** Each run returns every order, fill and closed trade, and each rejected order carries its reason in text. With a fixed seed, a run is byte-identical on every repeat, so any trade can be reproduced exactly.
@@ -86,4 +86,4 @@ An engine does not find an edge, supply market data or decide which costs are re
 - **Report.** Each run can write one JSON document with a version number: 31 summary metrics, drawdown and streaks, and the full trade and order logs. `RESULT_JSON_SCHEMA.md` defines every field, including how each ratio is annualised.
 - **Hand off.** `reamer_relay_*` sends the orders a strategy returns to [Reamer Server](/products/reamer-server.html), the live product, and reads the fills back as position state. `RESEARCH_TO_SERVER.md` ships in the kit and states what carries over and what changes: the strategy logic and the order carry over, and indicators that read a lookback window in research become running state live.
 
-The scope is stated in the kit as well. Reamer Research is built for mid-frequency strategies on OHLCV bars; high-frequency, order-book (L2/L3) and options strategies call for a different engine. You bring your own bars, already adjusted for splits and dividends. Running a sweep is your own loop over runs; the engine makes each run fast and repeatable, and does not choose the parameters for you.
+The scope is stated in the kit as well. Reamer Research is built for mid-frequency strategies on bars of any type; high-frequency, order-book (L2/L3) and options strategies call for a different engine. You bring your own bars, already adjusted for splits and dividends. Running a sweep is your own loop over runs; the engine makes each run fast and repeatable, and does not choose the parameters for you.

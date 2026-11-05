@@ -21,7 +21,7 @@ NautilusTrader is a free, open-source trading platform with a Rust core and a Py
 ## How Reamer Labs differs
 
 - **Two products.** [Reamer Research](/products/reamer-research.html) is the research engine and [Reamer Server](/products/reamer-server.html) takes a strategy live. Each is a library with a stable C interface, licensed separately.
-- **Bars, not order books.** Reamer Labs targets strategies on OHLCV bars, held from minutes to days. It does not do high-frequency or order-book strategies.
+- **Bars, not order books.** Reamer Labs targets strategies on time, tick, volume, dollar or custom bars, held from minutes to days. It does not do high-frequency or order-book strategies.
 - **Fill rules in writing.** Reamer Research fills orders by an execution specification that ships with the kit: bid and ask, spread, slippage, commission, overnight swap, margin, gaps, and what fills first inside a bar. Output is byte-identical for a fixed `rng_seed`.
 - **One call per time step.** A Reamer Research strategy is called once per time step with every instrument's recent bars and positions, so a cross-sectional rule reads all instruments in one place.
 - **Your gate and your connector.** Reamer Server supplies the order core: sequencing, order state, and a call to your pre-trade gate on every order. You write the gate's rules and the broker connector. It ships starting points in C++, Rust and Go, including a FIX 4.4 example. Strategies connect over a socket from any language.

@@ -45,7 +45,7 @@ TimeBase, the data store under Deltix, has an open-source community edition unde
 
 [Reamer Research](/products/reamer-research.html) and [Reamer Server](/products/reamer-server.html) cover the same span as Deltix, from research to live trading, as two smaller libraries. Reamer Research has a public [execution specification](/docs/execution-spec.html) and byte-identical runs. Reamer Server runs your pre-trade gate on every order, and `reamer_relay_*` sends the orders a strategy returns in a backtest to it.
 
-They handle systematic strategies on OHLCV bars, held from minutes to days. You supply the data and write the broker connector. See [How do Reamer Research and Reamer Server compare with EPAM Deltix QuantOffice?](/faq/reamer-labs-vs-deltix.html)
+They handle systematic strategies on time, tick, volume, dollar or custom bars, held from minutes to days. You supply the data and write the broker connector. See [How do Reamer Research and Reamer Server compare with EPAM Deltix QuantOffice?](/faq/reamer-labs-vs-deltix.html)
 
 ## How to choose
 

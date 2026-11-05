@@ -14,7 +14,7 @@ They are for systematic quants who write their own code and trade mid-frequency 
 ## A good fit
 
 - **You trade rules, not judgement calls,** and you write them in code: Python, C++ or another language that can call C.
-- **Your strategies run on bars,** intraday to multi-day. Time bars are the usual case; tick, volume or dollar bars also work if you build them yourself.
+- **Your strategies run on bars of any type,** intraday to multi-day: time, tick, volume, dollar, imbalance or your own custom rule. You build the bars yourself.
 - **You want to check results, not trust them:** the same seed gives the same bytes, and the fill rules are written down.
 - **You want everything on your own machine,** with nothing uploaded.
 - **For [Reamer Server](/faq/what-is-reamer-server.html) in particular:** you are taking strategies live at your own broker, and you or your team can write the broker connection and the pre-trade check in C, C++, Rust or Go.

@@ -46,7 +46,7 @@ Details below were checked against each project's own pages in November 2026.
 
 ## Backtesting on bars
 
-[Reamer Research](/products/reamer-research.html) is the backtesting engine for strategies on OHLCV bars. It holds no market data, so it works beside any of the tools above. It models spread, slippage, commission, swap and margin under a public [execution specification](/docs/execution-spec.html), and fixed seeds give byte-identical runs. See [How does Reamer Research compare with OneTick?](/faq/reamer-research-vs-onetick.html)
+[Reamer Research](/products/reamer-research.html) is the backtesting engine for strategies on time, tick, volume, dollar or custom bars. It holds no market data, so it works beside any of the tools above. It models spread, slippage, commission, swap and margin under a public [execution specification](/docs/execution-spec.html), and fixed seeds give byte-identical runs. See [How does Reamer Research compare with OneTick?](/faq/reamer-research-vs-onetick.html)
 
 ## How to choose
 

@@ -9,7 +9,7 @@ date: 2026-10-01
 topics: backtesting, ohlc, determinism, quantitative-analysis
 ---
 
-A good one gives byte-identical results for the same inputs and seed, publishes the rules it fills orders by, and models bid, ask, spread and slippage the way your broker charges them. It also runs fast enough to sweep parameters, keeps your strategy on your own machine and has a path to live trading. Reamer Research is a commercial engine built for exactly this case: systematic strategies on OHLCV bars, held from minutes to days.
+A good one gives byte-identical results for the same inputs and seed, publishes the rules it fills orders by, and models bid, ask, spread and slippage the way your broker charges them. It also runs fast enough to sweep parameters, keeps your strategy on your own machine and has a path to live trading. Reamer Research is a commercial engine built for exactly this case: systematic strategies on time, tick, volume, dollar or custom bars, held from minutes to days.
 
 The list matters more than any one name. Below is what to check in any engine, the questions that separate a serious one from a script with a price on it, and how Reamer Research answers each.
 

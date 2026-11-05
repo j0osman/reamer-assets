@@ -45,7 +45,7 @@ Details below were checked against each project's own pages in November 2026.
 
 A database computes on your data. It does not decide how orders fill. KX's own [October 2026 tutorial](https://kx.com/blog/backtesting-a-moving-average-crossover-strategy-with-kdb-x-python/) leaves out commission, spread and slippage, and tells the reader to add them.
 
-[Reamer Research](/products/reamer-research.html) is an engine for that part, for strategies on OHLCV bars. Bid and ask, spread, slippage, commission, swap, margin and order lifetimes are in place under a public [execution specification](/docs/execution-spec.html). It stores no data, so you can keep kdb+ or any database here and pass in bars. It works on bars, not ticks. See [How does Reamer Research compare with kdb+?](/faq/reamer-research-vs-kdb.html)
+[Reamer Research](/products/reamer-research.html) is an engine for that part, for strategies on time, tick, volume, dollar or custom bars. Bid and ask, spread, slippage, commission, swap, margin and order lifetimes are in place under a public [execution specification](/docs/execution-spec.html). It stores no data, so you can keep kdb+ or any database here and pass in bars. It works on bars, not ticks. See [How does Reamer Research compare with kdb+?](/faq/reamer-research-vs-kdb.html)
 
 ## How to choose
 

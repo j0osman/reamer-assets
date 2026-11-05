@@ -1,6 +1,6 @@
 ---
 title: What are the best DolphinDB alternatives in 2026?
-description: The main DolphinDB alternatives are kdb+ and KDB-X, QuestDB, ClickHouse and OneTick for storing and computing on market data. For backtesting, the alternatives are engines: NautilusTrader for ticks and order books, and Reamer Research from Reamer Labs for strategies on OHLCV bars. Replacing both the database and the matching simulator may take two tools.
+description: The main DolphinDB alternatives are kdb+ and KDB-X, QuestDB, ClickHouse and OneTick for storing and computing on market data. For backtesting, the alternatives are engines: NautilusTrader for ticks and order books, and Reamer Research from Reamer Labs for strategies on time, tick, volume, dollar or custom bars. Replacing both the database and the matching simulator may take two tools.
 stage: 4
 order: 35.96
 product: research
@@ -41,7 +41,7 @@ Details below were checked against each project's own pages in November 2026.
 ## Backtesting engines
 
 - **NautilusTrader** fills the tick and order-book role of DolphinDB's plugin, in Python, and the same code runs live. It is free, and you run it yourself. It reads your data, so it pairs with any database above.
-- **[Reamer Research](/products/reamer-research.html)** is for strategies on OHLCV bars, held from minutes to days. A public [execution specification](/docs/execution-spec.html) covers spread, slippage, commission, swap, margin and what fills first inside a bar, and fixed seeds give byte-identical runs. See [How does Reamer Research compare with DolphinDB?](/faq/reamer-research-vs-dolphindb.html)
+- **[Reamer Research](/products/reamer-research.html)** is for strategies on time, tick, volume, dollar or custom bars, held from minutes to days. A public [execution specification](/docs/execution-spec.html) covers spread, slippage, commission, swap, margin and what fills first inside a bar, and fixed seeds give byte-identical runs. See [How does Reamer Research compare with DolphinDB?](/faq/reamer-research-vs-dolphindb.html)
 
 ## How to choose
 

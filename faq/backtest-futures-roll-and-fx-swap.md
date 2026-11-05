@@ -54,7 +54,7 @@ To test futures and FX properly, an engine should give you:
 
 ## How Reamer Research handles it
 
-[Reamer Research](/products/reamer-research.html) runs any OHLCV series, so futures, FX, equities and other instruments can share one portfolio in one run. Commission, slippage, spread, bid or ask pricing, swap and the roll settings can each be set for every instrument in the run. Instruments without their own settings use the run's defaults. What follows is documented in the execution specification that ships with the kit.
+[Reamer Research](/products/reamer-research.html) runs any series of bars, however they were built, so futures, FX, equities and other instruments can share one portfolio in one run. Commission, slippage, spread, bid or ask pricing, swap and the roll settings can each be set for every instrument in the run. Instruments without their own settings use the run's defaults. What follows is documented in the execution specification that ships with the kit.
 
 **Futures rolls.** The roll feature is for an unadjusted, spliced series. It is off by default, and a run with it off is byte-identical to a run on a build without it.
 

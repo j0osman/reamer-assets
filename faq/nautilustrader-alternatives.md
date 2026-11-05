@@ -30,7 +30,7 @@ Details below were checked against each project's own pages in November 2026.
 | Freqtrade | Open-source crypto bot | Crypto spot and futures | Crypto candles | Crypto exchanges | Free |
 | vectorbt, vectorbt PRO | Python libraries | Large parameter sweeps | Price arrays | Signals only; you supply execution | Open-source edition free, PRO paid |
 | Backtrader | Open-source framework (GPL-3.0) | Learning, simple strategies | Bars | Older connectors | Free |
-| Reamer Research, Reamer Server | Paid local libraries | Strategies on bars, around your own gate and connector | OHLCV bars | Reamer Server with your own connector | $1,800 and $7,200 per year |
+| Reamer Research, Reamer Server | Paid local libraries | Strategies on bars, around your own gate and connector | Bars of any type | Reamer Server with your own connector | $1,800 and $7,200 per year |
 
 ## High-frequency backtesters
 

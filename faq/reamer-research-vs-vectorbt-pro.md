@@ -34,7 +34,7 @@ Reamer Research can also sweep: each backtest is single-threaded, and separate b
 ## Which to choose
 
 - **vectorbt PRO** if the shape is settled and the job is exploring a large parameter space quickly in Python, or if you want analysis and plotting in the same library.
-- **Reamer Research** if you need order-level fills you can read, costs modelled the way your broker charges them, and results you can rerun to the byte. It is for systematic strategies on OHLCV bars, held from minutes to days. See [What is Reamer Research?](/faq/what-is-reamer-research.html)
+- **Reamer Research** if you need order-level fills you can read, costs modelled the way your broker charges them, and results you can rerun to the byte. It is for systematic strategies on time, tick, volume, dollar or custom bars, held from minutes to days. See [What is Reamer Research?](/faq/what-is-reamer-research.html)
 - **Both**, if you validate a shape in Reamer Research and then sweep it at scale in vectorbt PRO.
 
 ## Price

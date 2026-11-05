@@ -15,7 +15,7 @@ It is a library, not an application. Your program hands it bars, settings and a 
 
 ## The loop it covers
 
-1. **Test.** Run a strategy against years of OHLCV bars, intraday to multi-day, with spread, slippage, commission and overnight swap set for each instrument, and a leverage limit on the account. Bars come from memory or from memory-mapped `.bin` files, so a dataset larger than RAM runs. On every bar the strategy sees its full position state and every resting order, and can re-price an order, move a position's stop and target, close everything or cancel everything.
+1. **Test.** Run a strategy against years of time, tick, volume, dollar or custom bars, intraday to multi-day, with spread, slippage, commission and overnight swap set for each instrument, and a leverage limit on the account. Bars come from memory or from memory-mapped `.bin` files, so a dataset larger than RAM runs. On every bar the strategy sees its full position state and every resting order, and can re-price an order, move a position's stop and target, close everything or cancel everything.
 2. **Diagnose.** Every order, fill, modification and closed trade comes back, so any result can be traced trade by trade.
 3. **Sweep.** Run the same strategy across many parameter sets to see whether a result holds or survived on one lucky setting. Each backtest is single-threaded, and separate backtests can run at once from your own threads. A progress callback reports each run and can stop it early. `reamer_run_monte_carlo()` resamples a run's trades to show how much of a drawdown was trade-order luck.
 4. **Report.** 31 summary metrics, the realised equity curve, and the full trade and order logs, written as a schema-versioned JSON file.
@@ -25,7 +25,7 @@ How fills are decided, including stops and targets inside one bar, is set out in
 
 ## Scope
 
-- Mid-frequency strategies on OHLCV bars. Order-book (level 2 or level 3), high-frequency and options strategies are a different kind of engine.
+- Mid-frequency strategies on bars of any type: time, tick, volume, dollar, imbalance or your own custom rule. Order-book (level 2 or level 3), high-frequency and options strategies are a different kind of engine.
 - Batch runs over historical bars. Live order handling, sequencing and your pre-trade gate run in Reamer Server, which the relay connects to.
 - Your own data. You bring your own bars, already adjusted for splits and dividends.
 - Linux x86-64 and macOS on Apple Silicon.

@@ -45,7 +45,7 @@ Details below were checked against each project's own pages in November 2026.
 
 ## A paid engine for strategies on bars
 
-[Reamer Research](/products/reamer-research.html) calls your strategy once per time step with its recent bars and current positions, and fills each order under a public [execution specification](/docs/execution-spec.html). Runs with a fixed seed are byte-identical. It works on OHLCV bars. Separate backtests can run from your own threads, so a sweep can use every core. Some researchers use both. See [How does Reamer Research compare with vectorbt PRO?](/faq/reamer-research-vs-vectorbt-pro.html)
+[Reamer Research](/products/reamer-research.html) calls your strategy once per time step with its recent bars and current positions, and fills each order under a public [execution specification](/docs/execution-spec.html). Runs with a fixed seed are byte-identical. It works on time, tick, volume, dollar or custom bars. Separate backtests can run from your own threads, so a sweep can use every core. Some researchers use both. See [How does Reamer Research compare with vectorbt PRO?](/faq/reamer-research-vs-vectorbt-pro.html)
 
 ## How to choose
 
