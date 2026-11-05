@@ -26,7 +26,7 @@ variant).
 below. Verifying first is both the correct order and the only order in
 which the commands work as printed: the `.tar.gz`, `.sha256`,
 `.sha256.sig`, and `.tar.gz.sig` are downloaded as siblings, and
-extraction creates the `research-kit-4.6.1-linux_x86_64/` directory
+extraction creates the `research-kit-4.6.2-linux_x86_64/` directory
 *next to* them, not around them.
 
 Once verification passes, extract — see "Extract the archive" at the end
@@ -72,7 +72,7 @@ files are siblings of that directory, not members of it.
 1. Check the tarball wasn't corrupted or tampered with in transit:
 
    ```
-   sha256sum -c research-kit-4.6.1-linux_x86_64.tar.gz.sha256
+   sha256sum -c research-kit-4.6.2-linux_x86_64.tar.gz.sha256
    ```
 
 2. Check the checksum's detached signature, using the `release-sign`
@@ -83,17 +83,17 @@ files are siblings of that directory, not members of it.
    downloads:
 
    ```
-   tar xzf research-kit-4.6.1-linux_x86_64.tar.gz \
+   tar xzf research-kit-4.6.2-linux_x86_64.tar.gz \
      --strip-components=2 \
-     research-kit-4.6.1-linux_x86_64/bin/release-sign
+     research-kit-4.6.2-linux_x86_64/bin/release-sign
    ```
 
    Then verify, from the directory holding the downloads:
 
    ```
    ./release-sign verify \
-     research-kit-4.6.1-linux_x86_64.tar.gz.sha256 \
-     research-kit-4.6.1-linux_x86_64.tar.gz.sha256.sig \
+     research-kit-4.6.2-linux_x86_64.tar.gz.sha256 \
+     research-kit-4.6.2-linux_x86_64.tar.gz.sha256.sig \
      b0ff9dcdcbd767ec78375629e10afec2baf18319df27e000ed6d8307cb93e68c
    ```
 
@@ -138,8 +138,8 @@ files are siblings of that directory, not members of it.
 
    ```
    ./release-sign verify \
-     research-kit-4.6.1-linux_x86_64.tar.gz \
-     research-kit-4.6.1-linux_x86_64.tar.gz.sig \
+     research-kit-4.6.2-linux_x86_64.tar.gz \
+     research-kit-4.6.2-linux_x86_64.tar.gz.sig \
      b0ff9dcdcbd767ec78375629e10afec2baf18319df27e000ed6d8307cb93e68c
    ```
 
@@ -165,13 +165,13 @@ Only after both verification commands above have passed, still from the
 directory holding the downloads:
 
 ```
-tar xzf research-kit-4.6.1-linux_x86_64.tar.gz
-cd research-kit-4.6.1-linux_x86_64
+tar xzf research-kit-4.6.2-linux_x86_64.tar.gz
+cd research-kit-4.6.2-linux_x86_64
 ls include/reamer_research_abi.h lib/libreamer_research.so
 ```
 
 Every later step in this document runs from that
-`research-kit-4.6.1-linux_x86_64/` directory unless it says otherwise.
+`research-kit-4.6.2-linux_x86_64/` directory unless it says otherwise.
 
 ## Step 2 — Activate the license
 
@@ -489,7 +489,8 @@ never sits in memory.
 1. Write each ticker's bars once: convert a CSV with
    `bin/reamer-csv-build AAPL.csv AAPL.bin`, or call
    `reamer_write_bin(path, bars, count)` from code. Bars must be sorted
-   strictly ascending by `ts`.
+   strictly ascending by `ts`. A CSV with several symbols stops the tool
+   until `--symbol NAME` selects one.
 2. Run over the files. Pass `ticker_names[]` (required) and an inclusive
    `start_ts`/`end_ts` range in epoch seconds UTC. Pass
    `REAMER_RESEARCH_TS_UNBOUNDED_START` / `REAMER_RESEARCH_TS_UNBOUNDED_END`

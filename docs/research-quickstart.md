@@ -99,10 +99,10 @@ lists every removal and rename.
 Every binary answers `--version`, so you can confirm which build you have:
 
 ```bash
-./bin/reamer-license --version    # reamer-license 4.6.1
-./bin/release-sign --version      # release-sign 4.6.1
-./bin/reamer-exo-build --version  # reamer-exo-build 4.6.1
-./bin/reamer-csv-build --version  # reamer-csv-build 4.6.1
+./bin/reamer-license --version    # reamer-license 4.6.2
+./bin/release-sign --version      # release-sign 4.6.2
+./bin/reamer-exo-build --version  # reamer-exo-build 4.6.2
+./bin/reamer-csv-build --version  # reamer-csv-build 4.6.2
 ```
 
 Docs: `EXECUTION_SPEC.md` (**authoritative** on fills, slippage, spread,
@@ -178,6 +178,14 @@ the security-hardening record).
    format. It prints what it detected, the rows it skipped, the duplicate
    timestamps it dropped, and the first and last timestamp written. Check
    the report before you run.
+
+   A `.bin` file holds one instrument. If the CSV has a symbol column with
+   more than one symbol, the tool stops and writes nothing. Select each
+   symbol with `--symbol`:
+
+   ```bash
+   bin/reamer-csv-build --symbol AAPL market.csv AAPL.bin
+   ```
 2. Pass the `.bin` paths to `reamer_run_backtest_files()`. The files are
    memory-mapped, so a dataset larger than RAM runs. `start_ts` and
    `end_ts` select a date range without rewriting the files.

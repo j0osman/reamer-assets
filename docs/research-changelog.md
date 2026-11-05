@@ -16,6 +16,28 @@ Version numbers here are the release version (`kReamerVersion`), which is
 shared with Reamer Server and moves independently of `REAMER_ABI_VERSION`.
 ABI bumps are called out explicitly where they occur.
 
+## [4.6.2] - 2026-11-05
+
+No ABI change (`REAMER_ABI_VERSION` stays 7). The change is in
+`bin/reamer-csv-build`; results from an existing `.bin` file are identical
+to 4.6.1.
+
+### Fixed
+- `bin/reamer-csv-build`: a CSV with several symbols in a `symbol` or
+  `ticker` column was written as one series. Rows that shared a timestamp
+  were dropped as duplicates, and rows that did not were interleaved, with
+  exit code 0 and no warning about the mix. The tool now names the symbols,
+  exits non-zero and writes nothing. **If you built a `.bin` file from such
+  a CSV, rebuild it.**
+
+### Added
+- `bin/reamer-csv-build --symbol NAME` converts one symbol from a CSV that
+  holds several. The match is exact.
+- `bin/reamer-csv-build` recognises `window_start` and `t` as timestamp
+  columns, and `transactions` and `n` as trade counts.
+- The parse report has three new lines: `symbol_column`, `symbols` and
+  `filtered_rows`.
+
 ## [4.6.1] - 2026-10-26
 
 No ABI change (`REAMER_ABI_VERSION` stays 7). Reference Python binding only;
