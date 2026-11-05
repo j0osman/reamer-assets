@@ -28,7 +28,7 @@ Details below were checked against MultiCharts' own pages in November 2026.
 - **General-purpose languages.** Strategies are written in Python or C++, or any language that can call C, so your own libraries and models run inside the strategy.
 - **Fill rules in writing.** The public [execution specification](/docs/execution-spec.html) states how orders fill on bars. A seeded tick path runs through every bar, so you do not need tick data to resolve a stop and a target in one bar.
 - **Byte-identical runs.** With a fixed seed, output matches to the byte, which suits audit and regression tests.
-- **Several instruments on one account.** Instruments share one timeline and one account in every Reamer Research run.
+- **Several instruments on one account.** Instruments share one wall clock and one account in every Reamer Research run.
 - **Live through your own gate.** Reamer Server runs your pre-trade gate on every order and sends accepted orders through a broker connector you write. The kit has a worked FIX 4.4 example. MultiCharts ships ready broker connections.
 - **Different machines.** Both products run on Linux x86-64, and Reamer Research also runs on macOS on Apple Silicon. Neither runs on Windows.
 

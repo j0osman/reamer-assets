@@ -29,7 +29,7 @@ A research engine supports a whole cycle of work on a strategy, not just one run
 
 ### 1. Test
 
-Run the strategy over years of bars with realistic costs. The engine owns the loop over time, the alignment of several instruments onto one timeline, the account's open orders and positions, and the cost of each fill. The strategy sees the bars in order and says what it wants to trade.
+Run the strategy over years of bars with realistic costs. The engine owns the loop over time, running several instruments on one wall clock, the account's open orders and positions, and the cost of each fill. The strategy sees the bars in order and says what it wants to trade.
 
 ### 2. Diagnose
 

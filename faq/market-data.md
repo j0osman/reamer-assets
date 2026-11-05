@@ -16,10 +16,10 @@ The only data in the kit is a 100-bar daily sample, so the quickstart runs on it
 ## Getting bars into Reamer Research
 
 - **Arrays from any source.** Load bars from CSV with pandas or numpy, a database or a vendor API, and pass them in as arrays: timestamp, open, high, low, close and volume for each bar. This works from Python, C++ or any language that can call C.
-- **`.bin` files.** `bin/reamer-csv-build AAPL.csv AAPL.bin` converts a CSV. It detects the delimiter, columns and timestamp format, and reports what it skipped. It needs no license. Through the C interface, `reamer_run_backtest_files()` memory-maps these files, so a dataset larger than RAM runs, and `start_ts` and `end_ts` select a date range without rewriting them. The Python binding takes arrays.
+- **`.bin` files.** `bin/reamer-csv-build AAPL.csv AAPL.bin` converts a CSV. It detects the delimiter, columns and timestamp format, and reports what it skipped. Timestamps are whole seconds, so two rows at the same timestamp stop it unless `--keep-first` keeps the first bar of each second. It needs no license. Through the C interface, `reamer_run_backtest_files()` memory-maps these files, so a dataset larger than RAM runs, and `start_ts` and `end_ts` select a date range without rewriting them. The Python binding takes arrays.
 - **One instrument per file.** If a CSV holds several symbols, the converter stops until `--symbol` selects one.
 - **Any bar type.** Time, tick, volume, dollar, imbalance or your own custom rule. You build the bars, and the engine treats every type the same way. OHLCV is the record format, not a limit on how a bar was built.
-- **Several instruments at once.** Each instrument has its own series, and timestamps do not need to line up across them.
+- **Several instruments at once.** Each instrument has its own series, and timestamps do not need to line up across them. Every instrument is cut to the range they all share, so the shortest series sets the run's length.
 - **Non-price data,** such as earnings dates or an index level, can be attached to each instrument through the C interface. A bundled tool converts it from a two-column CSV. The Python binding does not pass it.
 
 ## What stays your job
