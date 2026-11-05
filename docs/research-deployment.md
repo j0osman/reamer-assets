@@ -26,7 +26,7 @@ variant).
 below. Verifying first is both the correct order and the only order in
 which the commands work as printed: the `.tar.gz`, `.sha256`,
 `.sha256.sig`, and `.tar.gz.sig` are downloaded as siblings, and
-extraction creates the `research-kit-4.6.2-linux_x86_64/` directory
+extraction creates the `research-kit-4.7.0-linux_x86_64/` directory
 *next to* them, not around them.
 
 Once verification passes, extract — see "Extract the archive" at the end
@@ -72,7 +72,7 @@ files are siblings of that directory, not members of it.
 1. Check the tarball wasn't corrupted or tampered with in transit:
 
    ```
-   sha256sum -c research-kit-4.6.2-linux_x86_64.tar.gz.sha256
+   sha256sum -c research-kit-4.7.0-linux_x86_64.tar.gz.sha256
    ```
 
 2. Check the checksum's detached signature, using the `release-sign`
@@ -83,17 +83,17 @@ files are siblings of that directory, not members of it.
    downloads:
 
    ```
-   tar xzf research-kit-4.6.2-linux_x86_64.tar.gz \
+   tar xzf research-kit-4.7.0-linux_x86_64.tar.gz \
      --strip-components=2 \
-     research-kit-4.6.2-linux_x86_64/bin/release-sign
+     research-kit-4.7.0-linux_x86_64/bin/release-sign
    ```
 
    Then verify, from the directory holding the downloads:
 
    ```
    ./release-sign verify \
-     research-kit-4.6.2-linux_x86_64.tar.gz.sha256 \
-     research-kit-4.6.2-linux_x86_64.tar.gz.sha256.sig \
+     research-kit-4.7.0-linux_x86_64.tar.gz.sha256 \
+     research-kit-4.7.0-linux_x86_64.tar.gz.sha256.sig \
      b0ff9dcdcbd767ec78375629e10afec2baf18319df27e000ed6d8307cb93e68c
    ```
 
@@ -138,8 +138,8 @@ files are siblings of that directory, not members of it.
 
    ```
    ./release-sign verify \
-     research-kit-4.6.2-linux_x86_64.tar.gz \
-     research-kit-4.6.2-linux_x86_64.tar.gz.sig \
+     research-kit-4.7.0-linux_x86_64.tar.gz \
+     research-kit-4.7.0-linux_x86_64.tar.gz.sig \
      b0ff9dcdcbd767ec78375629e10afec2baf18319df27e000ed6d8307cb93e68c
    ```
 
@@ -165,13 +165,13 @@ Only after both verification commands above have passed, still from the
 directory holding the downloads:
 
 ```
-tar xzf research-kit-4.6.2-linux_x86_64.tar.gz
-cd research-kit-4.6.2-linux_x86_64
+tar xzf research-kit-4.7.0-linux_x86_64.tar.gz
+cd research-kit-4.7.0-linux_x86_64
 ls include/reamer_research_abi.h lib/libreamer_research.so
 ```
 
 Every later step in this document runs from that
-`research-kit-4.6.2-linux_x86_64/` directory unless it says otherwise.
+`research-kit-4.7.0-linux_x86_64/` directory unless it says otherwise.
 
 ## Step 2 — Activate the license
 
@@ -308,6 +308,11 @@ if (status == REAMER_RESEARCH_SUCCESS) {
 
 A ticker's `ticker_id` is its array position in `bars_by_ticker[]`.
 
+Every ticker is cut to the latest first bar and the earliest last bar across
+the run, so the shortest ticker sets the run's length. One late-listed ticker
+shortens the history of all of them. The run is refused if the tickers share no
+range, or if a ticker has no bars inside it.
+
 ### ABI 7 additions (4.5.0)
 
 ABI 7 breaks ABI 6. Rebuild against the shipped header. `CHANGELOG.md` lists
@@ -402,12 +407,13 @@ that happened to print the same price. This matters most in a multi-ticker
 run, where tickers that did not trade on a given step are forward-filled to
 keep the window rectangular.
 
-Observed directly: a 2-ticker union run where ticker B has no bar on
-step 2 delivers, on that step, `valid=0` with B's day-1 close and day-1
-timestamp still in the slot, while ticker A shows `valid=1` with its
-fresh day-2 bar. The stale `ts` lagging the step is a second way to
-detect this, but `window_valid` states it directly and is the supported
-signal.
+Observed directly: in a 2-ticker daily run where ticker B has no row on the
+third day, B's second row stays open until its next row, so on the step where
+A's second row closes, `on_bar()` gets `valid=0` for B with B's first close and
+timestamp still in the slot, while A shows `valid=1` with its fresh bar. B's
+second row arrives `valid=1` on the following step. The stale `ts` lagging the
+step is a second way to detect this, but `window_valid` states it directly and
+is the supported signal.
 
 **positions.** Length `ticker_count`: the engine's signed position per
 ticker after this bar's fills (positive=long, negative=short, 0.0=flat).
@@ -489,7 +495,10 @@ never sits in memory.
 1. Write each ticker's bars once: convert a CSV with
    `bin/reamer-csv-build AAPL.csv AAPL.bin`, or call
    `reamer_write_bin(path, bars, count)` from code. Bars must be sorted
-   strictly ascending by `ts`. A CSV with several symbols stops the tool
+   strictly ascending by `ts`. `ts` is in whole seconds, so each ticker can
+   have one bar per second. If two CSV rows share a timestamp the tool stops
+   and writes nothing, unless `--keep-first` keeps the first bar of each
+   second. A CSV with several symbols stops the tool
    until `--symbol NAME` selects one.
 2. Run over the files. Pass `ticker_names[]` (required) and an inclusive
    `start_ts`/`end_ts` range in epoch seconds UTC. Pass

@@ -37,7 +37,8 @@ spread) on release 4.6.0 — the single-threaded engine has no scheduler in
 its path to introduce run-to-run drift. See the [replication of the
 whitepaper](https://doi.org/10.6084/m9.figshare.34787757).
 
-**Scope.** OHLCV-bar mid-frequency strategies, intraday to multi-day. Not
+**Scope.** Mid-frequency strategies on bars of any type (time, tick, volume,
+dollar, imbalance or your own custom rule), intraday to multi-day. Not
 a high-frequency order-book (L2/L3) system, not an options platform, and
 no corporate-action adjustment for equities — your input data must already
 be split- and dividend-adjusted. `EXECUTION_SPEC.md` states the boundaries
@@ -99,10 +100,10 @@ lists every removal and rename.
 Every binary answers `--version`, so you can confirm which build you have:
 
 ```bash
-./bin/reamer-license --version    # reamer-license 4.6.2
-./bin/release-sign --version      # release-sign 4.6.2
-./bin/reamer-exo-build --version  # reamer-exo-build 4.6.2
-./bin/reamer-csv-build --version  # reamer-csv-build 4.6.2
+./bin/reamer-license --version    # reamer-license 4.7.0
+./bin/release-sign --version      # release-sign 4.7.0
+./bin/reamer-exo-build --version  # reamer-exo-build 4.7.0
+./bin/reamer-csv-build --version  # reamer-csv-build 4.7.0
 ```
 
 Docs: `EXECUTION_SPEC.md` (**authoritative** on fills, slippage, spread,
@@ -175,9 +176,12 @@ the security-hardening record).
    ```
 
    The tool detects the delimiter, the column names and the timestamp
-   format. It prints what it detected, the rows it skipped, the duplicate
-   timestamps it dropped, and the first and last timestamp written. Check
-   the report before you run.
+   format. It prints what it detected, the rows it skipped, and the first
+   and last timestamp written. Check the report before you run.
+
+   Timestamps are whole seconds, so each instrument can have one bar per
+   second. If two rows share a timestamp, the tool stops and writes nothing
+   unless `--keep-first` keeps the first bar of each second.
 
    A `.bin` file holds one instrument. If the CSV has a symbol column with
    more than one symbol, the tool stops and writes nothing. Select each

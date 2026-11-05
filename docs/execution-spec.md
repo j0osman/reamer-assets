@@ -238,9 +238,10 @@ Fill eligibility is origin-dependent:
 - **Bar-origin orders** — every order a strategy writes to `out_orders` in `on_bar(N)`.
   `on_bar(N)` only ever runs after bar N is fully sealed and replayed (the newest window row
   is bar N's real close, and `positions`, `position_states` and `open_orders` show every fill
-  on bar N, as a venue reports fills before the bar closes), so an order it returns is only eligible starting
-  the ticker's **next** bar (N+1) — `created_ts = bar_N.epoch`, and the order becomes
-  eligible once `now_ts > created_ts`, i.e. bar N+1 tick 1 onward. It is never matched
+  on bar N, as a venue reports fills before the bar closes), so an order it returns is only eligible from
+  the first tick later on the wall clock (§14) than the moment it was written, i.e. bar N+1
+  tick 1 onward for the ticker whose bar just closed. A ticker part-way through a row when
+  the order is written trades from that row's next tick. It is never matched
   against any tick of bar N itself: a decision made from bar N's close cannot fill at a
   price from earlier in bar N's own (already fully-determined) tick path. Submitting a
   bar-origin order on a ticker's last available bar is rejected outright
@@ -259,7 +260,9 @@ Tick count per bar defaults to the time delta in seconds to the next bar timesta
 gap-derived estimate. This is what makes non-time-interval bars (tick/volume/dollar/
 imbalance bars, or any other pre-aggregated activity bar — see §14) simulate
 correctly: a dollar bar that took 40 real trades to fill gets 40 synthetic ticks,
-regardless of how many wall-clock seconds its own timestamp gap happens to span.
+spread across the time its row takes on the wall clock (§14).
+A supplied `tick_count` must be at least 1, or -1 for unknown. The run is refused
+otherwise, because a bar with no ticks cannot fill an order.
 
 Market orders have no price condition and fill unconditionally at the first eligible tick
 (bar N+1 tick 1, for a bar-origin order). Limit/stop orders fill at the first eligible tick
@@ -522,12 +525,37 @@ turn raw tick data into tick/volume/dollar/imbalance bars. That aggregation step
 producer's responsibility (a user's own pipeline, or a vendor's tooling), same as it
 already is for anyone building custom time-bar OHLCV today.
 
-**Multi-asset alignment is union-only, timestamp-driven, and origin-agnostic.**
-The engine emits one portfolio step per distinct timestamp seen
-across any ticker's bars, including only the ticker(s) whose bar actually lands
-there. This requires no change to support
-independently-sampled activity bars: a step is defined purely by "some ticker
-produced a bar here," never by exact-timestamp coincidence across tickers.
+**Timestamps are whole seconds.** `ts` is `int64` epoch seconds UTC, so each ticker
+can have one bar per second. Bars that form faster than that need a coarser rule.
+`.bin` files enforce this. `reamer_run_backtest()` refuses a bar that shares its
+timestamp with the next one unless that bar carries its own `tick_count`.
+
+**Every ticker runs over the same range.** Before a run, each ticker with bars is cut
+to the latest first bar and the earliest last bar across the run, so the shortest
+ticker sets the run's length. Bars outside that range never reach `on_bar()`, and
+warmup starts inside it. `reamer_run_backtest_files()` applies its `start_ts`/`end_ts`
+first. A ticker with no bars at all stays at its array position and never trades. The
+run is refused with `REAMER_RESEARCH_ERROR_INVALID_BAR` if the tickers share no range,
+or if a ticker has no bars inside it.
+
+**One wall clock runs the whole run.** It starts at the earliest row of any ticker
+and runs to the close of the last row. Every row of every ticker is an event on it,
+placed at its own `ts`. A row runs until its ticker's next distinct `ts`, and a
+ticker's last row runs for that ticker's first gap. Rows sharing a `ts` take turns
+across the time to the next `ts`, each in proportion to its ticks. Rows never need
+to line up with anything: one ticker or 10,000, on a shared grid or with no two
+timestamps alike, the rule is the same. Nothing compares one ticker's rows with
+another's.
+
+A row's ticks are spread evenly across its time on the clock, so `tick_count` sets
+how finely a row is simulated and never how long it lasts.
+
+**A step is one moment a row closes.** The moment any row closes, that row and every
+other row closing at that moment are one portfolio step, and `on_bar()` runs. Every
+row reaches `on_bar()` exactly once, in the order rows close, as soon as it has
+closed. Orders then fill on the ticks that follow that moment, in the same pass of
+the clock as every other ticker's rows.
+
 (`AlignmentMode::Intersection` — a step only when *every* ticker shared a bar —
 existed prior to this and was removed: it required exact timestamp coincidence
 across every ticker, which independently-sampled activity bars essentially never
@@ -538,11 +566,11 @@ last-known state.** `on_bar()` exposes this per ticker through `window_valid` an
 window rows' own timestamps. With `last = i * window_len + window_len - 1` (ticker
 `i`'s newest row):
 
-- **Fresh this step** — `window_valid[last] == 1`: ticker `i`'s bar is one that
-  just landed. `0` on every other step, including before the ticker's first bar and
-  on every step where a *different* ticker's bar was the one driving that step. For
-  tickers sharing a common time grid (ordinary time bars), every step where a ticker
-  is present is fresh.
+- **Fresh this step** — `window_valid[last] == 1`: ticker `i`'s row closed at this
+  moment. `0` on every other step, including before the ticker's first row closes
+  and on every step where only other tickers' rows closed. For tickers sharing a
+  common time grid (ordinary time bars), every step where a ticker is present is
+  fresh.
 - **Has ever had data** — any row of ticker `i` with `window_valid == 1`, or a
   nonzero `window[last].ts`. A ticker before its first bar holds zeroed placeholder
   rows (`ts == 0`).
@@ -556,8 +584,10 @@ remains the best estimate) and sets `volume`/`notional` to zero rather than carr
 prior period's total forward — both are period *flow* quantities, and zero is the honest
 statement that nothing traded during a step where this ticker produced no bar at all.
 
-An order for a ticker that is not fresh this step is rejected (`"no market data"`):
-submit orders only for tickers whose newest row is real.
+An order for a ticker that is not fresh this step is taken at this moment on the
+clock: it fills from the next tick of the row that ticker has in progress, which the
+strategy has not seen. An order for a ticker with no closed row yet is rejected
+(`"no market data"`).
 
 A strategy reading multiple asynchronously-sampled tickers together should always check
 `window_valid` before treating a read as fresh information, and may use staleness to decide

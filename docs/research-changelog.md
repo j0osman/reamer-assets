@@ -16,6 +16,61 @@ Version numbers here are the release version (`kReamerVersion`), which is
 shared with Reamer Server and moves independently of `REAMER_ABI_VERSION`.
 ABI bumps are called out explicitly where they occur.
 
+## [4.7.0] - 2026-11-06
+
+A core change to how time runs in a backtest. `REAMER_ABI_VERSION` stays 7, and
+no strategy code needs to change.
+
+### Changed
+- `bin/reamer-csv-build`: a CSV with two rows at the same timestamp now stops
+  the tool. It names the first repeated timestamp, exits non-zero and writes
+  nothing. Before, it dropped the repeat with a warning and exited 0, so a
+  sub-second feed could silently lose most of its bars. `--keep-first` keeps
+  the old behaviour.
+
+### Fixed
+- One wall clock now runs every backtest, from the earliest row of any ticker to
+  the close of the last row. Every row of every ticker is an event on it at its
+  own timestamp, `on_bar` runs the moment a row closes, and fills run off the same
+  clock. Rows never need to line up with anything. Before, `on_bar` followed row
+  timestamps while each ticker's fills ran on its own counter, so tickers that were
+  offset, on different timeframes or with different `tick_count` filled ahead of
+  the row `on_bar` was shown: a 1-minute ticker beside a daily one filled 1,440
+  rows ahead. Results on those multi-ticker runs change. Runs on one ticker, and
+  tickers sharing one grid and one tick count, give identical results.
+- A row reaches `on_bar` when it closes, so a ticker with a gap shows its row on
+  the step of its next row's start, not the step of its own timestamp.
+- An order on a ticker part-way through a row now fills from that row's next tick.
+  Before, it was rejected with `"no market data"`, which now means the ticker has
+  no closed row yet.
+- Rows sharing a timestamp fill one after another. An order written when the
+  first closes fills on the second, not on the first row of a later timestamp.
+- A futures roll on a ticker whose rows do not fall on every step is no longer lost.
+- Every ticker in a run is cut to the latest first bar and the earliest last
+  bar across the run, on arrays and `.bin` files, so the shortest ticker sets
+  the run's length. Tickers that started apart filled ahead of the bar `on_bar`
+  was shown, by the gap between their starts: a ticker listed 30 days late
+  filled 30 bars ahead. The run is refused if the tickers share
+  no range, or if a ticker has no bars inside it. Multi-ticker results on
+  tickers with different start or end dates change.
+- `reamer_run_backtest()` refuses bars that are not sorted ascending by `ts`.
+  The header always required this, but only `.bin` files were checked.
+- `reamer_run_backtest()` and `reamer_run_backtest_files()` refuse a
+  `tick_count` below 1 other than the -1 sentinel, and one past the range of
+  `int`. `reamer_write_bin()` refuses the same bars. A bar with no ticks seals
+  at once, so a run with a `tick_count` of 0 returned success with no fills.
+- `reamer_run_backtest()` refuses a bar with no `tick_count` that shares its
+  `ts` with the next bar. The gap gave such bars no ticks, which ran the engine
+  ahead of the step `on_bar` was shown, so a fill could land on a bar the
+  strategy had not seen yet. Same-second bars with a real `tick_count` still
+  run.
+
+### Documentation
+- `README.md` states the scope as bars of any type. OHLCV is the
+  record format, not a limit on how a bar was built.
+- `EXECUTION_SPEC.md`, `DEPLOYMENT.md` and the header state the whole-second
+  timestamp rule and the `tick_count` range.
+
 ## [4.6.2] - 2026-11-05
 
 No ABI change (`REAMER_ABI_VERSION` stays 7). The change is in

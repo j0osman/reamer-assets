@@ -12,6 +12,12 @@ entry below describes a customer-visible change to the Reamer Server
 product — the ABI, the shipped reference material, or the kit
 contents — not internal refactors. Updated at release, alongside the tag.
 
+## [4.7.0] - 2026-11-06
+
+### Changed
+- Version number only, kept in step with Reamer Research 4.7.0. No change to
+  the server ABI (still 4), the wire protocol or the execution core.
+
 ## [4.6.2] - 2026-11-05
 
 ### Changed
