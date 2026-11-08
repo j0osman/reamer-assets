@@ -1,6 +1,6 @@
 ---
 title: What exactly do I receive after buying?
-description: An email with your licence key and a link to download the kit. The kit is the product itself, compiled libraries and command-line tools with the full documentation and reference code, and it holds no key. You activate the key once per machine with the reamer-license tool, and the term starts then. Nothing is shipped physically and nothing is hosted for you.
+description: An email with your licence key and a link to download the kit. The kit is the product itself, compiled libraries, ready-to-run Python, C++ and Go code in source, command-line tools and the full documentation, and it holds no key. You activate the key once per machine with the reamer-license tool, and the term starts then. Nothing is shipped physically and nothing is hosted for you.
 stage: 6
 order: 49
 product: both
@@ -9,7 +9,7 @@ date: 2026-10-03
 topics: sdk, software-license
 ---
 
-An email with your licence key and a link to download the kit. The kit is the product itself, compiled libraries and command-line tools with the full documentation and reference code, and it holds no key. You activate the key once per machine with the reamer-license tool, and the term starts then. Nothing is shipped physically and nothing is hosted for you.
+An email with your licence key and a link to download the kit. The kit is the product itself, compiled libraries, ready-to-run Python, C++ and Go code in source, command-line tools and the full documentation, and it holds no key. You activate the key once per machine with the reamer-license tool, and the term starts then. Nothing is shipped physically and nothing is hosted for you.
 
 ## The email
 
@@ -20,8 +20,8 @@ Once payment completes, the key and the kit download link go to the email addres
 An archive for Linux x86-64 or macOS on Apple Silicon, containing:
 
 - **The engine,** a shared library, with the C header that is its complete contract.
-- **Tools:** the licence activator, a benchmark that measures throughput on your own machine, a converter for exogenous data files and a signature checker for the download.
-- **Reference code:** a C++ wrapper with runnable examples, and a Python binding with strategy templates, a quickstart and 100 bars of sample data, so a first backtest runs before you source data.
+- **Ready-to-run code, in source:** a Python binding (ctypes and numpy, with helpers for every order type, bracket, cancel, partial close and modify), a C++ wrapper, 6 strategy templates, 15 Python and 4 C++ examples, and a one-command quickstart with 100 bars of sample data, so a first backtest runs before you source data.
+- **Tools:** the licence activator, a converter from your CSV bars to the engine's memory-mapped files, a converter for exogenous data files, a benchmark that measures throughput on your own machine and a signature checker for the download.
 - **Documents,** including the execution specification, the result schema, deployment and benchmark guides, and the guide to moving a strategy to Reamer Server.
 
 ## The Reamer Server kit
@@ -29,8 +29,8 @@ An archive for Linux x86-64 or macOS on Apple Silicon, containing:
 A zip for Linux x86-64, containing:
 
 - **The core,** a static library you link into your own program, with its C header. There is no server program to run; you write a small `main()` around it.
+- **Ready-to-run code, in source:** a worked FIX 4.4 integration in Go (session, broker connector, gate, strategy relay and event-bus reader, with a 100-test suite) that runs to a fill in one command, and starting points in C++ and Rust.
 - **Tools:** the licence activator, a config checker, a diagnostic bundle for support requests, a benchmark and a signature checker.
-- **Reference code:** minimal starting points in C++ and Rust, and a worked FIX 4.4 integration that runs to a fill in one command.
 - **Documents,** including the wire protocols, every config field, monitoring and deployment guides.
 
 Both kits include the licence terms, the vendor questionnaire pack, a security hardening report, a software bill of materials and a checksum for every file.
