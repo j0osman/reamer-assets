@@ -17,10 +17,10 @@ Once payment completes, the key and the kit download link go to the email addres
 
 ## The Reamer Research kit
 
-An archive for Linux x86-64 or macOS on Apple Silicon, containing:
+An archive for Linux x86-64 or macOS on Apple Silicon (on Windows, the Linux archive runs through WSL2), containing:
 
 - **The engine,** a shared library, with the C header that is its complete contract.
-- **Ready-to-run code, in source:** a Python binding (ctypes and numpy, with helpers for every order type, bracket, cancel, partial close and modify), a C++ wrapper, 6 strategy templates, 15 Python and 4 C++ examples, and a one-command quickstart with 100 bars of sample data, so a first backtest runs before you source data.
+- **Ready-to-run code, in source:** a Python binding (ctypes and numpy, with helpers for every order type, bracket, cancel, partial close and modify), a C++ wrapper, 6 strategy templates, 16 Python and 4 C++ examples, Alpaca and Databento fetchers that pull historical bars from your own account into a backtest, and a one-command quickstart with 100 bars of sample data, so a first backtest runs before you source data.
 - **Tools:** the licence activator, a converter from your CSV bars to the engine's memory-mapped files, a converter for exogenous data files, a benchmark that measures throughput on your own machine and a signature checker for the download.
 - **Documents,** including the execution specification, the result schema, deployment and benchmark guides, and the guide to moving a strategy to Reamer Server.
 

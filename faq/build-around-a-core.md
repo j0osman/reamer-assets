@@ -45,7 +45,7 @@ The core is where a subtle bug costs money without anyone noticing: a stop fille
 ## When a core is not the right fit
 
 - **The core itself is your edge,** for example a fill or microstructure model better than anyone else's.
-- **Your strategy is outside its scope:** order-book or high-frequency trading, options, or Windows.
+- **Your strategy is outside its scope:** order-book or high-frequency trading, options, or a native Windows build.
 - **You want everything done for you,** including data, brokers and hosting. A full platform fits better.
 
 ## Price

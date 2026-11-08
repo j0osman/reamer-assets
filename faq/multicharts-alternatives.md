@@ -30,7 +30,7 @@ Details below were checked in November 2026, against each vendor's own pages whe
 | AmiBroker | Charting and portfolio backtester | AFL | Windows | One-time licence; Ultimate Pack $499 |
 | Zorro | Compact coding environment | lite-C, C++; calls R and Python | Windows, other systems with special installs | Free for private users under limits; Zorro S €35 a month |
 | QuantConnect | Cloud platform | Python, C# | Browser, or LEAN locally | Free tier, paid plans |
-| Reamer Research, Reamer Server | Libraries | Python, C++, or any language that can call C | Linux; Reamer Research also on Apple Silicon Macs | $1,800 and $7,200 per year |
+| Reamer Research, Reamer Server | Libraries | Python, C++, or any language that can call C | Linux; Reamer Research also on Apple Silicon Macs and Windows through WSL2 | $1,800 and $7,200 per year |
 
 ## Trading applications
 
@@ -43,7 +43,7 @@ Details below were checked in November 2026, against each vendor's own pages whe
 
 - **Zorro** offers C or C++ with a built-in optimizer, charts and broker connections. The free version has a $30,000 annual profit limit and a $15,000 capital limit, and corporations need Zorro S.
 - **QuantConnect** runs Python or C# strategies in the cloud with data and brokers included. See [What are the best QuantConnect alternatives in 2026?](/faq/quantconnect-alternatives.html)
-- **Reamer Research and Reamer Server** supply the research and order-management core for your own program. [Reamer Research](/products/reamer-research.html) fills orders under a public [execution specification](/docs/execution-spec.html), with byte-identical runs on a fixed seed. [Reamer Server](/products/reamer-server.html) runs your pre-trade gate and a broker connector you write. They have no charts, and there is no Windows version. See [How do Reamer Research and Reamer Server compare with MultiCharts?](/faq/reamer-labs-vs-multicharts.html)
+- **Reamer Research and Reamer Server** supply the research and order-management core for your own program. [Reamer Research](/products/reamer-research.html) fills orders under a public [execution specification](/docs/execution-spec.html), with byte-identical runs on a fixed seed. [Reamer Server](/products/reamer-server.html) runs your pre-trade gate and a broker connector you write. They have no charts and no native Windows build; Reamer Research runs on Windows through WSL2. See [How do Reamer Research and Reamer Server compare with MultiCharts?](/faq/reamer-labs-vs-multicharts.html)
 
 ## How to choose
 

@@ -23,7 +23,7 @@ QuantConnect is a full hosted platform: market data, a cloud IDE, backtesting on
 
 - **Two products, not one platform.** [Reamer Research](/products/reamer-research.html) is the research engine. [Reamer Server](/products/reamer-server.html) takes a strategy live. Each is a library with a stable C interface, licensed separately.
 - **Local only.** After a one-time activation nothing leaves your machine: no strategy code, data or results. See [Does my strategy code or data ever leave my machine?](/faq/data-privacy.html)
-- **No data.** You bring your own bars. See [Does it include market data?](/faq/market-data.html)
+- **No data.** You bring your own bars, or pull them from your own Alpaca or Databento account with the bundled fetchers. See [Does it include market data?](/faq/market-data.html)
 - **Your own broker connection.** Reamer Server runs your pre-trade gate on every order and sends accepted orders through a connector you write. The kit has a worked FIX 4.4 example and a paper broker. See [Which brokers does Reamer Server connect to?](/faq/broker-connections.html)
 - **A written execution specification.** Reamer Research fills orders by a document that ships with the kit, and gives byte-identical output for a fixed `rng_seed`.
 - **Research and live are two engines joined by a relay.** On QuantConnect the same algorithm runs in backtest and live. With Reamer Labs, `reamer_relay_*` sends the orders a Reamer Research strategy returns to Reamer Server, and indicators move from a bar window to running state. See [What does it take to move from Reamer Research to Reamer Server?](/faq/research-to-server-move.html)

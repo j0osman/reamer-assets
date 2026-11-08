@@ -16,6 +16,33 @@ Version numbers here are the release version (`kReamerVersion`), which is
 shared with Reamer Server and moves independently of `REAMER_ABI_VERSION`.
 ABI bumps are called out explicitly where they occur.
 
+## [4.8.0] - 2026-11-08
+
+Windows support through WSL2, and market-data fetchers for the Python
+binding. `REAMER_ABI_VERSION` stays 7, and no strategy code or results change.
+
+### Added
+- Windows through WSL2 is a supported platform, using the Linux x86-64 kit.
+  [Supported platforms](/docs/supported-platforms.html) covers the requirements.
+- `reference-python/fetchers/`: download historical bars from Alpaca (US
+  stocks and crypto) and Databento (OHLCV schemas, including continuous
+  futures across rolls) straight into the form `run_backtest()` takes.
+  `write_csv()` saves them for `bin/reamer-csv-build`. The Alpaca fetcher is
+  standard library only; the Databento one needs `pip install databento`
+  and prices each request before downloading it. Source, like the binding.
+  The engine makes no network calls.
+- `reference-python/examples/fetch_and_run.py`: fetch bars from either
+  vendor and run a multi-ticker backtest in one command. Alpaca crypto needs
+  no account.
+
+### Fixed
+- An activation inside WSL2 now survives a restart of the WSL VM or of
+  Windows. WSL2 gives its VM a new MAC address on every restart, which changed
+  the machine fingerprint and made `reamer-license` report the licence as
+  active on another machine. Under a WSL kernel the fingerprint now uses
+  `/etc/machine-id` in place of the MAC. Native Linux and macOS fingerprints
+  are unchanged, so existing activations stay valid.
+
 ## [4.7.0] - 2026-11-06
 
 A core change to how time runs in a backtest. `REAMER_ABI_VERSION` stays 7, and

@@ -29,7 +29,7 @@ Details below were checked against ArcticDB's own pages in November 2026.
 - **An engine, not a database.** You load bars from any source and pass them in as arrays, or use memory-mapped `.bin` files for data larger than RAM. It has no versioning and no storage of its own.
 - **Your own language.** Strategies are written in Python or C++, or any language that can call C.
 - **Byte-identical runs.** With a fixed seed, output matches to the byte, including randomised spread and slippage.
-- **Platforms.** It runs on Linux x86-64 and on macOS on Apple Silicon. ArcticDB also runs on Windows, and Reamer Research does not.
+- **Platforms.** It runs on Linux x86-64, on macOS on Apple Silicon and on Windows through WSL2. ArcticDB also runs natively on Windows.
 
 ## Using both
 

@@ -48,7 +48,7 @@ Both engines repeated every result. This is one machine, one date, one instrumen
 
 ## When Reamer Research is
 
-When a result will decide where real money goes, and you need to know which costs and fill rules produced it, rerun it to the byte, and sweep parameters around it. It is for systematic strategies on time, tick, volume, dollar or custom bars, held from minutes to days, on Linux x86-64 or macOS on Apple Silicon. See [What is Reamer Research?](/faq/what-is-reamer-research.html)
+When a result will decide where real money goes, and you need to know which costs and fill rules produced it, rerun it to the byte, and sweep parameters around it. It is for systematic strategies on time, tick, volume, dollar or custom bars, held from minutes to days, on Linux x86-64, macOS on Apple Silicon or Windows through WSL2. See [What is Reamer Research?](/faq/what-is-reamer-research.html)
 
 ## Price
 

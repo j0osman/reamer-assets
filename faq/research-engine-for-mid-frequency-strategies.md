@@ -33,7 +33,7 @@ Mid-frequency means positions held from minutes to days, decided on bars rather 
 3. **Can I reproduce the published speed on my own hardware?** A benchmark you cannot rerun is marketing.
 4. **What leaves my machine?** Strategy code and data are your edge. Know exactly what the tool sends, and where.
 5. **Which languages can drive it?** It should fit the code you already write, not ask you to rewrite it.
-6. **What is not included?** Data, live trading, options, order-book data, Windows. A vendor that states its limits saves you weeks.
+6. **What is not included?** Data, live trading, options, order-book data, a native Windows build. A vendor that states its limits saves you weeks.
 7. **What does it cost each year, per person, and can I try it on my own strategy first?**
 
 ## How Reamer Research answers them
@@ -58,7 +58,7 @@ The method and raw data behind the speed and repeatability figures are public: s
 - **Bars, minutes to days.** Level 2 and level 3 order-book strategies and high-frequency trading call for a different kind of engine.
 - **Equities, futures and FX on bars.** Options pricing and modelling sit outside it.
 - **Code first.** You write the strategy and the program that runs it.
-- **Linux x86-64 and macOS on Apple Silicon.**
+- **Linux x86-64, macOS on Apple Silicon, and Windows through WSL2.**
 - **Your own data,** with equity data already adjusted for splits and dividends.
 
 ## Price

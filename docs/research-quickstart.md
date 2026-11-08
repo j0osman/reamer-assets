@@ -89,7 +89,7 @@ lists every removal and rename.
 | `bin/reamer-csv-build` | Converts an OHLCV CSV into the `.bin` bar file `reamer_run_backtest_files()` memory-maps. Offline converter — needs no license. See "Your own data" below. |
 | `bin/research-bench` | Runs the pure-ABI backtest throughput benchmark on your own hardware after activation, reproducing `BENCHMARK.md`'s bars/sec figure. See "Measuring on your own hardware" there. |
 | `reference-cpp/` | An RAII wrapper over the ABI plus four runnable examples. Source, not binaries — you are meant to read and adapt it. |
-| `reference-python/` | A ctypes binding, strategy templates, and a runnable end-to-end quickstart. Same status: reference material, not a supported surface. |
+| `reference-python/` | A ctypes binding, strategy templates, Alpaca and Databento bar fetchers, and a runnable end-to-end quickstart. Same status: reference material, not a supported surface. |
 | `reference-python/sample_data/` | A 100-bar daily OHLCV CSV, so the quickstart runs without you sourcing data first. |
 | `VENDOR_QUESTIONNAIRE_PACK.md` | The standing answer to an infra/risk/procurement team's security questionnaire, support model, vulnerability disclosure policy, data-handling statement, and business-continuity/escrow note — hand it to your own security review. Published as the [vendor questionnaire pack](/docs/vendor-questionnaire.html). |
 | `SECURITY_HARDENING.md` | The internal adversarial security pass already performed against the ABI/IPC and license boundaries: the defect classes found and closed, and the sanitizer + regression-test verification each fix carries. |
@@ -100,10 +100,10 @@ lists every removal and rename.
 Every binary answers `--version`, so you can confirm which build you have:
 
 ```bash
-./bin/reamer-license --version    # reamer-license 4.7.0
-./bin/release-sign --version      # release-sign 4.7.0
-./bin/reamer-exo-build --version  # reamer-exo-build 4.7.0
-./bin/reamer-csv-build --version  # reamer-csv-build 4.7.0
+./bin/reamer-license --version    # reamer-license 4.8.0
+./bin/release-sign --version      # release-sign 4.8.0
+./bin/reamer-exo-build --version  # reamer-exo-build 4.8.0
+./bin/reamer-csv-build --version  # reamer-csv-build 4.8.0
 ```
 
 Docs: `EXECUTION_SPEC.md` (**authoritative** on fills, slippage, spread,
@@ -249,7 +249,8 @@ Stated plainly, so you can scope the work rather than discover it:
 
 ## Platform
 
-Linux x86-64 and macOS arm64. Windows is not a supported target. See
+Linux x86-64 and macOS arm64, and Windows through WSL2 using the Linux kit.
+There is no native Windows build. See
 `SUPPORTED_PLATFORMS.md` for exact OS versions and the glibc floor —
 and note that if you are deploying Reamer Server on the same image, the
 server's floor is higher and governs the combined image.

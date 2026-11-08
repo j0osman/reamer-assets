@@ -51,7 +51,7 @@ Details below were checked against each project's own pages in November 2026.
 - Spread, slippage, commission, swap and margin are set per instrument, under a public [execution specification](/docs/execution-spec.html). With a fixed seed, output matches to the byte.
 - Reamer Server calls your pre-trade gate on every order, and `reamer_relay_*` sends research orders to it. You write the broker connector, and the kit has a worked FIX 4.4 example.
 
-They cover strategies on time, tick, volume, dollar or custom bars, from minutes to days, and you bring your own data. Reamer Research runs on Linux x86-64 and on macOS on Apple Silicon, and Reamer Server on Linux. See [How do Reamer Research and Reamer Server compare with QuantRocket?](/faq/reamer-labs-vs-quantrocket.html)
+They cover strategies on time, tick, volume, dollar or custom bars, from minutes to days, and you bring your own data. Reamer Research runs on Linux x86-64, on macOS on Apple Silicon and on Windows through WSL2, and Reamer Server on Linux. See [How do Reamer Research and Reamer Server compare with QuantRocket?](/faq/reamer-labs-vs-quantrocket.html)
 
 ## How to choose
 

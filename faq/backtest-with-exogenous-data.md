@@ -79,6 +79,6 @@ The note [Testing earnings strategies with exogenous data](/notes/testing-earnin
 - **The current value, not a history.** The callback receives the latest visible value for each ticker. If the strategy needs earlier values, it keeps them itself.
 - **Your timestamps are trusted.** The engine enforces the order of visibility; it cannot know when your data was really available.
 - **No data supplied.** Earnings, fundamentals and every other series are yours to source and stamp.
-- **No Windows.** It runs on Linux x86-64 and macOS on Apple Silicon.
+- **No native Windows build.** It runs on Linux x86-64, on macOS on Apple Silicon, and on Windows through WSL2.
 
 The $225 trial includes the full kit, the converter and the format specification, so you can build a sidecar from your own data and check where each value first appears before buying a licence.

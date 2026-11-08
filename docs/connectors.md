@@ -73,7 +73,7 @@ is the complete contract.
 | Path | What it is |
 | --- | --- |
 | `reference-cpp/` | An RAII wrapper over the C ABI and four runnable examples: buy and hold, a Donchian breakout, an ATR stop with brackets, and a strategy whose orders are rejected on purpose. |
-| `reference-python/` | A ctypes binding with numpy lookback windows, four strategy templates, and `examples/quickstart_run.py`, which runs end to end on a bundled 100-bar sample CSV. |
+| `reference-python/` | A ctypes binding with numpy lookback windows, six strategy templates, `fetchers/` for historical bars from Alpaca or Databento, and `examples/quickstart_run.py`, which runs end to end on a bundled 100-bar sample CSV. |
 | `bin/reamer-csv-build` | Converts an OHLCV CSV into the `.bin` bar file the engine memory-maps, with a parse report. Needs no licence. |
 | `bin/reamer-exo-build` | Converts a two-column CSV into the `.exo.bin` sidecar for non-price data. Needs no licence. |
 | `bin/research-bench` | A prebuilt benchmark: a real throughput number on your hardware with no compiler. |

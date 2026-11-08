@@ -26,9 +26,9 @@ Independent quants and firms buy the same products at the same prices. A Reamer 
 - **High-frequency or order-book strategies.** Both products work on bars and order intents, not on level 2 or level 3 data, and are not built for the latency race.
 - **Options.** There is no options pricing, greeks, exercise or expiry modelling.
 - **Discretionary or point-and-click trading.** There is no charting interface or strategy builder; you write code.
-- **You want data included.** No market data ships. You bring your own bars, and equities must already be adjusted for splits and dividends.
+- **You want data included.** No market data ships. You bring your own bars or pull them from your own Alpaca or Databento account with the bundled fetchers, and equities must already be adjusted for splits and dividends.
 - **You want it hosted.** Both run on your own machines; there is no cloud version.
 - **You want a broker connection out of the box.** Reamer Server connects to any broker you write a connector for. The kit has a worked FIX 4.4 example, not a certified connection.
-- **Windows.** [Reamer Research](/faq/what-is-reamer-research.html) runs on Linux x86-64 and macOS on Apple Silicon; Reamer Server on Linux x86-64 only.
+- **Windows.** [Reamer Research](/faq/what-is-reamer-research.html) has no native Windows build but runs through WSL2; Reamer Server runs on Linux x86-64 only.
 
 If you are unsure, the 30-day trial ($225 for Research, $900 for Server) is the way to check fit on your own strategy before buying a year. See [pricing](/pricing.html).

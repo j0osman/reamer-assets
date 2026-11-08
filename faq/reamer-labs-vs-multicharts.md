@@ -30,12 +30,12 @@ Details below were checked against MultiCharts' own pages in November 2026.
 - **Byte-identical runs.** With a fixed seed, output matches to the byte, which suits audit and regression tests.
 - **Several instruments on one account.** Instruments share one wall clock and one account in every Reamer Research run.
 - **Live through your own gate.** Reamer Server runs your pre-trade gate on every order and sends accepted orders through a broker connector you write. The kit has a worked FIX 4.4 example. MultiCharts ships ready broker connections.
-- **Different machines.** Both products run on Linux x86-64, and Reamer Research also runs on macOS on Apple Silicon. Neither runs on Windows.
+- **Different machines.** Both products run on Linux x86-64. Reamer Research also runs on macOS on Apple Silicon and on Windows through WSL2; Reamer Server does not run on Windows.
 
 ## Which to choose
 
-- **MultiCharts** if you work on Windows, want charts and ready broker connections, write strategies in an EasyLanguage style, or do not want to run your own software.
-- **Reamer Labs** if you write Python or C++, run on Linux or an Apple Silicon Mac, need strategies that call your own code, and want fills you can read and rerun to the byte. See [Who are Reamer Research and Reamer Server for?](/faq/who-its-for.html)
+- **MultiCharts** if you want a native Windows application, want charts and ready broker connections, write strategies in an EasyLanguage style, or do not want to run your own software.
+- **Reamer Labs** if you write Python or C++, run on Linux, an Apple Silicon Mac or Windows through WSL2, need strategies that call your own code, and want fills you can read and rerun to the byte. See [Who are Reamer Research and Reamer Server for?](/faq/who-its-for.html)
 
 ## Price
 

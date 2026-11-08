@@ -20,14 +20,37 @@ image. See "Running both products on one image" below.
 
 | | |
 | --- | --- |
-| **OS** | Linux (x86-64), macOS (arm64) |
+| **OS** | Linux (x86-64), macOS (arm64), Windows through WSL2 (x86-64) |
 | **Linux glibc floor** | **2.35** — the shipped `libreamer_research.so` requires no `GLIBC_` symbol newer than 2.35 |
 | **macOS deployment target** | 11.0 (Big Sur), Apple Silicon |
 | **C++ standard** | C++20 |
-| **Windows** | Not a supported target |
+| **Windows** | Through WSL2 only, using the Linux x86-64 kit. No native Windows build |
 
 Distributions meeting the 2.35 floor include Ubuntu 22.04 and later,
 Debian 12 and later, and RHEL 9 and later.
+
+### Windows through WSL2
+
+On Windows, Reamer Research runs inside WSL2 from the same Linux x86-64
+kit. Nothing is installed on the Windows side. The distribution inside
+WSL2 must meet the same 2.35 glibc floor, so Ubuntu 22.04 or later works.
+
+- **WSL2, not WSL1.** WSL1 has no Linux kernel and is not supported.
+  `uname -r` inside the distribution ends in `-WSL2` on WSL2.
+- **The licence binds to the WSL machine ID.** WSL2 gives its VM a new MAC
+  address on every restart, so under a WSL kernel the machine fingerprint
+  uses the distribution's `/etc/machine-id` in place of the MAC. An
+  activation survives `wsl --shutdown` and a Windows reboot. Unregistering
+  or reinstalling the distribution creates a new machine ID, so deactivate
+  first, as you would before moving to a new machine. See
+  [Licensing](/docs/licensing.html).
+- **Keep data inside the WSL filesystem** (`~/...`), not under `/mnt/c`.
+  Files under `/mnt/c` cross the Windows filesystem bridge and are much
+  slower to read.
+
+A Windows runner with Ubuntu 24.04 under WSL2 checks this: it activates a
+key, runs the quickstart, restarts the WSL VM, and requires the same
+fingerprint, a valid licence and byte-identical output after the restart.
 
 ## Reamer Server
 

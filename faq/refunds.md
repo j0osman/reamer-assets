@@ -34,7 +34,7 @@ The software is sold for use in a trade or profession, by firms and by individua
 ## Avoiding the wrong purchase
 
 - **Pick the right product.** Reamer Research and Reamer Server are licensed separately, and a key for one does not activate the other.
-- **Check your platform.** There is no Windows version, and the two products have different Linux requirements. See [Which operating systems are supported?](/faq/supported-platforms.html)
+- **Check your platform.** There is no native Windows build: Reamer Research runs on Windows through WSL2, Reamer Server does not, and the two products have different Linux requirements. See [Which operating systems are supported?](/faq/supported-platforms.html)
 - **Know what you bring.** Neither product includes market data, and Reamer Server ships no ready-made broker connection. See [Does it include market data?](/faq/market-data.html) and [Which brokers does Reamer Server connect to?](/faq/broker-connections.html)
 
 ## If something goes wrong after buying

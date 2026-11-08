@@ -1,6 +1,6 @@
 ---
 title: Does it include market data?
-description: No. Neither Reamer Research nor Reamer Server includes market data. For Reamer Research you bring your own bars of any type in OHLCV format, as arrays from any source or as memory-mapped files built from CSV, and equities must already be adjusted for splits and dividends. The engine checks that bars are well formed, not that the data is right. Reamer Server takes orders from your strategies, which get their prices from your own feed.
+description: No. Neither Reamer Research nor Reamer Server includes market data, but Reamer Research ships fetchers that pull historical bars from your own Alpaca or Databento account straight into a backtest. Otherwise you bring your own bars of any type in OHLCV format, as arrays from any source or as memory-mapped files built from CSV, and equities must already be adjusted for splits and dividends. The engine checks that bars are well formed, not that the data is right. Reamer Server takes orders from your strategies, which get their prices from your own feed.
 stage: 4
 order: 29
 product: both
@@ -9,12 +9,13 @@ date: 2026-10-02
 topics: market-data, ohlc
 ---
 
-No. Neither Reamer Research nor Reamer Server includes market data. For Reamer Research you bring your own bars of any type in OHLCV format, as arrays from any source or as memory-mapped files built from CSV, and equities must already be adjusted for splits and dividends. The engine checks that bars are well formed, not that the data is right. Reamer Server takes orders from your strategies, which get their prices from your own feed.
+No. Neither Reamer Research nor Reamer Server includes market data, but Reamer Research ships fetchers that pull historical bars from your own Alpaca or Databento account straight into a backtest. Otherwise you bring your own bars of any type in OHLCV format, as arrays from any source or as memory-mapped files built from CSV, and equities must already be adjusted for splits and dividends. The engine checks that bars are well formed, not that the data is right. Reamer Server takes orders from your strategies, which get their prices from your own feed.
 
 The only data in the kit is a 100-bar daily sample, so the quickstart runs on its first try.
 
 ## Getting bars into Reamer Research
 
+- **From Alpaca or Databento.** `reference-python/fetchers/` downloads historical bars from your own Alpaca account (US stocks and crypto) or Databento account (OHLCV, including continuous futures) straight into a backtest, and `examples/fetch_and_run.py` does it in one command. Alpaca crypto needs no account. The engine itself makes no network calls. Alpaca stock bars arrive adjusted for splits and dividends. Each Databento request is priced first, and one over your limit is refused.
 - **Arrays from any source.** Load bars from CSV with pandas or numpy, a database or a vendor API, and pass them in as arrays: timestamp, open, high, low, close and volume for each bar. This works from Python, C++ or any language that can call C.
 - **`.bin` files.** `bin/reamer-csv-build AAPL.csv AAPL.bin` converts a CSV. It detects the delimiter, columns and timestamp format, and reports what it skipped. Timestamps are whole seconds, so two rows at the same timestamp stop it unless `--keep-first` keeps the first bar of each second. It needs no license. Through the C interface, `reamer_run_backtest_files()` memory-maps these files, so a dataset larger than RAM runs, and `start_ts` and `end_ts` select a date range without rewriting them. The Python binding takes arrays.
 - **One instrument per file.** If a CSV holds several symbols, the converter stops until `--symbol` selects one.

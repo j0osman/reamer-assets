@@ -28,7 +28,7 @@ Details below were checked against KX's own pages in November 2026.
 - **An engine, not a database.** You load bars from any source and pass them in as arrays, or use memory-mapped `.bin` files for data larger than RAM. It has no query language and no streaming data store.
 - **Your own language.** Strategies are written in Python or C++, or any language that can call C. You do not need to learn q.
 - **Byte-identical runs.** With a fixed seed, output matches to the byte, including randomised spread and slippage.
-- **Built for bars.** It handles time, tick, volume, dollar or custom bars, and it runs on Linux x86-64 and on macOS on Apple Silicon.
+- **Built for bars.** It handles time, tick, volume, dollar or custom bars, and it runs on Linux x86-64, on macOS on Apple Silicon and on Windows through WSL2.
 
 ## Using both
 

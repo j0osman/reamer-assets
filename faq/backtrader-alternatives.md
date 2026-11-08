@@ -35,7 +35,7 @@ Details below were checked against each project's own pages in November 2026.
 ## Closest to how Backtrader works
 
 - **backtesting.py** has the same bar-by-bar idea and a smaller API, with interactive charts. It trades one instrument per strategy, so a Backtrader strategy with several data feeds will not port directly.
-- **[Reamer Research](/products/reamer-research.html)** calls your strategy on every bar, from Python or C++, and returns every order, fill and closed trade. Spread, slippage, commission, overnight swap and margin are set per instrument. A public [execution specification](/docs/execution-spec.html) states how orders fill. It has no charts, ready indicators or analyzers of the kind Backtrader ships, and it runs on Linux x86-64 and on macOS on Apple Silicon, with no Windows version. See [How does Reamer Research compare with Backtrader?](/faq/reamer-research-vs-backtrader.html)
+- **[Reamer Research](/products/reamer-research.html)** calls your strategy on every bar, from Python or C++, and returns every order, fill and closed trade. Spread, slippage, commission, overnight swap and margin are set per instrument. A public [execution specification](/docs/execution-spec.html) states how orders fill. It has no charts, ready indicators or analyzers of the kind Backtrader ships, and it runs on Linux x86-64, on macOS on Apple Silicon and on Windows through WSL2. See [How does Reamer Research compare with Backtrader?](/faq/reamer-research-vs-backtrader.html)
 
 ## Different models
 

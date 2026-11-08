@@ -29,7 +29,7 @@ Details below were checked against the vendors' own pages in November 2026.
 - **Fill rules in writing.** The public [execution specification](/docs/execution-spec.html) covers spread, slippage, commission, overnight swap, margin, gaps, order lifetimes and what fills first inside a bar.
 - **Byte-identical runs.** With a fixed seed, output matches to the byte, including randomised spread and slippage.
 - **Your strategy in your language.** Strategies run in Python or C++, or any language that can call C, on each bar. Each run returns every order, fill and closed trade.
-- **One machine, published prices.** It runs on one Linux x86-64 machine or Apple Silicon Mac, offline after activation, and you buy it self-serve. There is no Windows version.
+- **One machine, published prices.** It runs on one Linux x86-64 machine, Apple Silicon Mac or Windows PC through WSL2, offline after activation, and you buy it self-serve.
 
 ## Using both
 

@@ -28,7 +28,7 @@ How fills are decided, including stops and targets inside one bar, is set out in
 - Mid-frequency strategies on bars of any type: time, tick, volume, dollar, imbalance or your own custom rule. Order-book (level 2 or level 3), high-frequency and options strategies are a different kind of engine.
 - Batch runs over historical bars. Live order handling, sequencing and your pre-trade gate run in Reamer Server, which the relay connects to.
 - Your own data. You bring your own bars, already adjusted for splits and dividends.
-- Linux x86-64 and macOS on Apple Silicon.
+- Linux x86-64, macOS on Apple Silicon, and Windows through WSL2.
 
 ## How it compares
 

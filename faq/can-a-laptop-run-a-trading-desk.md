@@ -55,6 +55,6 @@ Reamer Labs was built around this question: one engine for research and one for 
 - At eight strategies on four cores, the middle order barely moved, to 100 microseconds, but the slowest 1% rose to 4.2 milliseconds. No orders were lost at any strategy count tested. That is the one-strategy-per-core rule measured, and the 64-core run showed the same limit at around 64 strategies.
 - The server keeps no state of its own between runs. On start, order and position state is rebuilt from your broker connector, so a restart does not leave two versions of the truth to reconcile.
 
-Two limits to check before choosing a laptop. Reamer Server runs on Linux x86-64 only, with glibc 2.39 or newer. Reamer Research also runs on Apple Silicon Macs, so a Mac can do the research but not the live side. And each product's seat covers one machine: research and live trading on the same laptop use one seat of each.
+Two limits to check before choosing a laptop. Reamer Server runs on Linux x86-64 only, with glibc 2.39 or newer. Reamer Research also runs on Apple Silicon Macs and on Windows through WSL2, so a Mac or a Windows laptop can do the research but not the live side. And each product's seat covers one machine: research and live trading on the same laptop use one seat of each.
 
 The engines make one machine enough on speed. Keeping that machine on, connected and uncontended while it trades is still your part of the job.

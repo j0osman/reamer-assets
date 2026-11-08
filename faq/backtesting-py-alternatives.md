@@ -54,7 +54,7 @@ Details below were checked against each project's own pages in November 2026.
 - Fill rules are written down in a public [execution specification](/docs/execution-spec.html). A seeded tick path runs through every bar, so a stop and a target in one bar resolve the same way on every run.
 - Each run returns every order, fill and closed trade.
 
-It covers strategies on time, tick, volume, dollar or custom bars, and runs on Linux x86-64 and on macOS on Apple Silicon. You bring your own data. There are no built-in charts or optimizer: a sweep is your own loop over runs, and separate runs can use every core.
+It covers strategies on time, tick, volume, dollar or custom bars, and runs on Linux x86-64, on macOS on Apple Silicon and on Windows through WSL2. You bring your own data or pull it from your Alpaca or Databento account with the bundled fetchers. There are no built-in charts or optimizer: a sweep is your own loop over runs, and separate runs can use every core.
 
 ## What a published benchmark measured
 

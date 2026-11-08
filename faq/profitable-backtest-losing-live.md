@@ -75,4 +75,4 @@ The procedure needs two things from a backtest: a full trade list, and the same 
 
 [Reamer Research](/products/reamer-research.html) returns every order, fill and closed trade, with the reason for every rejected order, and a fixed seed gives byte-identical output on every run. Spread, slippage, commission and overnight swap are set per instrument, so you can put your measured costs back into the model. `reamer_run_monte_carlo()` resamples a run's trades to show how much of a drawdown was trade-order luck.
 
-It cannot tell you why your broker filled you where it did, and it will not give a strategy an edge it does not have. It runs on Linux x86-64 and on macOS on Apple Silicon. The $225 30-day trial lets you run this comparison on your own strategy and data. See [pricing](/pricing.html).
+It cannot tell you why your broker filled you where it did, and it will not give a strategy an edge it does not have. It runs on Linux x86-64, on macOS on Apple Silicon and on Windows through WSL2. The $225 30-day trial lets you run this comparison on your own strategy and data. See [pricing](/pricing.html).

@@ -210,7 +210,11 @@ step. Contact support@reamerlabs.com to release the seat manually.
 ## Self-Service Activation Failure Modes
 
 A machine's identity is `machineFingerprint()`:
-`SHA-256(hostname:first_mac)`. The four failure modes below all trace back
+`SHA-256(hostname:first_mac)`. Under WSL2 on Windows, the MAC is replaced
+by the distribution's `/etc/machine-id`, giving
+`SHA-256(hostname:wsl-machine-id:<id>)`, because WSL2 assigns its VM a new
+MAC on every restart and the machine ID survives it. Native Linux and macOS
+are unchanged. The four failure modes below all trace back
 to that fingerprint, and every one of them looks like a self-service error
 to a first-time user. Each is expected behavior, not a bug.
 
@@ -243,7 +247,8 @@ provisioning rather than something the platform picks. Two hosts that
 share a hostname *and* degrade to the all-zeros MAC share a fingerprint,
 and the second to activate is refused.
 
-The fingerprint is `SHA-256(hostname:first_mac)`, and `reamer-license`
+The fingerprint is `SHA-256(hostname:first_mac)` (WSL2: machine ID in place
+of the MAC, as above), and `reamer-license`
 has no subcommand that prints it, so check the two inputs directly on
 each host before activating — `hostname`, and the MAC of the first
 non-virtual interface (`ip link`). If two hosts agree on both, they will
