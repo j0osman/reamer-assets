@@ -44,7 +44,7 @@ Details below were checked against each project's own pages in November 2026.
 
 A database stores and reads your data. It does not decide how orders fill. ArcticDB has no fill model, cost model or order handling, so a backtest on it is your own code.
 
-[Reamer Research](/products/reamer-research.html) is an engine for that part, for strategies on time, tick, volume, dollar or custom bars. Bid and ask, spread, slippage, commission, swap, margin and order lifetimes are in place under a public [execution specification](/docs/execution-spec.html). It stores no data, so you can keep ArcticDB or any database here and pass in bars. It works on bars, not ticks, and runs on Linux and macOS. See [How does Reamer Research compare with ArcticDB?](/faq/reamer-research-vs-arcticdb.html)
+[Reamer Research](/products/reamer-research.html) is an engine for that part, for strategies on time, tick, volume, dollar or custom bars. Bid and ask, spread, slippage, commission, swap, margin and order lifetimes are in place under a public [execution specification](/docs/execution-spec.html). It stores no data, so you can keep ArcticDB or any database here and pass in bars. It works on bars, not ticks, and runs on Linux, macOS and Windows through WSL2. See [How does Reamer Research compare with ArcticDB?](/faq/reamer-research-vs-arcticdb.html)
 
 ## How to choose
 

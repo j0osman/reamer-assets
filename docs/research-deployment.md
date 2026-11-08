@@ -1,6 +1,6 @@
 ---
 title: Deploying Reamer Research
-description: Verify, license, build and run Reamer Research: the C ABI entry points, linking on Linux and macOS, and the strategy callback contract.
+description: Verify, license, build and run Reamer Research: the C ABI entry points, linking on Linux, macOS and Windows through WSL2, and the strategy callback contract.
 group: integration
 order: 1
 product: research
