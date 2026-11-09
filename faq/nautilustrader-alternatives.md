@@ -52,7 +52,7 @@ Details below were checked against each project's own pages in November 2026.
 
 ## What a published benchmark measured
 
-[What a Backtest Costs](https://doi.org/10.6084/m9.figshare.34787745) ran NautilusTrader 1.231.0, Backtrader, LEAN and Reamer Research on the same strategies and data, on one AMD EPYC 9575F on 2026-10-25. There was no commission, spread or slippage, and all figures use bars, not ticks or order books.
+[What a Backtest Costs](https://reamerlabs.com/papers/what-a-backtest-costs.pdf) ran NautilusTrader 1.231.0, Backtrader, LEAN and Reamer Research on the same strategies and data, on one AMD EPYC 9575F on 2026-10-25. There was no commission, spread or slippage, and all figures use bars, not ticks or order books.
 
 | Engine | 500,000 bars | 100 tickers of 35,064 bars each |
 |---|---|---|

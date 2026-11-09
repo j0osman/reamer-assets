@@ -7,7 +7,7 @@ topics: benchmark, manycore, latency, reproducibility, determinism, oms
 cites: replication, whitepaper
 ---
 
-In September I published a [whitepaper](https://doi.org/10.6084/m9.figshare.33972466) that maps the operating envelope of Reamer Server and Reamer Research on an AMD EPYC 9575F. A single run on a single date is one data point. So six weeks later I rented the same CPU model and measured again. That paper is now public: [Does the Operating Envelope Survive an Upgrade?](https://doi.org/10.6084/m9.figshare.34787757)
+In September I published a [whitepaper](https://reamerlabs.com/papers/predictable-trading-infrastructure.pdf) that maps the operating envelope of Reamer Server and Reamer Research on an AMD EPYC 9575F. A single run on a single date is one data point. So six weeks later I rented the same CPU model and measured again. That paper is now public: [Does the Operating Envelope Survive an Upgrade?](https://reamerlabs.com/papers/operating-envelope-replication.pdf)
 
 ## What changed in between
 
@@ -56,4 +56,4 @@ The run also measured things the first paper did not: a concurrency sweep in ste
 
 One machine per run, one date per run, and three changes at once. Both servers were the same CPU model from the same provider, but I cannot confirm they were the same physical machine. Reproduce the figures on your own hardware before you rely on any one of them.
 
-The full method, the scorecard and every table are in the preprint, [Does the Operating Envelope Survive an Upgrade?](https://doi.org/10.6084/m9.figshare.34787757). The raw outputs are archived openly at [doi.org/10.6084/m9.figshare.34785762](https://doi.org/10.6084/m9.figshare.34785762).
+The full method, the scorecard and every table are in the preprint, [Does the Operating Envelope Survive an Upgrade?](https://reamerlabs.com/papers/operating-envelope-replication.pdf). The raw outputs are published at [reamerlabs.com/papers/data/epyc-9575f-4.6.0-raw-artifacts.zip](https://reamerlabs.com/papers/data/epyc-9575f-4.6.0-raw-artifacts.zip).

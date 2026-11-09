@@ -58,7 +58,7 @@ It covers strategies on time, tick, volume, dollar or custom bars, and runs on L
 
 ## What a published benchmark measured
 
-backtesting.py was not tested in [What a Backtest Costs](https://doi.org/10.6084/m9.figshare.34787745), so this page gives no speed figures for it. The study ran Backtrader, NautilusTrader, LEAN and Reamer Research on the same strategies and data. See [What are the best Backtrader alternatives in 2026?](/faq/backtrader-alternatives.html) for the results.
+backtesting.py was not tested in [What a Backtest Costs](https://reamerlabs.com/papers/what-a-backtest-costs.pdf), so this page gives no speed figures for it. The study ran Backtrader, NautilusTrader, LEAN and Reamer Research on the same strategies and data. See [What are the best Backtrader alternatives in 2026?](/faq/backtrader-alternatives.html) for the results.
 
 ## How to choose
 

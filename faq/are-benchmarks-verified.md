@@ -1,6 +1,6 @@
 ---
 title: Have the benchmarks been independently verified?
-description: No. No third party has audited the Reamer Research or Reamer Server benchmarks; Reamer Labs ran them itself. What you can check is the method, published as a whitepaper with a DOI, the raw output of every run, also published, and your own hardware, using the benchmark programs that ship in each kit.
+description: No. No third party has audited the Reamer Research or Reamer Server benchmarks; Reamer Labs ran them itself. What you can check is the method, published as a whitepaper, the raw output of every run, also published, and your own hardware, using the benchmark programs that ship in each kit.
 stage: 5
 order: 37
 product: both
@@ -9,7 +9,7 @@ date: 2026-10-03
 topics: benchmark, reproducibility, latency
 ---
 
-No. No third party has audited the Reamer Research or Reamer Server benchmarks; Reamer Labs ran them itself. What you can check is the method, published as a whitepaper with a DOI, the raw output of every run, also published, and your own hardware, using the benchmark programs that ship in each kit.
+No. No third party has audited the Reamer Research or Reamer Server benchmarks; Reamer Labs ran them itself. What you can check is the method, published as a whitepaper, the raw output of every run, also published, and your own hardware, using the benchmark programs that ship in each kit.
 
 ## Who ran them, and where
 
@@ -20,8 +20,8 @@ Neither was observed or repeated by anyone else.
 
 ## What you can check
 
-- **The method.** The [whitepaper](https://doi.org/10.6084/m9.figshare.33972466) sets out the hardware, settings, workloads and how each figure was measured. Its [replication](https://doi.org/10.6084/m9.figshare.34787757) repeats the measurements on release 4.6.0 and gives the current figures.
-- **The raw output.** The raw benchmark data of the [first run](https://doi.org/10.6084/m9.figshare.33877588) and of the [4.6.0 run](https://doi.org/10.6084/m9.figshare.34785762) hold the unedited console and CSV output behind each published figure. Where a summary and a raw file differ, the raw file is the correct one.
+- **The method.** The [whitepaper](https://reamerlabs.com/papers/predictable-trading-infrastructure.pdf) sets out the hardware, settings, workloads and how each figure was measured. Its [replication](https://reamerlabs.com/papers/operating-envelope-replication.pdf) repeats the measurements on release 4.6.0 and gives the current figures.
+- **The raw output.** The raw benchmark data of the [first run](https://reamerlabs.com/papers/data/epyc-9575f-2026-09-raw-artifacts.zip) and of the [4.6.0 run](https://reamerlabs.com/papers/data/epyc-9575f-4.6.0-raw-artifacts.zip) hold the unedited console and CSV output behind each published figure. Where a summary and a raw file differ, the raw file is the correct one.
 - **Your own machine.** Each kit ships a ready-built benchmark: `research-bench` replays bars through Reamer Research, and `server-bench` sends orders from 1 to 64 strategies through Reamer Server. Both print throughput and latency percentiles, and each kit's `BENCHMARK.md` explains how to read them.
 - **Determinism.** Run the same backtest twice with the same seed and compare the result files byte for byte. That claim needs no benchmark to test.
 

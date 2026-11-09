@@ -35,7 +35,7 @@ spread path. Run any backtest twice and compare. Determinism holds in
 2000 independent backtests with per-run throughput CV 0.66% (1.05× min→max
 spread) on release 4.6.0 — the single-threaded engine has no scheduler in
 its path to introduce run-to-run drift. See the [replication of the
-whitepaper](https://doi.org/10.6084/m9.figshare.34787757).
+whitepaper](https://reamerlabs.com/papers/operating-envelope-replication.pdf).
 
 **Scope.** Mid-frequency strategies on bars of any type (time, tick, volume,
 dollar, imbalance or your own custom rule), intraday to multi-day. Not

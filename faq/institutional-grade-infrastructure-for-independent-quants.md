@@ -66,7 +66,7 @@ Before paying for any product sold with the word, look for evidence you can chec
 
 - **One seat is one machine.** Any number of processes and cores on that machine run under one seat.
 - **Your code stays on your machine.** After activation they run offline; only activation and deactivation contact the licence server.
-- **Evidence.** The benchmark method is in a whitepaper with a DOI, and the raw output is published. See [Reamer Research findings](/blog/reamer-research-findings-epyc.html) and [Reamer Server findings](/blog/reamer-server-findings-epyc.html).
+- **Evidence.** The benchmark method is in a whitepaper, and the raw output is published. See [Reamer Research findings](/blog/reamer-research-findings-epyc.html) and [Reamer Server findings](/blog/reamer-server-findings-epyc.html).
 - **Verifiable releases.** Checksums and a signature for every release, and a software bill of materials for every third-party component.
 - **Procurement papers.** Each kit includes a vendor questionnaire pack covering security, support, data handling and business continuity, and a record of the security review already done.
 

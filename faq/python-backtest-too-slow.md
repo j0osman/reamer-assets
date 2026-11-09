@@ -52,7 +52,7 @@ The last point has limits. A strategy that does slow pandas work on every bar st
 
 ## How much a compiled engine changes
 
-[What a Backtest Costs](https://doi.org/10.6084/m9.figshare.34787745) ran the same 20-bar breakout on 500,000 bars, on one AMD EPYC 9575F on 2026-10-25, with no commission, spread or slippage.
+[What a Backtest Costs](https://reamerlabs.com/papers/what-a-backtest-costs.pdf) ran the same 20-bar breakout on 500,000 bars, on one AMD EPYC 9575F on 2026-10-25, with no commission, spread or slippage.
 
 - **Backtrader, entirely in Python:** 15.04 s.
 - **Reamer Research, strategy in Python:** 3.38 s.

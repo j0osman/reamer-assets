@@ -31,7 +31,7 @@ QuantConnect is a full hosted platform: market data, a cloud IDE, backtesting on
 
 ## What a published benchmark measured
 
-[What a Backtest Costs](https://doi.org/10.6084/m9.figshare.34787745) ran Backtrader, NautilusTrader, LEAN and Reamer Research on the same strategies and data, on one AMD EPYC 9575F on 2026-10-25. There was no commission, spread or slippage, and the realistic strategy was a 20-bar breakout. The study's author builds and sells Reamer Research, so the [runners and raw results are public](https://github.com/j0osman/research-engine-benchmark) and you can check every figure.
+[What a Backtest Costs](https://reamerlabs.com/papers/what-a-backtest-costs.pdf) ran Backtrader, NautilusTrader, LEAN and Reamer Research on the same strategies and data, on one AMD EPYC 9575F on 2026-10-25. There was no commission, spread or slippage, and the realistic strategy was a 20-bar breakout. The study's author builds and sells Reamer Research, so the [runners and raw results are public](https://github.com/j0osman/research-engine-benchmark) and you can check every figure.
 
 The study ran the LEAN engine locally, built from source. It did not measure QuantConnect's cloud, data or live trading.
 

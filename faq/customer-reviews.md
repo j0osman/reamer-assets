@@ -23,7 +23,7 @@ Reamer Research and Reamer Server are listed on Product Hunt and SaaSHub, where 
 Reviews tell you whether other people were satisfied. The evidence below tells you whether the claims are true, which reviews cannot.
 
 - **The integration recordings.** Uncut recordings show an AI agent integrating each product from the kit documents alone, start to finish. See [How long does integration take?](/faq/integration-time.html)
-- **The benchmark method and raw data.** Both are published with DOIs, so you can check how each figure was measured and read the unedited output. See [Have the benchmarks been independently verified?](/faq/are-benchmarks-verified.html)
+- **The benchmark method and raw data.** Both are published, so you can check how each figure was measured and read the unedited output. See [Have the benchmarks been independently verified?](/faq/are-benchmarks-verified.html)
 - **A month on your own hardware.** A $20 month of Reamer Research, or a $2,000 30-day Reamer Server trial, lets you run the benchmarks and your own strategies on your own hardware. See [pricing](/pricing.html).
 
 If you want to talk to the person who built it before buying, write to hello@reamerlabs.com. See also [Who makes Reamer Research and Reamer Server?](/faq/who-makes-it.html)

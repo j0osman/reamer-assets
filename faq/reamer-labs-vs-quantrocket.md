@@ -38,7 +38,7 @@ Reamer Research runs on Linux x86-64, on macOS on Apple Silicon and on Windows t
 
 ## Speed
 
-QuantRocket's backtesters were not tested in [What a Backtest Costs](https://doi.org/10.6084/m9.figshare.34787745), so this page gives no speed figures for them.
+QuantRocket's backtesters were not tested in [What a Backtest Costs](https://reamerlabs.com/papers/what-a-backtest-costs.pdf), so this page gives no speed figures for them.
 
 ## Which to choose
 

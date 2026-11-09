@@ -1,6 +1,6 @@
 ---
 title: Who makes Reamer Research and Reamer Server? Is Reamer Labs legitimate?
-description: Reamer Labs is Chaitanya Palghadmal, a sole proprietor in Pune, India, who writes both products, publishes their benchmarks and answers the support email. It is a real business but a small, new one, so check it rather than trust it: the legal terms name him, payment runs through Paddle as merchant of record, and the method and raw data behind the figures are published with DOIs.
+description: Reamer Labs is Chaitanya Palghadmal, a sole proprietor in Pune, India, who writes both products, publishes their benchmarks and answers the support email. It is a real business but a small, new one, so check it rather than trust it: the legal terms name him, payment runs through Paddle as merchant of record, and the method and raw data behind the figures are published.
 stage: 5
 order: 36
 product: both
@@ -8,7 +8,7 @@ next: are-benchmarks-verified, single-maintainer-risk, data-privacy, security-an
 date: 2026-10-03
 ---
 
-Reamer Labs is Chaitanya Palghadmal, a sole proprietor in Pune, India, who writes both products, publishes their benchmarks and answers the support email. It is a real business but a small, new one, so check it rather than trust it: the legal terms name him, payment runs through Paddle as merchant of record, and the method and raw data behind the figures are published with DOIs.
+Reamer Labs is Chaitanya Palghadmal, a sole proprietor in Pune, India, who writes both products, publishes their benchmarks and answers the support email. It is a real business but a small, new one, so check it rather than trust it: the legal terms name him, payment runs through Paddle as merchant of record, and the method and raw data behind the figures are published.
 
 ## Who is behind it
 
@@ -19,7 +19,7 @@ One person, by design. Chaitanya started as a retail trader and became an indepe
 - **The legal party.** The [terms](/terms.html) and the licence in the kit name Chaitanya Palghadmal, doing business as Reamer Labs, under Indian law.
 - **The payment.** Checkout runs through [Paddle](https://www.paddle.com), which acts as merchant of record: it issues the invoice and handles your card, and Reamer Labs never sees your payment details.
 - **The author's record.** His [ORCID profile](https://orcid.org/0000-0003-0173-0067) ties his name to his published research.
-- **The method.** The [whitepaper](https://doi.org/10.6084/m9.figshare.33972466) behind the performance figures has a DOI, and so does the [raw benchmark data](https://doi.org/10.6084/m9.figshare.33877588). Where the two differ, the raw files win.
+- **The method.** The [whitepaper](https://reamerlabs.com/papers/predictable-trading-infrastructure.pdf) behind the performance figures is published, and so is the [raw benchmark data](https://reamerlabs.com/papers/data/epyc-9575f-2026-09-raw-artifacts.zip). Where the two differ, the raw files win.
 - **The integrations.** Uncut recordings show an AI agent integrating each product from the kit documents alone. See [How long does integration take?](/faq/integration-time.html)
 - **The support record.** Bug reports are tracked in public on [GitHub](https://github.com/j0osman/reamer-support).
 

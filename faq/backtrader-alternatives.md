@@ -50,7 +50,7 @@ Details below were checked against each project's own pages in November 2026.
 
 ## What a published benchmark measured
 
-[What a Backtest Costs](https://doi.org/10.6084/m9.figshare.34787745) ran four engines on the same strategies and data, on one AMD EPYC 9575F on 2026-10-25. This is one backtest of a 20-bar breakout on 500,000 bars, with no commission, spread or slippage.
+[What a Backtest Costs](https://reamerlabs.com/papers/what-a-backtest-costs.pdf) ran four engines on the same strategies and data, on one AMD EPYC 9575F on 2026-10-25. This is one backtest of a 20-bar breakout on 500,000 bars, with no commission, spread or slippage.
 
 | Engine | Time |
 |---|---|

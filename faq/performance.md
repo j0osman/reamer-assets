@@ -11,7 +11,7 @@ topics: latency, benchmark, manycore
 
 On a 64-core AMD EPYC 9575F and release 4.6.0, Reamer Research replays about 1.8 million bars a second in one backtest, and Reamer Server takes an order from a strategy to an accepted event in a median of 10.3 µs, with about 200,000 to 220,000 orders a second across many strategies.
 
-Every figure below is from the kits' own benchmark documents or from the EPYC measurements of release 4.6.0, published as a [replication of the whitepaper](https://doi.org/10.6084/m9.figshare.34787757). Each one measures something specific, so read the conditions with the number.
+Every figure below is from the kits' own benchmark documents or from the EPYC measurements of release 4.6.0, published as a [replication of the whitepaper](https://reamerlabs.com/papers/operating-envelope-replication.pdf). Each one measures something specific, so read the conditions with the number.
 
 ## Reamer Research
 
@@ -32,4 +32,4 @@ These figures leave out your gate's own logic, the network and the broker. A bro
 
 ## Measure it yourself
 
-The Research kit ships `research-bench` and the Server kit ships `server-bench`. Each runs the benchmark above on your own machine in one command, during a [$20 month of Reamer Research or the 30-day Reamer Server trial](/pricing.html). The method is in the [whitepaper](https://doi.org/10.6084/m9.figshare.33972466), and the EPYC results for release 4.6.0 are in its [replication](https://doi.org/10.6084/m9.figshare.34787757).
+The Research kit ships `research-bench` and the Server kit ships `server-bench`. Each runs the benchmark above on your own machine in one command, during a [$20 month of Reamer Research or the 30-day Reamer Server trial](/pricing.html). The method is in the [whitepaper](https://reamerlabs.com/papers/predictable-trading-infrastructure.pdf), and the EPYC results for release 4.6.0 are in its [replication](https://reamerlabs.com/papers/operating-envelope-replication.pdf).
