@@ -30,7 +30,7 @@ Details below were checked against each project's own pages in November 2026.
 | DolphinDB | Database and backtesting | One system for data, factors and order-book backtests | Free community edition with limits, commercial editions |
 | ArcticDB | Dataframe store | Python research teams | Free for non-commercial use, commercial licence otherwise |
 | Databento | Managed market data | Historical and live data without a platform | Usage-based, plans for fuller access |
-| Reamer Research | Backtesting on bars | Fill rules and costs for strategies on bars | $1,800 per seat per year |
+| Reamer Research | Backtesting on bars | Fill rules and costs for strategies on bars | $20 per seat per month |
 
 ## Tick databases
 
@@ -59,4 +59,4 @@ Details below were checked against each project's own pages in November 2026.
 | Market data without a platform | Databento |
 | A backtest on bars with fill rules you can read | Reamer Research |
 
-See [Who are Reamer Research and Reamer Server for?](/faq/who-its-for.html) Reamer Research has a $225 30-day trial; see [pricing](/pricing.html).
+See [Who are Reamer Research and Reamer Server for?](/faq/who-its-for.html) Reamer Research is $20 a month, cancel any time; see [pricing](/pricing.html).

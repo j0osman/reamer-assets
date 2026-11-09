@@ -1,6 +1,6 @@
 ---
 title: What is Reamer Server?
-description: Reamer Server is an order management engine that takes a strategy live. It is the core of your trading process, delivered as a library with a stable C interface. It holds order state and sequencing, runs your pre-trade check on every order and sends accepted orders to your broker through a connector you write. It costs $7,200 per seat per year, with a $900 30-day trial.
+description: Reamer Server is an order management engine that takes a strategy live. It is the core of your trading process, delivered as a library with a stable C interface. It holds order state and sequencing, runs your pre-trade check on every order and sends accepted orders to your broker through a connector you write. It costs $24,000 per seat per year, with a $2,000 30-day trial.
 stage: 4
 order: 25
 product: server
@@ -43,4 +43,4 @@ Gate and connector can be written in C, C++, Rust or Go. Strategies connect over
 
 ## Price
 
-$7,200 per seat per year, paid once, with no automatic renewal. The $900 30-day trial includes the full kit. See the [product page](/products/reamer-server.html), [What is an order management engine?](/faq/what-is-an-order-management-engine.html) and [pricing](/pricing.html).
+$24,000 per seat per year, paid once, with no automatic renewal. The $2,000 30-day trial includes the full kit. See the [product page](/products/reamer-server.html), [What is an order management engine?](/faq/what-is-an-order-management-engine.html) and [pricing](/pricing.html).

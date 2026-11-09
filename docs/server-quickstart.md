@@ -66,7 +66,7 @@ Every binary in `bin/` answers `--version`, so you can confirm which build
 you have:
 
 ```bash
-bin/reamer-license --version    # reamer-license 4.8.0
+bin/reamer-license --version    # reamer-license 4.8.1
 ```
 
 Docs: `DEPLOYMENT.md` (quickstart and operations), `CONFIG.md` (every
@@ -157,7 +157,7 @@ record), and `CHANGELOG.md`.
 
 **This archive contains no license key, deliberately.** Your key arrives by
 email on payment, with this kit's download link. It carries the term you
-bought: a 30-day trial or 1 year. Nothing in this zip will activate on its
+bought: a 30-day trial or 1 year (Reamer Server). Nothing in this zip will activate on its
 own.
 
 `reamer_server_run()` refuses to enter its loop without an active license,

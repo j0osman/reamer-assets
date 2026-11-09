@@ -30,7 +30,7 @@ Details below were checked against each project's own pages in November 2026.
 | Backtrader | Python, event-driven | Learning, a first look at an idea | Older connectors | Free (GPL-3.0) |
 | NautilusTrader | Rust core, Python strategies | Ticks, order books, many venues | Yes | Free (LGPL-3.0) |
 | LEAN | C# core, Python or C# strategies | QuantConnect's engine on your machine | Self-run | Free (Apache 2.0) |
-| Reamer Research | Compiled library, event-driven | Strategies on bars with written fill rules | Through Reamer Server | $1,800 per seat per year |
+| Reamer Research | Compiled library, event-driven | Strategies on bars with written fill rules | Through Reamer Server | $20 per seat per month |
 
 ## Python backtesters
 
@@ -57,4 +57,4 @@ Details below were checked against each project's own pages in November 2026.
 | Ticks, order books or ready venue adapters | NautilusTrader |
 | Systematic strategies on bars, with fills you can read and a route to live | Reamer Research and Reamer Server |
 
-See [Who are Reamer Research and Reamer Server for?](/faq/who-its-for.html) Reamer Research has a $225 30-day trial; see [pricing](/pricing.html).
+See [Who are Reamer Research and Reamer Server for?](/faq/who-its-for.html) Reamer Research is $20 a month, cancel any time; see [pricing](/pricing.html).

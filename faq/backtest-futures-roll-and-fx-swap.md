@@ -75,4 +75,4 @@ To test futures and FX properly, an engine should give you:
 - **Off in the worked references.** The C++ and Python reference integrations leave the roll calendar empty and swap at zero. You set them in your own integration.
 - **Bars only.** No options, no order-book data, and no corporate-action adjustment: data must arrive already adjusted for splits and dividends.
 
-The $225 trial includes the full execution specification and the kit, so you can test roll and swap handling on your own data before buying a licence.
+A $20 month includes the full execution specification and the kit, so you can test roll and swap handling on your own data, and cancel if it does not fit.

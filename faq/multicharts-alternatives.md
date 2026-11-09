@@ -30,7 +30,7 @@ Details below were checked in November 2026, against each vendor's own pages whe
 | AmiBroker | Charting and portfolio backtester | AFL | Windows | One-time licence; Ultimate Pack $499 |
 | Zorro | Compact coding environment | lite-C, C++; calls R and Python | Windows, other systems with special installs | Free for private users under limits; Zorro S €35 a month |
 | QuantConnect | Cloud platform | Python, C# | Browser, or LEAN locally | Free tier, paid plans |
-| Reamer Research, Reamer Server | Libraries | Python, C++, or any language that can call C | Linux; Reamer Research also on Apple Silicon Macs and Windows through WSL2 | $1,800 and $7,200 per year |
+| Reamer Research, Reamer Server | Libraries | Python, C++, or any language that can call C | Linux; Reamer Research also on Apple Silicon Macs and Windows through WSL2 | $20 a month and $24,000 a year |
 
 ## Trading applications
 
@@ -56,4 +56,4 @@ Details below were checked in November 2026, against each vendor's own pages whe
 | Data and brokers in the cloud | QuantConnect |
 | Your own system in Python or C++, on Linux or a Mac, with fills you can read | Reamer Research and Reamer Server |
 
-See [Who are Reamer Research and Reamer Server for?](/faq/who-its-for.html) Both have a 30-day paid trial; see [pricing](/pricing.html).
+See [Who are Reamer Research and Reamer Server for?](/faq/who-its-for.html) Reamer Research is $20 a month, cancel any time, and Reamer Server has a paid 30-day trial; see [pricing](/pricing.html).

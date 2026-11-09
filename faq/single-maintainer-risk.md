@@ -18,7 +18,7 @@ Reamer Labs is one person, Chaitanya Palghadmal. There is no team to take over i
 ## What keeps working, and what does not
 
 - **Keeps working:** every activated machine, until the end of the term you paid for. The licence is signed when you activate and checked locally after that, so the licence server going away does not stop it. A running process is never stopped by the licence, even at expiry.
-- **Stops:** bug fixes and new releases, support, renewing when the term ends, and activating on a new machine. Licences are for 30 days or one year, so the longest you are covered without Reamer Labs is the rest of your current term.
+- **Stops:** bug fixes and new releases, support, renewing when the term ends, and activating on a new machine. Reamer Research is paid by the month and Reamer Server for 30 days or one year, so the longest you are covered without Reamer Labs is the rest of your current term.
 
 ## The source escrow
 

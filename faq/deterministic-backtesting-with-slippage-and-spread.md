@@ -36,7 +36,7 @@ For the difference between two runs to mean something, both problems have to be 
 
 ## How to test a vendor's claim
 
-During a trial, with spread and slippage noise switched on:
+During your first month, with spread and slippage noise switched on:
 
 1. **Repeat.** Run the same backtest at least ten times and hash the full output, including the trade and order logs, not just the summary. Every hash should match.
 2. **Change one thing.** Add one order, or one instrument, and compare the logs. Trades the change cannot reach should be identical to the last decimal.
@@ -71,4 +71,4 @@ Everything below is stated in the execution specification that ships with the ki
 - **No built-in seed sweep.** You run the seeds from your own loop and compare the results yourself.
 - **Your own code.** If the strategy draws its own unseeded random numbers or reads the clock, the run will not repeat, however the engine behaves.
 
-The $225 trial includes the full execution specification and the kit, so you can run the four checks above on your own strategy before buying a licence.
+A $20 month includes the full execution specification and the kit, so you can run the four checks above on your own strategy, and cancel if it does not fit.

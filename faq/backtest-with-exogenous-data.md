@@ -81,4 +81,4 @@ The note [Testing earnings strategies with exogenous data](/notes/testing-earnin
 - **No data supplied.** Earnings, fundamentals and every other series are yours to source and stamp.
 - **No native Windows build.** It runs on Linux x86-64, on macOS on Apple Silicon, and on Windows through WSL2.
 
-The $225 trial includes the full kit, the converter and the format specification, so you can build a sidecar from your own data and check where each value first appears before buying a licence.
+A $20 month includes the full kit, the converter and the format specification, so you can build a sidecar from your own data and check where each value first appears, and cancel if it does not fit.

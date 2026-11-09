@@ -94,12 +94,12 @@ If an engine passes, buy the layers that need to be right and build the ones tha
 
 [Reamer Research](/products/reamer-research.html) is the bought core in that in-between setup. It covers the layers that have to be right but are rarely an edge: execution simulation, accounting, metrics, reporting and speed. Your strategies, data pipeline, sweep scripts and analysis stay yours to build around it. Everything below is documented in the kit:
 
-- **The rules, already written.** Market, limit and stop fills, gaps, bracket collisions, spread and slippage, commission, margin, partial closes, overnight financing, futures rolls, multi-asset timing and non-price data are each specified in [`EXECUTION_SPEC.md`](/docs/execution-spec.html). The document ships in the kit rather than on the web, so the 30-day trial below is the way to read it, and test against it, before committing to a year.
+- **The rules, already written.** Market, limit and stop fills, gaps, bracket collisions, spread and slippage, commission, margin, partial closes, overnight financing, futures rolls, multi-asset timing and non-price data are each specified in [`EXECUTION_SPEC.md`](/docs/execution-spec.html). The document ships in the kit rather than on the web, so a month of Reamer Research is the way to read it, and test against it, before committing further.
 - **Checkable output.** With a fixed seed, a run is byte-identical on every repeat. The quickstart asks you to run it twice and compare.
 - **Speed for sweeps.** About 1.8 million bars per second per run on a 64-core EPYC machine on release 4.6.0, with the hardware and method in the [replication of the whitepaper](https://doi.org/10.6084/m9.figshare.34787757) and a benchmark tool in the kit to reproduce it.
 - **A stable interface.** From ABI 7 on, interface versions are additive: a program built against ABI 7 runs unmodified against a newer library. `ABI_VERSIONING_POLICY.md` in the kit states the rules.
 - **Integration in minutes.** An uncut recording shows an AI coding agent, working from the kit documents alone, taking a strategy through the full research loop in about 13 minutes.
 
-The price is USD 1,800 per seat per year, paid once, with nothing renewing automatically, or USD 225 for a 30-day trial to check fit first. See [Pricing](/pricing.html).
+The price is USD 20 per seat per month, billed monthly, and you can cancel any time. See [Pricing](/pricing.html).
 
 What you do not get is the source code: the engine is a precompiled library behind a C interface. Reamer Labs is one person, and a source escrow can be arranged at the licensee's own cost, with the release conditions set out in `LICENSING.md`. The engine's scope is mid-frequency strategies on time, tick, volume, dollar or custom bars. If your strategy needs the order book or options modelling, or the engine itself is your edge, this is one of the cases where building is right.

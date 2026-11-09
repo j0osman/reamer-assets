@@ -65,4 +65,4 @@ The tick path is not the real path, and the specification does not claim it is. 
 - **No exit-reason field.** Which exit fired is read from the exit price against the stop and target levels each trade records.
 - **The path's construction is not published.** The specification states what the path guarantees and how fills are taken from it, not how it is generated.
 
-The $225 trial includes the full execution specification and the kit, so you can run your own bracket strategy and inspect every exit before buying a licence.
+A $20 month includes the full execution specification and the kit, so you can run your own bracket strategy and inspect every exit, and cancel if it does not fit.

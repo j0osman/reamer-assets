@@ -30,4 +30,4 @@ Neither was observed or repeated by anyone else.
 - **Not every figure.** The internal programs behind some figures, such as the cost of crossing the C interface and the largest stress tests, are not in the kits.
 - **Not the absolute numbers.** The shipped benchmarks are built to run on any supported processor, not tuned to yours, so expect somewhat lower figures than the published ones. Compare the shape of the results, such as how latency changes as you add strategies, rather than the exact numbers.
 
-Running the benchmarks needs an activated licence, so the 30-day trial is the way to test them. See [How fast is it?](/faq/performance.html) and [pricing](/pricing.html).
+Running the benchmarks needs an activated licence, so a $20 month of Reamer Research, or the 30-day Reamer Server trial, is the way to test them. See [How fast is it?](/faq/performance.html) and [pricing](/pricing.html).

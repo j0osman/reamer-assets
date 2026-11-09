@@ -84,4 +84,4 @@ The rest is infrastructure, built once and shared by every strategy:
 - **Your venue adapter.** The FIX reference runs against a simulated venue. Making a connection fit for your broker in production, including recovery after sequence gaps and venue certification, is your work.
 - **Your market data.** The live feed and the bars it is compared against are yours to source and match.
 
-The $225 Reamer Research trial includes the full execution specification and the kit, so you can write a strategy with running indicators and check it repeats exactly before buying a licence. The $900 Reamer Server trial includes both reference integrations, so you can send that strategy's orders through to a simulated fill.
+A $20 month of Reamer Research includes the full execution specification and the kit, so you can write a strategy with running indicators and check it repeats exactly, and cancel if it does not fit. The $2,000 Reamer Server trial includes both reference integrations, so you can send that strategy's orders through to a simulated fill.

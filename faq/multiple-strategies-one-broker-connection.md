@@ -75,4 +75,4 @@ Everything below is documented in the kit:
 - **No allocation across accounts.** Splitting one order's fills between accounts is not part of it.
 - **Linux on x86-64 only,** with glibc 2.39 or later.
 
-$7,200 per seat per year, paid once, with no automatic renewal. The $900 30-day trial includes the full kit, so you can connect several strategies through the reference relay to a simulated venue and run `server-bench` on your own machine before buying a licence. See [pricing](/pricing.html).
+$24,000 per seat per year, paid once, with no automatic renewal. The $2,000 30-day trial includes the full kit, so you can connect several strategies through the reference relay to a simulated venue and run `server-bench` on your own machine before buying a licence. See [pricing](/pricing.html).

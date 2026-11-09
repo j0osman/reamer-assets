@@ -1,6 +1,6 @@
 ---
 title: Are there customer reviews?
-description: Not yet. Reamer Research and Reamer Server are newly launched, and there are no published customer reviews or testimonials. Reviews will appear on the public software listings as customers post them. Until then, the evidence you can check is the uncut integration recordings, the published benchmark method and raw data, and the trial.
+description: Not yet. Reamer Research and Reamer Server are newly launched, and there are no published customer reviews or testimonials. Reviews will appear on the public software listings as customers post them. Until then, the evidence you can check is the uncut integration recordings, the published benchmark method and raw data, and a month on your own machine.
 stage: 5
 order: 41
 product: both
@@ -8,7 +8,7 @@ next: who-makes-it, are-benchmarks-verified, single-maintainer-risk, security-an
 date: 2026-10-03
 ---
 
-Not yet. Reamer Research and Reamer Server are newly launched, and there are no published customer reviews or testimonials. Reviews will appear on the public software listings as customers post them. Until then, the evidence you can check is the uncut integration recordings, the published benchmark method and raw data, and the trial.
+Not yet. Reamer Research and Reamer Server are newly launched, and there are no published customer reviews or testimonials. Reviews will appear on the public software listings as customers post them. Until then, the evidence you can check is the uncut integration recordings, the published benchmark method and raw data, and a month on your own machine.
 
 ## Why there are none
 
@@ -24,6 +24,6 @@ Reviews tell you whether other people were satisfied. The evidence below tells y
 
 - **The integration recordings.** Uncut recordings show an AI agent integrating each product from the kit documents alone, start to finish. See [How long does integration take?](/faq/integration-time.html)
 - **The benchmark method and raw data.** Both are published with DOIs, so you can check how each figure was measured and read the unedited output. See [Have the benchmarks been independently verified?](/faq/are-benchmarks-verified.html)
-- **The trial.** A 30-day licence, at $225 for Reamer Research or $900 for Reamer Server, lets you run the benchmarks and your own strategies on your own hardware. See [pricing](/pricing.html).
+- **A month on your own hardware.** A $20 month of Reamer Research, or a $2,000 30-day Reamer Server trial, lets you run the benchmarks and your own strategies on your own hardware. See [pricing](/pricing.html).
 
 If you want to talk to the person who built it before buying, write to hello@reamerlabs.com. See also [Who makes Reamer Research and Reamer Server?](/faq/who-makes-it.html)

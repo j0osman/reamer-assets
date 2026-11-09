@@ -29,7 +29,7 @@ Details below were checked against each project's own pages in November 2026.
 | ClickHouse | Database | SQL | General analytics at scale | Apache 2.0, paid cloud and enterprise |
 | OneTick | Database and managed data | SQL, Python | Managed data, transaction cost analysis, surveillance | Through sales |
 | NautilusTrader | Backtest, tick level | Python on a Rust core | Ticks, order books, same code live | Free (LGPL-3.0) |
-| Reamer Research | Backtest, bar level | Python, C++, or any language that can call C | Strategies on bars with written fill rules | $1,800 per seat per year |
+| Reamer Research | Backtest, bar level | Python, C++, or any language that can call C | Strategies on bars with written fill rules | $20 per seat per month |
 
 ## Databases
 
@@ -54,4 +54,4 @@ Details below were checked against each project's own pages in November 2026.
 | Order-book backtests in Python | NautilusTrader, with any database |
 | Backtests on bars with fill rules you can read | Reamer Research, with any database |
 
-See [Who are Reamer Research and Reamer Server for?](/faq/who-its-for.html) Reamer Research has a $225 30-day trial; see [pricing](/pricing.html).
+See [Who are Reamer Research and Reamer Server for?](/faq/who-its-for.html) Reamer Research is $20 a month, cancel any time; see [pricing](/pricing.html).

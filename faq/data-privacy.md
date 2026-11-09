@@ -14,7 +14,8 @@ No. Reamer Research and Reamer Server run entirely on your own machine, and neit
 
 - **On activation:** the licence key and a machine fingerprint, which is a SHA-256 hash of the machine's hostname and network hardware address. The licence server checks the key, binds it to that machine, and returns a signed licence.
 - **On deactivation:** the same, to release the seat so you can move it to another machine.
-- **At any other time:** nothing. Each later start checks the signed licence on your machine, with no network call, and a running process does not check in.
+- **Near a Reamer Research renewal:** within two days of the subscription's end date, a run asks the licence server to re-sign the licence with the new end date. It sends the same key, fingerprint and seat id, and nothing else. `REAMER_LICENSE_NO_REFRESH=1` turns it off.
+- **At any other time:** nothing. Each start checks the signed licence on your machine, and a running process does not check in. Reamer Server makes no call after activation.
 
 ## What is never sent
 
@@ -27,7 +28,7 @@ Reamer Server's orders go to your broker through a connector you write, not thro
 
 ## Checking it yourself
 
-After activation, both products run with no internet access, so you can block outbound traffic and confirm they work. The Reamer Server deployment guide says that any traffic from a running process to the licence server is unexpected and should be reported. The kit also includes a vendor questionnaire pack with a data-handling statement for your firm's review.
+After activation, both products run with no internet access, so you can block outbound traffic and confirm they work. A blocked Reamer Research refresh costs at most five seconds and leaves the signed licence as it was. The Reamer Server deployment guide says that any traffic from a running process to the licence server is unexpected and should be reported. The kit also includes a vendor questionnaire pack with a data-handling statement for your firm's review.
 
 ## What Reamer Labs does hold
 

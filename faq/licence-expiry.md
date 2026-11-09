@@ -1,6 +1,6 @@
 ---
 title: What happens when my licence expires?
-description: Anything already running keeps running. Expiry never stops a live process, including a Reamer Server instance that is trading. What it stops is starting a new process, so after expiry a restart will fail until you renew. Nothing renews or charges automatically; renewing is a new purchase.
+description: Anything already running keeps running. Expiry never stops a live process, including a Reamer Server instance that is trading. What it stops is starting a new process, so after expiry a restart will fail until you renew. A Reamer Research subscription renews each month on the same key until you cancel; a Reamer Server licence never renews or charges automatically, and renewing it is a new purchase.
 stage: 6
 order: 46
 product: both
@@ -9,11 +9,11 @@ date: 2026-10-03
 topics: software-license
 ---
 
-Anything already running keeps running. Expiry never stops a live process, including a Reamer Server instance that is trading. What it stops is starting a new process, so after expiry a restart will fail until you renew. Nothing renews or charges automatically; renewing is a new purchase.
+Anything already running keeps running. Expiry never stops a live process, including a Reamer Server instance that is trading. What it stops is starting a new process, so after expiry a restart will fail until you renew. A Reamer Research subscription renews each month on the same key until you cancel; a Reamer Server licence never renews or charges automatically, and renewing it is a new purchase.
 
 ## When the term ends
 
-The term is 30 days or one year from the key's first activation, not from the date you bought it. Moving the seat to another machine does not restart it. `reamer-license status` shows how many days are left.
+The term counts from the key's first activation, not from the date you bought it: a month for Reamer Research, extended by each monthly payment, and 30 days or one year for Reamer Server. Moving the seat to another machine does not restart it. `reamer-license status` shows how many days are left.
 
 The end date is part of the signed licence and is checked on your machine, so it is enforced without a network connection. Changing the system clock or editing the activation file does not extend it.
 
@@ -29,12 +29,12 @@ Reamer Server raises a `license.expiring` warning once at each of 30, 14, 7 and 
 
 ## Renewing
 
-- **Nothing renews automatically.** Nothing is charged at the end of a term.
-- **Renewal is a new purchase,** at the [pricing page](/pricing.html), by card or by invoice.
+- **Reamer Research renews monthly.** Each payment extends the same key by the month paid. The engine picks up the new end date by itself near the old one, from release 4.8.1; on an earlier kit, rerun `reamer-license activate` with your key. Cancel and no further month is charged; the key runs to the end of the month already paid.
+- **Reamer Server does not renew automatically.** Nothing is charged at the end of a term. Renewal is a new purchase, at the [pricing page](/pricing.html), by card or by invoice.
 - **Buy it before the term ends** so a restart never finds the licence expired. The new key's term starts when you first activate it, so buying early does not cost you days.
-- **A renewal ships the latest release.**
+- **Updates.** Reamer Research subscribers download the latest release from the link in their licence email at any time. A Reamer Server renewal ships the latest release.
 
-To switch a machine to the new key, deactivate the old key first, then activate the new one:
+To switch a machine to a new Reamer Server key, deactivate the old key first, then activate the new one:
 
 1. `reamer-license deactivate`, adding `--product research` or `--product server` if the machine holds both
 2. `reamer-license activate` with the new key

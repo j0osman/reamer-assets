@@ -52,4 +52,4 @@ For the wider field, see [What are the best QuantConnect alternatives in 2026?](
 
 ## Price
 
-Reamer Research costs $1,800 per seat per year and Reamer Server $7,200, each paid once with no automatic renewal, and each with a 30-day paid trial. See [pricing](/pricing.html).
+Reamer Research costs $20 per seat per month, cancel any time. Reamer Server costs $24,000 per seat per year, paid once with no automatic renewal, with a $2,000 30-day trial. See [pricing](/pricing.html).

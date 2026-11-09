@@ -39,4 +39,4 @@ Reamer Research can also sweep: each backtest is single-threaded, and separate b
 
 ## Price
 
-Reamer Research costs $1,800 per seat per year, with a $225 30-day trial. See [pricing](/pricing.html).
+Reamer Research costs $20 per seat per month, cancel any time. See [pricing](/pricing.html).

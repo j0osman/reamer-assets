@@ -33,14 +33,17 @@ README lists the exact contents a reviewing party receives.
 **Authentication and access control.**
 Access to the software is gated by an offline, term-limited,
 machine-locked license (Ed25519-signed activation grant). License checks
-run locally after activation — no network call is made during normal
-operation; the license server is contacted only on explicit activation or
-deactivation. See `LICENSING.md`.
+run locally after activation. The license server is contacted on explicit
+activation or deactivation and, for Reamer Research 4.8.1 and later, by a
+license refresh within two days of a subscription's end date, which sends
+the key, machine fingerprint and seat id activation already sent
+(`REAMER_LICENSE_NO_REFRESH=1` turns it off). Reamer Server makes no call
+during normal operation. See `LICENSING.md`.
 
 **Encryption.**
 License validity is verified with an embedded public key against an
-Ed25519 signature, entirely offline. Activation/deactivation calls to the
-license server use HTTPS. No trading data or strategy logic is ever
+Ed25519 signature, entirely offline. Activation, deactivation and refresh
+calls to the license server use HTTPS. No trading data or strategy logic is ever
 transmitted to Reamer Labs — see Section 4.
 
 **Security review posture.**
@@ -148,8 +151,8 @@ entirely on the customer's own infrastructure. All trading data, strategy
 logic, and order flow processed by a running instance stays on that
 infrastructure — Reamer Labs has no network access to a running instance
 and never receives or sees this data. The only network contact between the
-software and Reamer Labs is the license activation/deactivation call
-described above.
+software and Reamer Labs is the license activation, deactivation and
+refresh calls described above.
 
 As a standing product position: Reamer Labs is never the broker, never
 custodies funds, and never gives investment advice — Reamer Server manages

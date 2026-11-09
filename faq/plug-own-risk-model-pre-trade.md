@@ -82,4 +82,4 @@ In Reamer Server, the gate is your model. Everything below is documented in `EXT
 - **256 positions per account snapshot.** The account state carries at most 256 instrument positions; past that, the order is rejected.
 - **Linux on x86-64 only,** with glibc 2.39 or later.
 
-$7,200 per seat per year, paid once, with no automatic renewal. The $900 30-day trial includes the full kit, so you can write your own gate, run the reference demo with it, and watch your rejections and their reasons before buying a licence. See [pricing](/pricing.html).
+$24,000 per seat per year, paid once, with no automatic renewal. The $2,000 30-day trial includes the full kit, so you can write your own gate, run the reference demo with it, and watch your rejections and their reasons before buying a licence. See [pricing](/pricing.html).

@@ -31,7 +31,7 @@ Details below were checked against each project's own pages in November 2026.
 | NautilusTrader | Open-source platform (LGPL-3.0) | Ticks, order books, many venues | Yes | Adapters for crypto venues, Interactive Brokers and others | Free |
 | LEAN | Open-source engine (Apache 2.0) | Many asset classes, QuantConnect's model | Yes | Self-run | Free |
 | Zipline Reloaded | Open-source engine (Apache 2.0) | Existing Zipline code | Yes | None advertised | Free |
-| Reamer Research | Paid local library | Strategies on bars, with written fill rules and modelled costs | Yes | Reamer Server, sold separately, with your own connector | $1,800 per year |
+| Reamer Research | Paid local library | Strategies on bars, with written fill rules and modelled costs | Yes | Reamer Server, sold separately, with your own connector | $20 per month |
 
 ## Free Python frameworks
 
@@ -71,4 +71,4 @@ backtesting.py was not tested in [What a Backtest Costs](https://doi.org/10.6084
 | Ticks, order books or ready venue adapters | NautilusTrader |
 | Strategies on bars, with several instruments, modelled costs and fill rules you can read | Reamer Research |
 
-Reamer Research costs $1,800 per seat per year, with a $225 30-day trial to run your own strategy first. See [pricing](/pricing.html).
+Reamer Research costs $20 per seat per month, cancel any time, so a month on your own strategy is the test. See [pricing](/pricing.html).

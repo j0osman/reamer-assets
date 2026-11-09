@@ -29,7 +29,7 @@ Details below were checked against each project's own pages in November 2026.
 | DolphinDB | Time-series database | Own scripting language | Data and order-book backtests in one system | Proprietary, free community edition with limits |
 | TimescaleDB | PostgreSQL extension | SQL | Teams already on PostgreSQL | Apache 2.0 core, Timescale License for other features |
 | Parquet with DuckDB | Files with an in-process SQL engine | SQL, Python | Plain files with no database to run | Open source |
-| Reamer Research | Backtesting engine, not a database | Python, C++ or C | Backtests of strategies on bars | $1,800 per seat per year |
+| Reamer Research | Backtesting engine, not a database | Python, C++ or C | Backtests of strategies on bars | $20 per seat per month |
 
 ## Databases
 
@@ -59,4 +59,4 @@ A database stores and reads your data. It does not decide how orders fill. Arcti
 | Plain files, no database to run | Parquet with DuckDB |
 | Modelled fills and costs for strategies on bars | Reamer Research, with any database |
 
-See [Who are Reamer Research and Reamer Server for?](/faq/who-its-for.html) Reamer Research has a $225 30-day trial; see [pricing](/pricing.html).
+See [Who are Reamer Research and Reamer Server for?](/faq/who-its-for.html) Reamer Research is $20 a month, cancel any time; see [pricing](/pricing.html).

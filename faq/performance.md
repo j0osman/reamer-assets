@@ -32,4 +32,4 @@ These figures leave out your gate's own logic, the network and the broker. A bro
 
 ## Measure it yourself
 
-The Research kit ships `research-bench` and the Server kit ships `server-bench`. Each runs the benchmark above on your own machine in one command, during the [30-day trial](/pricing.html). The method is in the [whitepaper](https://doi.org/10.6084/m9.figshare.33972466), and the EPYC results for release 4.6.0 are in its [replication](https://doi.org/10.6084/m9.figshare.34787757).
+The Research kit ships `research-bench` and the Server kit ships `server-bench`. Each runs the benchmark above on your own machine in one command, during a [$20 month of Reamer Research or the 30-day Reamer Server trial](/pricing.html). The method is in the [whitepaper](https://doi.org/10.6084/m9.figshare.33972466), and the EPYC results for release 4.6.0 are in its [replication](https://doi.org/10.6084/m9.figshare.34787757).

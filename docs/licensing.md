@@ -205,7 +205,9 @@ path. There is no direct machine-to-machine transfer.
 
 **Hazard: lost or unavailable old machine.** If the old machine is gone,
 wiped, or otherwise unreachable, you cannot self-service the deactivate
-step. Contact support@reamerlabs.com to release the seat manually.
+step. For Reamer Server, contact support@reamerlabs.com to release the
+seat manually. For Reamer Research, cancel the subscription and subscribe
+again on the new machine.
 
 ## Self-Service Activation Failure Modes
 
@@ -442,7 +444,9 @@ container readiness check.
 ## Term Licenses
 
 Every license is a term license: it carries a term length (`term_days`),
-set once at issuance. There is no perpetual, non-expiring license.
+set at issuance. Each monthly Reamer Research renewal adds the period paid
+to it; a Reamer Server term never changes. There is no perpetual,
+non-expiring license.
 
 Expiration is computed as `first_activated_at + term_days`, not from
 issuance time. `first_activated_at` is set once, on the very first
@@ -461,11 +465,29 @@ warnings as expiration approaches and after it passes, but a live process
 keeps running until it exits on its own. Expiration only blocks the
 **next** process start.
 
-To renew, buy a new key at reamerlabs.com/pricing.html before the term
-expires. Nothing renews automatically. A renewal ships the latest release;
-an update released mid-term is sent on email request.
+A Reamer Research subscription renews itself each month on the same key,
+and the engine picks up the new end date by itself. Within two days of the
+end date on this machine, a run first asks the license server to re-sign
+the grant this machine already holds (`/refresh`): at most every six hours
+before the end date and every hour after it, for up to 30 days after it.
+The request carries the key, the machine fingerprint and the seat id that
+activation already sent, and nothing else. It never moves a seat, it adds
+at most five seconds to a run when the server cannot be reached, and when
+it fails the signed grant on disk decides as before.
+`reamer-license refresh` makes the same request on demand. On a host that
+must make no network calls, set `REAMER_LICENSE_NO_REFRESH=1` and run
+`reamer-license refresh` after each renewal instead.
 
-### Renew on the same machine
+Reamer Research updates are self-serve: the download link in your license
+email serves the latest release for as long as the subscription runs.
+Releases are not emailed or sent on request.
+
+To renew Reamer Server, buy a new key at
+reamerlabs.com/pricing.html before the term expires; nothing renews
+automatically. A Server renewal ships the latest release; an update
+released mid-term is sent on email request.
+
+### Renew Reamer Server on the same machine
 
 A machine holds one key per product, so the old key must be released
 before the new one can be activated:
@@ -491,17 +513,20 @@ during a renewal; the process keeps trading, and the next recheck after
 `activate` finds the new key valid and the errors stop. There is no
 separate "restored" event.
 
-Term length is fixed to one of two tiers: a 30-day trial or 1 year.
+Reamer Research is a monthly subscription: each payment extends the same
+key by the month paid, and cancelling stops the next charge. Release
+4.8.1 and later picks up the new end date by itself; on an earlier kit,
+rerun `reamer-license activate` with the key after a renewal. A Reamer Server term is fixed to one of two tiers, a 30-day trial
+or 1 year, and never renews automatically.
 
 ## Price
 
-One published price per product, per seat, bought online as a one-time
-payment:
+One published price per product, per seat, bought online:
 
-| Product | 30-day trial | Per seat, per year |
+| Product | Price per seat | Trial |
 |---|---|---|
-| Reamer Research | $225 | $1,800 |
-| Reamer Server | $900 | $7,200 |
+| Reamer Research | $20 a month, billed monthly, cancel any time | None; the first month is the trial |
+| Reamer Server | $24,000 a year, paid once | 30 days, $2,000, paid once |
 
 Research licenses the machine where you develop a strategy. Server
 licenses the machine that trades it — the server process and every
@@ -515,7 +540,7 @@ Prices are per seat and additive across machines: three Server machines
 are three seats. A machine running both products holds one seat of each
 and is billed for both.
 
-Card payment runs through Paddle. An annual licence can also be paid by
+Card payment runs through Paddle. An annual Reamer Server licence can also be paid by
 bank transfer against a Paddle invoice; see [pricing](/pricing.html). Refunds follow Paddle's refund policy.
 
 Seat policy is one machine at a time, same as every license — see

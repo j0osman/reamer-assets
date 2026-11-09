@@ -30,7 +30,7 @@ Details below were checked against each project's own pages in November 2026.
 | vectorbt, vectorbt PRO | Python libraries | Large parameter sweeps | Bring your own | Signals only; you supply execution | Open-source edition free, PRO paid |
 | Backtrader | Open-source framework (GPL-3.0) | Learning, a first look at an idea | Bring your own | Older connectors | Free |
 | Zipline Reloaded | Open-source engine (Apache 2.0) | Existing Zipline code | Bring your own | None advertised | Free |
-| Reamer Research, Reamer Server | Paid local libraries | Your own system around a supplied core, on bars | Bring your own | Reamer Server with your own connector | $1,800 and $7,200 per year |
+| Reamer Research, Reamer Server | Paid local libraries | Your own system around a supplied core, on bars | Bring your own | Reamer Server with your own connector | $20 a month and $24,000 a year |
 
 ## Self-hosted platforms
 
@@ -74,4 +74,4 @@ The study's author builds and sells Reamer Research, so the [runners and raw res
 | To learn, or to spend nothing | Backtrader |
 | The core supplied and the rest built your way, for systematic strategies on bars from minutes to days | Reamer Research and Reamer Server |
 
-See [Who are Reamer Research and Reamer Server for?](/faq/who-its-for.html) Both have a 30-day paid trial; see [pricing](/pricing.html).
+See [Who are Reamer Research and Reamer Server for?](/faq/who-its-for.html) Reamer Research is $20 a month, cancel any time, and Reamer Server has a paid 30-day trial; see [pricing](/pricing.html).

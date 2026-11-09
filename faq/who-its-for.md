@@ -31,4 +31,4 @@ Independent quants and firms buy the same products at the same prices. A Reamer 
 - **You want a broker connection out of the box.** Reamer Server connects to any broker you write a connector for. The kit has a worked FIX 4.4 example, not a certified connection.
 - **Windows.** [Reamer Research](/faq/what-is-reamer-research.html) has no native Windows build but runs through WSL2; Reamer Server runs on Linux x86-64 only.
 
-If you are unsure, the 30-day trial ($225 for Research, $900 for Server) is the way to check fit on your own strategy before buying a year. See [pricing](/pricing.html).
+If you are unsure, a $20 month of Reamer Research, or the $2,000 30-day Reamer Server trial, is the way to check fit on your own strategy. See [pricing](/pricing.html).

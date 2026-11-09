@@ -29,7 +29,7 @@ Details below were checked against each project's own pages in November 2026.
 | NautilusTrader | Open-source platform (LGPL-3.0) | Yes, same code | Adapters for crypto venues, Interactive Brokers and others | Free |
 | TimeBase Community | Open-source time-series store (Apache 2.0) | Data only | Not applicable | Free |
 | KDB-X, OneTick | Data and analytics platforms from KX | Data side | Not applicable | Through sales, KDB-X has a limited free edition |
-| Reamer Research, Reamer Server | Paid local libraries | Yes, on bars | Your own connector; FIX 4.4 example in the kit | $1,800 and $7,200 per year |
+| Reamer Research, Reamer Server | Paid local libraries | Yes, on bars | Your own connector; FIX 4.4 example in the kit | $20 a month and $24,000 a year |
 
 ## All-in-one platforms
 
@@ -58,4 +58,4 @@ They handle systematic strategies on time, tick, volume, dollar or custom bars, 
 | A market data store | TimeBase Community, KDB-X or OneTick |
 | Research and order management for strategies on bars, at a published price | Reamer Research and Reamer Server |
 
-See [Who are Reamer Research and Reamer Server for?](/faq/who-its-for.html) Both have a 30-day paid trial; see [pricing](/pricing.html).
+See [Who are Reamer Research and Reamer Server for?](/faq/who-its-for.html) Reamer Research is $20 a month, cancel any time, and Reamer Server has a paid 30-day trial; see [pricing](/pricing.html).

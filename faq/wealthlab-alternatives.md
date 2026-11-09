@@ -29,7 +29,7 @@ Details below were checked in November 2026, against each vendor's own pages.
 | MultiCharts | Charting and trading application | PowerLanguage; .NET edition | Windows | From $99 a month, or a lifetime licence |
 | QuantConnect | Cloud platform | Python, C# | Browser, or LEAN locally | Free tier, paid plans |
 | Zorro | Compact coding environment | lite-C, C++; calls R and Python | Windows, other systems with special installs | Free for private users under limits; Zorro S €35 a month |
-| Reamer Research, Reamer Server | Libraries | Python, C++, or any language that can call C | Linux; Reamer Research also on Apple Silicon Macs and Windows through WSL2 | $1,800 and $7,200 per year |
+| Reamer Research, Reamer Server | Libraries | Python, C++, or any language that can call C | Linux; Reamer Research also on Apple Silicon Macs and Windows through WSL2 | $20 a month and $24,000 a year |
 
 ## Desktop applications
 
@@ -54,4 +54,4 @@ Details below were checked in November 2026, against each vendor's own pages.
 | C or C++ with tools included, at low cost | Zorro |
 | Your own system in Python or C++, on Linux, a Mac or Windows through WSL2, with fills you can read | Reamer Research and Reamer Server |
 
-See [Who are Reamer Research and Reamer Server for?](/faq/who-its-for.html) Both have a 30-day paid trial; see [pricing](/pricing.html).
+See [Who are Reamer Research and Reamer Server for?](/faq/who-its-for.html) Reamer Research is $20 a month, cancel any time, and Reamer Server has a paid 30-day trial; see [pricing](/pricing.html).

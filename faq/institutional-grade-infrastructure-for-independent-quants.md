@@ -1,6 +1,7 @@
 ---
 title: Is there institutional-grade trading infrastructure an independent quant can afford?
-description: Yes, for systematic strategies on bars. What makes infrastructure institutional is a set of properties you can check, not a budget. Reamer Labs sells both halves at public prices, per seat per year, with no sales call. Reamer Research, the research engine, is $1,800. Reamer Server, the order management engine, is $7,200. Each has a paid 30-day trial.
+description: Yes, for systematic strategies on bars. What makes infrastructure institutional is a set of properties you can check, not a budget. Reamer Labs sells both halves at public prices, with no sales call. Reamer Research, the research engine, is $20 per seat per month, cancel any time. Reamer Server, the order management engine, is $24,000 per seat per year, with a paid 30-day trial.
+draft: true
 stage: 3
 order: 15
 product: both
@@ -9,7 +10,7 @@ date: 2026-10-01
 topics: quantitative-analysis, oms, financial-risk, reproducibility
 ---
 
-Yes, for systematic strategies that trade on bars. What makes infrastructure institutional is a set of properties you can check, not a budget: results that repeat exactly, fill and cost rules written down, risk checks separate from strategy code, one ordered path for every order, a full record, and performance claims backed by published data. Reamer Labs sells both halves at public prices, per seat per year: Reamer Research for research at $1,800 and Reamer Server for live order management at $7,200.
+Yes, for systematic strategies that trade on bars. What makes infrastructure institutional is a set of properties you can check, not a budget: results that repeat exactly, fill and cost rules written down, risk checks separate from strategy code, one ordered path for every order, a full record, and performance claims backed by published data. Reamer Labs sells both halves at public prices: Reamer Research for research at $20 per seat per month, and Reamer Server for live order management at $24,000 per seat per year.
 
 The harder part of the question is telling a real claim from a label. "Institutional-grade" costs nothing to write on a web page.
 
@@ -48,14 +49,14 @@ Before paying for any product sold with the word, look for evidence you can chec
 
 ## What Reamer Labs offers
 
-**[Reamer Research](/products/reamer-research.html): $1,800 per seat per year, 30-day trial $225.** A research engine delivered as a library with a stable C interface, driven from Python, C++ or any language that can call C:
+**[Reamer Research](/products/reamer-research.html): $20 per seat per month, cancel any time.** A research engine delivered as a library with a stable C interface, driven from Python, C++ or any language that can call C:
 
 - Byte-identical output for a fixed seed, randomised spread and slippage included; in the published test, 20 of 20 runs matched by SHA-256.
 - A written execution specification for fills, costs, margin, order lifetimes, swap and futures rolls, shipped with the kit.
 - About 1.83 million bars a second per backtest on an AMD EPYC 9575F and release 4.6.0, with speed varying by 0.66% across 2,000 runs.
 - A relay that sends the strategy's orders to Reamer Server and reads the fills back.
 
-**[Reamer Server](/products/reamer-server.html): $7,200 per seat per year, 30-day trial $900.** An order management engine you link into your own program. Strategies connect over a socket; every order from every strategy goes through one sequence, then your own pre-trade check, then your broker connector:
+**[Reamer Server](/products/reamer-server.html): $24,000 per seat per year, 30-day trial $2,000.** An order management engine you link into your own program. Strategies connect over a socket; every order from every strategy goes through one sequence, then your own pre-trade check, then your broker connector:
 
 - 60 ns per order to cross into your own code and back, and 10.3 µs at P50 and 11.8 µs at P99 end to end, on an AMD EPYC 9575F.
 - A peak of 220,446 orders a second, and no correctness failure at any point up to 512 concurrent strategies.
@@ -69,7 +70,7 @@ Before paying for any product sold with the word, look for evidence you can chec
 - **Verifiable releases.** Checksums and a signature for every release, and a software bill of materials for every third-party component.
 - **Procurement papers.** Each kit includes a vendor questionnaire pack covering security, support, data handling and business continuity, and a record of the security review already done.
 
-Research alone is $1,800 a year. Both products are $9,000 a year for one person on one machine. Prices are on the [pricing page](/pricing.html), checkout is by card, and the key and kit arrive by email within minutes.
+Research alone is $20 a month, or $240 over a year. Both products are $24,240 a year for one person on one machine. Prices are on the [pricing page](/pricing.html), checkout is by card, and the key and kit arrive by email within minutes.
 
 ## What you still own
 
@@ -80,10 +81,10 @@ Research alone is $1,800 a year. Both products are $9,000 a year for one person 
 
 ## The trade-offs of a small vendor
 
-The price is low partly because Reamer Labs is one person. That has consequences you should weigh:
+Reamer Labs is one person. That has consequences you should weigh:
 
 - **Support is best-effort.** Email to one person on weekdays, with a target of acknowledging within two business days, and no contractual service level. Issues that stop trading come first.
 - **Continuity.** There is no standing source escrow. A customer can set one up at their own cost, released only if Reamer Labs closes or ends the product. `LICENSING.md` in each kit gives the terms.
 - **Closed source.** You link the library and read the specification; you do not get the engine's source.
 
-If those are acceptable, the trial is the test: run your own strategy on your own data and check each claim above before buying a year.
+If those are acceptable, a month of Reamer Research or the Reamer Server trial is the test: run your own strategy on your own data and check each claim above before committing further.

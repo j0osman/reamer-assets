@@ -12,6 +12,18 @@ entry below describes a customer-visible change to the Reamer Server
 product — the ABI, the shipped reference material, or the kit
 contents — not internal refactors. Updated at release, alongside the tag.
 
+## [4.8.1] - 2026-11-09
+
+### Added
+- `reamer-license refresh`, shared with Reamer Research 4.8.1. A Reamer
+  Server licence does not renew automatically, so it reports the grant
+  unchanged; the Server process itself makes no refresh request.
+
+### Changed
+- `LICENSE.txt` 1.4: Reamer Server USD 24,000
+  a year, with a USD 2,000 30-day trial. No change to the server ABI
+  (still 4), the wire protocol or the execution core.
+
 ## [4.8.0] - 2026-11-08
 
 ### Changed

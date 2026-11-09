@@ -50,4 +50,4 @@ The core is where a subtle bug costs money without anyone noticing: a stop fille
 
 ## Price
 
-Reamer Research costs $1,800 per seat per year and Reamer Server $7,200, each paid once with no automatic renewal. The 30-day trials cost $225 and $900. See [pricing](/pricing.html).
+Reamer Research costs $20 per seat per month, cancel any time. Reamer Server costs $24,000 per seat per year, paid once with no automatic renewal. The Reamer Server 30-day trial costs $2,000. See [pricing](/pricing.html).

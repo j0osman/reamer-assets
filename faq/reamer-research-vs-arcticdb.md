@@ -43,4 +43,4 @@ If your data already lives in ArcticDB, you do not have to move it. Read each sy
 
 ## Price
 
-Reamer Research costs $1,800 per seat per year, with a $225 30-day trial. See [pricing](/pricing.html).
+Reamer Research costs $20 per seat per month, cancel any time. See [pricing](/pricing.html).

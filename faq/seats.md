@@ -30,6 +30,6 @@ The machine is identified by a hash of its hostname and network hardware address
 
 ## Reamer Research: one person
 
-A Reamer Research seat bought online belongs to the person whose email it was issued to at checkout. Only that person may use it, at home or at work. An employer can pay for it, but it stays personal to that employee. An employer can ask, once per term, for it to be reissued to a different employee. Each extra person needs their own seat. Reamer Server seats are not tied to a person.
+A Reamer Research seat bought online belongs to the person whose email it was issued to at checkout. Only that person may use it, at home or at work. An employer can pay for it, but it stays personal to that employee. It is not reissued to a different employee: cancel the subscription and subscribe again with the new person's email. Each extra person needs their own seat. Reamer Server seats are not tied to a person.
 
 See [pricing](/pricing.html) and [How much do Reamer Research and Reamer Server cost?](/faq/pricing.html)

@@ -47,4 +47,4 @@ QuantRocket's backtesters were not tested in [What a Backtest Costs](https://doi
 
 ## Price
 
-Reamer Research costs $1,800 per seat per year and Reamer Server $7,200, each with a 30-day paid trial. See [pricing](/pricing.html).
+Reamer Research costs $20 per seat per month, cancel any time. Reamer Server costs $24,000 per seat per year, with a $2,000 30-day trial. See [pricing](/pricing.html).

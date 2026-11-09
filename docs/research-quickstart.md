@@ -100,10 +100,10 @@ lists every removal and rename.
 Every binary answers `--version`, so you can confirm which build you have:
 
 ```bash
-./bin/reamer-license --version    # reamer-license 4.8.0
-./bin/release-sign --version      # release-sign 4.8.0
-./bin/reamer-exo-build --version  # reamer-exo-build 4.8.0
-./bin/reamer-csv-build --version  # reamer-csv-build 4.8.0
+./bin/reamer-license --version    # reamer-license 4.8.1
+./bin/release-sign --version      # release-sign 4.8.1
+./bin/reamer-exo-build --version  # reamer-exo-build 4.8.1
+./bin/reamer-csv-build --version  # reamer-csv-build 4.8.1
 ```
 
 Docs: `EXECUTION_SPEC.md` (**authoritative** on fills, slippage, spread,
@@ -197,8 +197,8 @@ the security-hardening record).
 ## Your license key
 
 **This archive contains no license key, deliberately.** Your key arrives by
-email on payment, with this kit's download link. It carries the term you
-bought: a 30-day trial or 1 year. Nothing in this archive will activate on
+email on payment, with this kit's download link. It carries the month you
+paid for, and each monthly renewal extends it. Nothing in this archive will activate on
 its own.
 
 `reamer_run_backtest()` refuses to run without an active license,

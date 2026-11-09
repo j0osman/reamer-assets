@@ -52,4 +52,4 @@ When a result will decide where real money goes, and you need to know which cost
 
 ## Price
 
-Backtrader is free. Reamer Research costs $1,800 per seat per year, with a $225 30-day trial to run your own strategy first. See [pricing](/pricing.html).
+Backtrader is free. Reamer Research costs $20 per seat per month, cancel any time, so a month on your own strategy is the test. See [pricing](/pricing.html).

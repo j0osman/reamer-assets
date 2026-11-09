@@ -26,4 +26,4 @@ Each kit ships the documents a vendor review usually asks for, including a fille
 
 ## What helps the review
 
-Both products run inside your network and send nothing to Reamer Labs beyond licence activation, which limits what a reviewer has to assess. See [Does my strategy code or data ever leave my machine?](/faq/data-privacy.html) For a firm buying Reamer Server, the [For firms](/firms.html) page covers order forms and procurement.
+Both products run inside your network and send nothing to Reamer Labs beyond licence activation and renewal checks, which limits what a reviewer has to assess. See [Does my strategy code or data ever leave my machine?](/faq/data-privacy.html) For a firm buying Reamer Server, the [For firms](/firms.html) page covers order forms and procurement.

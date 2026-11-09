@@ -28,4 +28,4 @@ One person, by design. Chaitanya started as a retail trader and became an indepe
 - **It is newly launched.** There are no customer quotes on the site, and the benchmarks have not been audited by a third party.
 - **It is one person.** If that is a concern for your firm, there is a source escrow you can fund; the terms are on the [About](/about.html) page.
 
-The cheapest test is the trial: $225 for Reamer Research or $900 for Reamer Server, for 30 days. See [pricing](/pricing.html).
+The cheapest test is a month: $20 for Reamer Research, cancel any time, or $2,000 for a 30-day Reamer Server trial. See [pricing](/pricing.html).

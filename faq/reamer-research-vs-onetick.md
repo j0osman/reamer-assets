@@ -29,7 +29,7 @@ Details below were checked against the vendors' own pages in November 2026.
 - **Fill rules in writing.** The public [execution specification](/docs/execution-spec.html) covers spread, slippage, commission, overnight swap, margin, gaps, order lifetimes and what fills first inside a bar.
 - **Byte-identical runs.** With a fixed seed, output matches to the byte, including randomised spread and slippage.
 - **Your strategy in your language.** Strategies run in Python or C++, or any language that can call C, on each bar. Each run returns every order, fill and closed trade.
-- **One machine, published prices.** It runs on one Linux x86-64 machine, Apple Silicon Mac or Windows PC through WSL2, offline after activation, and you buy it self-serve.
+- **One machine, published prices.** It runs on one Linux x86-64 machine, Apple Silicon Mac or Windows PC through WSL2, without a connection after activation, and you buy it self-serve.
 
 ## Using both
 
@@ -42,4 +42,4 @@ The two can work together. Build bars from OneTick data, adjusted as your instru
 
 ## Price
 
-Reamer Research costs $1,800 per seat per year, with a $225 30-day trial. See [pricing](/pricing.html).
+Reamer Research costs $20 per seat per month, cancel any time. See [pricing](/pricing.html).

@@ -4,7 +4,7 @@ description: For mid-frequency strategies on bars, yes. Research on a 2017 four-
 stage: 1
 order: 6
 product: both
-next: what-is-institutional-grade-trading-infrastructure, institutional-grade-infrastructure-for-independent-quants, performance, supported-platforms
+next: what-is-institutional-grade-trading-infrastructure, performance, supported-platforms
 date: 2026-09-29
 topics: latency, hft
 ---

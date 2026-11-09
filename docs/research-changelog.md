@@ -16,6 +16,35 @@ Version numbers here are the release version (`kReamerVersion`), which is
 shared with Reamer Server and moves independently of `REAMER_ABI_VERSION`.
 ABI bumps are called out explicitly where they occur.
 
+## [4.8.1] - 2026-11-09
+
+Reamer Research becomes a monthly subscription, and the engine picks up
+each renewal by itself. `REAMER_ABI_VERSION` stays 7, and no strategy code
+or results change.
+
+### Added
+- Automatic licence refresh. Within two days of a Reamer Research grant's
+  end date, a run first asks the licence server to re-sign the grant this
+  machine already holds, so a renewed subscription needs no second
+  `reamer-license activate`. The request sends the key, machine fingerprint
+  and seat id that activation already sent, and nothing else; it never
+  moves a seat, waits at most five seconds, and retries at most every six
+  hours before the end date and every hour after it, for 30 days. Any
+  failure leaves the grant on disk to decide as before.
+  `REAMER_LICENSE_NO_REFRESH=1` turns it off.
+- `reamer-license refresh` makes the same request on demand.
+
+### Changed
+- `LICENSE.txt` 1.4: the Reamer Research Term is the period paid on the
+  subscription; trials are Reamer Server only; a Reamer Research licence is
+  not reissued to a different employee (cancel and subscribe again).
+- `LICENSING.md`: monthly Reamer Research pricing and renewal; Reamer
+  Server USD 24,000 a year with a USD 2,000 30-day trial.
+- Reamer Research updates are self-serve from the download link in the
+  license email; releases are not sent on email request.
+- `activation.json` is written to a temporary file and renamed into place,
+  so a process checking its licence never reads a half-written grant.
+
 ## [4.8.0] - 2026-11-08
 
 Windows support through WSL2, and market-data fetchers for the Python

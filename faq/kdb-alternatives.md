@@ -30,7 +30,7 @@ Details below were checked against each project's own pages in November 2026.
 | TimescaleDB | PostgreSQL extension | SQL | Teams already on PostgreSQL | Apache 2.0 core, Timescale License for other features |
 | ArcticDB | Dataframe database | Python | Python research teams | Business Source License |
 | OneTick | Data and analytics platform | SQL, Python | Managed data, transaction cost analysis, surveillance | Commercial |
-| Reamer Research | Backtesting engine, not a database | Python, C++ or C | Backtests of strategies on bars | $1,800 per seat per year |
+| Reamer Research | Backtesting engine, not a database | Python, C++ or C | Backtests of strategies on bars | $20 per seat per month |
 
 ## Databases
 
@@ -58,4 +58,4 @@ A database computes on your data. It does not decide how orders fill. KX's own [
 | To stay on PostgreSQL | TimescaleDB |
 | Modelled fills and costs for strategies on bars | Reamer Research, with any database |
 
-See [Who are Reamer Research and Reamer Server for?](/faq/who-its-for.html) Reamer Research has a $225 30-day trial; see [pricing](/pricing.html).
+See [Who are Reamer Research and Reamer Server for?](/faq/who-its-for.html) Reamer Research is $20 a month, cancel any time; see [pricing](/pricing.html).

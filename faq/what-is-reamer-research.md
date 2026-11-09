@@ -1,6 +1,6 @@
 ---
 title: What is Reamer Research?
-description: Reamer Research is a deterministic research engine for mid-frequency quants. It is a library with a stable C interface that you call from Python, C++ or any language that can call C, on your own machine. It tests a strategy, diagnoses it trade by trade, sweeps it, reports it, and sends its orders live to Reamer Server. The same data, settings and seed give byte-identical results every run. It costs $1,800 per seat per year, with a $225 30-day trial.
+description: Reamer Research is a deterministic research engine for mid-frequency quants. It is a library with a stable C interface that you call from Python, C++ or any language that can call C, on your own machine. It tests a strategy, diagnoses it trade by trade, sweeps it, reports it, and sends its orders live to Reamer Server. The same data, settings and seed give byte-identical results every run. It costs $20 per seat per month, cancel any time.
 stage: 4
 order: 24
 product: research
@@ -41,4 +41,4 @@ How fills are decided, including stops and targets inside one bar, is set out in
 
 ## Price
 
-$1,800 per seat per year, paid once, with no automatic renewal. The $225 30-day trial includes the full kit. See the [product page](/products/reamer-research.html) and [pricing](/pricing.html).
+$20 per seat per month, billed monthly, cancel any time. A $20 month includes the full kit. See the [product page](/products/reamer-research.html) and [pricing](/pricing.html).

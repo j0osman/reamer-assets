@@ -30,7 +30,7 @@ Details below were checked against AmiBroker's own pages in November 2026.
 - **Fill rules in writing.** The public [execution specification](/docs/execution-spec.html) states how orders fill on bars. A seeded tick path runs through every bar, so you do not need tick data to resolve a stop and a target in one bar.
 - **Byte-identical runs.** With a fixed seed, output matches to the byte, which suits audit and regression tests.
 - **Bars of any type.** Time, tick, volume or dollar bars all run, and several instruments share one wall clock and one account in every run. Monte Carlo resampling of a run's trades is built in, and parameter sweeps and walk-forward splits are loops in your own program.
-- **Your own data.** The engine reads your CSV or binary files and makes no network calls. The kit includes Alpaca and Databento fetchers that write those files.
+- **Your own data.** The engine reads your CSV or binary files and fetches no data itself. The kit includes Alpaca and Databento fetchers that write those files.
 - **Live through your own gate.** Reamer Server runs your pre-trade gate on every order and sends accepted orders through a broker connector you write. The kit has a worked FIX 4.4 example.
 - **Different machines.** Both products run on Linux x86-64. Reamer Research also runs on macOS on Apple Silicon and on Windows through WSL2; Reamer Server does not run on Windows.
 
@@ -41,4 +41,4 @@ Details below were checked against AmiBroker's own pages in November 2026.
 
 ## Price
 
-Reamer Research costs $1,800 per seat per year and Reamer Server $7,200, each with a 30-day paid trial. See [pricing](/pricing.html).
+Reamer Research costs $20 per seat per month, cancel any time. Reamer Server costs $24,000 per seat per year, with a $2,000 30-day trial. See [pricing](/pricing.html).

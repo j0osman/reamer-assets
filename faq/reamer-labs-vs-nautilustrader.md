@@ -52,4 +52,4 @@ For the wider field, see [What are the best NautilusTrader alternatives in 2026?
 
 ## Price
 
-NautilusTrader is free. Reamer Research costs $1,800 per seat per year and Reamer Server $7,200, each with a 30-day paid trial. See [pricing](/pricing.html).
+NautilusTrader is free. Reamer Research costs $20 per seat per month, cancel any time. Reamer Server costs $24,000 per seat per year, with a $2,000 30-day trial. See [pricing](/pricing.html).

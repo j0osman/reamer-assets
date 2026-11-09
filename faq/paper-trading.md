@@ -23,6 +23,6 @@ A second instance on the same machine can run against a paper account, with its 
 
 ## Licensing
 
-The licence does not restrict paper or live trading, and a 30-day trial key is a full paid licence on the same terms. A seat is one machine, so an instance on another machine needs its own seat. See [pricing](/pricing.html).
+The licence does not restrict paper or live trading, and a monthly key or a 30-day trial key is a full paid licence on the same terms. A seat is one machine, so an instance on another machine needs its own seat. See [pricing](/pricing.html).
 
 Reamer Research runs backtests; its `reamer_relay_*` functions send a strategy's orders to a Reamer Server instance, paper or live. See [Which brokers does Reamer Server connect to?](/faq/broker-connections.html) and [What is Reamer Server?](/faq/what-is-reamer-server.html)

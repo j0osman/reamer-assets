@@ -13,7 +13,7 @@ An email with your licence key and a link to download the kit. The kit is the pr
 
 ## The email
 
-Once payment completes, the key and the kit download link go to the email address used at checkout. For an invoice, that is once the invoice is paid. The key carries the term you bought, 30 days or one year. If it does not arrive, write to support@reamerlabs.com.
+Once payment completes, the key and the kit download link go to the email address used at checkout. For an invoice, that is once the invoice is paid. The key carries the term you paid for: a month for Reamer Research, extended each time the subscription renews, or 30 days or one year for Reamer Server. If it does not arrive, write to support@reamerlabs.com.
 
 ## The Reamer Research kit
 

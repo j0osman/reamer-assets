@@ -4,7 +4,7 @@ description: Less hardware than people expect and more discipline. Research that
 stage: 1
 order: 7
 product: both
-next: institutional-grade-infrastructure-for-independent-quants, what-is-an-order-management-engine, where-pre-trade-risk-checks-belong, what-makes-a-backtest-deterministic
+next: what-is-an-order-management-engine, where-pre-trade-risk-checks-belong, what-makes-a-backtest-deterministic
 date: 2026-09-29
 topics: reproducibility, financial-risk, automated-trading
 ---

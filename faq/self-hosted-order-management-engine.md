@@ -1,6 +1,6 @@
 ---
 title: Is there a self-hosted order management engine I can build my own OMS around?
-description: Yes. Look for an engine you link into your own program, which keeps order state, puts every strategy's orders into one sequence and publishes every decision, and leaves the pre-trade check, the broker connection and storage to you. Reamer Server is built that way. It is a C library for Linux at $7,200 per seat per year, with a $900 30-day trial.
+description: Yes. Look for an engine you link into your own program, which keeps order state, puts every strategy's orders into one sequence and publishes every decision, and leaves the pre-trade check, the broker connection and storage to you. Reamer Server is built that way. It is a C library for Linux at $24,000 per seat per year, with a $2,000 30-day trial.
 stage: 3
 order: 19
 product: server
@@ -72,4 +72,4 @@ Reamer Server is a static C library. You write `main()`, implement two sets of c
 - **Linux only, on a recent base.** x86-64 with glibc 2.39 or later: Ubuntu 24.04 or Debian 13 and later. RHEL 9 does not meet it.
 - **Closed source.** You link the library and read the header and protocol; you do not get the core's source.
 
-$7,200 per seat per year, paid once, with no automatic renewal. The $900 30-day trial includes the full kit, so you can run the reference integration to a fill and write your own gate and connector before buying a licence. See [pricing](/pricing.html).
+$24,000 per seat per year, paid once, with no automatic renewal. The $2,000 30-day trial includes the full kit, so you can run the reference integration to a fill and write your own gate and connector before buying a licence. See [pricing](/pricing.html).

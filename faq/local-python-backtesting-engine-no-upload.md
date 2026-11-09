@@ -1,6 +1,6 @@
 ---
 title: Is there a backtesting engine I can call from Python that runs locally and never uploads my code?
-description: Yes. Look for an engine delivered as a library you run on your own machine, with a licence that is checked offline, and confirm it by running it with the network cut off. Reamer Research is one: a compiled engine with a pure-Python binding that ships in source, which runs offline after a one-time activation and sends no strategy code, data or results to Reamer Labs.
+description: Yes. Look for an engine delivered as a library you run on your own machine, with a licence that is checked offline, and confirm it by running it with the network cut off. Reamer Research is one: a compiled engine with a pure-Python binding that ships in source, which runs without a connection after activation and sends no strategy code, data or results to Reamer Labs.
 stage: 3
 order: 17
 product: research
@@ -9,7 +9,7 @@ date: 2026-10-01
 topics: backtesting, abi
 ---
 
-Yes. Look for an engine delivered as a library you run on your own machine, with a licence that is checked offline, and confirm it by running it with the network cut off. [Reamer Research](/products/reamer-research.html) is one: a compiled engine with a pure-Python binding that ships in source, which runs offline after a one-time activation and sends no strategy code, data or results to Reamer Labs.
+Yes. Look for an engine delivered as a library you run on your own machine, with a licence that is checked offline, and confirm it by running it with the network cut off. [Reamer Research](/products/reamer-research.html) is one: a compiled engine with a pure-Python binding that ships in source, which runs without a connection after activation and sends no strategy code, data or results to Reamer Labs.
 
 "Local" is easy to claim, so the useful part of the answer is how to check it.
 
@@ -37,10 +37,10 @@ A desktop application can fall in either camp. Running on your machine is not th
 
 ## How to verify it yourself
 
-Do not rely on the answers alone. During a trial:
+Do not rely on the answers alone. During your first month:
 
 1. **Activate, then cut the network.** Disconnect the machine, or on Linux run the backtest in a namespace with no network (`unshare -rn python3 your_backtest.py`). It should run exactly as before.
-2. **Watch the connections.** Run it with a network monitor or under `strace -f -e trace=network` and check that no connection is opened during a backtest.
+2. **Watch the connections.** Run it with a network monitor or under `strace -f -e trace=network` and check that no connection is opened during a backtest, other than the licence refresh in the two days before a renewal.
 3. **Firewall it.** Block the process's outbound traffic entirely and confirm nothing breaks.
 
 If the engine runs normally with no network at all, nothing during that run can have been uploaded.
@@ -57,7 +57,7 @@ An engine with a compiled core called from Python is usually the best of both: t
 Everything below is stated in the documents that ship with the kit:
 
 - **A library on your machine.** The engine is a precompiled library with a stable C interface. Your program loads it and runs backtests in-process.
-- **Offline after activation.** The licence is machine-locked and checked locally against a signed grant. No network call is made during normal operation; the licence server is contacted only when you activate or deactivate.
+- **Runs with the network cut off.** The licence is machine-locked and checked locally against a signed grant. The licence server is contacted when you activate or deactivate, and near each monthly renewal to re-sign the end date, sending only the key, fingerprint and seat id. `REAMER_LICENSE_NO_REFRESH=1` turns the renewal call off.
 - **Nothing about your trading leaves.** The vendor questionnaire pack in the kit states that strategy code, backtest configurations and trading data are never sent to Reamer Labs, and that there is no telemetry, feature analytics or crash reporting. Reamer Labs keeps only your email address, your licence key and its activation time.
 - **No data from us.** You load your own bars, from CSV, a database or anything numpy or pandas can read, and pass them in. No market data is included, so nothing about what you test is requested from anyone. The bundled Alpaca and Databento fetchers are optional and contact only the vendor you call.
 - **A pure-Python binding, ready to run.** It uses `ctypes` and numpy, needs Python 3.8 or later, and has no build step. You write a class with an `on_bar(self, data)` method that sees each ticker's lookback window as numpy arrays and returns orders as dicts: market, limit and stop entries, optional stop-loss and take-profit, cancels, and GTC, IOC or GTD lifetimes. `data.position_state(ticker)` and `data.open_orders()` give the full position and every resting order, and `engine/actions.py` builds actions that re-price an order, move a position's stop and target, close all or cancel all. A strategy that defines `on_progress(done, total)` sees the run's progress and can stop it.
@@ -74,4 +74,4 @@ Everything below is stated in the documents that ship with the kit:
 - **Activation needs a connection once.** And deactivating, to move the licence to another machine, needs one again.
 - **No native Windows build.** On Windows it runs through WSL2.
 
-The $225 trial includes the full kit and the Python binding, so you can activate, cut the network and run your own strategy before buying a licence.
+A $20 month includes the full kit and the Python binding, so you can activate, cut the network and run your own strategy, and cancel if it does not fit.

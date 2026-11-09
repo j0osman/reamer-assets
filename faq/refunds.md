@@ -1,6 +1,6 @@
 ---
 title: Can I get a refund?
-description: Refunds are handled by Paddle, the merchant of record that sells every Reamer Labs licence, under Paddle's refund policy. A request goes to Paddle within 14 days of purchase, and Paddle decides it case by case. There is no partial refund or cancellation partway through a term. The paid trial is where you decide whether the product fits, and much of it can be checked for free before that.
+description: Refunds are handled by Paddle, the merchant of record that sells every Reamer Labs licence, under Paddle's refund policy. A request goes to Paddle within 14 days of purchase, and Paddle decides it case by case. There is no partial refund partway through a term; cancelling a Reamer Research subscription stops the next monthly charge. A $20 month of Reamer Research, or the paid Reamer Server trial, is where you decide whether the product fits, and much of it can be checked for free before that.
 stage: 6
 order: 47
 product: both
@@ -9,7 +9,7 @@ date: 2026-10-15
 topics: software-license
 ---
 
-Refunds are handled by Paddle, the merchant of record that sells every Reamer Labs licence, under Paddle's refund policy. A request goes to Paddle within 14 days of purchase, and Paddle decides it case by case. There is no partial refund or cancellation partway through a term. The paid trial is where you decide whether the product fits, and much of it can be checked for free before that.
+Refunds are handled by Paddle, the merchant of record that sells every Reamer Labs licence, under Paddle's refund policy. A request goes to Paddle within 14 days of purchase, and Paddle decides it case by case. There is no partial refund partway through a term; cancelling a Reamer Research subscription stops the next monthly charge. A $20 month of Reamer Research, or the paid Reamer Server trial, is where you decide whether the product fits, and much of it can be checked for free before that.
 
 ## How a refund request works
 
@@ -29,7 +29,7 @@ The software is sold for use in a trade or profession, by firms and by individua
 ## Checking fit before you pay
 
 - **For free:** the [Spec Notes](/notes.html), which publish how execution is modelled, this FAQ, the benchmark method and raw data, and the uncut integration recordings.
-- **For the price of a trial:** the full product for 30 days on your own data, hardware and strategy code. See [Is there a free trial?](/faq/trial.html)
+- **For $20, or the price of a Server trial:** the full product for a month on your own data, hardware and strategy code. See [Is there a free trial?](/faq/trial.html)
 
 ## Avoiding the wrong purchase
 

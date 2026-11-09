@@ -15,7 +15,7 @@ Email support from the person who builds the product, included with every active
 - **One channel:** support@reamerlabs.com, for licensing and technical questions. There is no ticket portal, forum or public issue tracker.
 - **One person:** requests reach the author of the software directly. The tiers below set targets; they are not a support organisation.
 - **Covered hours:** 09:00 to 18:00 IST (UTC+5:30), Monday to Friday, excluding public holidays in Pune. A message sent outside those hours, including straight after a market-hours incident, is picked up at the next covered hour.
-- **Included:** support comes with an active licence, trial or annual, and is not metered per request.
+- **Included:** support comes with an active licence, monthly, trial or annual, and is not metered per request.
 
 ## Severity tiers
 
@@ -34,4 +34,4 @@ To escalate, reply on the same thread marked urgent and state the trading impact
 - **Expired licences.** Support ends with the term.
 - **Running your system.** Both products run on your own machines, so there is no uptime commitment.
 
-Updates released during your term are sent on request by email. For what one maintainer means for continuity, see [Reamer Labs is one person. What happens if it stops?](/faq/single-maintainer-risk.html)
+Reamer Research updates are self-serve: the download link in your licence email serves the latest release while the subscription runs. Reamer Server updates released during your term are sent on request by email. For what one maintainer means for continuity, see [Reamer Labs is one person. What happens if it stops?](/faq/single-maintainer-risk.html)

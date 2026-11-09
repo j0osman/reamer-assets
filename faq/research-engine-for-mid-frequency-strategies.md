@@ -1,6 +1,6 @@
 ---
 title: What's a good commercial research engine for mid-frequency strategies on OHLCV bars?
-description: A good one gives byte-identical results for the same inputs and seed, publishes the rules it fills orders by, models bid, ask, spread and slippage, runs fast enough to sweep parameters, keeps your strategy on your own machine and has a path to live trading. Reamer Research is built for this case. It costs $1,800 per seat per year, with a $225 30-day trial.
+description: A good one gives byte-identical results for the same inputs and seed, publishes the rules it fills orders by, models bid, ask, spread and slippage, runs fast enough to sweep parameters, keeps your strategy on your own machine and has a path to live trading. Reamer Research is built for this case. It costs $20 per seat per month, cancel any time.
 stage: 3
 order: 14
 product: research
@@ -46,7 +46,7 @@ Mid-frequency means positions held from minutes to days, decided on bars rather 
 - **Portfolios with per-instrument costs.** Many instruments in one run with shared equity and margin. Commission, spread, slippage, swap and bid or ask pricing can be set for each one. Non-price data, such as earnings dates, can be attached to an instrument and is only visible from its own timestamp onward.
 - **Fast enough to sweep.** On an AMD EPYC 9575F and release 4.6.0, one backtest ran at about 1.83 million bars a second, and its speed varied by only 0.66% (coefficient of variation) across 2,000 runs. A 50-million-bar test, 10,000 tickers over 20 years with 990,000 stop-and-target orders, ran in 15.8 seconds. Each backtest is single-threaded, and separate backtests are safe to run at the same time from your own threads, so a sweep uses every core. A benchmark tool in the kit reruns the measurement on your own machine.
 - **Python, with a cost.** The Python reference uses ctypes and numpy and ships with 15 example strategies and scripts. It is far slower per bar than C++: on a 2017 laptop and release 4.1.2, an 884,130-bar backtest took about 65 seconds from Python.
-- **Local.** After a one-time activation, it runs offline. Only activation and deactivation contact the licence server; strategies, data and results stay on your machine.
+- **Local.** After activation it runs without a connection. Only the licence key, fingerprint and seat id go to the licence server, at activation, deactivation and each monthly renewal; strategies, data and results stay on your machine.
 - **The full record.** 31 summary metrics, including Sharpe, Sortino, Calmar and drawdown, plus every order, fill and closed trade, written as a versioned JSON report.
 - **Full state on every bar.** The strategy sees its position in each instrument and every resting order, and can re-price an order, move a position's stop to breakeven or into profit, close everything or cancel everything. Each action reports whether it was applied and why not.
 - **A route to live.** `reamer_relay_*` sends the orders your strategy returns to a running [Reamer Server](/products/reamer-server.html), a separate product, and reads the fills back as position state. The decision logic carries over; indicators move from a bar window to running state.
@@ -63,4 +63,4 @@ The method and raw data behind the speed and repeatability figures are public: s
 
 ## Price
 
-$1,800 per seat per year, paid once, with no automatic renewal. A 30-day trial costs $225, and the licence key and kit arrive by email within minutes. The trial is the way to run your own strategy on your own data before deciding. See [pricing](/pricing.html).
+$20 per seat per month, billed monthly, cancel any time. It is $20 a month, cancel any time, and the licence key and kit arrive by email within minutes. A month is the way to run your own strategy on your own data before deciding. See [pricing](/pricing.html).

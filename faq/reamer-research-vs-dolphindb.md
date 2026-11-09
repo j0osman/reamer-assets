@@ -25,7 +25,7 @@ DolphinDB is a time-series database with its own scripting language, stream proc
 - **Bars, not order books.** It models what happens inside a bar on a deterministic tick path, but it does not replay Level-2 data or simulate a queue. Order-book and high-frequency strategies are out of scope.
 - **Fill rules in writing.** An execution specification ships with the kit and covers bid and ask, spread, slippage, commission, overnight swap, margin, gaps, order lifetimes and what fills first inside a bar.
 - **Byte-identical runs.** With a fixed `rng_seed`, output is identical to the byte, including randomised spread and slippage.
-- **One machine.** It runs on one Linux x86-64 machine, Apple Silicon Mac or Windows PC through WSL2, offline after activation. No cluster to run.
+- **One machine.** It runs on one Linux x86-64 machine, Apple Silicon Mac or Windows PC through WSL2, without a connection after activation. No cluster to run.
 
 ## Which to choose
 
@@ -34,4 +34,4 @@ DolphinDB is a time-series database with its own scripting language, stream proc
 
 ## Price
 
-Reamer Research costs $1,800 per seat per year, with a $225 30-day trial. See [pricing](/pricing.html).
+Reamer Research costs $20 per seat per month, cancel any time. See [pricing](/pricing.html).
