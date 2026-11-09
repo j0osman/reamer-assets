@@ -1,6 +1,6 @@
 ---
 title: What is Reamer Research?
-description: Reamer Research is a deterministic research engine for mid-frequency quants. It is a library with a stable C interface that you call from Python, C++ or any language that can call C, on your own machine. It tests a strategy, diagnoses it trade by trade, sweeps it, reports it, and sends its orders live to Reamer Server. The same data, settings and seed give byte-identical results every run. It costs $20 per seat per month, cancel any time.
+description: Reamer Research is a deterministic research engine for mid-frequency quants. It is a library with a stable C interface that you call from Python, C++ or any language that can call C, on your own machine. It tests a strategy, diagnoses it trade by trade, sweeps it, reports it, and sends its orders live, to Reamer Server or to a receiver of your own over the published protocol. The same data, settings and seed give byte-identical results every run. It costs $20 per seat per month, cancel any time.
 stage: 4
 order: 24
 product: research
@@ -26,7 +26,7 @@ How fills are decided, including stops and targets inside one bar, is set out in
 ## Scope
 
 - Mid-frequency strategies on bars of any type: time, tick, volume, dollar, imbalance or your own custom rule. Order-book (level 2 or level 3), high-frequency and options strategies are a different kind of engine.
-- Batch runs over historical bars. Live order handling, sequencing and your pre-trade gate run in Reamer Server, which the relay connects to.
+- Batch runs over historical bars. The relay sends orders live over the published strategy socket protocol, to Reamer Server, which adds sequencing, your pre-trade gate and your broker connector, or to a receiver you write.
 - Your own data. You bring your own bars, already adjusted for splits and dividends.
 - Linux x86-64, macOS on Apple Silicon, and Windows through WSL2.
 

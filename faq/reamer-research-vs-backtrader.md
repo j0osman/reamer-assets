@@ -44,7 +44,7 @@ Both engines repeated every result. This is one machine, one date, one instrumen
 - You are learning, or taking a first look at whether an idea has any shape at all.
 - You need it to be free.
 - You want an engine written entirely in Python that you can read and change.
-- You want live trading and market data in the same package as the research tool. With Reamer Labs, live orders go through [Reamer Server](/products/reamer-server.html), a separate product, and the market data is yours.
+- You want live trading and market data in the same package as the research tool. With Reamer Labs, the relay sends live orders to [Reamer Server](/products/reamer-server.html), a separate product, or to a receiver you write, and the market data is yours.
 
 ## When Reamer Research is
 

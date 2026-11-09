@@ -45,9 +45,10 @@ be split- and dividend-adjusted. `EXECUTION_SPEC.md` states the boundaries
 precisely.
 
 **This is a batch research engine.** Backtests run over historical bars;
-there is no live market-data feed. Live execution runs on Reamer Server:
-`reamer_relay_*` sends the orders your strategy returns to a running server
-over its local strategy socket. The gate and the broker connector are yours
+there is no live market-data feed. For live execution, `reamer_relay_*`
+sends the orders your strategy returns to a running Reamer Server over its
+local strategy socket, or to any receiver you write that speaks the socket
+protocol in `EXTENSION_PROTOCOL.md`. The gate and the broker connector are yours
 to build — see `RESEARCH_TO_SERVER.md`.
 
 ## New in 4.5.0 — ABI 7
