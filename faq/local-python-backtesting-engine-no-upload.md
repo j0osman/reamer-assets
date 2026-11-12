@@ -1,6 +1,6 @@
 ---
 title: Is there a backtesting engine I can call from Python that runs locally and never uploads my code?
-description: Yes. Look for an engine delivered as a library you run on your own machine, with a licence that is checked offline, and confirm it by running it with the network cut off. Reamer Research is one: a compiled engine with a pure-Python binding that ships in source, which runs without a connection after activation and sends no strategy code, data or results to Reamer Labs.
+description: Yes. Look for an engine delivered as a library you run on your own machine, with a licence that is checked offline, and confirm it by running it with the network cut off. Reamer Research is one: a compiled engine in a Python package whose Python code ships in source, which runs without a connection after activation and sends no strategy code, data or results to Reamer Labs.
 stage: 3
 order: 17
 product: research
@@ -9,7 +9,7 @@ date: 2026-10-01
 topics: backtesting, abi
 ---
 
-Yes. Look for an engine delivered as a library you run on your own machine, with a licence that is checked offline, and confirm it by running it with the network cut off. [Reamer Research](/products/reamer-research.html) is one: a compiled engine with a pure-Python binding that ships in source, which runs without a connection after activation and sends no strategy code, data or results to Reamer Labs.
+Yes. Look for an engine delivered as a library you run on your own machine, with a licence that is checked offline, and confirm it by running it with the network cut off. [Reamer Research](/products/reamer-research.html) is one: a compiled engine in a Python package whose Python code ships in source, which runs without a connection after activation and sends no strategy code, data or results to Reamer Labs.
 
 "Local" is easy to claim, so the useful part of the answer is how to check it.
 
@@ -68,10 +68,9 @@ Everything below is stated in the documents that ship with the kit:
 ## Limits to know
 
 - **Python is much slower per bar than C++.** In the kit's benchmark, on release 4.1.2, a realistic strategy cost about 74 µs per bar from Python against about 2.2 µs from C++, roughly 33 times slower. An 884,130-bar backtest took about 65 seconds from Python.
-- **The binding is sample code under the licence.** It works out of the box, and you may use and change it, in production too. But the licence (Section 4) treats it as unsupported, without warranty and liable to change between releases. The supported contract is the C interface.
-- **It covers less than the C interface.** The binding applies one cost configuration to every ticker in a run, and does not pass non-price data such as earnings dates. Both are available through the C interface's current entry point, which the binding can be extended to call.
+- **The package is sample code under the licence.** It works out of the box, and you may use and change it, in production too. But the licence (Section 4) treats it as unsupported, without warranty and liable to change between releases. The supported contract is the C interface.
 - **Closed source.** You can verify what the engine sends, as above, but not read its code.
 - **Activation needs a connection once.** And deactivating, to move the licence to another machine, needs one again.
 - **No native Windows build.** On Windows it runs through WSL2.
 
-A $20 month includes the full kit and the Python binding, so you can activate, cut the network and run your own strategy, and cancel if it does not fit.
+A $20 month includes the full kit and the Python package, so you can activate, cut the network and run your own strategy, and cancel if it does not fit.

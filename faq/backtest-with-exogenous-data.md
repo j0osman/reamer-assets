@@ -74,7 +74,7 @@ The note [Testing earnings strategies with exogenous data](/notes/testing-earnin
 
 ## Limits to know
 
-- **C interface only, for now.** Sidecars are attached through `reamer_run_backtest()` or `reamer_run_backtest_files()` and read in the `on_bar` callback. The Python reference binding does not pass them; it can be extended to. Neither reference implementation includes a worked example.
+- **No worked example yet.** Sidecars attach from Python (`exogenous=` on `rr.backtest`, read as `data.exogenous(ticker)`), from the C++ header, or through `reamer_run_backtest()` and `reamer_run_backtest_files()`, but the kit's examples do not include one.
 - **One series per ticker.** Combine several sources into one value, such as a JSON object. Market-wide data, such as a volatility index, is attached to each ticker that reads it.
 - **The current value, not a history.** The callback receives the latest visible value for each ticker. If the strategy needs earlier values, it keeps them itself.
 - **Your timestamps are trusted.** The engine enforces the order of visibility; it cannot know when your data was really available.

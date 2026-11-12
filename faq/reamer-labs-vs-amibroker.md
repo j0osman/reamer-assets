@@ -25,8 +25,8 @@ Details below were checked against AmiBroker's own pages in November 2026.
 
 ## How Reamer Labs differs
 
-- **Libraries, not an application.** [Reamer Research](/products/reamer-research.html) and [Reamer Server](/products/reamer-server.html) each have a stable C interface, and you write a short program around them. There are no charts or scanners.
-- **General-purpose languages.** Strategies are written in Python or C++, or any language that can call C, so your own libraries and models run inside the strategy. The kit ships a Python binding, a C++ wrapper, 6 templates and 20 examples.
+- **Libraries, not an application.** [Reamer Research](/products/reamer-research.html) and [Reamer Server](/products/reamer-server.html) are libraries you call from your own program: Reamer Research as a Python package or one C++ header, both products through a stable C interface. There are no scanners or live charts. Reamer Research's offline trade viewer charts each closed trade on its bars, but it is not a charting or trading application.
+- **General-purpose languages.** Strategies are written in Python or C++, or any language that can call C, so your own libraries and models run inside the strategy. The kit ships a Python package, a one-header C++ wrapper, 6 templates and 22 examples (17 Python, 5 C++).
 - **Fill rules in writing.** The public [execution specification](/docs/execution-spec.html) states how orders fill on bars. A seeded tick path runs through every bar, so you do not need tick data to resolve a stop and a target in one bar.
 - **Byte-identical runs.** With a fixed seed, output matches to the byte, which suits audit and regression tests.
 - **Bars of any type.** Time, tick, volume or dollar bars all run, and several instruments share one wall clock and one account in every run. Monte Carlo resampling of a run's trades is built in, and parameter sweeps and walk-forward splits are loops in your own program.

@@ -22,7 +22,7 @@ Deltix QuantOffice is an enterprise trading platform from EPAM. It covers resear
 
 ## How Reamer Labs differs
 
-- **Two libraries, not a platform.** [Reamer Research](/products/reamer-research.html) is the research engine and [Reamer Server](/products/reamer-server.html) takes a strategy live. Each has a stable C interface, and you write a short program around it.
+- **Two libraries, not a platform.** [Reamer Research](/products/reamer-research.html) is the research engine and [Reamer Server](/products/reamer-server.html) takes a strategy live. Each is a library you call from your own program: Reamer Research as a Python package or one C++ header, both through a stable C interface.
 - **Self-serve start.** Checkout is online, with the key and kit by email within minutes. A first Reamer Research run takes a couple of minutes with the Python package or the C++ header; on an uncut recording, a working Reamer Server integration took about 19. See [How long does integration take?](/faq/integration-time.html)
 - **Built for bars.** Systematic strategies on time, tick, volume, dollar or custom bars, held from minutes to days. No options, high-frequency or order-book strategies, and you bring your own data.
 - **You supply the edges.** Reamer Server runs your own pre-trade gate on every order and sends accepted orders through a broker connector you write. The kit has a worked FIX 4.4 example. Deltix ships the connectors.

@@ -41,7 +41,7 @@ Details below were checked in November 2026, against each vendor's own pages.
 
 - **QuantConnect** runs Python or C# strategies in the cloud with data and brokers included. See [What are the best QuantConnect alternatives in 2026?](/faq/quantconnect-alternatives.html)
 - **Zorro** offers C or C++ with a built-in optimizer, charts and broker connections. The free version has a $30,000 annual profit limit and a $15,000 capital limit, and corporations need Zorro S.
-- **Reamer Research and Reamer Server** supply the research and order-management core for your own program. [Reamer Research](/products/reamer-research.html) fills orders under a public [execution specification](/docs/execution-spec.html), with byte-identical runs on a fixed seed and bars of any type. [Reamer Server](/products/reamer-server.html) runs your pre-trade gate and a broker connector you write. They have no charts and no visual builder. See [How do Reamer Research and Reamer Server compare with WealthLab?](/faq/reamer-labs-vs-wealthlab.html)
+- **Reamer Research and Reamer Server** supply the research and order-management core for your own program. [Reamer Research](/products/reamer-research.html) fills orders under a public [execution specification](/docs/execution-spec.html), with byte-identical runs on a fixed seed and bars of any type. [Reamer Server](/products/reamer-server.html) runs your pre-trade gate and a broker connector you write. They have no live charts and no visual builder; Reamer Research's offline trade viewer charts each closed trade. See [How do Reamer Research and Reamer Server compare with WealthLab?](/faq/reamer-labs-vs-wealthlab.html)
 
 ## How to choose
 
