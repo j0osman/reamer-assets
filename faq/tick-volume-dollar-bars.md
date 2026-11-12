@@ -28,7 +28,8 @@ The harder question is whether a backtest stays correct once bars stop arriving 
 
 ## What stays your job
 
-- **Building the bars.** The engine does not turn ticks into bars. Buy and sell classification, threshold estimates and bucketing belong in your own pipeline or a vendor's tool.
+- **Building the bars.** The engine does not turn ticks into bars. Buy and sell classification, threshold estimates and bucketing belong in your own pipeline or a vendor's tool. So does where each bar is cut. Index futures trade overnight, so a volume bar that starts at 9:20 ET can close at 9:31 and put the open inside it. Cut bars at the session boundary.
+- **Rewriting rules counted in bars.** "The first six bars after the open" means 30 minutes on 5-minute bars and perhaps a minute on dollar bars, and a 20-bar lookback no longer covers a fixed stretch of time. Rules keyed to the clock survive the switch: the strategy sees each step's timestamp as `data.ts` in Python or `d.ts()` in C++, in epoch seconds UTC. Convert exchange times such as 9:30 ET to UTC yourself, daylight saving included.
 - **Keeping the future out of them.** A threshold estimated over the whole dataset leaks later data into earlier bars. The engine cannot see this, because it only receives finished bars.
 - **Annualising the ratios.** Bars at irregular intervals do not map to a calendar. Pass `periods_per_year` to `reamer_get_summary()` to set the convention for Sharpe and Sortino.
 
