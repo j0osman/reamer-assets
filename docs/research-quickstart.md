@@ -16,8 +16,10 @@ library**, not as a program you run.
 There is no `reamer-research` binary in this kit. You write a program that
 builds a strategy vtable, hands the engine your bars and config, and calls
 `reamer_run_backtest()`. That call is your backtest. Any language
-that can call a C ABI can drive it — this kit ships worked examples in C++
-and Python.
+that can call a C ABI can drive it. For Python and C++ the kit ships that
+program's plumbing already written: `pip install python/*.whl` and
+`import reamer_research`, or `#include <reamer_research.hpp>`. A whole
+backtest is then a strategy function and one `backtest()` call.
 
 `reamer_run_backtest()` takes **per-ticker execution config**
 (per-instrument commission, slippage and spread in one run), **mandatory
@@ -51,7 +53,21 @@ local strategy socket, or to any receiver you write that speaks the socket
 protocol in `EXTENSION_PROTOCOL.md`. The gate and the broker connector are yours
 to build — see `RESEARCH_TO_SERVER.md`.
 
-## New in 4.5.0 — ABI 7
+## New in 4.9.0
+
+ABI 7 is unchanged: code built against 4.5.0 or later runs as it is.
+
+| Addition | What it does |
+|---|---|
+| `python/reamer_research-*.whl` | The Python package, with the library and the viewer inside it. `pip install` it, or `pip install ./reference-python`, and `rr.backtest(on_bar, "AAPL.csv")` runs from any directory. CSV, pandas, numpy and `.bin` input; per-ticker costs, exogenous sidecars, `Relay`. See the [Python package](/docs/python-package.html) page. |
+| `include/reamer_research.hpp` | The C++ wrapper, one header: `rr::backtest(on_bar, "AAPL.csv")` with a lambda or an object strategy, CSV and `.bin` loading, fluent orders, `Relay`. Found by `find_package(ReamerResearch)` and pkg-config through `lib/cmake/` and `lib/pkgconfig/`. See the [C++ wrapper](/docs/cpp-wrapper.html) page. |
+| `viewer/reamer-viewer.html` | The offline [trade viewer](/docs/trade-viewer.html). `open_viewer=True` (Python) or `.open_viewer = true` (C++) opens a run in it as soon as it finishes. |
+
+The Python and C++ quickstarts are `reference-python/examples/quickstart.py`
+and `reference-cpp/examples/quickstart.cpp`: an ATR band reversion with a
+bracket on every entry, in about a dozen lines each.
+
+## In 4.5.0 — ABI 7
 
 ABI 7 breaks ABI 6: `on_bar` and the strategy vtable change. Rebuild
 against the shipped header. `CHANGELOG.md` lists every change.
@@ -83,14 +99,18 @@ lists every removal and rename.
 | Path | What it is |
 |---|---|
 | `include/reamer_research_abi.h` | The entire integration contract. Every struct, vtable, and entry point, with lifetime rules stated inline. Read this first. |
+| `include/reamer_research.hpp` | The C++ wrapper over that contract, one header. See `reference-cpp/README.md`. |
 | `lib/libreamer_research.so` | The engine you link against (`.dylib` on macOS). |
+| `lib/cmake/ReamerResearch/`, `lib/pkgconfig/` | `find_package(ReamerResearch)` and `pkg-config reamer-research` files for the library and the C++ header. |
+| `python/reamer_research-*.whl` | The Python package, library and viewer included. `pip install` it. See `reference-python/README.md`. |
 | `bin/reamer-license` | Activates this machine's license (`activate` / `status` / `deactivate`). |
 | `bin/release-sign` | Verifies the detached Ed25519 signature over this archive's `.sha256`. See `DEPLOYMENT.md` Step 1. |
 | `bin/reamer-exo-build` | Converts a two-column CSV into the `.exo.bin` sidecar `reamer_run_backtest()` reads. Offline converter — needs no license. See `EXOGENOUS_FORMAT.md`. |
 | `bin/reamer-csv-build` | Converts an OHLCV CSV into the `.bin` bar file `reamer_run_backtest_files()` memory-maps. Offline converter — needs no license. See "Your own data" below. |
 | `bin/research-bench` | Runs the pure-ABI backtest throughput benchmark on your own hardware after activation, reproducing `BENCHMARK.md`'s bars/sec figure. See "Measuring on your own hardware" there. |
-| `reference-cpp/` | An RAII wrapper over the ABI plus four runnable examples. Source, not binaries — you are meant to read and adapt it. |
-| `reference-python/` | A ctypes binding, strategy templates, Alpaca and Databento bar fetchers, and a runnable end-to-end quickstart. Same status: reference material, not a supported surface. |
+| `reference-cpp/` | The C++ wrapper's source and five runnable examples, `quickstart.cpp` first. |
+| `reference-python/` | The Python package's source (`pip install ./reference-python` installs it), strategy templates, Alpaca and Databento bar fetchers, and runnable examples, `examples/quickstart.py` first. |
+| `viewer/reamer-viewer.html` | An offline trade viewer: one HTML file you open in a browser. Add a run's result JSON, its bar files and, optionally, its console log, and it charts each closed trade on its bars beside the indicator values and other output your strategy printed. Nothing is uploaded. See `viewer/README.md`. |
 | `reference-python/sample_data/` | A 100-bar daily OHLCV CSV, so the quickstart runs without you sourcing data first. |
 | `VENDOR_QUESTIONNAIRE_PACK.md` | The standing answer to an infra/risk/procurement team's security questionnaire, support model, vulnerability disclosure policy, data-handling statement, and business-continuity/escrow note — hand it to your own security review. Published as the [vendor questionnaire pack](/docs/vendor-questionnaire.html). |
 | `SECURITY_HARDENING.md` | The internal adversarial security pass already performed against the ABI/IPC and license boundaries: the defect classes found and closed, and the sanitizer + regression-test verification each fix carries. |
@@ -101,10 +121,10 @@ lists every removal and rename.
 Every binary answers `--version`, so you can confirm which build you have:
 
 ```bash
-./bin/reamer-license --version    # reamer-license 4.8.1
-./bin/release-sign --version      # release-sign 4.8.1
-./bin/reamer-exo-build --version  # reamer-exo-build 4.8.1
-./bin/reamer-csv-build --version  # reamer-csv-build 4.8.1
+./bin/reamer-license --version    # reamer-license 4.9.0
+./bin/release-sign --version      # release-sign 4.9.0
+./bin/reamer-exo-build --version  # reamer-exo-build 4.9.0
+./bin/reamer-csv-build --version  # reamer-csv-build 4.9.0
 ```
 
 Docs: `EXECUTION_SPEC.md` (**authoritative** on fills, slippage, spread,
@@ -142,26 +162,24 @@ the security-hardening record).
 3. **`include/reamer_research_abi.h`.** Twenty minutes here answers most
    integration questions. It is the contract, and it is written to be read.
 4. **Run something.** The fastest path to a *backtest* result, from this
-   directory (keep the `-o` target here too — `'$ORIGIN/lib'` resolves
-   relative to wherever the binary lands, so building it into another
-   directory compiles clean but fails at launch; see `DEPLOYMENT.md` Step 3):
+   directory. In Python:
 
    ```bash
-   g++ -std=c++20 -Iinclude -Ireference-cpp/include \
-     reference-cpp/examples/buy_and_hold.cpp \
-     -Llib -lreamer_research -Wl,-rpath,'$ORIGIN/lib' -o buy_and_hold
-   ./buy_and_hold
+   pip install python/reamer_research-*.whl
+   python3 reference-python/examples/quickstart.py
    ```
 
-   Or, in Python:
+   Or in C++:
 
    ```bash
-   export REAMER_RESEARCH_LIB="$PWD/lib/libreamer_research.so"
-   cd reference-python && python3 examples/quickstart_run.py
+   c++ -std=c++20 -O2 reference-cpp/examples/quickstart.cpp -Iinclude \
+     -Llib -lreamer_research -Wl,-rpath,"$PWD/lib" -o quickstart
+   ./quickstart reference-python/sample_data/AAPL.csv
    ```
 
-   Both require an activated license. Run either twice — the output is
-   byte-identical.
+   Each runs an ATR band reversion over the sample data, prints the summary and
+   opens the run in the trade viewer. Both require an activated license.
+   Run either twice — the output is byte-identical.
 5. **`EXECUTION_SPEC.md`.** Before you size a position against any backtest
    result, read §1 (bid/ask and the slippage model), §2 (fill prices), and
    §10 (margin). Slippage is **not floored at zero** — negative slippage,

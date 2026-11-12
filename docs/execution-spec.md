@@ -72,7 +72,15 @@ Validation, applied at submission:
 - **Long entry** — `take_profit` must be above the entry price; `stop_loss` below it.
 - **Short entry** — `take_profit` must be below the entry price; `stop_loss` above it.
 
-An order violating these is rejected at submission. Bracket exits fill per §2's TP/SL
+The entry price is the limit or stop price for those order types, and the latest close
+for a market order. An order violating these is rejected at submission.
+
+The fill can still land past a level that was valid at submission: a market order
+filling after a gap, or slippage through a nearby level. The bracket keeps its prices,
+as a venue keeps a bracket's absolute levels, and a level the fill has already passed
+exits on the next tick after the fill, at that tick's price plus slippage, like a
+bracket leg that is marketable the moment it goes live. If the fill is on a bar's last
+tick, that is the first tick of the next bar. Bracket exits fill per §2's TP/SL
 rows, resolve collisions per §7, and are accounted into the closed trade's fees and
 slippage — they do not appear as separate live orders.
 

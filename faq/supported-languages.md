@@ -15,14 +15,14 @@ Both products are compiled libraries with a stable C interface. The C interface 
 
 ## Reamer Research
 
-- **Python.** A pure-Python binding using `ctypes` and numpy, for Python 3.8 or later, with no build step. You write an `on_bar` method that sees each instrument's recent bars as numpy arrays, its positions and resting orders, and returns orders and order actions. Templates and example strategies are included.
-- **C++.** A C++20 wrapper around the C interface, with example strategies.
+- **Python.** A package you `pip install`, with the engine inside it, for Python 3.9 or later and numpy, with nothing to compile. `rr.backtest(on_bar, "AAPL.csv")` runs a strategy over CSV, `.bin`, pandas or numpy bars. Your `on_bar` function sees each instrument's recent bars as numpy arrays, its positions and resting orders, and returns orders and order actions. Templates and example strategies are included.
+- **C++.** One C++20 header, found by CMake or pkg-config: `rr::backtest(on_bar, "AAPL.csv")` with a lambda or an object strategy, and orders with brackets chained on. Example strategies are included.
 - **Anything else that can call C,** such as Rust, Go, Julia or C#, against the header directly.
 
 Two things to know about Python:
 
 - **It is slower per bar.** In the kit's benchmark, on release 4.1.2, a strategy cost about 74 µs per bar from Python against about 2.2 µs from C++. An 884,130-bar backtest took about 65 seconds.
-- **The binding covers less than the C interface.** It applies one cost setting to every instrument in a run, and passes no non-price data such as earnings dates. For those, call the C interface's newest entry point from C++ or extend the binding.
+- **It covers what a backtest needs.** Per-instrument costs, non-price data such as earnings dates, memory-mapped `.bin` files and the live relay are all reachable from Python, as they are from C++.
 
 See [Is there a backtesting engine I can call from Python that runs locally and never uploads my code?](/faq/local-python-backtesting-engine-no-upload.html)
 

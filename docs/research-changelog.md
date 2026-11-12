@@ -16,6 +16,63 @@ Version numbers here are the release version (`kReamerVersion`), which is
 shared with Reamer Server and moves independently of `REAMER_ABI_VERSION`.
 ABI bumps are called out explicitly where they occur.
 
+## [4.9.0] - 2026-11-12
+
+Python and C++ researchers run a backtest without writing any ABI plumbing:
+`pip install` the package, or include one header. `REAMER_ABI_VERSION`
+stays 7, and code built against 4.5.0 or later runs as it is.
+
+### Added
+- Python package `reamer_research`, shipped built as
+  `python/reamer_research-<version>-py3-none-<tag>.whl` with the library and
+  the trade viewer inside it, and installable from source with
+  `pip install ./reference-python` (`[pandas]` extra for DataFrames).
+  `rr.backtest(on_bar, "AAPL.csv")` takes a function or class strategy and
+  CSV paths, `.bin` paths (memory-mapped), pandas DataFrames or numpy bars,
+  with `lookback`, per-ticker costs (`ticker_config`), exogenous sidecars,
+  `start`/`end`, `result_json`, `console_log` and `open_viewer`. Order
+  helpers (`rr.buy_market(10, stop_loss=...)` and the rest), `rr.Result`
+  (every summary field, `closed_trades`, `trades_frame()`, `json()`,
+  `monte_carlo()`, `open_viewer()`), `load_csv`, `to_bars`, `write_bin`,
+  `read_bin`, `write_exogenous` and `rr.Relay`.
+- C++ wrapper `include/reamer_research.hpp`, one header, C++20:
+  `rr::backtest(on_bar, "AAPL.csv", {.lookback = 30})` with a lambda or an
+  object strategy, CSV, `.bin` or in-memory bars, fluent orders with
+  `.bracket(tp, sl)` and time in force, `rr::Result` with `closed_trades()`,
+  `json()`, `monte_carlo()` and `write_viewer()`, `load_csv`, `write_bin`,
+  `read_bin`, `write_exogenous` and `rr::Relay`. Failures throw `rr::Error`.
+- `lib/cmake/ReamerResearch/` (`find_package(ReamerResearch)`, target
+  `ReamerResearch::reamer_research`) and `lib/pkgconfig/reamer-research.pc`.
+- `viewer/reamer-viewer.html`, an offline trade viewer: each closed trade
+  charted on its bars beside the values the strategy printed, the console
+  lines for each bar, and a Monte Carlo simulation of the run. The chart
+  shows a fixed window around the selected trade, with a crosshair and a
+  readout of the hovered bar. In a run of several tickers, a line that names
+  its ticker (`AUDUSD_M15 mid=...`) is plotted on that ticker only. One HTML
+  file; nothing is uploaded. `open_viewer=True` (Python) and
+  `.open_viewer = true` (C++) open a run in it as soon as it finishes;
+  `python3 -m reamer_research.viewer` builds the page from a C program's
+  files. On a machine with no desktop the page's path is printed and no
+  browser is started.
+- Quickstarts of about a dozen lines, an ATR band reversion with a bracket
+  on every entry: `reference-python/examples/quickstart.py` and
+  `reference-cpp/examples/quickstart.cpp`. They return early while the
+  lookback window is still filling, when its oldest rows are placeholders
+  that read as 0 (`valid()` is 0 for them).
+
+### Changed
+- A market entry whose fill gaps past its own take profit or stop loss keeps
+  its bracket, and the passed level exits on the next tick after the fill at
+  that tick's price. Before, the engine dropped both levels and the position
+  ran with no bracket. The rule is in `EXECUTION_SPEC.md` §0b.
+- `run_backtest()` and `reamer_research_binding` from 4.8 still import and
+  run, and now return an `rr.Result`. A strategy's exception is raised from
+  the run instead of ending it quietly, and `lookback` is read from an
+  instance as well as from the class.
+- `closed_trades` is no longer capped at 4,096 trades, in Python and in the
+  4.x C++ reference wrapper (namespace `reamer_research_ref`, kept in the
+  new header so its code compiles unchanged).
+
 ## [4.8.1] - 2026-11-09
 
 Reamer Research becomes a monthly subscription, and the engine picks up

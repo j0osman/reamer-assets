@@ -1,6 +1,6 @@
 ---
 title: Start from working code
-description: What both kits ship beyond the core: a working FIX 4.4 connector, strategy relay, gate and event reader for Reamer Server, and C++ and Python references for Reamer Research.
+description: What both kits ship beyond the core: a working FIX 4.4 connector, strategy relay, gate and event reader for Reamer Server, and a Python package, a C++ header and an offline trade viewer for Reamer Research.
 group: start
 order: 1
 product: both
@@ -72,17 +72,19 @@ is the complete contract.
 
 | Path | What it is |
 | --- | --- |
-| `reference-cpp/` | An RAII wrapper over the C ABI and four runnable examples: buy and hold, a Donchian breakout, an ATR stop with brackets, and a strategy whose orders are rejected on purpose. |
-| `reference-python/` | A ctypes binding with numpy lookback windows, six strategy templates, `fetchers/` for historical bars from Alpaca or Databento, and `examples/quickstart_run.py`, which runs end to end on a bundled 100-bar sample CSV. |
+| `python/reamer_research-*.whl` | The [Python package](/docs/python-package.html), library and trade viewer inside: `pip install` it and `rr.backtest(on_bar, "AAPL.csv")` runs from any directory. Its source is `reference-python/`, with strategy templates and `fetchers/` for historical bars from Alpaca or Databento. |
+| `include/reamer_research.hpp` | The [C++ wrapper](/docs/cpp-wrapper.html), one C++20 header: `rr::backtest(on_bar, "AAPL.csv")` with a lambda or an object strategy, found by `find_package(ReamerResearch)` and pkg-config. `reference-cpp/` holds five examples, `quickstart.cpp` first. |
+| `viewer/reamer-viewer.html` | The offline [trade viewer](/docs/trade-viewer.html): each closed trade on its bars, beside the values your strategy printed. |
 | `bin/reamer-csv-build` | Converts an OHLCV CSV into the `.bin` bar file the engine memory-maps, with a parse report. Needs no licence. |
 | `bin/reamer-exo-build` | Converts a two-column CSV into the `.exo.bin` sidecar for non-price data. Needs no licence. |
 | `bin/research-bench` | A prebuilt benchmark: a real throughput number on your hardware with no compiler. |
 
-The Python quickstart, from the kit root:
+The Python quickstart, from the kit root, an ATR band reversion with a
+bracket on every entry that opens in the trade viewer when it finishes:
 
 ```bash
-export REAMER_RESEARCH_LIB="$PWD/lib/libreamer_research.so"
-cd reference-python && python3 examples/quickstart_run.py
+pip install python/reamer_research-*.whl
+python3 reference-python/examples/quickstart.py
 ```
 
 ### From research to live
@@ -109,11 +111,13 @@ a fresh kit, using only the shipped files. Both were recorded against
 
 ## What this code is, and is not
 
-- **Only the C ABI is supported.** The headers in `include/` are the
-  contract. Everything under `reference/`, `reference-skeleton*/`,
-  `reference-cpp/` and `reference-python/` is reference material under the
-  kit licence: you can read it, change it and ship it in your own work, but
-  it is not a supported surface.
+- **The C ABI is the contract.** `reamer_research_abi.h` and the Reamer
+  Server headers in `include/` define it. The Reamer Research Python package
+  and C++ header are built over it and ship in source: read them, change
+  them, keep them in your own tree. Everything under `reference/` and
+  `reference-skeleton*/` is reference material under the kit licence: you
+  can read it, change it and ship it in your own work, but it is not a
+  supported surface.
 - **It is not an adapter for your venue.** The FIX session talks to the
   simulated acceptor in the kit. Session recovery is reconnect-only, with
   no ResendRequest and no persisted sequence numbers, so a production

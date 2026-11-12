@@ -34,6 +34,6 @@ The whole result is one JSON file, with a schema document in the kit. It carries
 
 - **Equity per closed trade, not per bar.** The report carries the realised equity curve after each closed trade, with timestamps, and the ratios are computed from per-trade returns. Build a daily curve yourself from the trade records if you need one.
 - **Annualisation is yours to set.** Pass the number of periods per year and the Sharpe and Sortino ratios use it. Leave it unset and it is inferred from the typical gap between trade exits, which may not match your convention for a strategy that trades irregularly.
-- **The Python binding** returns the main totals and the closed trades, up to 65,536 by default. For the full report, call the C interface.
+- **From Python or C++,** the result object holds every summary metric and every closed trade, writes the full JSON report, runs the Monte Carlo resample and opens the run in the offline trade viewer.
 
 See [How do I know if my backtest is overfit?](/faq/is-my-backtest-overfit.html) and [What is Reamer Research?](/faq/what-is-reamer-research.html)
