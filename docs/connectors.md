@@ -99,15 +99,13 @@ walks one order through both kits.
 
 ## Watch it done
 
-Two uncut screen recordings show Claude Code integrating each product from
-a fresh kit, using only the shipped files. Both were recorded against
-4.2.1.
+An uncut screen recording shows Claude Code integrating Reamer Server from
+a fresh kit, using only the shipped files, recorded against 4.2.1:
+[Reamer Server in 19 minutes](/videos/reamer-server-integration-demo.html),
+a C++ server with a gate and a broker connector, taking orders to fills.
 
-- [Reamer Research in 13 minutes](/videos/reamer-research-integration-demo.html):
-  from an empty directory to a strategy run that emits the full result
-  document.
-- [Reamer Server in 19 minutes](/videos/reamer-server-integration-demo.html):
-  a C++ server with a gate and a broker connector, taking orders to fills.
+For Reamer Research, the [product page](/products/reamer-research.html)
+shows the whole quickstart in Python and C++ and the trade viewer it opens.
 
 ## What this code is, and is not
 

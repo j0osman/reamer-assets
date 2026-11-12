@@ -98,7 +98,7 @@ If an engine passes, buy the layers that need to be right and build the ones tha
 - **Checkable output.** With a fixed seed, a run is byte-identical on every repeat. The quickstart asks you to run it twice and compare.
 - **Speed for sweeps.** About 1.8 million bars per second per run on a 64-core EPYC machine on release 4.6.0, with the hardware and method in the [replication of the whitepaper](https://reamerlabs.com/papers/operating-envelope-replication.pdf) and a benchmark tool in the kit to reproduce it.
 - **A stable interface.** From ABI 7 on, interface versions are additive: a program built against ABI 7 runs unmodified against a newer library. `ABI_VERSIONING_POLICY.md` in the kit states the rules.
-- **Integration in minutes.** An uncut recording shows an AI coding agent, working from the kit documents alone, taking a strategy through the full research loop in about 13 minutes.
+- **A first run in minutes.** Install the Python package or include the one C++ header, write a strategy as a plain function, and the run ends with a JSON report and the trade viewer.
 
 The price is USD 20 per seat per month, billed monthly, and you can cancel any time. See [Pricing](/pricing.html).
 

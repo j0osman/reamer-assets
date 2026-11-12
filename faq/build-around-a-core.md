@@ -36,7 +36,7 @@ That sits between the two usual choices. Building everything means months spent 
 - **With Reamer Research:** your strategies, in Python, C++ or any language that can call C. Your data pipeline and your sweep, analysis and reporting scripts.
 - **With Reamer Server:** the gate's rules, which are your risk policy. The connector to your broker, plus your strategy processes, storage for the event stream, and dashboards and alerts.
 
-Each product comes with starting points rather than a blank file: Python and C++ example strategies and templates for Reamer Research, and for Reamer Server an accept-all gate and paper broker in C++ and Rust, plus a full FIX 4.4 integration in Go. On uncut recordings, a working integration took about 13 minutes for Reamer Research and 19 for Reamer Server. See [How long does integration take?](/faq/integration-time.html)
+Each product comes with starting points rather than a blank file: Python and C++ example strategies and templates for Reamer Research, and for Reamer Server an accept-all gate and paper broker in C++ and Rust, plus a full FIX 4.4 integration in Go. With the Python package or the C++ header, a first Reamer Research run takes a couple of minutes; on an uncut recording, a working Reamer Server integration took about 19. See [How long does integration take?](/faq/integration-time.html)
 
 ## Why the line sits there
 
