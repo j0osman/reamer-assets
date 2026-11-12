@@ -117,7 +117,7 @@ triggered an exit.
 
 ## Console log format
 
-The Python binding writes JSON Lines when you pass `console_log=`: one record
+The Python package writes JSON Lines when you pass `console_log=`: one record
 per line printed, from `stdout` and `stderr` alike. Your output still reaches
 the terminal as before.
 

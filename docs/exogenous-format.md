@@ -144,6 +144,11 @@ reamer_run_backtest(
     3, &vtable, lookback, &config, 100000.0, 1.0, &handle);
 ```
 
+From Python, pass `exogenous={"AAPL": "aapl_vix.exo.bin"}` to `rr.backtest()`
+(a path, or the `{time: value}` records themselves); from the C++ header, set
+`.exogenous = {{"AAPL", "aapl_vix.exo.bin"}}`. Both read the value in `on_bar`
+as `data.exogenous(...)`, and `write_exogenous()` in each writes a sidecar.
+
 Every supplied path is opened and validated **before the run starts**. An
 unreadable or malformed sidecar fails the call with
 `REAMER_RESEARCH_ERROR_EXOGENOUS_LOAD` and runs no backtest — it never surfaces

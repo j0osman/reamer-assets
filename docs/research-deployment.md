@@ -293,9 +293,11 @@ immediately, this kit ships a 100-bar daily fixture at
 `ReamerOhlcvBar[]` — `ts` as UTC epoch seconds, `notional` 0.0 and
 `tick_count` -1 when unknown — and pass it as a one-ticker portfolio.
 
-For the Python path the whole sequence already ships as a runnable
-script — CSV to summary, using only files in this archive, through the
-lower-level `run_backtest()` interface:
+From Python or C++ none of this is needed: `pip install python/*.whl` and run
+`python3 reference-python/examples/quickstart.py`, or build
+`reference-cpp/examples/quickstart.cpp`. Each reads the CSV and runs it in
+about a dozen lines. The 4.8 script that does the same through the
+lower-level `run_backtest()` interface still ships:
 
 ```bash
 cd reference-python
@@ -587,7 +589,7 @@ release archive alongside this doc:
   4.8 keep working.
 
 - **`BENCHMARK.md`** — Performance comparison across pure-ABI (C/C++), C++ wrapper,
-  and Python binding approaches on the same workload, showing overhead of each
+  and Python approaches on the same workload, showing overhead of each
   language boundary and wrapper layer.
 
 - **`RESEARCH_TO_SERVER.md`** — After backtesting, this guide covers moving

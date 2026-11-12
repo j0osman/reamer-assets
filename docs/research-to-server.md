@@ -14,7 +14,7 @@ only in one kit, that is stated on the line.
 
 ## The handoff
 
-Reamer Research validates your strategy against historical OHLCV bars and
+Reamer Research validates your strategy against historical bars of any type and
 measures backtest performance. Reamer Server executes the same trading
 logic live against a real venue.
 
@@ -32,7 +32,9 @@ identical regardless of what your research strategy is written in.
 `reamer_relay_poll()` send the same `ReamerOrderRequest` your `on_bar()`
 returns to a running Reamer Server over its local-mode strategy socket, and
 `reamer_relay_get_positions()` reads the fills back as
-`ReamerPositionState`. See "Sending research orders live" below. The gate
+`ReamerPositionState`. From Python and C++, `rr.Relay` wraps the same
+calls: `relay.send(rr.buy_market(10, stop_loss=180))` sends the order a
+backtest would return. See "Sending research orders live" below. The gate
 and the broker connector are still yours to build.
 
 **What the move actually costs**, in order of how much it touches your
