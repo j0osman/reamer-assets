@@ -61,7 +61,7 @@ against the shipped header. `CHANGELOG.md` lists every change.
 | `on_bar` `position_states`, `open_orders` | Full position state per ticker (`ReamerPositionState`) and every resting order (`ReamerOpenOrder`), sorted by `order_id`. |
 | `on_bar` `out_actions` | `MODIFY_ORDER`, `MODIFY_POSITION`, `CLOSE_ALL`, `CANCEL_ALL` (`ReamerOrderAction`). `EXECUTION_SPEC.md` §6b has the timing. |
 | `on_progress` vtable slot | Progress calls between bars. Return nonzero to stop the run with `REAMER_RESEARCH_ERROR_CANCELLED` (11). |
-| `reamer_relay_*` | Sends `ReamerOrderRequest`s, brackets included, to a running Reamer Server and reads fills back as `ReamerPositionState`. `REAMER_RESEARCH_ERROR_RELAY` (12). Linux and macOS. |
+| `reamer_relay_*` | Sends `ReamerOrderRequest`s, brackets included, to a running Reamer Server or your own receiver, and reads fills back as `ReamerPositionState`. `REAMER_RESEARCH_ERROR_RELAY` (12). Linux and macOS. |
 
 ## In 4.4.0 — ABI 6
 
@@ -245,8 +245,7 @@ Stated plainly, so you can scope the work rather than discover it:
   report it to support@reamerlabs.com.
 - **No test suite.** The reference trees ship without tests. Validate any
   adaptation against your own.
-- **No live market data.** The relay sends orders to Reamer Server; it
-  does not feed bars to `on_bar`. See "What this is" above.
+- **No live market data.** The relay sends orders out; it does not feed bars to `on_bar`. See "What this is" above.
 
 ## Platform
 

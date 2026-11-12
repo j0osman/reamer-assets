@@ -49,7 +49,7 @@ Mid-frequency means positions held from minutes to days, decided on bars rather 
 - **Local.** After activation it runs without a connection. Only the licence key, fingerprint and seat id go to the licence server, at activation, deactivation and each monthly renewal; strategies, data and results stay on your machine.
 - **The full record.** 31 summary metrics, including Sharpe, Sortino, Calmar and drawdown, plus every order, fill and closed trade, written as a versioned JSON report.
 - **Full state on every bar.** The strategy sees its position in each instrument and every resting order, and can re-price an order, move a position's stop to breakeven or into profit, close everything or cancel everything. Each action reports whether it was applied and why not.
-- **A route to live.** `reamer_relay_*` sends the orders your strategy returns to a running [Reamer Server](/products/reamer-server.html), a separate product, and reads the fills back as position state. The decision logic carries over; indicators move from a bar window to running state.
+- **A route to live.** `reamer_relay_*` sends the orders your strategy returns to a running [Reamer Server](/products/reamer-server.html), a separate product, or to a receiver you write over the [published protocol](/docs/extension-protocol.html), and reads the fills back as position state. The decision logic carries over; indicators move from a bar window to running state.
 
 The method and raw data behind the speed and repeatability figures are public: see [Reamer Research findings on EPYC](/blog/reamer-research-findings-epyc.html).
 

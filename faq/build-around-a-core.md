@@ -22,7 +22,7 @@ That sits between the two usual choices. Building everything means months spent 
 - About 1.8 million bars a second per backtest on release 4.6.0, fast enough to sweep.
 - 31 summary metrics plus every order, fill and trade, in a versioned JSON report.
 - Full position state and every resting order on each bar, with actions that re-price an order, move a position's stop and target, close all or cancel all.
-- A relay, `reamer_relay_*`, that sends the strategy's orders to Reamer Server and reads the fills back.
+- A relay, `reamer_relay_*`, that sends the strategy's orders to Reamer Server, or to a receiver you write over the published protocol, and reads the fills back.
 
 **Reamer Server, the live core.** An order management engine delivered as a library you link into your own program:
 

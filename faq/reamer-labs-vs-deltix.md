@@ -26,7 +26,7 @@ Deltix QuantOffice is an enterprise trading platform from EPAM. It covers resear
 - **Self-serve start.** Checkout is online, with the key and kit by email within minutes. On uncut recordings, a working integration took about 13 minutes for Reamer Research and 19 for Reamer Server. See [How long does integration take?](/faq/integration-time.html)
 - **Built for bars.** Systematic strategies on time, tick, volume, dollar or custom bars, held from minutes to days. No options, high-frequency or order-book strategies, and you bring your own data.
 - **You supply the edges.** Reamer Server runs your own pre-trade gate on every order and sends accepted orders through a broker connector you write. The kit has a worked FIX 4.4 example. Deltix ships the connectors.
-- **Research orders go live through a relay.** `reamer_relay_*` in Reamer Research sends the orders a strategy returns in a backtest to Reamer Server. Indicators move from a bar window to running state. See [What does it take to move from Reamer Research to Reamer Server?](/faq/research-to-server-move.html)
+- **Research orders go live through a relay.** `reamer_relay_*` in Reamer Research sends the orders a strategy returns in a backtest to Reamer Server or to a receiver you write. Indicators move from a bar window to running state. See [What does it take to move from Reamer Research to Reamer Server?](/faq/research-to-server-move.html)
 - **Published prices.** Reamer Research costs $20 per seat per month, cancel any time. Reamer Server costs $24,000 per seat per year, with a $2,000 30-day trial.
 
 ## Which to choose

@@ -85,13 +85,11 @@ export REAMER_RESEARCH_LIB="$PWD/lib/libreamer_research.so"
 cd reference-python && python3 examples/quickstart_run.py
 ```
 
-### From research to a running server
+### From research to live
 
 From ABI 7 (4.5.0), `libreamer_research` includes a strategy relay:
 `reamer_relay_open()`, `reamer_relay_send()` and `reamer_relay_poll()`
-send the same `ReamerOrderRequest` a strategy returns from `on_bar()` to a
-running Reamer Server, and `reamer_relay_get_positions()` reads the fills
-back. Brackets travel with the entry. The relay has limits: it sends new
+send the same `ReamerOrderRequest` a strategy returns from `on_bar()` to a running Reamer Server, or to any receiver you write that speaks `EXTENSION_PROTOCOL.md`, and `reamer_relay_get_positions()` reads the fills back. Brackets travel with the entry. The relay has limits: it sends new
 orders and single cancels only, gate decisions are not echoed back to it,
 and fills for orders sent before a reconnect do not reach it.
 [Research to Server](/docs/research-to-server.html) lists every limit and

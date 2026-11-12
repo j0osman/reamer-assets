@@ -322,8 +322,7 @@ every change.
    `out_actions`. See "Strategy callback" below and `EXECUTION_SPEC.md` §6b.
 2. Optional vtable slot `on_progress` — progress calls between bars; return
    nonzero to stop the run with `REAMER_RESEARCH_ERROR_CANCELLED` (11).
-3. `reamer_relay_*` — send orders to a running Reamer Server and read fills
-   back. `REAMER_RESEARCH_ERROR_RELAY` (12). See `RESEARCH_TO_SERVER.md`.
+3. `reamer_relay_*` — send orders to a running Reamer Server, or to any receiver that speaks `EXTENSION_PROTOCOL.md`, and read fills back. `REAMER_RESEARCH_ERROR_RELAY` (12). See `RESEARCH_TO_SERVER.md`.
 
 ### ABI 6 additions (4.4.0)
 

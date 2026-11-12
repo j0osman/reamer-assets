@@ -19,7 +19,7 @@ It is a library, not an application. Your program hands it bars, settings and a 
 2. **Diagnose.** Every order, fill, modification and closed trade comes back, so any result can be traced trade by trade.
 3. **Sweep.** Run the same strategy across many parameter sets to see whether a result holds or survived on one lucky setting. Each backtest is single-threaded, and separate backtests can run at once from your own threads. A progress callback reports each run and can stop it early. `reamer_run_monte_carlo()` resamples a run's trades to show how much of a drawdown was trade-order luck.
 4. **Report.** 31 summary metrics, the realised equity curve, and the full trade and order logs, written as a schema-versioned JSON file.
-5. **Connect.** `reamer_relay_*` sends the orders your strategy returns to a running [Reamer Server](/products/reamer-server.html), a separate product, and reads the fills back as position state. The order is the same structure in both places. See [How do I take a strategy from backtest to live trading without a rewrite?](/faq/backtest-to-live-without-rewrite.html)
+5. **Connect.** `reamer_relay_*` sends the orders your strategy returns to a running [Reamer Server](/products/reamer-server.html), a separate product, or to a receiver you write over the [published protocol](/docs/extension-protocol.html), and reads the fills back as position state. The order is the same structure in both places. See [How do I take a strategy from backtest to live trading without a rewrite?](/faq/backtest-to-live-without-rewrite.html)
 
 How fills are decided, including stops and targets inside one bar, is set out in an execution specification that ships with the kit.
 

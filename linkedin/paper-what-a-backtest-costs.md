@@ -18,7 +18,7 @@ Speed is not the whole choice. LEAN has the broadest asset and order model and a
 
 The runners and raw results are public. If you think an engine deserved a better configuration, run it and tell me what you get.
 
-Paper: https://doi.org/10.6084/m9.figshare.34787745
-Data and runners: https://doi.org/10.6084/m9.figshare.34785729
+Paper: https://reamerlabs.com/papers/what-a-backtest-costs.pdf
+Data and runners: https://github.com/j0osman/research-engine-benchmark
 
 #backtesting #algotrading #quantitativefinance #QuantConnect #NautilusTrader #Backtrader #reproducibility

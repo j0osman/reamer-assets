@@ -25,7 +25,7 @@ NautilusTrader is a free, open-source trading platform with a Rust core and a Py
 - **Fill rules in writing.** Reamer Research fills orders by an execution specification that ships with the kit: bid and ask, spread, slippage, commission, overnight swap, margin, gaps, and what fills first inside a bar. Output is byte-identical for a fixed `rng_seed`.
 - **One call per time step.** A Reamer Research strategy is called once per time step with every instrument's recent bars and positions, so a cross-sectional rule reads all instruments in one place.
 - **Your gate and your connector.** Reamer Server supplies the order core: sequencing, order state, and a call to your pre-trade gate on every order. You write the gate's rules and the broker connector. It ships starting points in C++, Rust and Go, including a FIX 4.4 example. Strategies connect over a socket from any language.
-- **Research orders go live through a relay.** `reamer_relay_*` in Reamer Research sends the same order structure a backtest uses to Reamer Server. Indicators move from a bar window to running state. See [What does it take to move from Reamer Research to Reamer Server?](/faq/research-to-server-move.html)
+- **Research orders go live through a relay.** `reamer_relay_*` in Reamer Research sends the same order structure a backtest uses to Reamer Server or to a receiver you write. Indicators move from a bar window to running state. See [What does it take to move from Reamer Research to Reamer Server?](/faq/research-to-server-move.html)
 - **A vendor behind it.** A commercial licence, versioned releases and email support from the author.
 
 ## What a published benchmark measured

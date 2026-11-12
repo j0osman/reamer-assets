@@ -17,7 +17,7 @@ The largest change surprised me. In the first run, an unpinned 32-strategy run l
 
 Three things changed together, so the run cannot say which one caused any difference. The paper says so. Reproduce the figures on your own hardware before you rely on one of them.
 
-Paper: https://doi.org/10.6084/m9.figshare.34787757
-Raw outputs: https://doi.org/10.6084/m9.figshare.34785762
+Paper: https://reamerlabs.com/papers/operating-envelope-replication.pdf
+Raw outputs: https://reamerlabs.com/papers/data/epyc-9575f-4.6.0-raw-artifacts.zip
 
 #latency #tradingsystems #performanceengineering #benchmarking #reproducibility #algotrading

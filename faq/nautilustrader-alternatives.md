@@ -48,7 +48,7 @@ Details below were checked against each project's own pages in November 2026.
 
 ## Paid engine libraries
 
-[Reamer Research](/products/reamer-research.html) fills orders by a written execution specification and gives byte-identical output for a fixed `rng_seed`. [Reamer Server](/products/reamer-server.html) supplies sequencing, order state and a call to your pre-trade gate on every order, and you write the gate's rules and the broker connector. Both are from Reamer Labs. They are built for strategies on bars, and `reamer_relay_*` sends research orders to Reamer Server. See [What does it take to move from Reamer Research to Reamer Server?](/faq/research-to-server-move.html)
+[Reamer Research](/products/reamer-research.html) fills orders by a written execution specification and gives byte-identical output for a fixed `rng_seed`. [Reamer Server](/products/reamer-server.html) supplies sequencing, order state and a call to your pre-trade gate on every order, and you write the gate's rules and the broker connector. Both are from Reamer Labs. They are built for strategies on bars, and `reamer_relay_*` sends research orders to Reamer Server or to a receiver you write. See [What does it take to move from Reamer Research to Reamer Server?](/faq/research-to-server-move.html)
 
 ## What a published benchmark measured
 
